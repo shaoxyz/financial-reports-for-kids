@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build-site.mjs",
-    "preview": "python3 -m http.server 4173 -d public"
+    "preview": "python3 -m http.server 4173 -d public",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.120.0"
   }
 }

@@ -68,7 +68,7 @@ const reports = files.map((file) => {
     industry: industries[slug] || "商业与财报",
     title,
     headline,
-    href: `reports/${file}`
+    href: `reports/${file.replace(/\.html$/, "")}`
   };
 });
 
@@ -90,6 +90,5 @@ const output = template
 writeFileSync(join(publicDir, "index.html"), output);
 writeFileSync(join(publicDir, "reports.json"), JSON.stringify(reports, null, 2));
 cpSync(join(root, "src/404.html"), join(publicDir, "404.html"));
-cpSync(join(root, "src/_headers"), join(publicDir, "_headers"));
 
 console.log(`Built ${reports.length} reports into public/`);
