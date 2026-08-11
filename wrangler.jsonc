@@ -8,8 +8,8 @@
   },
   "routes": [
     {
-      "pattern": "f.webbx.space",
-      "custom_domain": true
+      "pattern": "f.webbx.space/*",
+      "zone_name": "webbx.space"
     }
   ]
 }
