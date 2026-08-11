@@ -1,11 +1,12 @@
 import { copyFileSync, cpSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
-import { basename, join } from "node:path";
+import { join } from "node:path";
 
 const root = new URL("../", import.meta.url).pathname;
 const sourceDir = join(root, "outputs/financial-reports");
 const publicDir = join(root, "public");
 const reportDir = join(publicDir, "reports");
 const template = readFileSync(join(root, "src/index.html"), "utf8");
+const brands = JSON.parse(readFileSync(join(root, "src/brands.json"), "utf8"));
 
 const companyNames = {
   NVIDIA: "英伟达",
@@ -47,6 +48,27 @@ const clean = (value) => value
   .replace(/\s+/g, " ")
   .trim();
 
+const readableText = (color) => {
+  if (!/^#[0-9a-f]{6}$/i.test(color)) return "#fffdf6";
+  const [red, green, blue] = color.slice(1).match(/../g).map((part) => Number.parseInt(part, 16));
+  return (red * 299 + green * 587 + blue * 114) / 1000 > 155 ? "#16213e" : "#fffdf6";
+};
+
+const addBrandHeader = (html, { asset, color, company, query }, date) => {
+  const textColor = readableText(color);
+  const brandStyle = `<style id="archive-brand-style">
+    .archive-brandbar{display:flex;align-items:center;gap:14px;min-height:58px;padding:10px max(18px,calc((100% - 1100px)/2));color:${textColor}!important;background:${color};text-decoration:none!important;font-family:"Avenir Next","PingFang SC",sans-serif;position:relative;z-index:1000}
+    .archive-brandbar img{width:42px;height:38px;object-fit:contain;padding:6px;background:#fffdf6;border-radius:4px}
+    .archive-brandbar span{font-size:.76rem;font-weight:800;letter-spacing:.06em;opacity:.88}
+    .archive-brandbar strong{margin-left:auto;font-size:.82rem;letter-spacing:.04em}
+    @media(max-width:560px){.archive-brandbar{min-height:52px}.archive-brandbar strong{font-size:0}.archive-brandbar strong::after{content:"全部报告";font-size:.78rem}.archive-brandbar img{width:38px;height:34px}}
+  </style>`;
+  const brandBar = `<a class="archive-brandbar" href="/" aria-label="返回全部财报"><img src="/brands/${asset}" alt="${query} Logo"><span>${company} · ${date}</span><strong>给孩子也看得懂的财报 ↗</strong></a>`;
+  return html
+    .replace(/<\/head>/i, `${brandStyle}</head>`)
+    .replace(/<body([^>]*)>/i, `<body$1>${brandBar}`);
+};
+
 const files = readdirSync(sourceDir)
   .filter((name) => /^\d{4}-\d{2}-\d{2}-.+\.html$/.test(name))
   .sort()
@@ -60,7 +82,8 @@ const reports = files.map((file) => {
   const [, date, slug] = file.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.html$/);
   const title = clean(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || slug);
   const headline = clean(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || title);
-  copyFileSync(join(sourceDir, file), join(reportDir, file));
+  const brand = brands[slug] || { company: companyNames[slug] || slug, query: slug, color: "#16213e", asset: `${slug}.svg` };
+  writeFileSync(join(reportDir, file), addBrandHeader(html, brand, date));
   return {
     date,
     slug,
@@ -68,14 +91,19 @@ const reports = files.map((file) => {
     industry: industries[slug] || "商业与财报",
     title,
     headline,
+    brandColor: brand.color,
+    brandText: readableText(brand.color),
+    logo: `brands/${brand.asset}`,
+    logoSource: brand.logoSource,
     href: `reports/${file.replace(/\.html$/, "")}`
   };
 });
 
 const cards = reports.map((report, index) => `
-  <article class="report${index === 0 ? " latest" : ""}" data-search="${clean(`${report.company} ${report.industry} ${report.title}`).toLowerCase()}">
+  <article class="report${index === 0 ? " latest" : ""}" style="--brand:${report.brandColor};--brand-text:${report.brandText}" data-search="${clean(`${report.company} ${report.industry} ${report.title}`).toLowerCase()}">
     <a href="${report.href}" aria-label="阅读 ${report.company} 财报">
       <div class="report-top"><time datetime="${report.date}">${report.date.replaceAll("-", ".")}</time><span>${report.industry}</span></div>
+      <div class="report-brand"><img src="${report.logo}" alt="${report.company} Logo" loading="lazy"></div>
       <h2>${report.company}</h2>
       <p>${report.headline}</p>
       <strong>打开报告 <i aria-hidden="true">↗</i></strong>
@@ -90,5 +118,6 @@ const output = template
 writeFileSync(join(publicDir, "index.html"), output);
 writeFileSync(join(publicDir, "reports.json"), JSON.stringify(reports, null, 2));
 cpSync(join(root, "src/404.html"), join(publicDir, "404.html"));
+cpSync(join(root, "src/brand-assets"), join(publicDir, "brands"), { recursive: true });
 
 console.log(`Built ${reports.length} reports into public/`);

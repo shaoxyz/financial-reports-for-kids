@@ -23,6 +23,12 @@ YYYY-MM-DD-Company.html
 
 运行 `npm run build` 后，首页和 `public/reports/` 会自动更新。
 
+## 品牌素材
+
+构建时会为新公司匹配 Logo 和品牌主色，并把素材缓存到 `src/brand-assets/`，网站不依赖外部图片地址。找不到可靠 Logo 时会自动使用文字标识，报告仍可正常发布。
+
+Logo 来源记录在 `src/brands.json`。Logo 和商标权利归各自品牌所有，仅用于识别报告涉及的公司，不包含在本项目的 MIT 许可范围内。
+
 ## 内容原则
 
 - 财报原文只使用公司投资者关系网站、交易所或监管机构文件。

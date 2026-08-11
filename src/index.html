@@ -37,17 +37,20 @@
     input { width:100%; margin-top:7px; padding:12px 14px; border:2px solid var(--ink); border-radius:0; background:var(--white); color:var(--ink); font:inherit; }
     .archive { padding:55px 0 100px; }
     .reports { display:grid; grid-template-columns:repeat(3,1fr); border-top:2px solid var(--ink); border-left:2px solid var(--ink); }
-    .report { min-height:330px; border-right:2px solid var(--ink); border-bottom:2px solid var(--ink); background:var(--white); }
+    .report { min-height:360px; border-right:2px solid var(--ink); border-bottom:2px solid var(--ink); background:var(--white); box-shadow:inset 0 7px 0 var(--brand); }
     .report a { height:100%; display:flex; flex-direction:column; padding:25px; text-decoration:none; }
     .report.latest { grid-column:span 2; color:var(--white); background:var(--ink); }
-    .report.latest h2 { color:var(--yellow); }
+    .report.latest h2 { color:var(--white); }
     .report-top { display:flex; justify-content:space-between; gap:12px; font-size:.72rem; font-weight:800; letter-spacing:.06em; }
     .report-top span { color:var(--red); }
     .latest .report-top span { color:var(--yellow); }
-    .report h2 { margin:44px 0 11px; font:900 clamp(2rem,4vw,3.4rem)/1 "Songti SC",serif; letter-spacing:-.04em; }
+    .report-brand { display:flex; align-items:center; height:68px; margin:25px 0 12px; }
+    .report-brand img { width:auto; max-width:150px; height:52px; object-fit:contain; object-position:left center; padding:8px; background:var(--white); border:1px solid color-mix(in srgb,var(--brand),transparent 68%); }
+    .latest .report-brand img { max-width:190px; height:60px; }
+    .report h2 { margin:0 0 11px; font:900 clamp(2rem,4vw,3.4rem)/1 "Songti SC",serif; letter-spacing:-.04em; }
     .report p { margin:0 0 24px; color:var(--muted); }
     .latest p { max-width:620px; color:#d9ddea; font-size:1.08rem; }
-    .report strong { margin-top:auto; color:var(--red); }
+    .report strong { margin-top:auto; color:var(--brand); }
     .latest strong { color:var(--yellow); }
     .report i { display:inline-block; font-style:normal; transition:transform .2s ease; }
     .report a:hover i { transform:translate(3px,-3px); }
