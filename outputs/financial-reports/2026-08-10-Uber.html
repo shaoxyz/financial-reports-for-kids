@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 Uber 2026 年第二季度财报学习报告">
+  <title>Uber：它没有那么多车，为什么能做全球出行生意？</title>
+  <style>
+    :root {
+      --night: #171b1b;
+      --paper: #f3f0e8;
+      --lime: #b7ef42;
+      --coral: #ff6a53;
+      --sky: #76b8dd;
+      --yellow: #ffd25e;
+      --muted: #5a6260;
+      --line: #242a29;
+      --white: #fcfbf6;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--night);
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(35deg, transparent 48%, rgba(23,27,27,.045) 49%, rgba(23,27,27,.045) 51%, transparent 52%),
+        linear-gradient(145deg, transparent 48%, rgba(23,27,27,.035) 49%, rgba(23,27,27,.035) 51%, transparent 52%);
+      background-size: 72px 72px;
+      font-family: "Avenir Next", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+    a { color: #075c8e; text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 4px solid var(--yellow); outline-offset: 3px; }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin: 0 auto; }
+    .routebar { background: var(--night); color: var(--white); }
+    .routebar .wrap { display: flex; justify-content: space-between; gap: 18px; padding: 9px 0; font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+    .hero { position: relative; min-height: 620px; padding: clamp(60px, 8vw, 110px) 0 62px; overflow: hidden; }
+    .hero::before, .hero::after { content: ""; position: absolute; border: 18px solid var(--lime); border-radius: 50%; opacity: .9; }
+    .hero::before { width: 260px; height: 260px; right: -85px; top: 38px; }
+    .hero::after { width: 130px; height: 130px; right: 170px; bottom: 58px; border-color: var(--coral); }
+    .kicker { display: inline-flex; align-items: center; gap: 9px; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .kicker::before { content: ""; width: 13px; height: 13px; border: 4px solid var(--night); border-radius: 50%; background: var(--lime); }
+    h1, h2, h3 { margin-top: 0; line-height: 1.16; }
+    h1 { max-width: 900px; margin: 20px 0 24px; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(2.7rem, 7.5vw, 6.7rem); font-weight: 900; letter-spacing: -.055em; }
+    h1 em { font-style: normal; text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: .16em; text-underline-offset: .08em; }
+    .hero-copy { max-width: 730px; font-size: clamp(1.08rem, 2vw, 1.35rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-block; padding: 12px 17px; border: 2px solid var(--night); background: var(--night); color: var(--white); font-weight: 800; text-decoration: none; }
+    .button.alt { background: transparent; color: var(--night); }
+    .ticket { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 56px; border: 3px solid var(--night); background: var(--white); box-shadow: 9px 9px 0 var(--night); z-index: 1; }
+    .ticket div { padding: 16px; border-right: 2px dashed var(--line); }
+    .ticket div:last-child { border-right: 0; }
+    .ticket small { display: block; color: var(--muted); font-size: .74rem; font-weight: 700; }
+    .ticket strong { display: block; margin-top: 4px; }
+    nav { border-top: 2px solid var(--night); border-bottom: 2px solid var(--night); background: rgba(243,240,232,.94); }
+    nav ol { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 15px 0; list-style: none; counter-reset: stop; }
+    nav li { counter-increment: stop; }
+    nav li::before { content: counter(stop); display: inline-grid; place-items: center; width: 23px; height: 23px; margin-right: 6px; color: var(--white); background: var(--night); border-radius: 50%; font-size: .72rem; font-weight: 800; }
+    nav a { color: var(--night); font-size: .84rem; font-weight: 700; text-decoration: none; }
+    section { padding: clamp(50px, 8vw, 90px) 0; border-bottom: 1px solid rgba(23,27,27,.25); }
+    .stop { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 12px; color: #35403d; font-size: .74rem; font-weight: 900; letter-spacing: .12em; }
+    .stop::before { content: ""; width: 14px; height: 14px; background: var(--lime); border: 3px solid var(--night); border-radius: 50%; }
+    h2 { max-width: 850px; margin-bottom: 20px; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(2rem, 4.6vw, 3.8rem); letter-spacing: -.035em; }
+    h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .lede { max-width: 800px; font-size: 1.12rem; }
+    .fact, .context, .analysis { display: inline-block; padding: 1px 7px; border: 1.5px solid currentColor; font-size: .7rem; font-weight: 900; line-height: 1.55; }
+    .fact { color: #075c8e; background: #e6f4fb; }
+    .context { color: #477114; background: #f0fad5; }
+    .analysis { color: #a53324; background: #ffebe6; }
+    .dispatch { display: grid; grid-template-columns: 1fr 70px 1fr 70px 1fr; align-items: center; margin: 34px 0; }
+    .dispatch article { min-height: 235px; padding: 24px; border: 2px solid var(--night); background: var(--white); }
+    .dispatch article:nth-child(3) { color: var(--white); background: var(--night); }
+    .dispatch .connector { height: 4px; background: var(--night); position: relative; }
+    .dispatch .connector::after { content: ""; position: absolute; right: -1px; top: -6px; border-width: 8px 0 8px 12px; border-style: solid; border-color: transparent transparent transparent var(--night); }
+    .dispatch ul { padding-left: 18px; }
+    .money-note { padding: 25px 28px; border: 3px solid var(--night); background: var(--yellow); font-size: 1.1rem; }
+    .money-note strong { font-size: 1.2rem; }
+    .metrics { display: grid; grid-template-columns: 1.2fr .8fr 1fr .8fr; gap: 0; margin: 30px 0; border: 2px solid var(--night); }
+    .metric { padding: 23px 19px; background: var(--white); border-right: 2px solid var(--night); }
+    .metric:last-child { border-right: 0; }
+    .metric:nth-child(2) { background: var(--lime); }
+    .metric b { display: block; margin: 9px 0 5px; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1; }
+    .up { color: #316000; }
+    .caution { color: #a12c20; }
+    .one-off { margin: 30px 0; padding: 28px; color: var(--white); background: var(--night); position: relative; }
+    .one-off::after { content: "NOT CASH FROM RIDES"; position: absolute; right: 18px; top: 10px; color: rgba(183,239,66,.18); font-weight: 900; font-size: clamp(1.3rem, 4vw, 3rem); transform: rotate(-4deg); }
+    .one-off h3 { color: var(--lime); position: relative; z-index: 1; }
+    .one-off p { max-width: 850px; position: relative; z-index: 1; }
+    table { width: 100%; margin: 24px 0; border-collapse: collapse; background: var(--white); }
+    th, td { padding: 12px 11px; border: 1.5px solid var(--night); text-align: left; vertical-align: top; }
+    th { color: var(--white); background: var(--night); }
+    .bars { margin: 24px 0; }
+    .bar-row { display: grid; grid-template-columns: 130px 1fr 86px; gap: 11px; align-items: center; margin: 12px 0; }
+    .bar-track { height: 24px; border: 2px solid var(--night); background: var(--white); }
+    .bar { height: 100%; background: var(--coral); }
+    .bar.mob { width: 50%; }
+    .bar.del { width: 47.3%; background: var(--lime); }
+    .bar.freight { width: 2.7%; background: var(--sky); }
+    .split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+    .moat-line { position: relative; margin: 34px 0; padding-left: 52px; }
+    .moat-line::before { content: ""; position: absolute; left: 13px; top: 11px; bottom: 13px; width: 5px; background: var(--night); }
+    .moat { position: relative; margin-bottom: 25px; }
+    .moat::before { content: ""; position: absolute; left: -47px; top: 5px; width: 19px; height: 19px; border: 4px solid var(--night); border-radius: 50%; background: var(--lime); }
+    .rivals { counter-reset: rival; }
+    .rival { display: grid; grid-template-columns: 72px 1fr; gap: 17px; padding: 22px 0; border-bottom: 2px dotted var(--night); }
+    .rival::before { counter-increment: rival; content: "R" counter(rival); display: grid; place-items: center; width: 55px; height: 55px; background: var(--coral); border: 2px solid var(--night); border-radius: 50% 50% 50% 8px; font-weight: 900; }
+    .city-map { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; align-items: stretch; margin: 30px 0; }
+    .city-map div { min-height: 110px; display: grid; place-items: center; padding: 13px; border: 2px solid var(--night); background: var(--white); text-align: center; font-weight: 800; position: relative; }
+    .city-map div:not(:last-child)::after { content: "→"; position: absolute; right: -18px; top: 39px; z-index: 2; font-size: 1.3rem; }
+    .city-map div:nth-child(3), .city-map div:nth-child(5) { background: var(--lime); }
+    .statements { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 2px solid var(--night); }
+    .statement { padding: 25px; background: var(--white); border-right: 2px solid var(--night); }
+    .statement:last-child { border-right: 0; }
+    .statement:nth-child(2) { background: #e6f4fb; }
+    .formula { padding: 12px; background: var(--night); color: var(--white); font-size: .86rem; font-weight: 700; }
+    .terms { columns: 2; column-gap: 38px; }
+    .term { break-inside: avoid; margin: 0 0 22px; padding-top: 14px; border-top: 5px solid var(--night); }
+    .term strong { display: block; margin-bottom: 6px; color: #9b3023; font-size: 1.08rem; }
+    .events { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
+    .event-main { padding: 28px; color: var(--white); background: var(--night); }
+    .event-main b { display: block; color: var(--lime); font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(2.2rem, 5vw, 4.3rem); line-height: 1; }
+    .event-side { padding: 24px; border: 3px solid var(--night); background: var(--white); }
+    .risks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .risk { padding: 22px; border-top: 8px solid var(--coral); background: var(--white); }
+    .risk:nth-child(3n) { border-color: var(--yellow); }
+    .remember { padding: clamp(50px, 8vw, 90px); color: var(--white); background: var(--night); }
+    .remember .stop::before { background: var(--lime); border-color: var(--white); }
+    .remember .stop { color: var(--lime); }
+    .remember h2 { color: var(--white); }
+    .remember ol { max-width: 800px; font-size: 1.12rem; }
+    details { margin: 12px 0; border: 2px solid var(--night); background: var(--white); }
+    summary { padding: 16px 18px; cursor: pointer; font-weight: 800; }
+    details p { margin: 0; padding: 0 18px 18px; }
+    .sources li { margin-bottom: 11px; overflow-wrap: anywhere; }
+    .fine { color: var(--muted); font-size: .84rem; }
+    footer { padding: 38px 0; color: var(--white); background: var(--night); }
+    footer .fine { color: #cfd5d2; }
+    @media (max-width: 860px) {
+      .ticket { grid-template-columns: 1fr 1fr; }
+      .ticket div:nth-child(2) { border-right: 0; }
+      .ticket div:nth-child(-n+2) { border-bottom: 2px dashed var(--line); }
+      .dispatch { grid-template-columns: 1fr; }
+      .dispatch .connector { width: 4px; height: 46px; margin: auto; }
+      .dispatch .connector::after { right: -6px; top: auto; bottom: -1px; border-width: 12px 8px 0; border-color: var(--night) transparent transparent; }
+      .dispatch article { min-height: auto; }
+      .metrics { grid-template-columns: 1fr 1fr; }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 2px solid var(--night); }
+      .split, .events { grid-template-columns: 1fr; }
+      .city-map { grid-template-columns: 1fr 1fr 1fr; }
+      .city-map div:nth-child(3)::after { content: ""; }
+      .statements { grid-template-columns: 1fr; }
+      .statement { border-right: 0; border-bottom: 2px solid var(--night); }
+      .statement:last-child { border-bottom: 0; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 22px, 1100px); }
+      .routebar .wrap { display: block; }
+      .routebar span { display: block; }
+      .hero { min-height: auto; padding-top: 48px; }
+      .hero::before { width: 155px; height: 155px; right: -90px; }
+      h1 { font-size: 2.75rem; }
+      .ticket, .metrics, .risks { grid-template-columns: 1fr; }
+      .ticket div, .metric { border-right: 0; border-bottom: 2px dashed var(--line); }
+      .ticket div:last-child, .metric:last-child { border-bottom: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 2px solid var(--night); }
+      .bar-row { grid-template-columns: 1fr 74px; }
+      .bar-track { grid-column: 1 / -1; grid-row: 2; }
+      .city-map { grid-template-columns: 1fr; }
+      .city-map div:not(:last-child)::after { content: "↓"; right: 50%; top: auto; bottom: -24px; }
+      .terms { columns: 1; }
+      th, td { padding: 9px 7px; font-size: .84rem; }
+      .rival { grid-template-columns: 53px 1fr; gap: 10px; }
+      .rival::before { width: 43px; height: 43px; }
+    }
+    @media print { body { background: white; } .ticket { box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="routebar"><div class="wrap"><span>CITY BUSINESS LINE · 第 17 站</span><span>2026-08-10 · 约 15 分钟</span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="kicker">Uber · NYSE: UBER · Q2 2026</div>
+      <h1>它没有那么多车，<br>为什么能做<em>全球出行</em>生意？</h1>
+      <p class="hero-copy">Uber 的核心不是自己买车、雇遍全世界的司机，而是搭一个“实时配对市场”：一边聚集乘客和点餐的人，另一边聚集司机、骑手、餐厅和货运公司，然后从撮合成功的交易中收费。</p>
+      <div class="hero-actions">
+        <a class="button" href="https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm">打开 SEC 正式季度报告</a>
+        <a class="button alt" href="https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uberq226earningspressrelea.htm">打开官方业绩材料</a>
+      </div>
+      <div class="ticket">
+        <div><small>公司 / 股票代码</small><strong>Uber / NYSE: UBER</strong></div>
+        <div><small>报告类型</small><strong>Form 10-Q 第二季度</strong></div>
+        <div><small>报告期间</small><strong>2026.04.01—06.30</strong></div>
+        <div><small>提交日期 / 币种</small><strong>2026.08.05 / 美元</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <nav><div class="wrap"><ol>
+    <li><a href="#business">怎么赚钱</a></li><li><a href="#numbers">核心数字</a></li><li><a href="#moat">壁垒</a></li><li><a href="#rivals">竞争对手</a></li><li><a href="#industry">行业地图</a></li><li><a href="#statements">三张报表</a></li><li><a href="#terms">名词</a></li><li><a href="#risks">风险</a></li><li><a href="#quiz">自测</a></li>
+  </ol></div></nav>
+
+  <main>
+    <section id="business"><div class="wrap">
+      <span class="stop">STOP 01 · 钱从哪里来</span>
+      <h2>乘客付的是车费，Uber 留下的是平台费</h2>
+      <p class="lede"><span class="fact">财报原文中的事实</span> Uber 说，它绝大部分收入来自司机和商家为使用平台支付的费用。多数交易里，Uber 是撮合者，因此财报收入会扣掉司机和商家的所得。</p>
+      <div class="dispatch">
+        <article><h3>有人提出需求</h3><ul><li>乘客想从 A 点到 B 点</li><li>顾客想收到一份餐或杂货</li><li>企业想运输一批货物</li></ul></article>
+        <div class="connector"></div>
+        <article><h3>Uber 实时配对</h3><ul><li>显示价格、路线和预计时间</li><li>完成支付、地图与客服</li><li>管理评价、安全和保险机制</li></ul></article>
+        <div class="connector"></div>
+        <article><h3>服务提供者完成</h3><ul><li>司机接送乘客</li><li>餐厅备餐、骑手配送</li><li>承运商运输货物</li></ul></article>
+      </div>
+      <div class="money-note"><strong>最容易混淆的地方：</strong>本季度平台上的订单总额是 <strong>580.22 亿美元</strong>，但 Uber 自己确认的收入是 <strong>141.91 亿美元</strong>。前者像整座商场的成交额，后者更接近商场最终记进自己账里的收费。</div>
+      <div class="split">
+        <div>
+          <h3>三门主要生意</h3>
+          <div class="bars">
+            <div class="bar-row"><span>出行 Mobility</span><span class="bar-track"><span class="bar mob"></span></span><strong>50.0%</strong></div>
+            <div class="bar-row"><span>配送 Delivery</span><span class="bar-track"><span class="bar del"></span></span><strong>47.3%</strong></div>
+            <div class="bar-row"><span>货运 Freight</span><span class="bar-track"><span class="bar freight"></span></span><strong>2.7%</strong></div>
+          </div>
+          <p class="fine">占比按本季度总订单额 580.22 亿美元计算：出行 289.88 亿、配送 274.63 亿、货运 15.71 亿美元。</p>
+        </div>
+        <div>
+          <h3>主要成本是什么？</h3>
+          <p>司机、骑手和承运商激励，保险和事故赔付，支付手续费、地图和云服务，客服与安全团队，广告促销，以及工程师开发应用和自动驾驶合作。</p>
+          <p><span class="analysis">分析判断</span> 它不用为每一笔订单买一辆车，但绝不是“零成本”：保险、补贴、监管和技术投入都很重。</p>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="numbers"><div class="wrap">
+      <span class="stop">STOP 02 · 这期成绩</span>
+      <h2>人更多、用得更勤，平台开始更明显地“长出利润”</h2>
+      <p><span class="fact">财报原文中的事实</span> 下列数据均为截至 2026 年 6 月 30 日的三个月，与 2025 年同期比较；金额为美元。</p>
+      <div class="metrics">
+        <article class="metric"><small>总订单额</small><b>580.22亿</b><strong class="up">同比 +24%</strong><p>按固定汇率增长 22%。</p></article>
+        <article class="metric"><small>完成行程/订单</small><b>38.67亿次</b><strong class="up">同比 +18%</strong><p>平均每天约 4,250 万次。</p></article>
+        <article class="metric"><small>营业利润</small><b>18.90亿</b><strong class="up">同比 +30%</strong><p>这是按美国会计准则计算。</p></article>
+        <article class="metric"><small>自由现金流</small><b>27.92亿</b><strong class="up">同比 +13%</strong><p>公司定义指标，计算见现金流部分。</p></article>
+      </div>
+      <table>
+        <thead><tr><th>用户和财务指标</th><th>2026 Q2</th><th>同比</th><th>怎么读</th></tr></thead>
+        <tbody>
+          <tr><td>月活跃平台消费者</td><td>2.08 亿</td><td>+16%</td><td>更多人至少完成过一次乘车或收货</td></tr>
+          <tr><td>收入</td><td>141.91 亿美元</td><td>+12%</td><td>英国业务记账方式变化压低增速约 11 亿美元</td></tr>
+          <tr><td>归母净利润</td><td>23.94 亿美元</td><td>+77%</td><td>其中含投资公允价值变动的较大帮助</td></tr>
+          <tr><td>营业现金流</td><td>28.62 亿美元</td><td>+12%</td><td>主营经营真正带进来的现金</td></tr>
+        </tbody>
+      </table>
+      <div class="one-off">
+        <h3>本期最值得关注：净利润里有 16 亿美元“账面投资收益”</h3>
+        <p><span class="fact">财报原文中的事实</span> 23.94 亿美元归母净利润中，包含债务和股票投资重新估值产生的 <strong>16 亿美元税前净收益</strong>，主要包括 Delivery Hero 投资收益 11 亿、Aurora 投资收益 8.99 亿，同时被滴滴投资损失 4.37 亿等部分抵消。</p>
+        <p><span class="analysis">分析判断</span> 股票涨价会让本期利润变漂亮，但没有卖出前不等于收到同样多现金。判断核心出行生意时，营业利润和现金流比这项投资涨跌更有参考价值。</p>
+      </div>
+    </div></section>
+
+    <section id="moat"><div class="wrap">
+      <span class="stop">STOP 03 · 壁垒与护城河</span>
+      <h2>越多人叫车，司机越愿意来；司机越多，车就越快到</h2>
+      <div class="split">
+        <div class="moat-line">
+          <article class="moat"><h3>双边网络</h3><p>乘客多会吸引司机，司机多会缩短等待时间并增加覆盖。配送业务里，顾客、骑手和商家形成三边网络。</p></article>
+          <article class="moat"><h3>密度与调度数据</h3><p>同一个城市订单越密，司机空跑可能越少，预计到达时间和定价也更容易优化。</p></article>
+          <article class="moat"><h3>一个应用，多种需求</h3><p>同一位用户可以叫车、点餐、买杂货；同一位司机也可能接不同类型订单。</p></article>
+          <article class="moat"><h3>品牌、支付与安全系统</h3><p>全球运营积累了地图、支付、身份验证、客服、保险和合规能力，新平台很难在许多国家同时补齐。</p></article>
+        </div>
+        <aside>
+          <div class="money-note"><strong>壁垒不是“锁死用户”。</strong><br>司机可以同时打开 Lyft、Bolt 等应用，顾客也能比价。如果等待变久、价格过高或安全体验变差，双方都可能离开。</div>
+          <p><span class="fact">财报原文中的事实</span> 本季度用户增长 16%，每位月活用户的月均订单次数增长约 2%。这说明网络不只是变大，也在被稍微更频繁地使用。</p>
+        </aside>
+      </div>
+    </div></section>
+
+    <section id="rivals"><div class="wrap">
+      <span class="stop">STOP 04 · 谁在竞争</span>
+      <h2>Uber 同时在三条街上比赛</h2>
+      <div class="rivals">
+        <article class="rival"><div><h3>Lyft、Bolt、滴滴、Ola</h3><p>直接争夺乘客和司机。Lyft 在北美深耕，Bolt 在欧洲与非洲等市场活跃，滴滴和 Ola 分别在中国、印度等市场有本地规模。</p></div></article>
+        <article class="rival"><div><h3>DoorDash、Instacart、Rappi</h3><p>争夺外卖、杂货顾客、商家和骑手。DoorDash 在北美配送网络强，Instacart 深耕杂货，Rappi 在拉美拥有本地网络。</p></div></article>
+        <article class="rival"><div><h3>Waymo、Tesla、Amazon Zoox</h3><p>自动驾驶既可能成为 Uber 的合作车辆，也可能绕过 Uber 自己接单。Waymo 已同时经营自己的叫车服务，并向 Uber 平台提供部分车辆。</p></div></article>
+        <article class="rival"><div><h3>C.H. Robinson、DHL、XPO</h3><p>在货运撮合和运输管理领域竞争，强项是企业客户关系、线下运输网络和专业服务经验。</p></div></article>
+      </div>
+      <p><span class="context">外部背景资料</span> 上述竞争者及竞争方式主要来自 Uber 2026 Q2 Form 10-Q“竞争”与“自动驾驶”风险章节；各公司的地域特点由其官方公司资料补充。不是实力排名。</p>
+    </div></section>
+
+    <section id="industry"><div class="wrap">
+      <span class="stop">STOP 05 · 行业地图与趋势</span>
+      <h2>这不是简单的出租车公司，而是城市即时服务市场</h2>
+      <div class="city-map">
+        <div>地图、云与支付服务</div><div>司机、骑手与承运商</div><div>Uber 配对平台</div><div>餐厅、超市与企业货主</div><div>乘客和消费者</div><div>监管、保险与城市交通</div>
+      </div>
+      <div class="split">
+        <div>
+          <h3>行业处于什么阶段？</h3>
+          <p><span class="analysis">分析判断</span> 网约车和外卖在很多大城市已经普及，但全球不同地区成熟度差别很大。行业已从“只求订单增长”转向同时追求利润、现金、安全和合规。</p>
+          <p>需求由城市化、手机支付、即时配送习惯和出行便利推动；油价、消费能力、司机供给和城市监管又会让需求起伏。</p>
+        </div>
+        <div>
+          <h3>三股正在改变行业的力量</h3>
+          <ul><li><strong>自动驾驶：</strong>可能降低司机成本，也可能产生新的强大竞争者。</li><li><strong>一个应用多种服务：</strong>叫车用户可被带到外卖和杂货，降低获客成本。</li><li><strong>监管与劳动关系：</strong>司机被认定为独立承包人还是雇员，会改变成本和经营方式。</li></ul>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="statements"><div class="wrap">
+      <span class="stop">STOP 06 · 三张报表</span>
+      <h2>利润、家底和现金，分别回答不同问题</h2>
+      <div class="statements">
+        <article class="statement"><h3>利润表：这三个月赚多少</h3><p class="formula">收入 141.91 亿<br>− 成本费用 123.01 亿<br>= 营业利润 18.90 亿美元</p><p>收入同比增 12%，成本费用只增约 9.8%，所以营业利润增 30%。这叫经营杠杆开始显现。</p></article>
+        <article class="statement"><h3>资产负债表：6 月底家底</h3><p>总资产 <strong>658.01 亿</strong>、总负债 <strong>374.02 亿</strong>、可赎回少数权益 1.80 亿、总权益 <strong>282.19 亿美元</strong>。</p><p>现金和短期投资共 53.91 亿；短期及长期债务账面值约 127.23 亿美元。保险准备金合计 132.86 亿美元，说明事故赔付是重要责任。</p></article>
+        <article class="statement"><h3>现金流量表：钱真的怎么走</h3><p class="formula">营业现金流 28.62 亿<br>− 购置设备 0.70 亿<br>= 自由现金流 27.92 亿美元</p><p>自由现金流是公司定义指标。同期投资现金净流出 53.89 亿，主要与证券、投资及收购有关；不能把它都当成买服务器或汽车。</p></article>
+      </div>
+      <p class="fine">以上均为 2026 Q2 单季口径，资产负债表为 2026-06-30 时点；金额按原表百万美元换算。总负债、可赎回少数权益和总权益合计等于总资产。</p>
+    </div></section>
+
+    <section id="terms"><div class="wrap">
+      <span class="stop">STOP 07 · 今日专业名词</span>
+      <h2>五个词，拆开平台生意</h2>
+      <div class="terms">
+        <article class="term"><strong>总订单额 Gross Bookings</strong><p>平台上完成交易的总金额，包括司机和商家后来拿走的部分。像班级义卖一共卖了 1,000 元，但组织者并不是赚了 1,000 元。</p></article>
+        <article class="term"><strong>平台收入</strong><p>Uber 按会计规则真正记进收入的部分，多数情况下已经扣除司机和商家的所得。它和总订单额不能混着比较。</p></article>
+        <article class="term"><strong>经营杠杆</strong><p>平台变大后，收入增长得比部分固定费用更快，利润可能增长更快。像小店房租没变，每天多卖几十杯饮料，新增收入更容易变成利润。</p></article>
+        <article class="term"><strong>自由现金流</strong><p>经营带来的现金，减去购买设备等资本支出后还剩多少。像收到零花钱后，先扣掉必须买的新书包，余下的钱才更自由。</p></article>
+        <article class="term"><strong>公允价值变动</strong><p>持有的股票按市场价格重新估值产生的账面涨跌。收藏卡市价上涨，会让你的收藏“看起来更值钱”，但没卖掉就没有收到现金。</p></article>
+      </div>
+    </div></section>
+
+    <section id="events"><div class="wrap">
+      <span class="stop">EXPRESS · 重要事件</span>
+      <h2>Uber 正准备把配送版图扩大一大块</h2>
+      <div class="events">
+        <article class="event-main"><b>148 亿美元</b><h3>拟收购 Delivery Hero 的全部股权价值</h3><p><span class="fact">财报原文中的事实</span> Uber 于 2026 年 7 月 16 日签署协议，拟以每股 41.50 欧元发起现金收购，交易预计 2027 年下半年完成，仍需达到接受比例并获得监管许可。</p></article>
+        <article class="event-side"><h3>钱从哪里来？</h3><p>公司计划使用现有现金和新债务，并已安排 142 亿欧元过桥贷款承诺。</p><p><span class="analysis">分析判断</span> 成功后配送规模会扩大，但债务、整合和监管风险也会明显增加；“规模更大”不自动等于“回报更高”。</p></article>
+      </div>
+      <p><span class="fact">财报原文中的事实</span> Uber 还在 2026 年 7 月 1 日完成对 Getir 外卖业务及杂货少数股权的收购，现金对价约 4.65 亿美元。</p>
+    </div></section>
+
+    <section id="risks"><div class="wrap">
+      <span class="stop">STOP 08 · 可能出什么问题</span>
+      <h2>最大的未知数：没有司机的未来，Uber 还是入口吗？</h2>
+      <div class="risks">
+        <article class="risk"><h3>自动驾驶绕开平台</h3><p>如果 Waymo、Tesla 或其他公司直接把车辆和顾客连起来，Uber 可能失去部分订单；若成为最大的聚合入口，它也可能受益。</p></article>
+        <article class="risk"><h3>司机身份改变</h3><p>若更多地区要求把司机视为雇员，公司可能要承担工资、福利和税费，商业模式与成本都会改变。</p></article>
+        <article class="risk"><h3>保险赔付不足</h3><p>保险准备金依赖估算。若严重事故或索赔比预想多，实际支出可能超过准备的钱。</p></article>
+        <article class="risk"><h3>大型收购和债务</h3><p>Delivery Hero 交易若完成，需要大量新债务。整合不顺、监管延迟或回报不足，都会消耗现金。</p></article>
+        <article class="risk"><h3>双边用户都容易离开</h3><p>补贴减少可能赶走司机，价格上涨可能赶走乘客；一边减少会让另一边体验也变差。</p></article>
+        <article class="risk"><h3>净利润被投资价格放大</h3><p>持有的 Delivery Hero、Aurora、滴滴等投资价格波动，会让净利润大起大落，却不一定反映叫车和外卖生意。</p></article>
+      </div>
+    </div></section>
+
+    <section id="remember" class="remember"><div class="wrap">
+      <span class="stop">TERMINAL · 今天记住</span>
+      <h2>到站前，只带走三句话</h2>
+      <ol><li><strong>Uber 卖的是配对效率，不是自己开的每一辆车。</strong></li><li><strong>总订单额 580 亿美元不等于收入 142 亿美元：</strong>司机和商家所得不属于 Uber。</li><li><strong>核心经营正在改善，但净利润含 16 亿美元投资估值收益：</strong>一定要同时看营业利润和现金流。</li></ol>
+    </div></section>
+
+    <section id="quiz"><div class="wrap">
+      <span class="stop">FINAL CHECK · 自测</span>
+      <h2>三道题，看看你是否真的看懂</h2>
+      <details><summary>1. 为什么 Uber 的总订单额远大于收入？</summary><p><strong>答案：</strong>总订单额包含乘客支付的整笔金额，其中大部分要归司机、骑手和商家。Uber 多数交易只是撮合者，财报收入会扣掉这些合作方所得。</p></details>
+      <details><summary>2. 为什么净利润增长 77%，不能直接理解成叫车生意利润增长 77%？</summary><p><strong>答案：</strong>净利润包含约 16 亿美元投资重新估值的税前净收益。更贴近主营经营的营业利润增长为 30%，两者回答的问题不同。</p></details>
+      <details><summary>3. 自动驾驶为什么既是机会，也是风险？</summary><p><strong>答案：</strong>如果自动驾驶车辆通过 Uber 接单，平台可能扩大供给并降低成本；如果自动驾驶公司自己连接乘客、绕开 Uber，平台可能失去订单入口。</p></details>
+    </div></section>
+
+    <section id="sources" class="sources"><div class="wrap">
+      <span class="stop">SOURCES · 资料来源</span>
+      <h2>关键事实可以回到原文</h2>
+      <ol>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm">Uber Form 10-Q：截至 2026 年 6 月 30 日季度报告</a>，提交于 2026-08-05。财务报表、业务模式、分部、收购、竞争与风险。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uberq226earningspressrelea.htm">Uber 2026 Q2 官方业绩新闻稿（SEC Exhibit 99.1）</a>，2026-08-05。核心指标、分部数据、非美国会计准则指标及其调节表。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1543151/000155278126000148/e26089_uber-ars.pdf">Uber 2025 年年度报告</a>，提交于 2026。商业模式与长期风险背景。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1759509/">Lyft SEC 公司档案</a>，访问于 2026-08-10。北美出行业务竞争背景。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1792789/">DoorDash SEC 公司档案</a>，访问于 2026-08-10。配送业务竞争背景。</li>
+        <li><a href="https://abc.xyz/investor/">Alphabet 投资者关系网站</a>，访问于 2026-08-10。Waymo 与自动驾驶业务背景。</li>
+      </ol>
+      <p class="fine">口径说明：金额均为美元。季度利润表、订单与现金流数据为 2026 年 4 月 1 日至 6 月 30 日；资产负债表为 2026 年 6 月 30 日时点；同比均与 2025 年同期比较。自由现金流、总订单额、月活消费者等为公司定义指标，已与美国会计准则数据分开说明。</p>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap"><strong>这是一份商业与财报教育材料，不构成投资建议。</strong><p class="fine">报告日期：2026-08-10。事实以公司及监管机构正式文件为准；分析判断可能随公司和行业情况变化。</p></div></footer>
+</body>
+</html>

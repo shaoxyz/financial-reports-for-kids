@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的任天堂 2027 财年第一季度财报学习报告">
+  <title>任天堂：游戏机是入口，快乐世界才是生意｜15 分钟财报</title>
+  <style>
+    :root {
+      --paper: #fff8e8;
+      --ink: #152235;
+      --red: #e63b2e;
+      --red-dark: #a51f1b;
+      --yellow: #ffd84d;
+      --green: #2f936c;
+      --blue: #3275bd;
+      --line: #26384d;
+      --muted: #5f6874;
+      --white: #fffdf7;
+      --shadow: 8px 8px 0 #152235;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(21,34,53,.035) 1px, transparent 1px),
+        linear-gradient(rgba(21,34,53,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 24px 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: #075fae; text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 4px solid var(--yellow); outline-offset: 3px; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar { background: var(--ink); color: white; font-size: .86rem; }
+    .topbar .wrap { display: flex; justify-content: space-between; gap: 20px; padding: 9px 0; }
+    .hero { padding: 56px 0 44px; overflow: hidden; position: relative; }
+    .hero::after {
+      content: "1UP";
+      position: absolute;
+      right: max(4vw, 20px);
+      top: 18px;
+      font: 900 clamp(4rem, 12vw, 9rem)/1 monospace;
+      color: rgba(230,59,46,.08);
+      transform: rotate(-7deg);
+    }
+    .eyebrow { font: 800 .78rem/1.2 monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--red-dark); }
+    h1, h2, h3 { line-height: 1.22; margin-top: 0; }
+    h1 { max-width: 820px; margin: 14px 0 16px; font-size: clamp(2.45rem, 7vw, 5.6rem); letter-spacing: -.055em; }
+    h1 em { color: var(--red); font-style: normal; }
+    .hero-copy { max-width: 720px; font-size: clamp(1.05rem, 2vw, 1.28rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button { display: inline-block; padding: 11px 16px; border: 3px solid var(--ink); color: var(--ink); background: var(--yellow); box-shadow: 4px 4px 0 var(--ink); font-weight: 800; text-decoration: none; }
+    .button.secondary { background: var(--white); }
+    .meta-strip { display: grid; grid-template-columns: repeat(4, 1fr); border: 3px solid var(--ink); background: var(--white); box-shadow: var(--shadow); }
+    .meta-strip div { padding: 16px; border-right: 2px solid var(--ink); }
+    .meta-strip div:last-child { border-right: 0; }
+    .meta-strip small { display: block; color: var(--muted); font-weight: 700; }
+    .meta-strip strong { display: block; margin-top: 4px; }
+    nav { margin: 42px 0; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+    nav ol { display: flex; flex-wrap: wrap; gap: 7px 20px; margin: 0; padding: 13px 0; list-style-position: inside; font: 700 .88rem/1.5 monospace; }
+    nav a { color: var(--ink); text-decoration: none; }
+    section { padding: 42px 0; border-top: 1px solid rgba(21,34,53,.22); }
+    .level { display: inline-block; margin-bottom: 10px; padding: 4px 9px; color: white; background: var(--red); font: 800 .76rem/1.4 monospace; letter-spacing: .08em; }
+    h2 { max-width: 760px; margin-bottom: 20px; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -.035em; }
+    h3 { margin-bottom: 8px; font-size: 1.2rem; }
+    .lede { max-width: 800px; font-size: 1.12rem; }
+    .fact, .context, .analysis { display: inline-block; padding: 2px 8px; border: 2px solid currentColor; font-size: .72rem; font-weight: 800; line-height: 1.5; }
+    .fact { color: var(--blue); }
+    .context { color: var(--green); }
+    .analysis { color: var(--red-dark); }
+    .money-map { display: grid; grid-template-columns: 1fr 64px 1fr 64px 1fr; align-items: stretch; margin-top: 24px; }
+    .money-map article { padding: 22px; border: 3px solid var(--ink); background: var(--white); }
+    .money-map .arrow { display: grid; place-items: center; font-size: 2rem; font-weight: 900; }
+    .money-map ul { margin-bottom: 0; padding-left: 20px; }
+    .big-rule { margin: 28px 0; padding: 24px; border-left: 10px solid var(--red); background: var(--white); font-size: 1.16rem; font-weight: 700; }
+    .numbers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 24px; }
+    .number { min-height: 195px; padding: 18px 15px; border: 3px solid var(--ink); background: var(--white); }
+    .number:nth-child(1), .number:nth-child(4) { background: #fff1b6; }
+    .number b { display: block; margin: 12px 0 5px; font: 900 clamp(1.55rem, 3vw, 2.35rem)/1 monospace; }
+    .number small { color: var(--muted); }
+    .up { color: #0b724b; } .down { color: #ad261e; }
+    .boss-box { margin: 30px 0; padding: 26px; border: 4px double var(--ink); background: #e8f3ff; }
+    .boss-box h3 { color: var(--red-dark); }
+    .split { display: grid; grid-template-columns: 1.15fr .85fr; gap: 34px; align-items: start; }
+    .bar-table { margin: 22px 0; }
+    .bar-row { display: grid; grid-template-columns: minmax(110px, 1.4fr) 3fr minmax(74px, .7fr); gap: 10px; align-items: center; margin: 11px 0; }
+    .bar-track { height: 20px; border: 2px solid var(--ink); background: var(--white); }
+    .bar { height: 100%; background: var(--red); }
+    .bar.green { background: var(--green); }
+    .bar-933 { width: 93.3%; }
+    .bar-067 { width: 6.7%; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--white); }
+    th, td { padding: 12px 10px; border: 2px solid var(--ink); text-align: left; vertical-align: top; }
+    th { background: var(--ink); color: white; }
+    .moat-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 24px; }
+    .moat-track article { position: relative; padding: 18px; border: 3px solid var(--ink); background: var(--white); }
+    .moat-track article + article { border-left: 0; }
+    .moat-track article:nth-child(even) { transform: translateY(14px); background: #edfaef; }
+    .competitors { counter-reset: rivals; }
+    .rival { display: grid; grid-template-columns: 70px 1fr; gap: 18px; padding: 21px 0; border-bottom: 2px dashed var(--line); }
+    .rival::before { counter-increment: rivals; content: "P" counter(rivals); display: grid; place-items: center; width: 56px; height: 56px; color: white; background: var(--ink); border-radius: 50%; font: 900 1rem monospace; }
+    .industry-chain { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 24px 0; }
+    .industry-chain span { padding: 10px 12px; border: 2px solid var(--ink); background: var(--white); font-weight: 700; }
+    .industry-chain i { font-style: normal; font-weight: 900; }
+    .statements { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .statement { padding: 22px; border-top: 10px solid var(--red); background: var(--white); box-shadow: 5px 5px 0 rgba(21,34,53,.2); }
+    .statement:nth-child(2) { border-color: var(--green); }
+    .statement:nth-child(3) { border-color: var(--blue); }
+    .formula { padding: 8px 10px; background: #eef1f5; font: 700 .85rem/1.55 monospace; }
+    .terms { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .term { padding: 18px; border: 2px solid var(--ink); background: var(--white); }
+    .term strong { display: block; color: var(--red-dark); font-size: 1.08rem; }
+    .risk-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .risk { padding: 18px 18px 18px 52px; border: 2px solid var(--ink); background: var(--white); position: relative; }
+    .risk::before { content: "!"; position: absolute; left: 16px; top: 18px; display: grid; place-items: center; width: 24px; height: 24px; color: white; background: var(--red); font-weight: 900; }
+    details { margin: 12px 0; border: 2px solid var(--ink); background: var(--white); }
+    summary { padding: 15px 18px; cursor: pointer; font-weight: 800; }
+    details p { margin: 0; padding: 0 18px 18px; }
+    .sources li { margin: 10px 0; overflow-wrap: anywhere; }
+    footer { margin-top: 34px; padding: 36px 0; color: white; background: var(--ink); }
+    .fine { color: var(--muted); font-size: .86rem; }
+    footer .fine { color: #c9d1dc; }
+    @media (max-width: 820px) {
+      .meta-strip { grid-template-columns: 1fr 1fr; }
+      .meta-strip div:nth-child(2) { border-right: 0; }
+      .meta-strip div:nth-child(-n+2) { border-bottom: 2px solid var(--ink); }
+      .numbers { grid-template-columns: 1fr 1fr; }
+      .number:last-child { grid-column: 1 / -1; min-height: auto; }
+      .money-map { grid-template-columns: 1fr; }
+      .money-map .arrow { height: 48px; transform: rotate(90deg); }
+      .split, .statements { grid-template-columns: 1fr; }
+      .moat-track { grid-template-columns: 1fr; gap: 9px; }
+      .moat-track article + article { border-left: 3px solid var(--ink); }
+      .moat-track article:nth-child(even) { transform: none; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 22px, 1080px); }
+      .topbar .wrap { display: block; }
+      .topbar span { display: block; }
+      .hero { padding-top: 38px; }
+      h1 { font-size: 2.65rem; }
+      .meta-strip, .numbers, .terms, .risk-list { grid-template-columns: 1fr; }
+      .meta-strip div { border-right: 0; border-bottom: 2px solid var(--ink); }
+      .meta-strip div:last-child { border-bottom: 0; }
+      .number:last-child { grid-column: auto; }
+      .bar-row { grid-template-columns: 1fr 80px; }
+      .bar-track { grid-column: 1 / -1; grid-row: 2; }
+      th, td { padding: 9px 7px; font-size: .88rem; }
+      .rival { grid-template-columns: 52px 1fr; gap: 10px; }
+      .rival::before { width: 44px; height: 44px; }
+    }
+    @media print { .button { box-shadow: none; } body { background: white; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>FINANCE QUEST · 第 16 关</span><span>阅读时间约 15 分钟</span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Nintendo · FY2027 Q1 · 2026.08.06</div>
+      <h1>游戏机是入口，<br><em>快乐世界</em>才是生意</h1>
+      <p class="hero-copy">任天堂不只卖一台 Switch 2。它先把游戏机放到客厅和书包里，再靠马力欧、塞尔达、宝可梦等角色和游戏，让玩家一次次回来买软件、订会员、看电影。</p>
+      <div class="hero-actions">
+        <a class="button" href="https://www.nintendo.co.jp/ir/pdf/2026/260806e.pdf">打开正式财报 PDF</a>
+        <a class="button secondary" href="https://www.nintendo.co.jp/ir/pdf/2026/260806_2e.pdf">打开财报说明材料</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="meta-strip">
+      <div><small>公司 / 股票</small><strong>任天堂 / 东京 7974</strong></div>
+      <div><small>报告类型</small><strong>2027 财年第一季度</strong></div>
+      <div><small>报告期间</small><strong>2026.04.01—06.30</strong></div>
+      <div><small>发布日 / 币种</small><strong>2026.08.06 / 日元</strong></div>
+    </div>
+
+    <nav aria-label="目录">
+      <ol>
+        <li><a href="#business">这是什么生意</a></li>
+        <li><a href="#numbers">核心数字</a></li>
+        <li><a href="#moat">壁垒</a></li>
+        <li><a href="#rivals">竞争对手</a></li>
+        <li><a href="#industry">行业地图</a></li>
+        <li><a href="#statements">三张报表</a></li>
+        <li><a href="#terms">专业名词</a></li>
+        <li><a href="#risks">风险</a></li>
+        <li><a href="#quiz">自测</a></li>
+      </ol>
+    </nav>
+
+    <section id="business">
+      <span class="level">LEVEL 01 · 钱从哪里来</span>
+      <h2>先卖“游乐园门票”，再卖里面的项目</h2>
+      <p class="lede"><span class="analysis">分析判断</span> 可以把 Switch 2 想成一座小游乐园的入口。硬件让玩家进门；游戏、下载内容、会员和角色授权，才让这座乐园持续收钱。</p>
+      <div class="money-map">
+        <article>
+          <h3>① 玩家和家庭付钱</h3>
+          <ul>
+            <li>买 Switch 2、Switch 和配件</li>
+            <li>买实体或下载版游戏</li>
+            <li>买追加内容、订阅在线会员</li>
+          </ul>
+        </article>
+        <div class="arrow" aria-hidden="true">→</div>
+        <article>
+          <h3>② 任天堂搭平台</h3>
+          <ul>
+            <li>研发游戏机和第一方游戏</li>
+            <li>经营数字商店和 Nintendo Account</li>
+            <li>让其他游戏公司在平台卖游戏并收取分成</li>
+          </ul>
+        </article>
+        <div class="arrow" aria-hidden="true">→</div>
+        <article>
+          <h3>③ 角色继续赚钱</h3>
+          <ul>
+            <li>电影、商品和官方商店</li>
+            <li>授权合作与移动业务</li>
+            <li>成功作品又把人带回游戏</li>
+          </ul>
+        </article>
+      </div>
+      <p class="big-rule"><span class="fact">财报原文中的事实</span> 本季度专用游戏平台收入为 <strong>4,830 亿日元</strong>，约占总收入 <strong>93.3%</strong>；IP 相关等收入为 <strong>348 亿日元</strong>，约占 <strong>6.7%</strong>。任天堂按一个经营分部披露，因此没有公布每个角色、每款游戏各赚多少钱。</p>
+      <div class="split">
+        <div>
+          <h3>生意怎样变成利润</h3>
+          <p>先收进卖机器、游戏和服务的钱，减去芯片、屏幕、代工、运输、关税等直接成本，得到<strong>毛利润</strong>；再减去研发、广告和管理费用，才得到<strong>营业利润</strong>。</p>
+          <p><span class="analysis">分析判断</span> 这季度软件占比上升，是利润率改善的重要原因之一。软件复制一份的成本通常远低于再造一台游戏机。</p>
+        </div>
+        <div>
+          <h3>玩家正在买什么</h3>
+          <div class="bar-table">
+            <div class="bar-row"><span>游戏平台</span><span class="bar-track"><span class="bar bar-933"></span></span><strong>93.3%</strong></div>
+            <div class="bar-row"><span>IP 等业务</span><span class="bar-track"><span class="bar green bar-067"></span></span><strong>6.7%</strong></div>
+          </div>
+          <p class="fine">占比按本季度收入 5,178.13 亿日元计算。图中宽度只是帮助理解。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers">
+      <span class="level">LEVEL 02 · 这期成绩</span>
+      <h2>收入少了，利润却猛增：先别急着欢呼</h2>
+      <p><span class="fact">财报原文中的事实</span> 以下均为截至 2026 年 6 月 30 日的三个月，与上年同期比较；金额为日元。</p>
+      <div class="numbers">
+        <article class="number"><small>净销售额</small><b>5,178亿</b><strong class="down">同比 −9.5%</strong><p>去年同期正逢 Switch 2 首发，比较基数很高。</p></article>
+        <article class="number"><small>营业利润</small><b>1,426亿</b><strong class="up">同比 +150.5%</strong><p>毛利率改善，且有关税退款和汇率帮助。</p></article>
+        <article class="number"><small>归母净利润</small><b>1,474亿</b><strong class="up">同比 +53.5%</strong><p>还包括联营企业收益、汇兑收益和利息收入。</p></article>
+        <article class="number"><small>营业利润率</small><b>27.5%</b><strong class="up">去年同期 9.9%</strong><p>每收 100 日元，主营经营约留下 27.5 日元。</p></article>
+        <article class="number"><small>数字销售额</small><b>1,327亿</b><strong class="up">同比 +90.0%</strong><p>占游戏软件销售额 61.5%，同比提高 2.2 个百分点。</p></article>
+      </div>
+      <div class="boss-box">
+        <h3>本期最值得关注的一件事：利润有“三个助推器”</h3>
+        <p><span class="fact">财报原文中的事实</span> 任天堂收到约 <strong>3 亿美元</strong>的美国 IEEPA 关税退款，并冲减了销售成本；汇率变化又给净销售额带来约 <strong>390 亿日元</strong>、给营业利润带来约 <strong>222 亿日元</strong>的正面影响。同时，收入结构从硬件向软件倾斜：硬件占游戏平台收入由 78.8% 降到 55.3%，第一方软件占软件销量由 64.8% 升至 82.6%。</p>
+        <p><span class="analysis">分析判断</span> 所以营业利润增长不是一个原因造成的。软件结构改善更像生意质量变化；关税退款则是一次性因素，不能简单按这个速度推算以后季度。</p>
+      </div>
+      <table>
+        <thead><tr><th>玩家活动</th><th>本季度</th><th>同比</th><th>读法</th></tr></thead>
+        <tbody>
+          <tr><td>Switch 2 硬件销量</td><td>382 万台</td><td>−34.4%</td><td>去年是上市首季，高基数很难超过</td></tr>
+          <tr><td>Switch 2 软件销量</td><td>946 万份</td><td>+9.2%</td><td>机器装进家庭后，软件仍可继续卖</td></tr>
+          <tr><td>Switch 软件销量</td><td>3,381 万份</td><td>+38.6%</td><td>老平台和兼容游戏仍有生命力</td></tr>
+          <tr><td>《朋友聚会 梦想生活》出货</td><td>794 万份</td><td>新作</td><td>爆款第一方游戏会明显改变单季成绩</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="moat">
+      <span class="level">LEVEL 03 · 护城河</span>
+      <h2>真正难复制的，不是塑料盒子，而是一整套快乐记忆</h2>
+      <div class="moat-track">
+        <article><h3>角色与作品</h3><p>马力欧、塞尔达、动物森友会等作品积累多年。玩家买的不是参数，而是只有这里能玩的体验。</p></article>
+        <article><h3>软硬一体</h3><p>同一家公司一起设计机器、系统和游戏，能围绕玩法取舍，而不只追求算力。</p></article>
+        <article><h3>玩家基础</h3><p>截至 2026 年 6 月的一年，年度游玩用户约 1.3 亿。Nintendo Account 和兼容设计帮助玩家换代。</p></article>
+        <article><h3>开发者与商店</h3><p>玩家多，游戏公司更愿意来；游戏多，玩家更愿意买机器。这是两边互相吸引。</p></article>
+        <article><h3>家庭品牌</h3><p>长期的亲子和合家欢形象，让家长更容易信任，但一次差的作品或安全问题也会伤害它。</p></article>
+      </div>
+      <p class="big-rule"><span class="analysis">分析判断</span> 护城河很强，但不是永远安全。玩家可以同时拥有手机、电脑和其他主机，娱乐时间也会被短视频、影视和社交平台抢走。任天堂必须持续做出真正好玩的游戏。</p>
+    </section>
+
+    <section id="rivals">
+      <span class="level">LEVEL 04 · 谁在竞争</span>
+      <h2>它争夺的不只是主机销量，更是人的空闲时间</h2>
+      <div class="competitors">
+        <article class="rival"><div><h3>Sony PlayStation</h3><p>强在高性能家用主机、庞大的第三方游戏阵容、工作室和订阅服务。它与任天堂争夺客厅娱乐时间，但产品路线更偏重高画质大作。</p></div></article>
+        <article class="rival"><div><h3>Microsoft Xbox</h3><p>强在 Xbox、Game Pass、Windows、云端和跨设备生态，还拥有动视暴雪与 Minecraft 等内容。它更强调“游戏在哪里都能玩”。</p></div></article>
+        <article class="rival"><div><h3>Tencent Games</h3><p>强在手机与电脑游戏、长期运营型游戏，以及中国和国际市场的发行与投资网络。它主要争夺玩家时间和游戏内容。</p></div></article>
+        <article class="rival"><div><h3>Valve Steam</h3><p>强在电脑数字商店、海量游戏、社区和 Steam Deck。它让玩家用开放的电脑生态获得大量选择。</p></div></article>
+      </div>
+      <p><span class="context">外部背景资料</span> 竞争特点根据各公司官方报告与平台介绍整理，资料链接见文末。这里不是排名：不同平台在硬件、内容、订阅、电脑或移动端各有优势。</p>
+    </section>
+
+    <section id="industry">
+      <span class="level">LEVEL 05 · 行业地图</span>
+      <h2>电子游戏是一门“爆款 + 平台 + 长周期”的生意</h2>
+      <div class="industry-chain">
+        <span>芯片、屏幕等零件</span><i>→</i><span>代工与物流</span><i>→</i><span>任天堂平台</span><i>→</i><span>自研及第三方游戏</span><i>→</i><span>商店与零售</span><i>→</i><span>玩家</span>
+      </div>
+      <div class="split">
+        <div>
+          <h3>现在处在什么阶段？</h3>
+          <p><span class="analysis">分析判断</span> 整体游戏行业已是成熟的大行业，但每一代主机会重新经历“上市—普及—成熟—换代”的周期。Switch 2 上市一年后，硬件进入与首发高峰比较的阶段；软件、会员和 IP 延伸的重要性上升。</p>
+          <p><span class="fact">财报原文中的事实</span> 任天堂预计截至 2027 年 3 月的全年销售额为 2.05 万亿日元，同比下降 11.4%；营业利润 3,700 亿日元，同比增长 2.7%。这是公司维持不变的预测，不是本报告的预测。</p>
+        </div>
+        <div>
+          <h3>四股重要力量</h3>
+          <ul>
+            <li><strong>数字化：</strong>下载、追加内容和订阅让购买更方便。</li>
+            <li><strong>跨代兼容：</strong>旧游戏和账号能减轻换机阻力。</li>
+            <li><strong>IP 跨媒体：</strong>电影、商品与乐园扩大角色影响力。</li>
+            <li><strong>成本压力：</strong>存储芯片、关税与汇率会改变硬件利润。</li>
+          </ul>
+        </div>
+      </div>
+      <p><span class="fact">财报原文中的事实</span> 公司估计，内存等零部件涨价和关税措施会给本财年带来约 <strong>1,000 亿日元</strong>影响；计划在京都建设的技术开发中心目前预计建设成本约 <strong>1,210 亿日元</strong>，计划 2029 年 3 月完工。</p>
+    </section>
+
+    <section id="statements">
+      <span class="level">LEVEL 06 · 三张报表</span>
+      <h2>成绩单、家底照、现金日记，三张要分开看</h2>
+      <div class="statements">
+        <article class="statement">
+          <h3>利润表：这期赚得怎样</h3>
+          <p class="formula">收入 5,178.13 亿<br>− 销售成本 2,364.17 亿<br>= 毛利润 2,813.96 亿<br>− 销管费 1,388.00 亿<br>= 营业利润 1,425.96 亿日元</p>
+          <p>它像一张三个月成绩单。毛利率从 32.3% 升到 54.3%，但要记住其中有约 3 亿美元关税退款。</p>
+        </article>
+        <article class="statement">
+          <h3>资产负债表：这天家底怎样</h3>
+          <p>截至 2026 年 6 月 30 日：总资产 <strong>3.816 万亿</strong>、总负债 <strong>8,969 亿</strong>、净资产 <strong>2.919 万亿日元</strong>，自己拥有的家底远大于欠的钱。</p>
+          <p>现金及存款 <strong>1.544 万亿</strong>；存货 <strong>6,180 亿</strong>，比三个月前增加 14.5%。存货能支持销售，也可能在需求判断错时积压。</p>
+        </article>
+        <article class="statement">
+          <h3>现金流量表：钱真的怎么走</h3>
+          <p><strong>本季度没有编制现金流量表。</strong>这是财报明确说明的，不能拿利润冒充现金。</p>
+          <p>只作学习参照：截至 2026 年 3 月的完整财年，经营现金流入 2,897.89 亿，购置固定及无形资产支出 271.69 亿，简单相减为 2,626.20 亿日元。注意：这是另一个期间。</p>
+        </article>
+      </div>
+      <p class="fine">表中单位均为日元；因原表按百万日元取整，分项相加可能与合计相差 100 万日元。</p>
+    </section>
+
+    <section id="terms">
+      <span class="level">LEVEL 07 · 今日词典</span>
+      <h2>五个词，看懂游戏平台的关键</h2>
+      <div class="terms">
+        <article class="term"><strong>装机量（installed base）</strong><p>已经被玩家买回家、能够运行游戏的机器数量。像一个小区里已经装好的咖啡机越多，后来卖咖啡胶囊的机会越大。</p></article>
+        <article class="term"><strong>第一方 / 第三方软件</strong><p>第一方是平台自己制作或主导的游戏；第三方来自其他游戏公司。像商场既有自营店，也把铺位租给别的品牌。</p></article>
+        <article class="term"><strong>毛利率</strong><p>卖出商品后，扣掉直接成本还剩多少比例。100 元卖一份点心，面粉和包装花 45 元，毛利率就是 55%。还没扣房租、研发等费用。</p></article>
+        <article class="term"><strong>数字销售占比</strong><p>游戏软件销售中，通过下载、追加内容、会员等产生的比例。像买书不再全去书店，也会买电子书和订阅。</p></article>
+        <article class="term"><strong>一次性项目</strong><p>这次出现、以后不一定再有的收入或成本变化。比如学校退回一笔以前多收的费用，会让这个月零花钱变多，却不能当成每月都有。</p></article>
+      </div>
+    </section>
+
+    <section id="events">
+      <span class="level">BONUS · 重要事件</span>
+      <h2>这些事正在改变下一关</h2>
+      <table>
+        <thead><tr><th>事件</th><th>为什么重要</th><th>事实边界</th></tr></thead>
+        <tbody>
+          <tr><td>《朋友聚会 梦想生活》本季度出货 794 万份</td><td>说明第一方爆款能带动软件结构和利润，但下一款是否同样成功不确定。</td><td>财报事实 + 分析判断</td></tr>
+          <tr><td>《超级马力欧银河大电影》推动 IP 等收入增长</td><td>角色可以在游戏之外赚钱，也能把观众带回游戏生态。</td><td>财报事实 + 分析判断</td></tr>
+          <tr><td>美国 IEEPA 关税退款约 3 亿美元</td><td>显著减少本季度销售成本，但不是日常经营重复收入。</td><td>财报事实</td></tr>
+          <tr><td>技术开发中心预计 2029 年 3 月完工</td><td>这是为长期研发准备的重投入，回报要靠未来产品验证。</td><td>财报事实 + 分析判断</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="risks">
+      <span class="level">LEVEL 08 · 可能出什么问题</span>
+      <h2>最大风险不是少卖一台机器，而是没有下一款让人想玩的游戏</h2>
+      <div class="risk-list">
+        <article class="risk"><h3>爆款断档</h3><p>如果重要游戏延期或口碑差，新机器可能吃灰，软件、会员和商店收入都会受影响。</p></article>
+        <article class="risk"><h3>高基数与主机周期</h3><p>上市首年销量特别高，下一年即使表现不错，也可能看起来下降。不能只凭同比数字判断生意突然变差。</p></article>
+        <article class="risk"><h3>成本与供应链</h3><p>内存涨价、关税、代工或物流中断，会让每台机器更贵；若不涨售价，利润会被挤压。</p></article>
+        <article class="risk"><h3>存货判断</h3><p>存货三个月增加 14.5%。备货不足会错失销售，备货太多则可能打折和减值。</p></article>
+        <article class="risk"><h3>汇率</h3><p>海外收入占 77.9%。日元升跌会让换算后的收入和利润变化，即使实际卖出的台数不变。</p></article>
+        <article class="risk"><h3>注意力竞争</h3><p>手机游戏、电脑游戏、其他主机、视频和社交应用，都在争同一份空闲时间。</p></article>
+      </div>
+    </section>
+
+    <section id="remember">
+      <span class="level">SAVE POINT · 今天记住</span>
+      <h2>只带走三句话</h2>
+      <ol class="lede">
+        <li><strong>任天堂卖的不是一台机器，而是由独家角色、游戏、商店和账号组成的生态。</strong></li>
+        <li><strong>收入下降不等于利润一定下降：</strong>硬件与软件的组合、关税退款和汇率，都可能改变利润。</li>
+        <li><strong>区分可持续变化和一次性帮助：</strong>软件占比提高值得长期观察，关税退款不能年年重复。</li>
+      </ol>
+    </section>
+
+    <section id="quiz">
+      <span class="level">CHECKPOINT · 自测</span>
+      <h2>三道题，答完才算通关</h2>
+      <details><summary>1. 为什么销售额下降 9.5%，营业利润却增长 150.5%？</summary><p><strong>答案：</strong>收入结构从硬件转向利润空间通常更好的软件；约 3 亿美元关税退款冲减成本；日元走弱也带来约 222 亿日元营业利润帮助。不能把增长全看成正常经营变强。</p></details>
+      <details><summary>2. 为什么任天堂可能愿意先卖很多游戏机，即使硬件利润不如软件？</summary><p><strong>答案：</strong>机器形成装机量。家里有机器的玩家，之后才可能持续购买游戏、追加内容和会员；第三方开发者也更愿意为玩家多的平台制作游戏。</p></details>
+      <details><summary>3. 为什么不能用截至 2026 年 3 月的经营现金流，直接评价这次 4—6 月季度？</summary><p><strong>答案：</strong>两者期间不同，而且本季度财报没有编制现金流量表。全年数据只能帮助理解，不能冒充季度数据。</p></details>
+    </section>
+
+    <section id="sources" class="sources">
+      <span class="level">SOURCES · 资料来源</span>
+      <h2>每个关键事实，都能回到原文</h2>
+      <ol>
+        <li><a href="https://www.nintendo.co.jp/ir/pdf/2026/260806e.pdf">任天堂：截至 2026 年 6 月 30 日三个月合并财务摘要</a>，2026-08-06。核心财务数据、资产负债表、预测与季度未编现金流量表的说明。</li>
+        <li><a href="https://www.nintendo.co.jp/ir/pdf/2026/260806_2e.pdf">任天堂：2027 财年第一季度财报说明材料</a>，2026-08-06。业务结构、销量、数字销售、关税退款、汇率影响、用户与产品信息。</li>
+        <li><a href="https://www.nintendo.co.jp/ir/pdf/2026/260508e.pdf">任天堂：截至 2026 年 3 月 31 日全年合并财务摘要</a>，2026-05-08。只用于全年现金流学习参照。</li>
+        <li><a href="https://www.nintendo.co.jp/ir/pdf/2026/annual2603e.pdf">任天堂 2026 年年度报告</a>，2026。商业模式、战略与风险背景。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/313838/000119312526274893/d28719d20f.htm">Sony 2025 财年 Form 20-F</a>，2026-06-18。PlayStation 竞争背景。</li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm">Microsoft 2026 财年 Form 10-K</a>，2026-07-29。Xbox、Game Pass 与游戏业务背景。</li>
+        <li><a href="https://static.www.tencent.com/uploads/2026/04/09/62d786fcf3d3c8cb7e54791ee95439ac.pdf">腾讯 2025 年年度报告</a>，2026-04-09。游戏业务与竞争背景。</li>
+        <li><a href="https://store.steampowered.com/about/">Valve：Steam 官方介绍</a>，访问于 2026-08-09。Steam 平台、游戏目录和社区背景。</li>
+      </ol>
+      <p class="fine">口径说明：除特别注明外，季度金额均为日元，期间为 2026 年 4 月 1 日至 6 月 30 日，同比为与 2025 年同期比较；销量为全球 sell-in（向渠道销售）口径。百分比可能因四舍五入略有差异。</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>这是一份商业与财报教育材料，不构成投资建议。</strong>
+      <p class="fine">报告日期：2026-08-09。事实以任天堂正式披露为准；外部背景已单独标注；分析判断可能随行业与公司情况变化。</p>
+    </div>
+  </footer>
+</body>
+</html>

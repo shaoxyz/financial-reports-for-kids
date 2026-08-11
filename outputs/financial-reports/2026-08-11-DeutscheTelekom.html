@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的德国电信 2026 年第二季度财报报告">
+  <title>德国电信：每月收话费，为什么还要不断花大钱？</title>
+  <style>
+    :root {
+      --magenta: #d90072;
+      --deep: #21141c;
+      --paper: #f7f2ed;
+      --white: #fffdf9;
+      --green: #bddd91;
+      --cyan: #a7dfe3;
+      --orange: #ffad69;
+      --muted: #655a61;
+      --line: #3e3038;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--deep);
+      background: var(--paper);
+      font-family: "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+    a { color: #7f0043; text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 4px solid var(--orange); outline-offset: 3px; }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin: 0 auto; }
+    .signal-bar { color: var(--white); background: var(--deep); }
+    .signal-bar .wrap { display: flex; justify-content: space-between; gap: 20px; padding: 9px 0; font-size: .78rem; font-weight: 800; letter-spacing: .08em; }
+    .hero { position: relative; min-height: 660px; padding: clamp(60px, 9vw, 120px) 0 62px; overflow: hidden; }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 530px;
+      height: 530px;
+      right: -240px;
+      top: -85px;
+      border: 46px solid var(--magenta);
+      border-radius: 50%;
+      box-shadow: 0 0 0 46px var(--paper), 0 0 0 86px rgba(217,0,114,.32), 0 0 0 126px var(--paper), 0 0 0 146px rgba(217,0,114,.12);
+    }
+    .kicker { display: inline-flex; align-items: center; gap: 9px; font-size: .78rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .kicker::before { content: ""; width: 14px; height: 14px; background: var(--magenta); border-radius: 50%; box-shadow: 22px 0 0 rgba(217,0,114,.6), 44px 0 0 rgba(217,0,114,.25); margin-right: 44px; }
+    h1, h2, h3 { margin-top: 0; line-height: 1.17; }
+    h1 { position: relative; max-width: 880px; margin: 20px 0 24px; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(2.8rem, 7.6vw, 6.8rem); letter-spacing: -.055em; z-index: 1; }
+    h1 em { color: var(--magenta); font-style: normal; }
+    .hero-copy { position: relative; max-width: 730px; font-size: clamp(1.08rem, 2vw, 1.32rem); z-index: 1; }
+    .hero-actions { position: relative; display: flex; flex-wrap: wrap; gap: 12px; margin: 29px 0 50px; z-index: 1; }
+    .button { display: inline-block; padding: 12px 17px; color: var(--white); background: var(--deep); border: 2px solid var(--deep); font-weight: 800; text-decoration: none; }
+    .button.alt { color: var(--deep); background: transparent; }
+    .sim-card { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); border: 3px solid var(--deep); background: var(--white); box-shadow: 9px 9px 0 var(--magenta); z-index: 1; }
+    .sim-card div { padding: 16px; border-right: 2px dotted var(--line); }
+    .sim-card div:last-child { border-right: 0; }
+    .sim-card small { display: block; color: var(--muted); font-weight: 700; }
+    .sim-card strong { display: block; margin-top: 4px; }
+    nav { border-top: 2px solid var(--deep); border-bottom: 2px solid var(--deep); }
+    nav ol { display: flex; flex-wrap: wrap; gap: 7px 20px; margin: 0; padding: 14px 0; list-style: none; counter-reset: tower; }
+    nav li { counter-increment: tower; }
+    nav li::before { content: counter(tower); display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 6px; color: var(--white); background: var(--magenta); border-radius: 50%; font-size: .7rem; font-weight: 900; }
+    nav a { color: var(--deep); font-size: .84rem; font-weight: 800; text-decoration: none; }
+    section { padding: clamp(50px, 8vw, 88px) 0; border-bottom: 1px solid rgba(33,20,28,.22); }
+    .channel { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 11px; color: var(--magenta); font-size: .74rem; font-weight: 900; letter-spacing: .12em; }
+    .channel::before { content: ""; width: 12px; height: 12px; border: 3px solid var(--magenta); border-radius: 50%; }
+    h2 { max-width: 860px; margin-bottom: 21px; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(2rem, 4.6vw, 3.8rem); letter-spacing: -.035em; }
+    h3 { margin-bottom: 8px; font-size: 1.16rem; }
+    .lede { max-width: 820px; font-size: 1.12rem; }
+    .fact, .context, .analysis { display: inline-block; padding: 1px 7px; border: 1.5px solid currentColor; font-size: .7rem; font-weight: 900; line-height: 1.55; }
+    .fact { color: #00616a; background: #e3f6f7; }
+    .context { color: #496700; background: #eff7df; }
+    .analysis { color: #9e004f; background: #ffe8f3; }
+    .network { display: grid; grid-template-columns: 1fr 64px 1fr 64px 1fr; align-items: center; margin: 34px 0; }
+    .network article { min-height: 245px; padding: 24px; border: 2px solid var(--deep); background: var(--white); }
+    .network article:nth-child(3) { color: var(--white); background: var(--magenta); }
+    .network .pulse { height: 4px; background: var(--magenta); position: relative; }
+    .network .pulse::before, .network .pulse::after { content: ""; position: absolute; top: -6px; width: 13px; height: 13px; border: 2px solid var(--deep); border-radius: 50%; background: var(--paper); }
+    .network .pulse::before { left: -3px; }
+    .network .pulse::after { right: -3px; }
+    .business-mix { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; align-items: start; }
+    .bars { margin: 22px 0; }
+    .bar-row { display: grid; grid-template-columns: 150px 1fr 74px; gap: 11px; align-items: center; margin: 12px 0; }
+    .bar-track { height: 23px; border: 2px solid var(--deep); background: var(--white); }
+    .bar { height: 100%; background: var(--magenta); }
+    .us { width: 65.4%; }
+    .de { width: 21.7%; background: var(--cyan); }
+    .eu { width: 10.6%; background: var(--green); }
+    .sys { width: 3.6%; background: var(--orange); }
+    .signal-note { padding: 24px; color: var(--white); background: var(--deep); }
+    .signal-note strong { color: var(--green); font-size: 1.16rem; }
+    .numbers { display: grid; grid-template-columns: repeat(5, 1fr); border: 2px solid var(--deep); margin: 28px 0; }
+    .number { min-height: 205px; padding: 20px 16px; border-right: 2px solid var(--deep); background: var(--white); }
+    .number:last-child { border-right: 0; }
+    .number:nth-child(2) { background: var(--green); }
+    .number:nth-child(4) { background: #ffe1ef; }
+    .number b { display: block; margin: 11px 0 5px; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.5rem); line-height: 1; }
+    .up { color: #416500; }
+    .down { color: #9e004f; }
+    .core-question { margin: 30px 0; padding: 28px; border: 4px double var(--magenta); background: var(--white); }
+    .core-question h3 { color: var(--magenta); }
+    table { width: 100%; margin: 24px 0; border-collapse: collapse; background: var(--white); }
+    th, td { padding: 12px 10px; border: 1.5px solid var(--deep); text-align: left; vertical-align: top; }
+    th { color: var(--white); background: var(--deep); }
+    .split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(30px, 5vw, 65px); align-items: start; }
+    .moat { position: relative; margin: 0 0 24px; padding: 0 0 24px 42px; border-bottom: 1px solid rgba(33,20,28,.28); }
+    .moat::before { content: ""; position: absolute; left: 0; top: 2px; width: 23px; height: 23px; background: var(--magenta); border-radius: 50%; box-shadow: 0 0 0 6px var(--paper), 0 0 0 8px var(--magenta); }
+    .rival { display: grid; grid-template-columns: 105px 1fr; gap: 20px; padding: 23px 0; border-bottom: 2px dotted var(--deep); }
+    .rival strong { display: grid; place-items: center; min-height: 68px; padding: 9px; color: var(--white); background: var(--deep); text-align: center; }
+    .industry-chain { display: grid; grid-template-columns: repeat(6, 1fr); gap: 9px; margin: 28px 0; }
+    .industry-chain div { min-height: 115px; display: grid; place-items: center; padding: 12px; border: 2px solid var(--deep); background: var(--white); text-align: center; font-weight: 800; position: relative; }
+    .industry-chain div:nth-child(2), .industry-chain div:nth-child(5) { background: #ffe1ef; }
+    .industry-chain div:not(:last-child)::after { content: "→"; position: absolute; right: -17px; z-index: 2; }
+    .statements { display: grid; grid-template-columns: repeat(3, 1fr); border: 2px solid var(--deep); }
+    .statement { padding: 24px; border-right: 2px solid var(--deep); background: var(--white); }
+    .statement:last-child { border-right: 0; }
+    .statement:nth-child(2) { background: #e8f6f7; }
+    .formula { padding: 12px; color: var(--white); background: var(--deep); font-size: .86rem; font-weight: 700; }
+    .capex-flow { display: grid; grid-template-columns: 1fr 55px 1fr 55px 1fr; align-items: center; margin-top: 30px; }
+    .capex-flow article { padding: 21px; border: 2px solid var(--deep); background: var(--white); }
+    .capex-flow i { text-align: center; color: var(--magenta); font-size: 1.7rem; font-style: normal; font-weight: 900; }
+    .terms { columns: 2; column-gap: 38px; }
+    .term { break-inside: avoid; margin-bottom: 23px; padding-top: 14px; border-top: 5px solid var(--magenta); }
+    .term strong { display: block; margin-bottom: 6px; color: var(--magenta); font-size: 1.08rem; }
+    .event { display: grid; grid-template-columns: .9fr 1.1fr; border: 3px solid var(--deep); }
+    .event-figure { display: grid; place-items: center; padding: 28px; color: var(--white); background: var(--magenta); text-align: center; }
+    .event-figure b { display: block; font-family: "Songti SC", "STSong", Georgia, serif; font-size: clamp(2.8rem, 7vw, 5.6rem); line-height: 1; }
+    .event-copy { padding: 28px; background: var(--white); }
+    .risks { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .risk { padding: 22px; background: var(--white); border-top: 7px solid var(--magenta); }
+    .risk:nth-child(3n) { border-color: var(--orange); }
+    .remember { color: var(--white); background: var(--deep); }
+    .remember .channel, .remember h2 { color: var(--white); }
+    .remember .channel::before { border-color: var(--green); }
+    .remember ol { max-width: 800px; font-size: 1.13rem; }
+    details { margin: 12px 0; border: 2px solid var(--deep); background: var(--white); }
+    summary { padding: 16px 18px; cursor: pointer; font-weight: 800; }
+    details p { margin: 0; padding: 0 18px 18px; }
+    .sources li { margin-bottom: 11px; overflow-wrap: anywhere; }
+    .fine { color: var(--muted); font-size: .84rem; }
+    footer { padding: 38px 0; color: var(--white); background: var(--magenta); }
+    footer .fine { color: #ffe6f2; }
+    @media (max-width: 860px) {
+      .sim-card { grid-template-columns: 1fr 1fr; }
+      .sim-card div:nth-child(2) { border-right: 0; }
+      .sim-card div:nth-child(-n+2) { border-bottom: 2px dotted var(--line); }
+      .network { grid-template-columns: 1fr; }
+      .network .pulse { width: 4px; height: 46px; margin: auto; }
+      .network .pulse::before, .network .pulse::after { left: -6px; }
+      .network .pulse::before { top: -3px; }
+      .network .pulse::after { top: auto; bottom: -3px; right: auto; }
+      .network article { min-height: auto; }
+      .business-mix, .split, .event { grid-template-columns: 1fr; }
+      .numbers { grid-template-columns: 1fr 1fr; }
+      .number:nth-child(even) { border-right: 0; }
+      .number:nth-child(-n+4) { border-bottom: 2px solid var(--deep); }
+      .number:last-child { grid-column: 1 / -1; min-height: auto; }
+      .industry-chain { grid-template-columns: 1fr 1fr 1fr; }
+      .industry-chain div:nth-child(3)::after { content: ""; }
+      .statements { grid-template-columns: 1fr; }
+      .statement { border-right: 0; border-bottom: 2px solid var(--deep); }
+      .statement:last-child { border-bottom: 0; }
+      .capex-flow { grid-template-columns: 1fr; }
+      .capex-flow i { transform: rotate(90deg); }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 22px, 1100px); }
+      .signal-bar .wrap { display: block; }
+      .signal-bar span { display: block; }
+      .hero { min-height: auto; padding-top: 48px; }
+      .hero::before { width: 220px; height: 220px; right: -150px; border-width: 25px; }
+      h1 { font-size: 2.65rem; }
+      .sim-card, .numbers, .risks { grid-template-columns: 1fr; }
+      .sim-card div, .number { border-right: 0; border-bottom: 2px dotted var(--line); }
+      .sim-card div:last-child, .number:last-child { border-bottom: 0; }
+      .number:last-child { grid-column: auto; }
+      .bar-row { grid-template-columns: 1fr 70px; }
+      .bar-track { grid-column: 1 / -1; grid-row: 2; }
+      .rival { grid-template-columns: 1fr; gap: 10px; }
+      .industry-chain { grid-template-columns: 1fr; }
+      .industry-chain div:not(:last-child)::after { content: "↓"; right: 50%; bottom: -25px; }
+      .terms { columns: 1; }
+      th, td { padding: 9px 7px; font-size: .84rem; }
+    }
+    @media print { body { background: white; } .sim-card { box-shadow: none; } }
+  </style>
+</head>
+<body>
+  <div class="signal-bar"><div class="wrap"><span>CONNECTIVITY LAB · 第 18 站</span><span>2026-08-11 · 约 15 分钟</span></div></div>
+  <header class="hero"><div class="wrap">
+    <div class="kicker">Deutsche Telekom · XETRA: DTE · Q2 2026</div>
+    <h1>每月稳定收话费，<br>为什么还要不断<em>花大钱</em>？</h1>
+    <p class="hero-copy">德国电信卖的是“连接”：手机信号、家庭宽带、电视和企业网络。客户每月付费，收入很稳定；但为了让更多人在更多地方用得更快，公司必须持续铺光纤、建基站、买频谱。</p>
+    <div class="hero-actions"><a class="button" href="https://www.telekom.com/resource/blob/1106158/4167d459d500d4e4e5c4c94f2f430c97/dt-26q2-interim-report-data.pdf">打开正式中期报告</a><a class="button alt" href="https://www.telekom.com/resource/blob/1106164/d3a5c94a5370554cb4853d4693760e81/dt-26q2-presentation-data.pdf">打开官方说明材料</a></div>
+    <div class="sim-card"><div><small>公司 / 股票</small><strong>德国电信 / XETRA: DTE</strong></div><div><small>报告类型</small><strong>2026 上半年中期报告</strong></div><div><small>重点期间</small><strong>Q2：2026.04.01—06.30</strong></div><div><small>发布日 / 币种</small><strong>2026.08.06 / 欧元</strong></div></div>
+  </div></header>
+
+  <nav><div class="wrap"><ol><li><a href="#business">怎么赚钱</a></li><li><a href="#numbers">核心数字</a></li><li><a href="#moat">壁垒</a></li><li><a href="#rivals">竞争对手</a></li><li><a href="#industry">行业</a></li><li><a href="#statements">三张报表</a></li><li><a href="#terms">名词</a></li><li><a href="#risks">风险</a></li><li><a href="#quiz">自测</a></li></ol></div></nav>
+
+  <main>
+    <section id="business"><div class="wrap">
+      <span class="channel">CHANNEL 01 · 钱从哪里来</span>
+      <h2>先铺一张昂贵的网，再把连接按月卖给很多人</h2>
+      <p class="lede"><span class="analysis">分析判断</span> 可以把通信网络想成城市自来水管。建设水管很贵，但铺好后，每多服务一个家庭，不必重新铺一整套管道。德国电信用长期网络投入，换取多年重复收费。</p>
+      <div class="network"><article><h3>公司先建设</h3><ul><li>购买无线频谱使用权</li><li>铺光纤、建基站和数据中心</li><li>维护客服、计费和网络安全</li></ul></article><div class="pulse"></div><article><h3>客户按月付费</h3><ul><li>手机套餐和数据流量</li><li>家庭宽带、电视和固定电话</li><li>企业云、网络与信息技术服务</li></ul></article><div class="pulse"></div><article><h3>现金继续循环</h3><ul><li>支付日常运营与利息</li><li>继续升级光纤和 5G</li><li>偿还债务、分红或回购股票</li></ul></article></div>
+      <div class="business-mix"><div><h3>本季度收入主要来自哪里</h3><div class="bars"><div class="bar-row"><span>美国 T-Mobile US</span><span class="bar-track"><span class="bar us"></span></span><strong>65.4%</strong></div><div class="bar-row"><span>德国</span><span class="bar-track"><span class="bar de"></span></span><strong>21.7%</strong></div><div class="bar-row"><span>其他欧洲</span><span class="bar-track"><span class="bar eu"></span></span><strong>10.6%</strong></div><div class="bar-row"><span>企业系统服务</span><span class="bar-track"><span class="bar sys"></span></span><strong>3.6%</strong></div></div><p class="fine">占比按各分部 Q2 收入除以集团收入 299.33 亿欧元估算；集团总部收入及分部内部交易抵销使各项合计不会正好等于 100%。</p></div><aside class="signal-note" aria-label="美国业务说明"><strong>最容易误解的一点</strong><p>名字叫“德国电信”，但约三分之二季度收入来自美国业务 T-Mobile US。德国电信截至 2026 年 7 月 17 日持有 T-Mobile US 54.3% 股份，因此会把其财务数据并入集团报表。</p></aside></div>
+      <p><span class="fact">财报原文中的事实</span> Q2 服务收入为 <strong>254.06 亿欧元</strong>，占总收入约 84.9%。服务收入主要是手机、宽带等持续收费，比卖一部手机更能反映这门生意的稳定程度。</p>
+    </div></section>
+
+    <section id="numbers"><div class="wrap">
+      <span class="channel">CHANNEL 02 · 这期成绩</span>
+      <h2>服务在增长，但“调整后利润”和真实净利润方向不同</h2>
+      <p><span class="fact">财报原文中的事实</span> 以下为 2026 年第二季度，与 2025 年同期比较；金额均为欧元。</p>
+      <div class="numbers"><article class="number"><small>总收入</small><b>299.33亿</b><strong class="up">同比 +4.4%</strong><p>有机口径增长 3.3%。</p></article><article class="number"><small>服务收入</small><b>254.06亿</b><strong class="up">同比 +4.8%</strong><p>按新定义重述了上年数据。</p></article><article class="number"><small>营业利润 EBIT</small><b>68.63亿</b><strong class="up">同比 +3.3%</strong><p>主营经营扣除折旧后留下的钱。</p></article><article class="number"><small>净利润</small><b>24.50亿</b><strong class="down">同比 −6.3%</strong><p>调整后净利润反而增长 11.1%。</p></article><article class="number"><small>自由现金流 AL</small><b>50.27亿</b><strong class="up">同比 +3.1%</strong><p>公司定义，扣除租赁本金等。</p></article></div>
+      <div class="core-question"><h3>本期最值得关注：为什么净利润下降，调整后净利润却上升？</h3><p><span class="fact">财报原文中的事实</span> Q2 净利润为 24.50 亿欧元，同比下降 6.3%；排除公司认定的特殊因素后，调整后净利润为 27.84 亿欧元，同比增长 11.1%。半年净利润下降主要受到美国重组和整合费用等影响，上年同期还受益于资产出售账面收益。</p><p><span class="analysis">分析判断</span> 调整后指标能帮助比较日常经营，但不能代替真实利润。最稳妥的读法是两者一起看，并弄清公司排除了什么。</p></div>
+      <table><thead><tr><th>经营指标</th><th>2026-06-30</th><th>变化</th><th>说明</th></tr></thead><tbody><tr><td>德国与欧洲移动客户</td><td>1.237 亿</td><td>同比 +2.1%</td><td>包括合约、预付费及部分机器连接</td></tr><tr><td>德国与欧洲宽带客户</td><td>2,280 万</td><td>同比 +2.0%</td><td>不含批发客户</td></tr><tr><td>美国后付费账户</td><td>3,470 万</td><td>较 2025 年底 +1.3%</td><td>一个账户可能包含多个用户</td></tr><tr><td>德国及欧洲光纤覆盖家庭</td><td>2,530 万户</td><td>同比增加 350 万户</td><td>表示可以接入，不等于已经付费使用</td></tr></tbody></table>
+    </div></section>
+
+    <section id="moat"><div class="wrap">
+      <span class="channel">CHANNEL 03 · 壁垒与护城河</span>
+      <h2>最难复制的是埋在地下、立在城市里、还要拿到许可的网络</h2>
+      <div class="split"><div><article class="moat"><h3>频谱牌照</h3><p>无线频谱像空中的专用车道，数量有限，需要监管机构分配或拍卖。没有足够频谱，很难提供稳定的大规模移动服务。</p></article><article class="moat"><h3>光纤与基站规模</h3><p>铺设需要大量资金、施工许可和多年时间。网络覆盖越广，固定成本可以由更多客户共同承担。</p></article><article class="moat"><h3>客户关系和组合套餐</h3><p>手机、宽带、电视放在同一家，换运营商会更麻烦。账单、号码、设备和家庭成员也增加转换成本。</p></article><article class="moat"><h3>T-Mobile US 的规模</h3><p>德国电信不只靠德国市场，而是通过控股 T-Mobile US 参与庞大的美国移动通信市场。</p></article></div><aside class="signal-note" aria-label="护城河边界"><strong>壁垒很高，不等于可以随意涨价</strong><p>通信服务高度标准化。只要网络质量接近，客户仍会比较价格；监管机构也会管理频谱、竞争、隐私和网络开放。</p></aside></div>
+    </div></section>
+
+    <section id="rivals"><div class="wrap">
+      <span class="channel">CHANNEL 04 · 谁在竞争</span>
+      <h2>每个国家都有本地强手，还要防着新技术绕路</h2>
+      <div><article class="rival"><strong>Verizon</strong><div><h3>美国移动与宽带</h3><p>网络覆盖、企业客户和品牌强，是 T-Mobile US 的直接对手；也在扩大固定无线和光纤宽带。</p></div></article><article class="rival"><strong>AT&amp;T</strong><div><h3>美国无线与光纤</h3><p>同时经营手机和大规模光纤网络，能把家庭宽带与手机套餐组合销售。</p></div></article><article class="rival"><strong>Vodafone</strong><div><h3>欧洲多国运营</h3><p>在德国及多个欧洲市场拥有移动与固定网络，是德国电信最直接的区域对手之一。</p></div></article><article class="rival"><strong>Telefónica / O2</strong><div><h3>德国、西班牙与拉美</h3><p>在德国以 O2 品牌竞争，强项是移动客户规模和不同价位套餐。</p></div></article><article class="rival"><strong>Orange</strong><div><h3>欧洲与非洲</h3><p>在法国、西班牙、波兰等市场拥有移动、光纤和企业通信业务。</p></div></article></div>
+      <p><span class="context">外部背景资料</span> 对手特点根据各公司官方财报及投资者资料整理，链接见文末；这里不做简单排名。卫星互联网、虚拟运营商和有线电视公司也在部分市场争夺客户。</p>
+    </div></section>
+
+    <section id="industry"><div class="wrap">
+      <span class="channel">CHANNEL 05 · 行业地图与趋势</span>
+      <h2>通信是一门成熟行业，但网络永远没有“建完”的一天</h2>
+      <div class="industry-chain"><div>芯片、光缆与设备商</div><div>频谱与监管许可</div><div>电信运营商建设网络</div><div>手机厂商与渠道</div><div>家庭和企业客户</div><div>云、视频与应用服务</div></div>
+      <div class="split"><div><h3>行业现在是什么状态？</h3><p><span class="analysis">分析判断</span> 手机连接在发达市场已很成熟，客户总量不会无限增长。运营商更多依靠提高套餐价值、增加光纤和融合客户、降低流失率来增长。</p><p>需求由视频、云服务、远程办公、人工智能和更多联网设备推动；但每一代技术升级都要求新的资本投入。</p></div><div><h3>目前三条重要趋势</h3><ul><li><strong>光纤替换铜线：</strong>速度更快、长期维护效率更高，但前期施工昂贵。</li><li><strong>5G 覆盖与容量：</strong>不只要“有信号”，还要在人多时保持速度。</li><li><strong>网络与人工智能：</strong>AI 增加数据中心和连接需求，也帮助客服、运维和网络规划。</li></ul></div></div>
+    </div></section>
+
+    <section id="statements"><div class="wrap">
+      <span class="channel">CHANNEL 06 · 三张报表</span>
+      <h2>通信公司的秘密藏在资产、折旧、现金和债务之间</h2>
+      <div class="statements"><article class="statement"><h3>利润表：Q2 成绩</h3><p class="formula">收入 299.33 亿<br>− 日常费用与折旧等<br>= 营业利润 68.63 亿<br>− 财务费用、税等<br>= 净利润 24.50 亿欧元</p><p>网络设备不是买来当期全部扣掉，而是多年计提折旧，所以 EBITDA 与最终净利润差别很大。</p></article><article class="statement"><h3>资产负债表：半年末家底</h3><p>截至 2026-06-30，总资产 <strong>2,913.44 亿</strong>、股东权益 <strong>887.83 亿</strong>欧元。</p><p>有形设备 645.60 亿、无形资产 1,368.08 亿欧元。无形资产包括频谱、商誉等。净债务为 <strong>1,383.87 亿欧元</strong>。</p></article><article class="statement"><h3>现金流量表：Q2 钱去哪</h3><p class="formula">经营现金流 102.42 亿<br>− 资本投入 44.30 亿<br>+ 资产处置等调整<br>= 公司口径自由现金流 62.74 亿<br>− 租赁本金等<br>= FCF AL 50.27 亿欧元</p><p>频谱支出 4.26 亿另行剔除，不能把 FCF AL 简单理解成银行账户最终增加额。</p></article></div>
+      <div class="capex-flow"><article><h3>今天收话费</h3><p>服务收入提供相对稳定的现金。</p></article><i>→</i><article><h3>投入网络</h3><p>Q2 不含频谱的现金资本支出 40.04 亿欧元。</p></article><i>→</i><article><h3>未来继续收费</h3><p>更快、更广的网络帮助留住客户并承载更多数据。</p></article></div>
+      <p class="fine">现金流桥接数字来自正式中期报告第 25 页。FCF AL 为公司定义指标，需与 IFRS 经营现金流同时阅读。</p>
+    </div></section>
+
+    <section id="terms"><div class="wrap">
+      <span class="channel">CHANNEL 07 · 今日专业名词</span>
+      <h2>五个词，看懂“重资产、月月收费”</h2>
+      <div class="terms"><article class="term"><strong>服务收入</strong><p>手机套餐、宽带等持续服务带来的收入，不包括一次性卖手机等。像健身房月卡，比卖一瓶水更能代表长期会员生意。</p></article><article class="term"><strong>现金资本支出 Cash Capex</strong><p>真正花出去建设或购买长期资产的现金。像学校花钱建新操场，不是当月用完，而是未来很多年使用。</p></article><article class="term"><strong>频谱</strong><p>手机信号使用的“空中车道”。不同运营商要获得特定频段的使用权，避免大家在同一条车道互相干扰。</p></article><article class="term"><strong>EBITDA AL</strong><p>公司用来观察经营能力的指标：在利息、税、折旧等之前，再扣除租赁影响。像先看一家店卖东西和日常运营产生多少成果，但它不是最终利润。</p></article><article class="term"><strong>净债务与杠杆</strong><p>有息债务减去可用现金等；杠杆则比较债务和赚钱能力。像家庭房贷很大并不一定危险，还要看收入是否稳定、每月能否还款。</p></article></div>
+    </div></section>
+
+    <section id="events"><div class="wrap">
+      <span class="channel">BOOSTER · 重要事件</span>
+      <h2>公司在加快光纤覆盖，也在把更多钱返还股东</h2>
+      <div class="event"><div class="event-figure"><div><b>2,530万</b><strong>德国及欧洲可接入光纤的家庭</strong></div></div><div class="event-copy"><p><span class="fact">财报原文中的事实</span> 同比增加 350 万户；德国一年新增约 250 万个覆盖家庭。覆盖不等于付费使用，真正的回报取决于多少家庭接入、每月付多少钱以及维护成本。</p><p>公司上半年已回购 10 亿欧元股票，并把 2026 年股票回购额度提高到最多 50 亿欧元。</p><p><span class="analysis">分析判断</span> 网络投资、还债、分红和回购都争夺同一份现金。稳定经营现金流让公司有选择，但高债务意味着不能只看“返还股东”而忽略资产负债表。</p></div></div>
+    </div></section>
+
+    <section id="risks"><div class="wrap">
+      <span class="channel">CHANNEL 08 · 可能出什么问题</span>
+      <h2>最大风险：花了很多钱，却没有换来足够多愿意付费的客户</h2>
+      <div class="risks"><article class="risk"><h3>投资回报不够</h3><p>光纤和 5G 建设先花钱。如果覆盖家庭不接入、客户不愿升级套餐，资产可能很难赚回预期回报。</p></article><article class="risk"><h3>价格战与客户流失</h3><p>对手用低价、送手机或促销抢人，德国电信必须在价格、网络质量和利润之间取舍。</p></article><article class="risk"><h3>债务与利率</h3><p>净债务约 1,384 亿欧元。利率上升或评级下降会增加再融资成本，也会挤压网络投资与分红空间。</p></article><article class="risk"><h3>过度依赖美国业务</h3><p>T-Mobile US 贡献约三分之二收入。美国竞争、监管、美元汇率和整合成本都会明显影响集团。</p></article><article class="risk"><h3>网络故障和攻击</h3><p>通信是重要基础设施。大规模断网、数据泄露或网络攻击会带来赔偿、监管处罚和声誉损失。</p></article><article class="risk"><h3>技术绕开传统网络</h3><p>卫星互联网、虚拟运营商或新的连接方式可能抢走部分客户，传统网络必须持续升级。</p></article></div>
+    </div></section>
+
+    <section id="remember" class="remember"><div class="wrap"><span class="channel">SIGNAL LOCKED · 今天记住</span><h2>三句话接通整份财报</h2><ol><li><strong>德国电信先重金建设网络，再靠手机、宽带等月费长期收钱。</strong></li><li><strong>约三分之二季度收入来自美国 T-Mobile US，名字里的“德国”不是全部生意。</strong></li><li><strong>调整后利润增长、真实净利润下降并不矛盾；要看清排除的特殊费用，同时检查现金流和债务。</strong></li></ol></div></section>
+
+    <section id="quiz"><div class="wrap"><span class="channel">FINAL CHECK · 自测</span><h2>三道题，检查信号是否清楚</h2><details><summary>1. 为什么通信公司收入稳定，仍然需要每年投入巨额资金？</summary><p><strong>答案：</strong>网络会老化，数据需求持续增长，还要铺光纤、扩大 5G 容量并购买频谱。停止投入可能让速度和覆盖落后，客户就会转向对手。</p></details><details><summary>2. 为什么净利润下降 6.3%，调整后净利润却增长 11.1%？</summary><p><strong>答案：</strong>调整后指标排除了公司认定的重组、整合等特殊因素。它适合比较日常经营，但真实发生的费用仍会影响股东最终得到的利润。</p></details><details><summary>3. 光纤“覆盖 2,530 万户”是否等于拥有 2,530 万付费光纤客户？</summary><p><strong>答案：</strong>不是。覆盖只表示这些家庭可以接入；真正回报还要看有多少家庭选择安装并持续付费。</p></details></div></section>
+
+    <section id="sources" class="sources"><div class="wrap"><span class="channel">SOURCES · 资料来源</span><h2>关键事实可以回到原文</h2><ol><li><a href="https://www.telekom.com/resource/blob/1106158/4167d459d500d4e4e5c4c94f2f430c97/dt-26q2-interim-report-data.pdf">Deutsche Telekom Interim Group Report H1 2026</a>，2026-08-06。正式中期报告；核心数据见第 3 页，利润与分部见第 15—20 页，资产负债表见第 21 页，现金流桥接见第 25 页。</li><li><a href="https://www.telekom.com/resource/blob/1106164/d3a5c94a5370554cb4853d4693760e81/dt-26q2-presentation-data.pdf">Deutsche Telekom Q2 2026 Results Presentation</a>，2026-08-06。网络覆盖、关键指标和全年指引。</li><li><a href="https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2026">Deutsche Telekom 2026 财务结果页面</a>，访问于 2026-08-11。报告发布信息和全部官方材料入口。</li><li><a href="https://investors.att.com/financial-reports/quarterly-earnings/2026">AT&amp;T 2026 季度财务资料</a>，访问于 2026-08-11。美国移动与光纤竞争背景。</li><li><a href="https://www.verizon.com/about/investors/quarterly-reports/2q-2026-earnings-conference-call-webcast">Verizon 2026 Q2 官方业绩资料</a>，2026-07-24。美国移动与宽带竞争背景。</li><li><a href="https://www.vodafone.com/investors/performance-and-reports/annual-reporting">Vodafone FY2026 年度报告入口</a>，2026-05-22。欧洲通信竞争背景。</li><li><a href="https://www.telefonica.com/en/communication-room/press-room/telefonica-posts-an-adjusted-ebitda-of-e5768-million-in-the-first-half-of-the-year-and-upgrades-its-operating-cash-flow-forecast-for-2026/">Telefónica 2026 上半年官方结果</a>，2026-08。欧洲和德国 O2 竞争背景。</li></ol><p class="fine">口径说明：除特别注明外，季度金额均为欧元，期间为 2026 年 4 月 1 日至 6 月 30 日，同比与 2025 年同期比较；资产、债务和客户数为 2026 年 6 月 30 日时点。公司对服务收入定义进行了调整，已重述上年比较数据。调整后 EBITDA AL、调整后净利润和 FCF AL 均为公司定义指标，不等同于 IFRS 净利润或银行存款变化。</p></div></section>
+  </main>
+  <footer><div class="wrap"><strong>这是一份商业与财报教育材料，不构成投资建议。</strong><p class="fine">报告日期：2026-08-11。事实以公司正式报告为准；外部背景和分析判断已区分标注。</p></div></footer>
+</body>
+</html>

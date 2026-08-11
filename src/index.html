@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每天 15 分钟，读懂一家全球知名公司的生意、壁垒、竞争对手和风险。">
+  <meta property="og:title" content="给孩子也看得懂的财报">
+  <meta property="og:description" content="不背术语，先看懂这是一门什么生意。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://f.webbx.space/">
+  <title>给孩子也看得懂的财报</title>
+  <style>
+    :root { --ink:#16213e; --paper:#f4f0e6; --red:#e8483f; --blue:#4b72b0; --yellow:#f2c14e; --white:#fffdf6; --muted:#697080; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.65; }
+    a { color:inherit; }
+    a:focus-visible, input:focus-visible { outline:4px solid var(--yellow); outline-offset:4px; }
+    .wrap { width:min(1120px,calc(100% - 36px)); margin:auto; }
+    .top { color:var(--white); background:var(--ink); }
+    .top .wrap { display:flex; justify-content:space-between; gap:20px; padding:10px 0; font-size:.78rem; font-weight:800; letter-spacing:.08em; }
+    .hero { position:relative; padding:clamp(60px,10vw,130px) 0 70px; overflow:hidden; }
+    .hero::before { content:""; position:absolute; width:420px; height:420px; right:-120px; top:-130px; border:70px solid var(--red); border-radius:50%; opacity:.12; }
+    .eyebrow { color:var(--red); font-size:.78rem; font-weight:900; letter-spacing:.13em; }
+    h1 { position:relative; max-width:900px; margin:16px 0 24px; font:900 clamp(3rem,8vw,7.4rem)/.98 "Songti SC","STSong",Georgia,serif; letter-spacing:-.06em; }
+    h1 em { color:var(--red); font-style:normal; }
+    .intro { max-width:710px; font-size:clamp(1.08rem,2vw,1.34rem); }
+    .promise { display:grid; grid-template-columns:repeat(3,1fr); margin-top:48px; border-top:3px solid var(--ink); border-bottom:3px solid var(--ink); }
+    .promise div { padding:18px; border-right:2px dotted var(--ink); }
+    .promise div:last-child { border-right:0; }
+    .promise b { display:block; font-family:"Songti SC",serif; font-size:1.35rem; }
+    .toolbar { padding:28px 0; border-top:1px solid rgba(22,33,62,.25); border-bottom:1px solid rgba(22,33,62,.25); background:rgba(255,253,246,.55); }
+    .toolbar .wrap { display:grid; grid-template-columns:1fr minmax(260px,420px); gap:30px; align-items:end; }
+    .toolbar h2 { margin:0; font:800 clamp(1.7rem,4vw,2.8rem)/1.1 "Songti SC",serif; }
+    .toolbar p { margin:8px 0 0; color:var(--muted); }
+    label { display:block; font-size:.78rem; font-weight:900; letter-spacing:.08em; }
+    input { width:100%; margin-top:7px; padding:12px 14px; border:2px solid var(--ink); border-radius:0; background:var(--white); color:var(--ink); font:inherit; }
+    .archive { padding:55px 0 100px; }
+    .reports { display:grid; grid-template-columns:repeat(3,1fr); border-top:2px solid var(--ink); border-left:2px solid var(--ink); }
+    .report { min-height:330px; border-right:2px solid var(--ink); border-bottom:2px solid var(--ink); background:var(--white); }
+    .report a { height:100%; display:flex; flex-direction:column; padding:25px; text-decoration:none; }
+    .report.latest { grid-column:span 2; color:var(--white); background:var(--ink); }
+    .report.latest h2 { color:var(--yellow); }
+    .report-top { display:flex; justify-content:space-between; gap:12px; font-size:.72rem; font-weight:800; letter-spacing:.06em; }
+    .report-top span { color:var(--red); }
+    .latest .report-top span { color:var(--yellow); }
+    .report h2 { margin:44px 0 11px; font:900 clamp(2rem,4vw,3.4rem)/1 "Songti SC",serif; letter-spacing:-.04em; }
+    .report p { margin:0 0 24px; color:var(--muted); }
+    .latest p { max-width:620px; color:#d9ddea; font-size:1.08rem; }
+    .report strong { margin-top:auto; color:var(--red); }
+    .latest strong { color:var(--yellow); }
+    .report i { display:inline-block; font-style:normal; transition:transform .2s ease; }
+    .report a:hover i { transform:translate(3px,-3px); }
+    .empty { display:none; padding:60px 0; font:800 1.3rem "Songti SC",serif; }
+    .method { padding:80px 0; color:var(--white); background:var(--blue); }
+    .method-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; }
+    .method h2 { margin:0; font:900 clamp(2.3rem,5vw,4.6rem)/1.05 "Songti SC",serif; }
+    .method ol { margin:0; padding:0; list-style:none; counter-reset:m; }
+    .method li { counter-increment:m; padding:16px 0; border-bottom:1px solid rgba(255,255,255,.35); font-size:1.05rem; }
+    .method li::before { content:"0" counter(m); margin-right:18px; color:var(--yellow); font-weight:900; }
+    footer { padding:34px 0; color:#d7dceb; background:var(--ink); font-size:.86rem; }
+    footer .wrap { display:flex; justify-content:space-between; gap:30px; }
+    footer a { color:var(--white); text-underline-offset:3px; }
+    @media (max-width:820px) { .reports{grid-template-columns:1fr 1fr}.report.latest{grid-column:1/-1}.toolbar .wrap,.method-grid{grid-template-columns:1fr}.promise{grid-template-columns:1fr}.promise div{border-right:0;border-bottom:2px dotted var(--ink)}.promise div:last-child{border-bottom:0} }
+    @media (max-width:560px) { .wrap{width:min(100% - 22px,1120px)}.top .wrap,footer .wrap{display:block}.top span{display:block}.reports{grid-template-columns:1fr}.report.latest{grid-column:auto}.report{min-height:285px}.report h2{margin-top:34px}.hero{padding-top:48px}h1{font-size:3.15rem} }
+    @media (prefers-reduced-motion:reduce) { *{scroll-behavior:auto!important;transition:none!important} }
+  </style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span>FINANCIAL REPORTS FOR EVERYONE</span><span>{{REPORT_COUNT}} 份报告 · 每日更新</span></div></div>
+  <header class="hero"><div class="wrap">
+    <div class="eyebrow">从零开始 · 一天一家公司</div>
+    <h1>给孩子也<br>看得懂的<em>财报</em></h1>
+    <p class="intro">不从复杂比率开始。先弄清楚公司卖什么、谁付钱、为什么别人抢不走，以及最可能在哪里出问题。</p>
+    <div class="promise"><div><b>15 分钟</b><span>每天读完一家公司</span></div><div><b>只用原文</b><span>公司、交易所或监管机构</span></div><div><b>不荐股</b><span>只学习商业和财报</span></div></div>
+  </div></header>
+  <section class="toolbar"><div class="wrap"><div><h2>财报学习档案</h2><p>共 {{REPORT_COUNT}} 份，最新更新于 {{LATEST_DATE}}</p></div><label>搜索公司或行业<input id="search" type="search" placeholder="例如：英伟达、银行、游戏" autocomplete="off"></label></div></section>
+  <main class="archive"><div class="wrap"><div class="reports" id="reports">{{REPORT_CARDS}}</div><p class="empty" id="empty">没有找到匹配的报告，换个关键词试试。</p></div></main>
+  <section class="method"><div class="wrap method-grid"><h2>我们怎样<br>读一份财报</h2><ol><li>先看公司靠什么赚钱</li><li>再看壁垒、竞争和行业</li><li>用少量数字验证生意变化</li><li>分清事实、背景和判断</li><li>最后检查风险和现金</li></ol></div></section>
+  <footer><div class="wrap"><span>仅用于商业与财报教育，不构成投资建议。</span><span><a href="https://github.com/shaoxyz/financial-reports-for-kids">GitHub 开源项目</a> · MIT License</span></div></footer>
+  <script>
+    const search = document.querySelector('#search');
+    const reports = [...document.querySelectorAll('.report')];
+    const empty = document.querySelector('#empty');
+    search.addEventListener('input', () => {
+      const term = search.value.trim().toLowerCase();
+      let visible = 0;
+      reports.forEach((report) => {
+        const match = report.dataset.search.includes(term);
+        report.hidden = !match;
+        if (match) visible += 1;
+      });
+      empty.style.display = visible ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

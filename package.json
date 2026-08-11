@@ -1,0 +1,9 @@
+{
+  "name": "financial-reports-for-kids",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "preview": "python3 -m http.server 4173 -d public"
+  }
+}
