@@ -159,5 +159,14 @@
     "wikimediaFile": "Microsoft logo (2012).svg",
     "asset": "Microsoft.svg",
     "logoSource": "https://commons.wikimedia.org/wiki/File:Microsoft_logo_(2012).svg"
+  },
+  "ProcterAndGamble": {
+    "company": "宝洁",
+    "query": "Procter & Gamble",
+    "color": "#003DA5",
+    "wikidataId": "Q212405",
+    "wikimediaFile": "P&G logo.svg",
+    "asset": "ProcterAndGamble.svg",
+    "logoSource": "https://commons.wikimedia.org/wiki/File:P%26G_logo.svg"
   }
 }

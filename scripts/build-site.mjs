@@ -28,7 +28,8 @@ const companyNames = {
   Nintendo: "任天堂",
   Uber: "Uber",
   DeutscheTelekom: "德国电信",
-  Microsoft: "微软"
+  Microsoft: "微软",
+  ProcterAndGamble: "宝洁"
 };
 
 const industries = {
@@ -38,7 +39,8 @@ const industries = {
   Shell: "能源", Amazon: "电商与云计算", Tesla: "新能源汽车",
   Visa: "支付网络", Disney: "娱乐传媒", EliLilly: "制药",
   Airbnb: "旅行平台", Nintendo: "电子游戏", Uber: "出行平台",
-  DeutscheTelekom: "通信运营", Microsoft: "软件与云计算"
+  DeutscheTelekom: "通信运营", Microsoft: "软件与云计算",
+  ProcterAndGamble: "日用消费品"
 };
 
 const clean = (value) => value
