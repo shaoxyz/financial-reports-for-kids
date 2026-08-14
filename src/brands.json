@@ -3,178 +3,132 @@
     "company": "英伟达",
     "query": "NVIDIA",
     "color": "#76B900",
-    "simpleIcon": "siNvidia",
-    "asset": "NVIDIA.svg",
-    "logoSource": "https://simpleicons.org/?q=NVIDIA"
+    "simpleIcon": "siNvidia"
   },
   "PepsiCo": {
     "company": "百事公司",
     "query": "PepsiCo",
     "color": "#005CB4",
-    "wikimediaFile": "PepsiCologo.svg",
-    "asset": "PepsiCo.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:PepsiCologo.svg"
+    "simpleIcon": "siPepsico"
   },
   "JPMorganChase": {
     "company": "摩根大通",
     "query": "JPMorgan Chase",
     "color": "#0B6EAF",
-    "wikimediaFile": "Logo of JPMorganChase 2024.svg",
-    "asset": "JPMorganChase.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:Logo_of_JPMorganChase_2024.svg"
+    "simpleIcon": "siJpmorgan"
   },
   "Honeywell": {
     "company": "霍尼韦尔",
     "query": "Honeywell International",
     "color": "#E2231A",
-    "wikimediaFile": "Logo honeywell.svg",
-    "asset": "Honeywell.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:Logo_honeywell.svg"
+    "simpleIcon": "siHoneywell"
   },
   "JohnsonAndJohnson": {
     "company": "强生",
     "query": "Johnson & Johnson",
     "color": "#D71920",
-    "wikimediaFile": "JNJ Logo New.svg",
-    "asset": "JohnsonAndJohnson.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:JNJ_Logo_New.svg"
+    "simpleIcon": "siJohnsonandjohnson"
   },
   "DeltaAirLines": {
     "company": "达美航空",
     "query": "Delta Air Lines",
     "color": "#C8102E",
-    "simpleIcon": "siDelta",
-    "asset": "DeltaAirLines.svg",
-    "logoSource": "https://simpleicons.org/?q=Delta"
+    "simpleIcon": "siDelta"
   },
   "Meta": {
     "company": "Meta",
     "query": "Meta Platforms",
     "color": "#0866FF",
-    "simpleIcon": "siMeta",
-    "asset": "Meta.svg",
-    "logoSource": "https://simpleicons.org/?q=Meta"
+    "simpleIcon": "siMeta"
   },
   "Starbucks": {
     "company": "星巴克",
     "query": "Starbucks",
     "color": "#00754A",
-    "simpleIcon": "siStarbucks",
-    "asset": "Starbucks.svg",
-    "logoSource": "https://simpleicons.org/?q=Starbucks"
+    "simpleIcon": "siStarbucks"
   },
   "Apple": {
     "company": "苹果",
     "query": "Apple Inc.",
     "color": "#1D1D1F",
-    "simpleIcon": "siApple",
-    "asset": "Apple.svg",
-    "logoSource": "https://simpleicons.org/?q=Apple"
+    "simpleIcon": "siApple"
   },
   "Shell": {
     "company": "壳牌",
     "query": "Shell plc",
     "color": "#FBCE07",
-    "simpleIcon": "siShell",
-    "asset": "Shell.svg",
-    "logoSource": "https://simpleicons.org/?q=Shell"
+    "simpleIcon": "siShell"
   },
   "Amazon": {
     "company": "亚马逊",
     "query": "Amazon.com",
     "color": "#FF9900",
-    "wikimediaFile": "Amazon logo.svg",
-    "asset": "Amazon.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:Amazon_logo.svg"
+    "simpleIcon": "siAmazon"
   },
   "Tesla": {
     "company": "特斯拉",
     "query": "Tesla, Inc.",
     "color": "#E82127",
-    "simpleIcon": "siTesla",
-    "asset": "Tesla.svg",
-    "logoSource": "https://simpleicons.org/?q=Tesla"
+    "simpleIcon": "siTesla"
   },
   "Visa": {
     "company": "Visa",
     "query": "Visa Inc.",
     "color": "#1A1F71",
-    "simpleIcon": "siVisa",
-    "asset": "Visa.svg",
-    "logoSource": "https://simpleicons.org/?q=Visa"
+    "simpleIcon": "siVisa"
   },
   "Disney": {
     "company": "迪士尼",
     "query": "The Walt Disney Company",
     "color": "#113CCF",
-    "wikimediaFile": "The Walt Disney Company Logo.svg",
-    "asset": "Disney.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:The_Walt_Disney_Company_Logo.svg"
+    "simpleIcon": "siDisney"
   },
   "EliLilly": {
     "company": "礼来",
     "query": "Eli Lilly and Company",
     "color": "#D52B1E",
-    "wikimediaFile": "Eli Lilly and Company.svg",
-    "asset": "EliLilly.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:Eli_Lilly_and_Company.svg"
+    "simpleIcon": "siElililly"
   },
   "Airbnb": {
     "company": "Airbnb",
     "query": "Airbnb, Inc.",
     "color": "#FF385C",
-    "simpleIcon": "siAirbnb",
-    "asset": "Airbnb.svg",
-    "logoSource": "https://simpleicons.org/?q=Airbnb"
+    "simpleIcon": "siAirbnb"
   },
   "Nintendo": {
     "company": "任天堂",
     "query": "Nintendo Co., Ltd.",
     "color": "#E60012",
-    "wikimediaFile": "Nintendo.svg",
-    "asset": "Nintendo.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:Nintendo.svg"
+    "simpleIcon": "siNintendo"
   },
   "Uber": {
     "company": "Uber",
     "query": "Uber Technologies",
     "color": "#111111",
-    "simpleIcon": "siUber",
-    "asset": "Uber.svg",
-    "logoSource": "https://simpleicons.org/?q=Uber"
+    "simpleIcon": "siUber"
   },
   "DeutscheTelekom": {
     "company": "德国电信",
     "query": "Deutsche Telekom AG",
     "color": "#E20074",
-    "simpleIcon": "siDeutschetelekom",
-    "asset": "DeutscheTelekom.svg",
-    "logoSource": "https://simpleicons.org/?q=Deutsche%20Telekom"
+    "simpleIcon": "siDeutschetelekom"
   },
   "Microsoft": {
     "company": "微软",
     "query": "Microsoft Corporation",
     "color": "#0067B8",
-    "wikidataId": "Q2283",
-    "wikimediaFile": "Microsoft logo (2012).svg",
-    "asset": "Microsoft.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:Microsoft_logo_(2012).svg"
+    "simpleIcon": "siMicrosoft"
   },
   "ProcterAndGamble": {
     "company": "宝洁",
     "query": "Procter & Gamble",
     "color": "#003DA5",
-    "wikidataId": "Q212405",
-    "wikimediaFile": "P&G logo.svg",
-    "asset": "ProcterAndGamble.svg",
-    "logoSource": "https://commons.wikimedia.org/wiki/File:P%26G_logo.svg"
+    "simpleIcon": "siProcterandgamble"
   },
   "McDonalds": {
     "company": "麦当劳",
     "query": "McDonald's",
     "color": "#DA291C",
-    "simpleIcon": "siMcdonalds",
-    "asset": "McDonalds.svg",
-    "logoSource": "https://simpleicons.org/?q=McDonald's"
+    "simpleIcon": "siMcdonalds"
   }
 }

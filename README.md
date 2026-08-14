@@ -25,9 +25,9 @@ YYYY-MM-DD-Company.html
 
 ## 品牌素材
 
-构建时会为新公司匹配 Logo 和品牌主色，并把素材缓存到 `src/brand-assets/`，网站不依赖外部图片地址。找不到可靠 Logo 时会自动使用文字标识，报告仍可正常发布。
+构建时用本地 simple-icons 匹配 Logo，并把 SVG 内联进页面，不请求 Wikimedia 或其他外网图片。找不到对应 icon 时会生成文字标识。若某个公司需要手动指定 Logo，把 SVG 放到 src/brand-assets/，并在 src/brands.json 里给该公司加上 override 文件名。
 
-Logo 来源记录在 `src/brands.json`。Logo 和商标权利归各自品牌所有，仅用于识别报告涉及的公司，不包含在本项目的 MIT 许可范围内。
+Logo 记录在 src/brands.json。Simple Icons 的 SVG path 为 CC0；Logo 和商标权利归各自品牌所有，仅用于识别报告涉及的公司，不包含在本项目的 MIT 许可范围内。
 
 ## 内容原则
 
