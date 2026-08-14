@@ -1,10 +1,12 @@
-import { copyFileSync, cpSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import * as simpleIcons from "simple-icons";
 
 const root = new URL("../", import.meta.url).pathname;
 const sourceDir = join(root, "outputs/financial-reports");
 const publicDir = join(root, "public");
 const reportDir = join(publicDir, "reports");
+const assetsDir = join(root, "src/brand-assets");
 const template = readFileSync(join(root, "src/index.html"), "utf8");
 const brands = JSON.parse(readFileSync(join(root, "src/brands.json"), "utf8"));
 
@@ -52,22 +54,50 @@ const clean = (value) => value
   .replace(/\s+/g, " ")
   .trim();
 
+const escapeXml = (value) => String(value)
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll("\"", "&quot;");
+
 const readableText = (color) => {
   if (!/^#[0-9a-f]{6}$/i.test(color)) return "#fffdf6";
   const [red, green, blue] = color.slice(1).match(/../g).map((part) => Number.parseInt(part, 16));
   return (red * 299 + green * 587 + blue * 114) / 1000 > 155 ? "#16213e" : "#fffdf6";
 };
 
-const addBrandHeader = (html, { asset, color, company, query }, date) => {
-  const textColor = readableText(color);
+const exportName = (slug) => `si${slug[0].toUpperCase()}${slug.slice(1)}`;
+
+const inlineLogo = (slug, brand) => {
+  const label = escapeXml(brand.query || brand.company || slug);
+  const color = /^#[0-9a-f]{6}$/i.test(brand.color) ? brand.color : "#16213e";
+  const overrideName = brand.override;
+  const overridePath = overrideName ? join(assetsDir, overrideName) : "";
+  if (overridePath && existsSync(overridePath)) {
+    let svg = readFileSync(overridePath, "utf8").replace(/^\uFEFF/, "").replace(/^\s*<\?xml[^>]*>/, "").trim();
+    if (!/\bclass=/.test(svg)) svg = svg.replace(/<svg\b/, "<svg class=\"brand-logo\"");
+    else svg = svg.replace(/<svg\b/, (tag) => tag.includes("brand-logo") ? tag : tag.replace("<svg", "<svg class=\"brand-logo\""));
+    if (!/aria-label=/.test(svg)) svg = svg.replace(/<svg\b/, `<svg role="img" aria-label="${label}"`);
+    return svg;
+  }
+  const icon = (brand.simpleIcon && simpleIcons[brand.simpleIcon])
+    || simpleIcons[exportName(slug.toLowerCase())];
+  if (icon?.path) {
+    return `<svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="${color}" d="${icon.path}"/></svg>`;
+  }
+  return `<svg class="brand-logo brand-logo-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-label="${label}"><text x="20" y="120" fill="${color}" font-family="Arial, sans-serif" font-size="76" font-weight="700">${label}</text></svg>`;
+};
+
+const addBrandHeader = (html, brand, date, logo) => {
+  const textColor = readableText(brand.color);
   const brandStyle = `<style id="archive-brand-style">
-    .archive-brandbar{display:flex;align-items:center;gap:14px;min-height:58px;padding:10px max(18px,calc((100% - 1100px)/2));color:${textColor}!important;background:${color};text-decoration:none!important;font-family:"Avenir Next","PingFang SC",sans-serif;position:relative;z-index:1000}
-    .archive-brandbar img{width:42px;height:38px;object-fit:contain;padding:6px;background:#fffdf6;border-radius:4px}
+    .archive-brandbar{display:flex;align-items:center;gap:14px;min-height:58px;padding:10px max(18px,calc((100% - 1100px)/2));color:${textColor}!important;background:${brand.color};text-decoration:none!important;font-family:"Avenir Next","PingFang SC",sans-serif;position:relative;z-index:1000}
+    .archive-brandbar .brand-logo{width:42px;height:38px;object-fit:contain;padding:6px;background:#fffdf6;border-radius:4px;flex:0 0 auto}
     .archive-brandbar span{font-size:.76rem;font-weight:800;letter-spacing:.06em;opacity:.88}
     .archive-brandbar strong{margin-left:auto;font-size:.82rem;letter-spacing:.04em}
-    @media(max-width:560px){.archive-brandbar{min-height:52px}.archive-brandbar strong{font-size:0}.archive-brandbar strong::after{content:"全部报告";font-size:.78rem}.archive-brandbar img{width:38px;height:34px}}
+    @media(max-width:560px){.archive-brandbar{min-height:52px}.archive-brandbar strong{font-size:0}.archive-brandbar strong::after{content:"全部报告";font-size:.78rem}.archive-brandbar .brand-logo{width:38px;height:34px}}
   </style>`;
-  const brandBar = `<a class="archive-brandbar" href="/" aria-label="返回全部财报"><img src="/brands/${asset}" alt="${query} Logo"><span>${company} · ${date}</span><strong>给孩子也看得懂的财报 ↗</strong></a>`;
+  const brandBar = `<a class="archive-brandbar" href="/" aria-label="返回全部财报">${logo}<span>${brand.company} · ${date}</span><strong>给孩子也看得懂的财报 ↗</strong></a>`;
   return html
     .replace(/<\/head>/i, `${brandStyle}</head>`)
     .replace(/<body([^>]*)>/i, `<body$1>${brandBar}`);
@@ -86,19 +116,25 @@ const reports = files.map((file) => {
   const [, date, slug] = file.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.html$/);
   const title = clean(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || slug);
   const headline = clean(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || title);
-  const brand = brands[slug] || { company: companyNames[slug] || slug, query: slug, color: "#16213e", asset: `${slug}.svg` };
-  writeFileSync(join(reportDir, file), addBrandHeader(html, brand, date));
+  const brand = {
+    company: companyNames[slug] || slug.replace(/([a-z])([A-Z])/g, "$1 $2"),
+    query: slug,
+    color: "#16213e",
+    ...(brands[slug] || {})
+  };
+  brand.company = companyNames[slug] || brand.company;
+  const logo = inlineLogo(slug, brand);
+  writeFileSync(join(reportDir, file), addBrandHeader(html, brand, date, logo));
   return {
     date,
     slug,
-    company: companyNames[slug] || slug.replace(/([a-z])([A-Z])/g, "$1 $2"),
+    company: brand.company,
     industry: industries[slug] || "商业与财报",
     title,
     headline,
     brandColor: brand.color,
     brandText: readableText(brand.color),
-    logo: `brands/${brand.asset}`,
-    logoSource: brand.logoSource,
+    logo,
     href: `reports/${file.replace(/\.html$/, "")}`
   };
 });
@@ -107,7 +143,7 @@ const cards = reports.map((report, index) => `
   <article class="report${index === 0 ? " latest" : ""}" style="--brand:${report.brandColor};--brand-text:${report.brandText}" data-search="${clean(`${report.company} ${report.industry} ${report.title}`).toLowerCase()}">
     <a href="${report.href}" aria-label="阅读 ${report.company} 财报">
       <div class="report-top"><time datetime="${report.date}">${report.date.replaceAll("-", ".")}</time><span>${report.industry}</span></div>
-      <div class="report-brand"><img src="${report.logo}" alt="${report.company} Logo" loading="lazy"></div>
+      <div class="report-brand">${report.logo}</div>
       <h2>${report.company}</h2>
       <p>${report.headline}</p>
       <strong>打开报告 <i aria-hidden="true">↗</i></strong>
@@ -120,8 +156,9 @@ const output = template
   .replace("{{REPORT_CARDS}}", cards);
 
 writeFileSync(join(publicDir, "index.html"), output);
-writeFileSync(join(publicDir, "reports.json"), JSON.stringify(reports, null, 2));
-cpSync(join(root, "src/404.html"), join(publicDir, "404.html"));
-cpSync(join(root, "src/brand-assets"), join(publicDir, "brands"), { recursive: true });
+writeFileSync(join(publicDir, "reports.json"), JSON.stringify(reports.map(({ logo, ...rest }) => rest), null, 2));
+
+const notFound = join(root, "src/404.html");
+if (existsSync(notFound)) writeFileSync(join(publicDir, "404.html"), readFileSync(notFound));
 
 console.log(`Built ${reports.length} reports into public/`);
