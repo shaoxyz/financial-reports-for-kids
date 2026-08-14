@@ -8,26 +8,22 @@
   "PepsiCo": {
     "company": "百事公司",
     "query": "PepsiCo",
-    "color": "#005CB4",
-    "simpleIcon": "siPepsico"
+    "color": "#005CB4"
   },
   "JPMorganChase": {
     "company": "摩根大通",
     "query": "JPMorgan Chase",
-    "color": "#0B6EAF",
-    "simpleIcon": "siJpmorgan"
+    "color": "#0B6EAF"
   },
   "Honeywell": {
     "company": "霍尼韦尔",
     "query": "Honeywell International",
-    "color": "#E2231A",
-    "simpleIcon": "siHoneywell"
+    "color": "#E2231A"
   },
   "JohnsonAndJohnson": {
     "company": "强生",
     "query": "Johnson & Johnson",
-    "color": "#D71920",
-    "simpleIcon": "siJohnsonandjohnson"
+    "color": "#D71920"
   },
   "DeltaAirLines": {
     "company": "达美航空",
@@ -62,8 +58,7 @@
   "Amazon": {
     "company": "亚马逊",
     "query": "Amazon.com",
-    "color": "#FF9900",
-    "simpleIcon": "siAmazon"
+    "color": "#FF9900"
   },
   "Tesla": {
     "company": "特斯拉",
@@ -80,14 +75,12 @@
   "Disney": {
     "company": "迪士尼",
     "query": "The Walt Disney Company",
-    "color": "#113CCF",
-    "simpleIcon": "siDisney"
+    "color": "#113CCF"
   },
   "EliLilly": {
     "company": "礼来",
     "query": "Eli Lilly and Company",
-    "color": "#D52B1E",
-    "simpleIcon": "siElililly"
+    "color": "#D52B1E"
   },
   "Airbnb": {
     "company": "Airbnb",
@@ -98,8 +91,7 @@
   "Nintendo": {
     "company": "任天堂",
     "query": "Nintendo Co., Ltd.",
-    "color": "#E60012",
-    "simpleIcon": "siNintendo"
+    "color": "#E60012"
   },
   "Uber": {
     "company": "Uber",
@@ -116,14 +108,12 @@
   "Microsoft": {
     "company": "微软",
     "query": "Microsoft Corporation",
-    "color": "#0067B8",
-    "simpleIcon": "siMicrosoft"
+    "color": "#0067B8"
   },
   "ProcterAndGamble": {
     "company": "宝洁",
     "query": "Procter & Gamble",
-    "color": "#003DA5",
-    "simpleIcon": "siProcterandgamble"
+    "color": "#003DA5"
   },
   "McDonalds": {
     "company": "麦当劳",

@@ -33,24 +33,12 @@ const findIcon = (slug, brand = {}) => {
     return { key: brand.simpleIcon, icon: simpleIcons[brand.simpleIcon] };
   }
   const names = [slug, brand.query, spacedName(slug)].map(normalize).filter(Boolean);
-  const exactSlug = icons.find((icon) => names.includes(normalize(icon.slug)));
-  if (exactSlug) return { key: exportName(exactSlug.slug), icon: exactSlug };
-  const exactTitle = icons.find((icon) => names.includes(normalize(icon.title)));
-  if (exactTitle) return { key: exportName(exactTitle.slug), icon: exactTitle };
-  const partial = icons
-    .map((icon) => {
-      const title = normalize(icon.title);
-      const slugName = normalize(icon.slug);
-      const hit = names.some((name) => (
-        (title.length >= 4 && (name.includes(title) || title.includes(name)))
-        || (slugName.length >= 4 && (name.includes(slugName) || slugName.includes(name)))
-      ));
-      return hit ? { icon, len: Math.max(title.length, slugName.length) } : null;
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.len - a.len)[0];
-  if (partial) return { key: exportName(partial.icon.slug), icon: partial.icon };
-  return null;
+  const exactMatches = icons.filter((icon) =>
+    names.includes(normalize(icon.slug)) || names.includes(normalize(icon.title))
+  );
+  if (exactMatches.length !== 1) return null;
+  const [icon] = exactMatches;
+  return { key: exportName(icon.slug), icon };
 };
 
 let changed = false;
