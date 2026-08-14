@@ -168,5 +168,13 @@
     "wikimediaFile": "P&G logo.svg",
     "asset": "ProcterAndGamble.svg",
     "logoSource": "https://commons.wikimedia.org/wiki/File:P%26G_logo.svg"
+  },
+  "McDonalds": {
+    "company": "麦当劳",
+    "query": "McDonald's",
+    "color": "#DA291C",
+    "simpleIcon": "siMcdonalds",
+    "asset": "McDonalds.svg",
+    "logoSource": "https://simpleicons.org/?q=McDonald's"
   }
 }
