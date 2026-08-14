@@ -1,5 +1,5 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { basename, join, relative, resolve } from "node:path";
 import * as simpleIcons from "simple-icons";
 
 const root = new URL("../", import.meta.url).pathname;
@@ -68,17 +68,37 @@ const readableText = (color) => {
 
 const exportName = (slug) => `si${slug[0].toUpperCase()}${slug.slice(1)}`;
 
+const overridePath = (name) => {
+  if (!name || name !== basename(name) || !name.toLowerCase().endsWith(".svg")) return "";
+  const resolved = resolve(assetsDir, name);
+  const rel = relative(resolve(assetsDir), resolved);
+  if (!rel || rel.startsWith("..")) return "";
+  return existsSync(resolved) ? resolved : "";
+};
+
+const rewriteSvgRoot = (svg, label) => svg.replace(/<svg\b([^>]*)>/i, (_, attrs) => {
+  const take = (attr) => {
+    const match = attrs.match(new RegExp("\\b" + attr + "\\s*=\\s*(\"([^\"]*)\"|'([^']*)')", "i"));
+    return match ? (match[2] ?? match[3] ?? "") : "";
+  };
+  const classes = new Set(take("class").split(/\s+/).filter(Boolean));
+  classes.add("brand-logo");
+  const rest = attrs
+    .replace(/\sclass\s*=\s*("([^"]*)"|'([^']*)')/ig, "")
+    .replace(/\srole\s*=\s*("([^"]*)"|'([^']*)')/ig, "")
+    .replace(/\saria-label\s*=\s*("([^"]*)"|'([^']*)')/ig, "")
+    .trim();
+  const aria = take("aria-label") || label;
+  return "<svg class=\"" + [...classes].join(" ") + "\" role=\"img\" aria-label=\"" + aria + "\"" + (rest ? " " + rest : "") + ">";
+});
+
 const inlineLogo = (slug, brand) => {
   const label = escapeXml(brand.query || brand.company || slug);
   const color = /^#[0-9a-f]{6}$/i.test(brand.color) ? brand.color : "#16213e";
-  const overrideName = brand.override;
-  const overridePath = overrideName ? join(assetsDir, overrideName) : "";
-  if (overridePath && existsSync(overridePath)) {
-    let svg = readFileSync(overridePath, "utf8").replace(/^\uFEFF/, "").replace(/^\s*<\?xml[^>]*>/, "").trim();
-    if (!/\bclass=/.test(svg)) svg = svg.replace(/<svg\b/, "<svg class=\"brand-logo\"");
-    else svg = svg.replace(/<svg\b/, (tag) => tag.includes("brand-logo") ? tag : tag.replace("<svg", "<svg class=\"brand-logo\""));
-    if (!/aria-label=/.test(svg)) svg = svg.replace(/<svg\b/, `<svg role="img" aria-label="${label}"`);
-    return svg;
+  const file = overridePath(brand.override);
+  if (file) {
+    const svg = readFileSync(file, "utf8").replace(/^\uFEFF/, "").replace(/^\s*<\?xml[^>]*>/, "").trim();
+    return rewriteSvgRoot(svg, label);
   }
   const icon = (brand.simpleIcon && simpleIcons[brand.simpleIcon])
     || simpleIcons[exportName(slug.toLowerCase())];
