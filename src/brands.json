@@ -120,5 +120,11 @@
     "query": "McDonald's",
     "color": "#DA291C",
     "simpleIcon": "siMcdonalds"
+  },
+  "Nike": {
+    "company": "耐克",
+    "query": "NIKE",
+    "color": "#111111",
+    "simpleIcon": "siNike"
   }
 }

@@ -32,7 +32,8 @@ const companyNames = {
   DeutscheTelekom: "德国电信",
   Microsoft: "微软",
   ProcterAndGamble: "宝洁",
-  McDonalds: "麦当劳"
+  McDonalds: "麦当劳",
+  Nike: "耐克"
 };
 
 const industries = {
@@ -43,7 +44,8 @@ const industries = {
   Visa: "支付网络", Disney: "娱乐传媒", EliLilly: "制药",
   Airbnb: "旅行平台", Nintendo: "电子游戏", Uber: "出行平台",
   DeutscheTelekom: "通信运营", Microsoft: "软件与云计算",
-  ProcterAndGamble: "日用消费品", McDonalds: "连锁餐饮"
+  ProcterAndGamble: "日用消费品", McDonalds: "连锁餐饮",
+  Nike: "运动鞋服"
 };
 
 const clean = (value) => value
