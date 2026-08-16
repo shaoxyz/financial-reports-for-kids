@@ -126,5 +126,11 @@
     "query": "NIKE",
     "color": "#111111",
     "simpleIcon": "siNike"
+  },
+  "Toyota": {
+    "company": "丰田",
+    "query": "Toyota Motor Corporation",
+    "color": "#EB0A1E",
+    "simpleIcon": "siToyota"
   }
 }
