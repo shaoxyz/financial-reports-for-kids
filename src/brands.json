@@ -132,5 +132,10 @@
     "query": "Toyota Motor Corporation",
     "color": "#EB0A1E",
     "simpleIcon": "siToyota"
+  },
+  "LVMH": {
+    "company": "LVMH 路威酩轩",
+    "query": "LVMH",
+    "color": "#171611"
   }
 }

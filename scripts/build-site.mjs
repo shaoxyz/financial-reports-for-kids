@@ -34,7 +34,8 @@ const companyNames = {
   ProcterAndGamble: "宝洁",
   McDonalds: "麦当劳",
   Nike: "耐克",
-  Toyota: "丰田"
+  Toyota: "丰田",
+  LVMH: "LVMH 路威酩轩"
 };
 
 const industries = {
@@ -46,7 +47,7 @@ const industries = {
   Airbnb: "旅行平台", Nintendo: "电子游戏", Uber: "出行平台",
   DeutscheTelekom: "通信运营", Microsoft: "软件与云计算",
   ProcterAndGamble: "日用消费品", McDonalds: "连锁餐饮",
-  Nike: "运动鞋服", Toyota: "汽车制造"
+  Nike: "运动鞋服", Toyota: "汽车制造", LVMH: "奢侈品集团"
 };
 
 const clean = (value) => value
