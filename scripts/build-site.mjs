@@ -35,7 +35,8 @@ const companyNames = {
   McDonalds: "麦当劳",
   Nike: "耐克",
   Toyota: "丰田",
-  LVMH: "LVMH 路威酩轩"
+  LVMH: "LVMH 路威酩轩",
+  Tencent: "腾讯"
 };
 
 const industries = {
@@ -47,7 +48,8 @@ const industries = {
   Airbnb: "旅行平台", Nintendo: "电子游戏", Uber: "出行平台",
   DeutscheTelekom: "通信运营", Microsoft: "软件与云计算",
   ProcterAndGamble: "日用消费品", McDonalds: "连锁餐饮",
-  Nike: "运动鞋服", Toyota: "汽车制造", LVMH: "奢侈品集团"
+  Nike: "运动鞋服", Toyota: "汽车制造", LVMH: "奢侈品集团",
+  Tencent: "互联网平台与游戏"
 };
 
 const clean = (value) => value
@@ -117,9 +119,10 @@ const addBrandHeader = (html, brand, date, logo) => {
   const brandStyle = `<style id="archive-brand-style">
     .archive-brandbar{display:flex;align-items:center;gap:14px;min-height:58px;padding:10px max(18px,calc((100% - 1100px)/2));color:${textColor}!important;background:${brand.color};text-decoration:none!important;font-family:"Avenir Next","PingFang SC",sans-serif;position:relative;z-index:1000}
     .archive-brandbar .brand-logo{width:42px;height:38px;object-fit:contain;padding:6px;background:#fffdf6;border-radius:4px;flex:0 0 auto}
+    .archive-brandbar .brand-logo-wordmark{width:82px;padding:5px 7px}
     .archive-brandbar span{font-size:.76rem;font-weight:800;letter-spacing:.06em;opacity:.88}
     .archive-brandbar strong{margin-left:auto;font-size:.82rem;letter-spacing:.04em}
-    @media(max-width:560px){.archive-brandbar{min-height:52px}.archive-brandbar strong{font-size:0}.archive-brandbar strong::after{content:"全部报告";font-size:.78rem}.archive-brandbar .brand-logo{width:38px;height:34px}}
+    @media(max-width:560px){.archive-brandbar{min-height:52px}.archive-brandbar strong{font-size:0}.archive-brandbar strong::after{content:"全部报告";font-size:.78rem}.archive-brandbar .brand-logo{width:38px;height:34px}.archive-brandbar .brand-logo-wordmark{width:70px}}
   </style>`;
   const brandBar = `<a class="archive-brandbar" href="/" aria-label="返回全部财报">${logo}<span>${brand.company} · ${date}</span><strong>给孩子也看得懂的财报 ↗</strong></a>`;
   return html
