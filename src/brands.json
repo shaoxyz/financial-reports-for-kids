@@ -142,5 +142,10 @@
     "company": "腾讯",
     "query": "Tencent",
     "color": "#0052D9"
+  },
+  "HomeDepot": {
+    "company": "家得宝",
+    "query": "The Home Depot",
+    "color": "#F96302"
   }
 }
