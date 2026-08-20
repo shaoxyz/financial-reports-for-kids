@@ -147,5 +147,10 @@
     "company": "家得宝",
     "query": "The Home Depot",
     "color": "#F96302"
+  },
+  "EsteeLauder": {
+    "company": "雅诗兰黛集团",
+    "query": "The Estée Lauder Companies",
+    "color": "#040A2B"
   }
 }

@@ -37,7 +37,8 @@ const companyNames = {
   Toyota: "丰田",
   LVMH: "LVMH 路威酩轩",
   Tencent: "腾讯",
-  HomeDepot: "家得宝"
+  HomeDepot: "家得宝",
+  EsteeLauder: "雅诗兰黛集团"
 };
 
 const industries = {
@@ -50,7 +51,8 @@ const industries = {
   DeutscheTelekom: "通信运营", Microsoft: "软件与云计算",
   ProcterAndGamble: "日用消费品", McDonalds: "连锁餐饮",
   Nike: "运动鞋服", Toyota: "汽车制造", LVMH: "奢侈品集团",
-  Tencent: "互联网平台与游戏", HomeDepot: "家居建材零售"
+  Tencent: "互联网平台与游戏", HomeDepot: "家居建材零售",
+  EsteeLauder: "高端美妆"
 };
 
 const clean = (value) => value
