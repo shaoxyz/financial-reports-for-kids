@@ -177,15 +177,23 @@ const addMarketSnapshot = (html, brand, snapshot) => {
     ? Math.max(0, Math.min(100, ((price - low) / (high - low)) * 100))
     : 50;
   const pe = Number(snapshot.peRatio);
+  const sources = snapshot.sources || [{
+    name: snapshot.provider || "行情数据源",
+    url: snapshot.providerUrl || "https://www.alphavantage.co/documentation/"
+  }];
+  const sourceLinks = sources.map((source) =>
+    `<a href="${escapeXml(source.url)}" rel="noopener nofollow" target="_blank">${escapeXml(source.name)}</a>`
+  ).join("、");
   const change = Number.parseFloat(snapshot.changePercent);
   const changeText = Number.isFinite(change) ? `${change >= 0 ? "+" : ""}${marketNumber(change)}%` : "—";
-  const trend = Number.isFinite(price) && Number.isFinite(moving50) && Number.isFinite(moving200)
+  const trend = snapshot.trendText || (Number.isFinite(price) && Number.isFinite(moving50) && Number.isFinite(moving200)
     ? price >= moving50 && moving50 >= moving200
       ? "价格在两条均线上方"
       : price < moving50 && moving50 < moving200
         ? "价格在两条均线下方"
         : "短期与长期趋势交错"
-    : "趋势数据暂不完整";
+    : "趋势数据暂不完整");
+  const trendDetail = snapshot.trendDetail || `50日 ${currency === "USD" ? "$" : ""}${marketNumber(moving50)} · 200日 ${currency === "USD" ? "$" : ""}${marketNumber(moving200)}`;
   const snapshotStyle = `<style id="market-snapshot-style">
     .market-snapshot{max-width:1100px;margin:clamp(28px,5vw,60px) auto;padding:clamp(22px,3.5vw,38px);border-top:4px solid ${brand.color};background:color-mix(in srgb,${brand.color} 5%,#fffdf6);color:#16213e;font-family:"Avenir Next","PingFang SC",sans-serif}
     .market-snapshot__head{display:grid;grid-template-columns:minmax(210px,.72fr) 1.28fr;gap:clamp(20px,5vw,64px);align-items:end;margin-bottom:24px}
@@ -209,9 +217,9 @@ const addMarketSnapshot = (html, brand, snapshot) => {
   </style>`;
   const card = `<aside class="market-snapshot" aria-labelledby="market-snapshot-title">
     <div class="market-snapshot__head"><div><span class="market-snapshot__kicker">行情快照 · ${escapeXml(snapshot.symbol)}</span><h2 id="market-snapshot-title">价格是标签，不是答案</h2></div><p class="market-snapshot__lesson"><strong>先知道市场给它标了多少钱，再回头看生意值不值。</strong>下面是最近交易日的静态快照，不会随着网页刷新跳动，也不构成买卖建议。</p></div>
-    <div class="market-snapshot__metrics"><div class="market-snapshot__metric"><span>最近收盘价</span><strong>${currency === "USD" ? "$" : ""}${marketNumber(price)}</strong><small>${changeText} · ${escapeXml(snapshot.latestTradingDay || "日期未知")}</small></div><div class="market-snapshot__metric"><span>市值</span><strong>${marketCapText(snapshot.marketCapitalization, currency)}</strong><small>股价 × 流通在外股份的近似总价</small></div><div class="market-snapshot__metric"><span>市盈率 PE（TTM）</span><strong>${Number.isFinite(pe) && pe > 0 ? marketNumber(pe, 1) + " 倍" : "不适用"}</strong><small>股价相当于过去12个月每股利润的多少倍</small></div><div class="market-snapshot__metric"><span>均线位置</span><strong>${trend}</strong><small>50日 ${currency === "USD" ? "$" : ""}${marketNumber(moving50)} · 200日 ${currency === "USD" ? "$" : ""}${marketNumber(moving200)}</small></div></div>
+    <div class="market-snapshot__metrics"><div class="market-snapshot__metric"><span>最近收盘价</span><strong>${currency === "USD" ? "$" : ""}${marketNumber(price)}</strong><small>${changeText} · ${escapeXml(snapshot.latestTradingDay || "日期未知")}</small></div><div class="market-snapshot__metric"><span>市值</span><strong>${marketCapText(snapshot.marketCapitalization, currency)}</strong><small>股价 × 流通在外股份的近似总价</small></div><div class="market-snapshot__metric"><span>市盈率 PE（TTM）</span><strong>${Number.isFinite(pe) && pe > 0 ? marketNumber(pe, 1) + " 倍" : "不适用"}</strong><small>股价相当于过去12个月每股利润的多少倍</small></div><div class="market-snapshot__metric"><span>${escapeXml(snapshot.trendLabel || "均线位置")}</span><strong>${escapeXml(trend)}</strong><small>${escapeXml(trendDetail)}</small></div></div>
     <div class="market-snapshot__range"><div class="market-snapshot__range-labels"><span>52周低点 ${currency === "USD" ? "$" : ""}${marketNumber(low)}</span><span>当前约在区间 ${marketNumber(rangePosition, 0)}% 位置</span><span>52周高点 ${currency === "USD" ? "$" : ""}${marketNumber(high)}</span></div><div class="market-snapshot__track" role="img" aria-label="当前价格位于52周最低与最高价格之间约${marketNumber(rangePosition, 0)}%的位置"></div></div>
-    <p class="market-snapshot__foot">证券：${escapeXml(snapshot.name || brand.company)}（${escapeXml(snapshot.symbol)}）；币种：${currency}；行情截至 ${escapeXml(snapshot.latestTradingDay || "未知日期")}。数据由 <a href="https://www.alphavantage.co/documentation/" rel="noopener nofollow" target="_blank">Alpha Vantage</a> 提供，快照抓取于 ${marketDateTime(snapshot.fetchedAt)}（新加坡时间）。市值、PE和均线可能与其他平台因口径及更新时间不同。</p>
+    <p class="market-snapshot__foot">证券：${escapeXml(snapshot.name || brand.company)}（${escapeXml(snapshot.symbol)}）；币种：${currency}；行情截至 ${escapeXml(snapshot.latestTradingDay || "未知日期")}。数据来自 ${sourceLinks}，快照抓取于 ${marketDateTime(snapshot.fetchedAt)}（新加坡时间）。${escapeXml(snapshot.methodNote || "市值、PE和均线可能与其他平台因口径及更新时间不同。")}</p>
   </aside>`;
   return html
     .replace(/<\/head>/i, () => `${snapshotStyle}</head>`)
