@@ -152,5 +152,10 @@
     "company": "雅诗兰黛集团",
     "query": "The Estée Lauder Companies",
     "color": "#040A2B"
+  },
+  "Walmart": {
+    "company": "沃尔玛",
+    "query": "Walmart Inc.",
+    "color": "#0071CE"
   }
 }
