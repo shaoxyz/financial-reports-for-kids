@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "brands": "node scripts/sync-brands.mjs",
+    "market:update": "node scripts/update-market-data.mjs",
     "build": "npm run brands && node scripts/build-site.mjs",
     "preview": "python3 -m http.server 4173 -d public",
     "deploy": "npm run build && wrangler deploy"

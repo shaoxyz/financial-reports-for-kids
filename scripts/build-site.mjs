@@ -9,6 +9,8 @@ const reportDir = join(publicDir, "reports");
 const assetsDir = join(root, "src/brand-assets");
 const template = readFileSync(join(root, "src/index.html"), "utf8");
 const brands = JSON.parse(readFileSync(join(root, "src/brands.json"), "utf8"));
+const marketDataFile = join(root, "src/market-data.json");
+const marketData = existsSync(marketDataFile) ? JSON.parse(readFileSync(marketDataFile, "utf8")) : {};
 
 const companyNames = {
   NVIDIA: "英伟达",
@@ -134,6 +136,88 @@ const addBrandHeader = (html, brand, date, logo) => {
     .replace(/<body([^>]*)>/i, `<body$1>${brandBar}`);
 };
 
+const marketNumber = (value, digits = 2) => {
+  const number = Number(value);
+  return Number.isFinite(number) ? number.toLocaleString("zh-CN", { maximumFractionDigits: digits }) : "—";
+};
+
+const marketCapText = (value, currency) => {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return "—";
+  if (currency === "USD") {
+    if (number >= 1e12) return `${marketNumber(number / 1e12)}万亿美元`;
+    if (number >= 1e8) return `${marketNumber(number / 1e8)}亿美元`;
+  }
+  return `${marketNumber(number, 0)} ${currency}`;
+};
+
+const marketDateTime = (value) => {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "未知时间";
+  return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Singapore",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).format(date).replaceAll("/", "-");
+};
+
+const addMarketSnapshot = (html, brand, snapshot) => {
+  if (!snapshot?.price) return html;
+  const currency = escapeXml(snapshot.currency || "USD");
+  const price = Number(snapshot.price);
+  const low = Number(snapshot.week52Low);
+  const high = Number(snapshot.week52High);
+  const moving50 = Number(snapshot.movingAverage50);
+  const moving200 = Number(snapshot.movingAverage200);
+  const rangePosition = Number.isFinite(price) && Number.isFinite(low) && Number.isFinite(high) && high > low
+    ? Math.max(0, Math.min(100, ((price - low) / (high - low)) * 100))
+    : 50;
+  const pe = Number(snapshot.peRatio);
+  const change = Number.parseFloat(snapshot.changePercent);
+  const changeText = Number.isFinite(change) ? `${change >= 0 ? "+" : ""}${marketNumber(change)}%` : "—";
+  const trend = Number.isFinite(price) && Number.isFinite(moving50) && Number.isFinite(moving200)
+    ? price >= moving50 && moving50 >= moving200
+      ? "价格在两条均线上方"
+      : price < moving50 && moving50 < moving200
+        ? "价格在两条均线下方"
+        : "短期与长期趋势交错"
+    : "趋势数据暂不完整";
+  const snapshotStyle = `<style id="market-snapshot-style">
+    .market-snapshot{max-width:1100px;margin:clamp(28px,5vw,60px) auto;padding:clamp(22px,3.5vw,38px);border-top:4px solid ${brand.color};background:color-mix(in srgb,${brand.color} 5%,#fffdf6);color:#16213e;font-family:"Avenir Next","PingFang SC",sans-serif}
+    .market-snapshot__head{display:grid;grid-template-columns:minmax(210px,.72fr) 1.28fr;gap:clamp(20px,5vw,64px);align-items:end;margin-bottom:24px}
+    .market-snapshot__kicker{display:block;margin-bottom:8px;color:${brand.color};font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    .market-snapshot h2{margin:0;color:#16213e;font-size:clamp(1.5rem,3vw,2.35rem);line-height:1.12}
+    .market-snapshot__lesson{margin:0;color:#47526a;font-size:.92rem;line-height:1.75}
+    .market-snapshot__metrics{display:grid;grid-template-columns:1.15fr 1fr .8fr 1.15fr;border-top:1px solid color-mix(in srgb,${brand.color} 25%,transparent);border-bottom:1px solid color-mix(in srgb,${brand.color} 25%,transparent)}
+    .market-snapshot__metric{padding:18px 16px 17px 0}
+    .market-snapshot__metric+.market-snapshot__metric{padding-left:18px;border-left:1px solid color-mix(in srgb,${brand.color} 18%,transparent)}
+    .market-snapshot__metric span{display:block;margin-bottom:7px;color:#6a7285;font-size:.72rem;font-weight:800;letter-spacing:.06em}
+    .market-snapshot__metric strong{display:block;color:#16213e;font-size:clamp(1.12rem,2vw,1.65rem);line-height:1.2}
+    .market-snapshot__metric small{display:block;margin-top:6px;color:#687086;font-size:.72rem;line-height:1.4}
+    .market-snapshot__range{margin-top:22px}
+    .market-snapshot__range-labels{display:flex;justify-content:space-between;gap:16px;color:#687086;font-size:.72rem;font-weight:750}
+    .market-snapshot__track{height:9px;margin:8px 0;background:color-mix(in srgb,${brand.color} 13%,#e6e8ee);position:relative}
+    .market-snapshot__track::before{content:"";position:absolute;inset:0 auto 0 0;width:${rangePosition.toFixed(1)}%;background:${brand.color}}
+    .market-snapshot__track::after{content:"";position:absolute;top:50%;left:${rangePosition.toFixed(1)}%;width:15px;height:15px;border:3px solid #fffdf6;background:${brand.color};border-radius:50%;transform:translate(-50%,-50%)}
+    .market-snapshot__foot{margin:18px 0 0;color:#687086;font-size:.72rem;line-height:1.65}
+    .market-snapshot__foot a{color:${brand.color};font-weight:800}
+    @media(max-width:720px){.market-snapshot{margin:28px 14px;padding:21px 16px}.market-snapshot__head{grid-template-columns:1fr;gap:10px}.market-snapshot__metrics{grid-template-columns:1fr 1fr}.market-snapshot__metric:nth-child(3){padding-left:0;border-left:0;border-top:1px solid color-mix(in srgb,${brand.color} 18%,transparent)}.market-snapshot__metric:nth-child(4){border-top:1px solid color-mix(in srgb,${brand.color} 18%,transparent)}}
+  </style>`;
+  const card = `<aside class="market-snapshot" aria-labelledby="market-snapshot-title">
+    <div class="market-snapshot__head"><div><span class="market-snapshot__kicker">行情快照 · ${escapeXml(snapshot.symbol)}</span><h2 id="market-snapshot-title">价格是标签，不是答案</h2></div><p class="market-snapshot__lesson"><strong>先知道市场给它标了多少钱，再回头看生意值不值。</strong>下面是最近交易日的静态快照，不会随着网页刷新跳动，也不构成买卖建议。</p></div>
+    <div class="market-snapshot__metrics"><div class="market-snapshot__metric"><span>最近收盘价</span><strong>${currency === "USD" ? "$" : ""}${marketNumber(price)}</strong><small>${changeText} · ${escapeXml(snapshot.latestTradingDay || "日期未知")}</small></div><div class="market-snapshot__metric"><span>市值</span><strong>${marketCapText(snapshot.marketCapitalization, currency)}</strong><small>股价 × 流通在外股份的近似总价</small></div><div class="market-snapshot__metric"><span>市盈率 PE（TTM）</span><strong>${Number.isFinite(pe) && pe > 0 ? marketNumber(pe, 1) + " 倍" : "不适用"}</strong><small>股价相当于过去12个月每股利润的多少倍</small></div><div class="market-snapshot__metric"><span>均线位置</span><strong>${trend}</strong><small>50日 ${currency === "USD" ? "$" : ""}${marketNumber(moving50)} · 200日 ${currency === "USD" ? "$" : ""}${marketNumber(moving200)}</small></div></div>
+    <div class="market-snapshot__range"><div class="market-snapshot__range-labels"><span>52周低点 ${currency === "USD" ? "$" : ""}${marketNumber(low)}</span><span>当前约在区间 ${marketNumber(rangePosition, 0)}% 位置</span><span>52周高点 ${currency === "USD" ? "$" : ""}${marketNumber(high)}</span></div><div class="market-snapshot__track" role="img" aria-label="当前价格位于52周最低与最高价格之间约${marketNumber(rangePosition, 0)}%的位置"></div></div>
+    <p class="market-snapshot__foot">证券：${escapeXml(snapshot.name || brand.company)}（${escapeXml(snapshot.symbol)}）；币种：${currency}；行情截至 ${escapeXml(snapshot.latestTradingDay || "未知日期")}。数据由 <a href="https://www.alphavantage.co/documentation/" rel="noopener nofollow" target="_blank">Alpha Vantage</a> 提供，快照抓取于 ${marketDateTime(snapshot.fetchedAt)}（新加坡时间）。市值、PE和均线可能与其他平台因口径及更新时间不同。</p>
+  </aside>`;
+  return html
+    .replace(/<\/head>/i, () => `${snapshotStyle}</head>`)
+    .replace(/<main([^>]*)>/i, (_, attrs) => `<main${attrs}>${card}`);
+};
+
 const files = readdirSync(sourceDir)
   .filter((name) => /^\d{4}-\d{2}-\d{2}-.+\.html$/.test(name))
   .sort()
@@ -155,7 +239,7 @@ const reports = files.map((file) => {
   };
   brand.company = companyNames[slug] || brand.company;
   const logo = inlineLogo(slug, brand);
-  writeFileSync(join(reportDir, file), addBrandHeader(html, brand, date, logo));
+  writeFileSync(join(reportDir, file), addMarketSnapshot(addBrandHeader(html, brand, date, logo), brand, marketData[slug]));
   return {
     date,
     slug,

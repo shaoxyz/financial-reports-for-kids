@@ -3,159 +3,192 @@
     "company": "英伟达",
     "query": "NVIDIA",
     "color": "#76B900",
-    "simpleIcon": "siNvidia"
+    "simpleIcon": "siNvidia",
+    "marketSymbol": "NASDAQ:NVDA"
   },
   "PepsiCo": {
     "company": "百事公司",
     "query": "PepsiCo",
-    "color": "#005CB4"
+    "color": "#005CB4",
+    "marketSymbol": "NASDAQ:PEP"
   },
   "JPMorganChase": {
     "company": "摩根大通",
     "query": "JPMorgan Chase",
-    "color": "#0B6EAF"
+    "color": "#0B6EAF",
+    "marketSymbol": "NYSE:JPM"
   },
   "Honeywell": {
     "company": "霍尼韦尔",
     "query": "Honeywell International",
-    "color": "#E2231A"
+    "color": "#E2231A",
+    "marketSymbol": "NASDAQ:HON"
   },
   "JohnsonAndJohnson": {
     "company": "强生",
     "query": "Johnson & Johnson",
-    "color": "#D71920"
+    "color": "#D71920",
+    "marketSymbol": "NYSE:JNJ"
   },
   "DeltaAirLines": {
     "company": "达美航空",
     "query": "Delta Air Lines",
     "color": "#C8102E",
-    "simpleIcon": "siDelta"
+    "simpleIcon": "siDelta",
+    "marketSymbol": "NYSE:DAL"
   },
   "Meta": {
     "company": "Meta",
     "query": "Meta Platforms",
     "color": "#0866FF",
-    "simpleIcon": "siMeta"
+    "simpleIcon": "siMeta",
+    "marketSymbol": "NASDAQ:META"
   },
   "Starbucks": {
     "company": "星巴克",
     "query": "Starbucks",
     "color": "#00754A",
-    "simpleIcon": "siStarbucks"
+    "simpleIcon": "siStarbucks",
+    "marketSymbol": "NASDAQ:SBUX"
   },
   "Apple": {
     "company": "苹果",
     "query": "Apple Inc.",
     "color": "#1D1D1F",
-    "simpleIcon": "siApple"
+    "simpleIcon": "siApple",
+    "marketSymbol": "NASDAQ:AAPL"
   },
   "Shell": {
     "company": "壳牌",
     "query": "Shell plc",
     "color": "#FBCE07",
-    "simpleIcon": "siShell"
+    "simpleIcon": "siShell",
+    "marketSymbol": "NYSE:SHEL"
   },
   "Amazon": {
     "company": "亚马逊",
     "query": "Amazon.com",
-    "color": "#FF9900"
+    "color": "#FF9900",
+    "marketSymbol": "NASDAQ:AMZN"
   },
   "Tesla": {
     "company": "特斯拉",
     "query": "Tesla, Inc.",
     "color": "#E82127",
-    "simpleIcon": "siTesla"
+    "simpleIcon": "siTesla",
+    "marketSymbol": "NASDAQ:TSLA"
   },
   "Visa": {
     "company": "Visa",
     "query": "Visa Inc.",
     "color": "#1A1F71",
-    "simpleIcon": "siVisa"
+    "simpleIcon": "siVisa",
+    "marketSymbol": "NYSE:V"
   },
   "Disney": {
     "company": "迪士尼",
     "query": "The Walt Disney Company",
-    "color": "#113CCF"
+    "color": "#113CCF",
+    "marketSymbol": "NYSE:DIS"
   },
   "EliLilly": {
     "company": "礼来",
     "query": "Eli Lilly and Company",
-    "color": "#D52B1E"
+    "color": "#D52B1E",
+    "marketSymbol": "NYSE:LLY"
   },
   "Airbnb": {
     "company": "Airbnb",
     "query": "Airbnb, Inc.",
     "color": "#FF385C",
-    "simpleIcon": "siAirbnb"
+    "simpleIcon": "siAirbnb",
+    "marketSymbol": "NASDAQ:ABNB"
   },
   "Nintendo": {
     "company": "任天堂",
     "query": "Nintendo Co., Ltd.",
-    "color": "#E60012"
+    "color": "#E60012",
+    "marketSymbol": "TSE:7974",
+    "dataSymbol": "NTDOY"
   },
   "Uber": {
     "company": "Uber",
     "query": "Uber Technologies",
     "color": "#111111",
-    "simpleIcon": "siUber"
+    "simpleIcon": "siUber",
+    "marketSymbol": "NYSE:UBER"
   },
   "DeutscheTelekom": {
     "company": "德国电信",
     "query": "Deutsche Telekom AG",
     "color": "#E20074",
-    "simpleIcon": "siDeutschetelekom"
+    "simpleIcon": "siDeutschetelekom",
+    "marketSymbol": "XETR:DTE",
+    "dataSymbol": "DTEGY"
   },
   "Microsoft": {
     "company": "微软",
     "query": "Microsoft Corporation",
-    "color": "#0067B8"
+    "color": "#0067B8",
+    "marketSymbol": "NASDAQ:MSFT"
   },
   "ProcterAndGamble": {
     "company": "宝洁",
     "query": "Procter & Gamble",
-    "color": "#003DA5"
+    "color": "#003DA5",
+    "marketSymbol": "NYSE:PG"
   },
   "McDonalds": {
     "company": "麦当劳",
     "query": "McDonald's",
     "color": "#DA291C",
-    "simpleIcon": "siMcdonalds"
+    "simpleIcon": "siMcdonalds",
+    "marketSymbol": "NYSE:MCD"
   },
   "Nike": {
     "company": "耐克",
     "query": "NIKE",
     "color": "#111111",
-    "simpleIcon": "siNike"
+    "simpleIcon": "siNike",
+    "marketSymbol": "NYSE:NKE"
   },
   "Toyota": {
     "company": "丰田",
     "query": "Toyota Motor Corporation",
     "color": "#EB0A1E",
-    "simpleIcon": "siToyota"
+    "simpleIcon": "siToyota",
+    "marketSymbol": "NYSE:TM"
   },
   "LVMH": {
     "company": "LVMH 路威酩轩",
     "query": "LVMH",
-    "color": "#171611"
+    "color": "#171611",
+    "marketSymbol": "EURONEXT:MC",
+    "dataSymbol": "LVMUY"
   },
   "Tencent": {
     "company": "腾讯",
     "query": "Tencent",
-    "color": "#0052D9"
+    "color": "#0052D9",
+    "marketSymbol": "HKEX:700",
+    "dataSymbol": "TCEHY"
   },
   "HomeDepot": {
     "company": "家得宝",
     "query": "The Home Depot",
-    "color": "#F96302"
+    "color": "#F96302",
+    "marketSymbol": "NYSE:HD"
   },
   "EsteeLauder": {
     "company": "雅诗兰黛集团",
     "query": "The Estée Lauder Companies",
-    "color": "#040A2B"
+    "color": "#040A2B",
+    "marketSymbol": "NYSE:EL"
   },
   "Walmart": {
     "company": "沃尔玛",
     "query": "Walmart Inc.",
-    "color": "#0071CE"
+    "color": "#0071CE",
+    "marketSymbol": "NASDAQ:WMT"
   }
 }

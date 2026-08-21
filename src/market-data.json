@@ -1,0 +1,18 @@
+{
+  "Walmart": {
+    "provider": "Alpha Vantage",
+    "symbol": "WMT",
+    "name": "Walmart Inc.",
+    "currency": "USD",
+    "price": "103.8400",
+    "changePercent": "-9.1514",
+    "latestTradingDay": "2026-08-20",
+    "marketCapitalization": "826366886000",
+    "peRatio": "40.25",
+    "week52High": "134.84",
+    "week52Low": "94.62",
+    "movingAverage50": "113.93",
+    "movingAverage200": "118.51",
+    "fetchedAt": "2026-08-21T15:13:24.838Z"
+  }
+}
