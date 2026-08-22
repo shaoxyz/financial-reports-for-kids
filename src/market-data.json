@@ -546,5 +546,21 @@
     "trendText": "接近52周低位",
     "trendDetail": "用ADR价格相对52周高低点观察趋势",
     "methodNote": "ADR价格来自Alpha Vantage；PE、52周区间及原生股市值来自Google Finance；市值按2026-08-21 ECB参考汇率换算为美元。"
+  },
+  "BHP": {
+    "provider": "Alpha Vantage",
+    "symbol": "BHP",
+    "name": "BHP Group Limited",
+    "currency": "USD",
+    "price": "97.0300",
+    "changePercent": "3.6313",
+    "latestTradingDay": "2026-08-21",
+    "marketCapitalization": "237827834000",
+    "peRatio": "23.89",
+    "week52High": "97.25",
+    "week52Low": "50.83",
+    "movingAverage50": "85.33",
+    "movingAverage200": "74.35",
+    "fetchedAt": "2026-08-22T02:03:38.105Z"
   }
 }

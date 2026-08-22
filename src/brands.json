@@ -190,5 +190,11 @@
     "query": "Walmart Inc.",
     "color": "#0071CE",
     "marketSymbol": "NASDAQ:WMT"
+  },
+  "BHP": {
+    "company": "必和必拓",
+    "query": "BHP Group Limited",
+    "color": "#E35B00",
+    "marketSymbol": "NYSE:BHP"
   }
 }
