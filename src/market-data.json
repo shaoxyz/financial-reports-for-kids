@@ -562,5 +562,21 @@
     "movingAverage50": "85.33",
     "movingAverage200": "74.35",
     "fetchedAt": "2026-08-22T02:03:38.105Z"
+  },
+  "Alibaba": {
+    "provider": "Alpha Vantage",
+    "symbol": "BABA",
+    "name": "Alibaba Group Holding Ltd",
+    "currency": "USD",
+    "price": "119.3400",
+    "changePercent": "-8.5727",
+    "latestTradingDay": "2026-08-21",
+    "marketCapitalization": "286042915000",
+    "peRatio": "29.61",
+    "week52High": "190.92",
+    "week52Low": "91.99",
+    "movingAverage50": "114.35",
+    "movingAverage200": "137.77",
+    "fetchedAt": "2026-08-23T02:03:21.025Z"
   }
 }

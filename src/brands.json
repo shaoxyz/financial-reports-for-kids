@@ -196,5 +196,11 @@
     "query": "BHP Group Limited",
     "color": "#E35B00",
     "marketSymbol": "NYSE:BHP"
+  },
+  "Alibaba": {
+    "company": "阿里巴巴",
+    "query": "Alibaba Group",
+    "color": "#FF6A00",
+    "marketSymbol": "NYSE:BABA"
   }
 }
