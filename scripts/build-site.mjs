@@ -230,6 +230,84 @@ const addMarketSnapshot = (html, brand, snapshot) => {
     .replace(/<main([^>]*)>/i, (_, attrs) => `<main${attrs}>${card}`);
 };
 
+const addDiscussionDrawer = (html, brand, date, slug, title) => {
+  const threadId = `${date}-${slug}`;
+  const reportUrl = `https://f.webbx.space/reports/${threadId}`;
+  const accent = readableText(brand.color) === "#16213e" ? "#16213e" : brand.color;
+  const discussionStyle = `<style id="discussion-drawer-style">
+    .discussion-trigger{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,calc(env(safe-area-inset-bottom) + 12px));z-index:1998;display:inline-flex;align-items:center;gap:9px;min-height:50px;padding:0 18px;border:0;border-radius:999px;color:${readableText(brand.color)};background:${brand.color};box-shadow:0 12px 30px color-mix(in srgb,${brand.color} 34%,transparent);font:800 .88rem/1 "Avenir Next","PingFang SC",sans-serif;letter-spacing:.04em;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+    .discussion-trigger svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.9}
+    .discussion-trigger:hover{transform:translateY(-2px);box-shadow:0 15px 34px color-mix(in srgb,${brand.color} 42%,transparent)}
+    .discussion-trigger:active{transform:translateY(0)}
+    .discussion-trigger:focus-visible,.discussion-close:focus-visible{outline:3px solid color-mix(in srgb,${brand.color} 62%,#fffdf6);outline-offset:3px}
+    .discussion-drawer{inset:0 0 0 auto;width:min(440px,100%);max-width:none;height:100dvh;max-height:none;margin:0;padding:0;border:0;background:#fffdf8;color:#182033;box-shadow:-22px 0 70px rgba(17,24,39,.2);overflow:hidden}
+    .discussion-drawer[open]{display:grid;grid-template-rows:auto minmax(0,1fr);animation:discussion-in .24s cubic-bezier(.22,1,.36,1)}
+    .discussion-drawer::backdrop{background:rgba(18,24,38,.42)}
+    .discussion-head{display:flex;align-items:center;gap:14px;padding:18px 18px 16px;border-bottom:1px solid color-mix(in srgb,${brand.color} 20%,#e7e1d5);background:color-mix(in srgb,${brand.color} 6%,#fffdf8)}
+    .discussion-head__mark{width:8px;height:36px;background:${brand.color};flex:0 0 auto}
+    .discussion-head__copy{min-width:0}
+    .discussion-head span{display:block;margin-bottom:3px;color:${accent};font:900 .68rem/1 "Avenir Next","PingFang SC",sans-serif;letter-spacing:.13em;text-transform:uppercase}
+    .discussion-head h2{margin:0;color:#182033;font:800 1.18rem/1.25 "Avenir Next","PingFang SC",sans-serif}
+    .discussion-close{display:grid;place-items:center;width:44px;height:44px;margin-left:auto;border:0;border-radius:50%;color:#344054;background:transparent;font-size:1.55rem;line-height:1;cursor:pointer}
+    .discussion-close:hover{background:color-mix(in srgb,${brand.color} 9%,#f4efe5)}
+    .discussion-body{overflow:auto;overscroll-behavior:contain;padding:18px 18px max(28px,env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch}
+    .discussion-status{margin:20px 0;padding:14px 16px;color:#596174;background:#f4f0e7;font:600 .84rem/1.6 "Avenir Next","PingFang SC",sans-serif}
+    .discussion-status[data-state="ready"]{display:none}
+    .discussion-status[data-state="error"]{color:#8a2d2d;background:#fff0ed}
+    #garrul{min-height:220px;--garrul-font:"Avenir Next","PingFang SC",sans-serif;--garrul-accent:${accent};--garrul-link:${accent};--garrul-radius:5px;--garrul-bg:#fffdf8;--garrul-input-bg:#fffdf8;--garrul-surface:#f7f3ea;--garrul-border:#d8d2c6;--garrul-fg:#182033;--garrul-muted:#687086}
+    @keyframes discussion-in{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+    @media(max-width:560px){.discussion-trigger{right:max(14px,env(safe-area-inset-right));bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px));min-height:48px;padding:0 16px}.discussion-drawer{width:100%}.discussion-head{padding-top:max(14px,env(safe-area-inset-top))}.discussion-body{padding-inline:15px}}
+    @media(prefers-reduced-motion:reduce){.discussion-trigger{transition:none}.discussion-drawer[open]{animation:none}}
+  </style>`;
+  const discussionMarkup = `<button class="discussion-trigger" type="button" aria-haspopup="dialog" aria-controls="discussion-drawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14v10H9l-4 3v-13Z"/></svg><span>讨论</span></button>
+  <dialog class="discussion-drawer" id="discussion-drawer" aria-labelledby="discussion-title">
+    <header class="discussion-head"><i class="discussion-head__mark" aria-hidden="true"></i><div class="discussion-head__copy"><span>REPORT DISCUSSION</span><h2 id="discussion-title">一起读懂这家公司</h2></div><button class="discussion-close" type="button" aria-label="关闭讨论区">×</button></header>
+    <div class="discussion-body"><p class="discussion-status" role="status" aria-live="polite">正在打开讨论区…</p><div id="garrul" data-slug="${escapeXml(threadId)}" data-api="https://comments.f.webbx.space" data-title="${escapeXml(title)}" data-url="${escapeXml(reportUrl)}" data-published="${escapeXml(date)}" data-lang="zh-CN" data-theme="light" data-preset="minimal"></div></div>
+  </dialog>
+  <script id="discussion-drawer-script">
+    (() => {
+      const trigger = document.querySelector(".discussion-trigger");
+      const drawer = document.getElementById("discussion-drawer");
+      const close = drawer?.querySelector(".discussion-close");
+      const status = drawer?.querySelector(".discussion-status");
+      if (!trigger || !drawer || !close || !status) return;
+      let loaded = false;
+      let previousOverflow = "";
+      const loadDiscussion = () => {
+        if (loaded) return;
+        loaded = true;
+        const script = document.createElement("script");
+        script.src = "https://comments.f.webbx.space/embed.js";
+        script.async = true;
+        script.onload = () => { status.dataset.state = "ready"; };
+        script.onerror = () => {
+          loaded = false;
+          status.dataset.state = "error";
+          status.textContent = "讨论区暂时无法连接，财报正文不受影响。请稍后再试。";
+        };
+        document.body.appendChild(script);
+      };
+      const open = () => {
+        previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        drawer.showModal();
+        loadDiscussion();
+      };
+      trigger.addEventListener("click", open);
+      close.addEventListener("click", () => drawer.close());
+      drawer.addEventListener("click", (event) => { if (event.target === drawer) drawer.close(); });
+      drawer.addEventListener("close", () => {
+        document.body.style.overflow = previousOverflow;
+        trigger.focus();
+      });
+    })();
+  </script>`;
+  return html
+    .replace(/<meta name="viewport" content="([^"]*)">/i, (_, content) => `<meta name="viewport" content="${content.includes("viewport-fit") ? content : `${content}, viewport-fit=cover`}">`)
+    .replace(/<\/head>/i, `${discussionStyle}</head>`)
+    .replace(/<\/body>/i, `${discussionMarkup}</body>`);
+};
+
 const files = readdirSync(sourceDir)
   .filter((name) => /^\d{4}-\d{2}-\d{2}-.+\.html$/.test(name))
   .sort()
@@ -251,7 +329,9 @@ const reports = files.map((file) => {
   };
   brand.company = companyNames[slug] || brand.company;
   const logo = inlineLogo(slug, brand);
-  writeFileSync(join(reportDir, file), addMarketSnapshot(addBrandHeader(html, brand, date, logo), brand, marketData[slug]));
+  const branded = addBrandHeader(html, brand, date, logo);
+  const withMarket = addMarketSnapshot(branded, brand, marketData[slug]);
+  writeFileSync(join(reportDir, file), addDiscussionDrawer(withMarket, brand, date, slug, title));
   return {
     date,
     slug,
