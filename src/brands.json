@@ -202,5 +202,12 @@
     "query": "Alibaba Group",
     "color": "#FF6A00",
     "marketSymbol": "NYSE:BABA"
+  },
+  "Deere": {
+    "company": "约翰迪尔",
+    "query": "John Deere",
+    "color": "#367C2B",
+    "simpleIcon": "siJohndeere",
+    "marketSymbol": "NYSE:DE"
   }
 }

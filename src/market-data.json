@@ -578,5 +578,21 @@
     "movingAverage50": "114.35",
     "movingAverage200": "137.77",
     "fetchedAt": "2026-08-23T02:03:21.025Z"
+  },
+  "Deere": {
+    "provider": "Alpha Vantage",
+    "symbol": "DE",
+    "name": "Deere & Company",
+    "currency": "USD",
+    "price": "647.4700",
+    "changePercent": "4.2726",
+    "latestTradingDay": "2026-08-21",
+    "marketCapitalization": "174776386000",
+    "peRatio": "35.97",
+    "week52High": "670.49",
+    "week52Low": "429.14",
+    "movingAverage50": "605.26",
+    "movingAverage200": "558.98",
+    "fetchedAt": "2026-08-24T02:02:52.361Z"
   }
 }

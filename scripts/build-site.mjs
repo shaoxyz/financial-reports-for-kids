@@ -43,7 +43,8 @@ const companyNames = {
   EsteeLauder: "雅诗兰黛集团",
   Walmart: "沃尔玛",
   BHP: "必和必拓",
-  Alibaba: "阿里巴巴"
+  Alibaba: "阿里巴巴",
+  Deere: "约翰迪尔"
 };
 
 const industries = {
@@ -58,7 +59,7 @@ const industries = {
   Nike: "运动鞋服", Toyota: "汽车制造", LVMH: "奢侈品集团",
   Tencent: "互联网平台与游戏", HomeDepot: "家居建材零售",
   EsteeLauder: "高端美妆", Walmart: "综合零售", BHP: "矿业与资源",
-  Alibaba: "电商平台与云计算"
+  Alibaba: "电商平台与云计算", Deere: "农业与工程机械"
 };
 
 const clean = (value) => value
