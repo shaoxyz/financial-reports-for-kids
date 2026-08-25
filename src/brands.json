@@ -209,5 +209,12 @@
     "color": "#367C2B",
     "simpleIcon": "siJohndeere",
     "marketSymbol": "NYSE:DE"
+  },
+  "Target": {
+    "company": "Target 塔吉特",
+    "query": "Target Corporation",
+    "color": "#CC0000",
+    "simpleIcon": "siTarget",
+    "marketSymbol": "NYSE:TGT"
   }
 }

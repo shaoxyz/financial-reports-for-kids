@@ -594,5 +594,21 @@
     "movingAverage50": "605.26",
     "movingAverage200": "558.98",
     "fetchedAt": "2026-08-24T02:02:52.361Z"
+  },
+  "Target": {
+    "provider": "Alpha Vantage",
+    "symbol": "TGT",
+    "name": "Target Corporation",
+    "currency": "USD",
+    "price": "169.8900",
+    "changePercent": "2.6898",
+    "latestTradingDay": "2026-08-24",
+    "marketCapitalization": "69255062000",
+    "peRatio": "17.14",
+    "week52High": "170.75",
+    "week52Low": "81.2",
+    "movingAverage50": "140.93",
+    "movingAverage200": "118.82",
+    "fetchedAt": "2026-08-25T03:41:27.720Z"
   }
 }
