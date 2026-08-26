@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 Intuit 财报：它怎样靠 QuickBooks、TurboTax、Credit Karma 和 Mailchimp 赚钱，为什么订阅、专家和数据会一起变成现金。">
+  <title>Intuit 2026财年：卖软件，也卖省心｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--blue:#236cff;--deep:#10233f;--sky:#dce8ff;--mint:#e8fff5;--cream:#f8f7f2;--paper:#eef3fb;--ink:#1a2230;--muted:#637089;--line:#cfd8e6;--green:#16815d;--gold:#ffd76a;--red:#b44747}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.72}a{color:var(--blue);text-underline-offset:3px}.wrap{width:min(1100px,calc(100% - 34px));margin:auto}.label{font-size:.7rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.fact,.background,.analysis{display:inline-block;padding:3px 8px;font-size:.68rem;font-weight:900}.fact{background:#fff;color:var(--deep);border:1px solid #c9d8f7}.background{background:#e3f3eb;color:#1f6148}.analysis{background:#edf0ff;color:#2c47a8}
+    .hero{position:relative;overflow:hidden;padding:74px 0 64px;color:#fff;background:linear-gradient(135deg,#0f2f7d 0%,#236cff 52%,#63a4ff 100%)}.hero:before,.hero:after{content:"";position:absolute;inset:auto;transform:rotate(-12deg);background:rgba(255,255,255,.11)}.hero:before{width:420px;height:420px;right:-140px;top:-150px;border-radius:36px}.hero:after{width:520px;height:180px;left:-110px;bottom:20px;border-radius:999px}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:end}.hero h1{max-width:780px;margin:16px 0 22px;font-size:clamp(3rem,7.4vw,6.3rem);font-weight:900;line-height:.94;letter-spacing:-.055em}.hero h1 em{display:block;color:var(--gold);font-style:normal}.lead{max-width:720px;color:#e7f0ff;font-size:clamp(1rem,1.7vw,1.18rem)}.hero-card{padding:25px;background:rgba(255,255,255,.96);color:var(--ink);box-shadow:18px 18px 0 rgba(7,20,49,.22)}.hero-card strong{display:block;margin:11px 0 16px;color:var(--blue);font-size:1.25rem}.hero-card p{margin:7px 0;font-size:.85rem}.hero-card a{font-weight:900}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(248,247,242,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav .wrap{display:flex;gap:20px;padding:12px 0;overflow:auto;white-space:nowrap}.nav a{color:#3a4960;text-decoration:none;font-size:.78rem;font-weight:850}main{overflow:hidden}section{padding:74px 0}.head{display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:start;margin-bottom:30px}.head .no{font:900 3.7rem/1 Georgia,serif;color:#aac2f6}.head h2{margin:5px 0 0;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.08}.intro{max-width:870px;font-size:1.05rem}.soft{background:var(--paper);border-block:1px solid var(--line)}
+    .company{display:grid;grid-template-columns:1.08fr .92fr;gap:42px}.company blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.72rem,3.15vw,2.85rem);line-height:1.3}.company blockquote span{box-shadow:inset 0 -.33em #cfe0ff}.list{margin:0;padding:0;list-style:none}.list li{padding:16px 0;border-bottom:1px solid var(--line)}.list b{display:block}
+    .segments{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.segment{padding:23px;background:#fff;border:1px solid var(--line);border-top:7px solid var(--blue)}.segment h3{margin:6px 0}.segment .money{display:block;margin:14px 0 10px;font:900 2.2rem/1 Georgia,serif;color:var(--blue)}.segment p{margin:0;color:var(--muted);font-size:.88rem}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);border:2px solid var(--blue)}.flow article{padding:20px 16px;border-right:1px solid #99b3ee}.flow article:last-child{border-right:0}.flow b{display:block;color:var(--blue)}.flow p{margin:5px 0 0;font-size:.85rem}
+    .numbers{background:var(--deep);color:#fff}.numbers .head .no{color:#6279a4}.numbers .fact{background:#fff}.dashboard{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:14px}.metric{min-height:182px;padding:23px;background:#fff;color:var(--ink)}.metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(135deg,#236cff 0%,#0f2f7d 100%);color:#fff}.metric .value{display:block;margin:10px 0;font:900 clamp(2rem,4.2vw,4.2rem)/1 Georgia,serif}.metric small{color:var(--muted)}.metric.main small{color:#e9f2ff}.up{color:var(--green);font-weight:900}.main .up{color:var(--gold)}.callout{margin-top:22px;padding:22px;border-left:7px solid var(--gold);background:#193260}.callout strong{color:var(--gold)}
+    .moats,.rivals{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.moat,.rival{padding:23px;background:#fff;border:1px solid var(--line)}.moat{border-top:7px solid var(--blue)}.rival{border-bottom:5px solid var(--deep)}.moat h3,.rival h3{margin:5px 0}.moat p,.rival p{margin:7px 0;color:var(--muted)}
+    .industry-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:42px}.industry-badge{display:grid;place-items:center;aspect-ratio:1;background:radial-gradient(circle at center,#fff 0 28%,#d7e5ff 28% 50%,#236cff 50% 70%,#10233f 70% 100%);border-radius:32px;color:#10233f;text-align:center;padding:28px;font-weight:900}.drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.drivers article{padding:17px 0;border-bottom:1px solid var(--line)}.drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.statement{padding:24px;background:#fff;border:1px solid var(--line)}.statement h3{margin:0}.formula{display:block;margin:14px 0;padding:11px;background:var(--sky);font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 34px}.term{padding:20px 0;border-bottom:1px solid var(--line)}.term h3{margin:0}.term p{margin:6px 0}.example{color:var(--muted);font-size:.91rem}
+    .events{color:#fff;background:linear-gradient(135deg,#14305a 0%,#236cff 100%)}.events .head .no{color:#7ca7ff}.events .fact{background:#fff}.events .list li{border-color:#82a7f3}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.risk{padding:23px;background:#fff6eb;border:1px solid #ecd7be}.risk h3{margin:0}.risk p{margin:8px 0 0}
+    .remember{background:#e8eefc}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.three article{padding:20px;background:#fff;border-top:4px solid var(--blue)}.three strong{color:var(--blue);font:900 2.5rem Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}.quiz summary{padding:16px 0;cursor:pointer;font-weight:900}.answer{padding:0 0 18px;color:var(--muted)}.sources{background:#e8e1d8}.sources li{margin:10px 0}.fine{font-size:.8rem;color:var(--muted)}.disclaimer{padding:24px 0;background:#181c23;color:#c7ccd4;font-size:.78rem}
+    @media(max-width:860px){.hero-grid,.company,.industry-grid{grid-template-columns:1fr}.segments,.moats,.rivals,.statements,.three{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.flow{grid-template-columns:1fr}.flow article{border-right:0;border-bottom:1px solid #99b3ee}}
+    @media(max-width:560px){section{padding:56px 0}.hero{padding:52px 0 48px}.hero h1{font-size:3.15rem}.head{grid-template-columns:48px 1fr}.head .no{font-size:2.7rem}.segments,.moats,.rivals,.statements,.terms,.risks,.three,.drivers,.dashboard{grid-template-columns:1fr}.metric.main{grid-column:auto}.wrap{width:min(100% - 28px,1100px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 财税与中小企业软件 · 2026-08-26</span>
+        <h1>卖软件，<em>也卖省心</em></h1>
+        <p class="lead">Intuit 不只是卖一个报税软件。它把记账、发票、收款、工资、营销、信用卡推荐和真人专家打包在一起，让小企业主和普通家庭少做一堆麻烦事，所以它收的不是一次性“软件钱”，而是持续的“省心费”。</p>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>Intuit Inc.（Nasdaq: INTU）</strong>
+        <p>主报告：FY2026 第四季度及全年业绩公告</p>
+        <p>期间：截至 2026-07-31 的三个月与全年</p>
+        <p>发布日期：2026-08-25</p>
+        <p>主口径：美元（公司原始披露口径）</p>
+        <p>说明：截至 2026-08-26，投资者关系页最新年度 SEC filing 仍显示 FY2025 10-K；本文把 2026-08-25 的正式业绩公告作为“这期成绩”的原文，FY2025 10-K 只用于商业模式与风险背景。</p>
+        <a href="https://investors.intuit.com/news-events/press-releases/detail/1320/intuit-reports-fourth-quarter-and-full-year-fiscal-2026-results-sets-fiscal-2027-guidance">打开公司正式业绩公告 ↗</a>
+      </aside>
+    </div>
+  </header>
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#company">公司</a>
+      <a href="#money">怎么赚钱</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#quiz">自测</a>
+    </div>
+  </nav>
+  <main>
+    <section id="company">
+      <div class="wrap">
+        <div class="head"><span class="no">01</span><div><span class="fact">财报原文中的事实</span><h2>一句话：它是“帮你管钱和报税”的工具箱</h2></div></div>
+        <div class="company">
+          <blockquote>如果说一家小店老板最怕的是“生意还没做完，账、税、工资、收款、营销先把人拖住”，那 Intuit 卖的就是把这些麻烦<span>尽量自动化</span>的整套工具。</blockquote>
+          <ul class="list">
+            <li><b>卖给谁：</b>普通报税用户、小企业主、中型企业、会计师和报税师。</li>
+            <li><b>卖什么：</b>TurboTax 帮个人报税；QuickBooks 帮企业记账、开票、收款、发工资；Credit Karma 做信用分和金融产品推荐；Mailchimp 做营销自动化。</li>
+            <li><b>为什么有人愿意付钱：</b>因为这些事又繁琐又容易出错，尤其税务、工资和付款，一旦弄错就不是“麻烦一点”，而可能是罚款、现金流断掉，或者客户不再信任你。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="money" class="soft">
+      <div class="wrap">
+        <div class="head"><span class="no">02</span><div><span class="fact">财报原文中的事实</span><h2>钱从哪里来</h2></div></div>
+        <div class="segments">
+          <article class="segment">
+            <span class="label">Global Business Solutions</span>
+            <h3>QuickBooks 主引擎</h3>
+            <span class="money">$129亿</span>
+            <p>全年收入，同比增长 16%。这是最大分部，主要来自在线记账、工资、支付、账单、融资和 Mailchimp 营销工具。</p>
+          </article>
+          <article class="segment">
+            <span class="label">Consumer</span>
+            <h3>TurboTax 报税</h3>
+            <span class="money">$86亿</span>
+            <p>全年收入，同比增长 11%。TurboTax 是它面向普通家庭的现金牛，Live 版把“软件”升级成“软件+真人专家”。</p>
+          </article>
+          <article class="segment">
+            <span class="label">Credit Karma</span>
+            <h3>金融推荐平台</h3>
+            <span class="money">$26亿</span>
+            <p>全年收入，同比增长 20%。合作机构在用户真的办成信用卡、贷款或保险后，才向 Intuit 付费。</p>
+          </article>
+          <article class="segment">
+            <span class="label">ProTax</span>
+            <h3>专业报税工具</h3>
+            <span class="money">$6.47亿</span>
+            <p>全年收入，同比增长 4%。卖给专业税务从业者，规模小，但和 Consumer、QuickBooks 互相导流。</p>
+          </article>
+        </div>
+        <p class="intro">从收钱方式看，Intuit 主要有三类收入。第一类是<b>订阅费</b>，像 QuickBooks 月费、工资服务费；第二类是<b>服务费</b>，比如报税软件、真人专家和电子申报服务；第三类是<b>结果分成</b>，Credit Karma 把用户介绍给信用卡、贷款和保险伙伴，只有真的发生点击、线索或放款等动作，才更容易拿到钱。</p>
+      </div>
+    </section>
+
+    <section id="profit">
+      <div class="wrap">
+        <div class="head"><span class="no">03</span><div><span class="analysis">分析判断</span><h2>这门生意怎样变成利润</h2></div></div>
+        <div class="flow">
+          <article><b>先吸引用户</b><p>广告、渠道、口碑、会计师网络把个人和小企业带进来。</p></article>
+          <article><b>让数据留在系统里</b><p>账本、工资、报税记录、信用信息越积越多。</p></article>
+          <article><b>卖更多环节</b><p>记账后接支付、工资、营销、融资；报税后接专家服务。</p></article>
+          <article><b>平台越深越难换</b><p>客户一旦把发票、工资和税表都放进去，就不爱搬家。</p></article>
+          <article><b>利润与现金留下来</b><p>软件的边际成本较低，续费和交叉销售会放大利润和现金流。</p></article>
+        </div>
+        <p class="intro">Intuit 的核心不是“把一个软件卖给你”，而是“把你的财务工作流装进我的系统里”。一旦客户在 QuickBooks 里沉淀了账、工资、支付和会计关系，或者在 TurboTax 里沉淀了报税习惯，切换成本就会变高。主要成本则集中在研发、销售营销、客户支持、云基础设施，以及为 TurboTax Live、QuickBooks Live 提供真人专家服务。</p>
+      </div>
+    </section>
+
+    <section id="numbers" class="numbers">
+      <div class="wrap">
+        <div class="head"><span class="no">04</span><div><span class="fact">财报原文中的事实</span><h2>这期成绩怎么样：最值得记住的 5 个数字</h2></div></div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div><span class="label">总收入</span><span class="value">214亿</span><b>美元 · FY2026 全年</b></div>
+            <small><span class="up">同比 +14%</span>。这是 Intuit 首次全年收入超过 200 亿美元，见正式业绩公告 “Financial Highlights”。</small>
+          </article>
+          <article class="metric">
+            <span class="label">最大收入引擎</span>
+            <span class="value">129亿</span>
+            <b>美元 · Global Business Solutions</b>
+            <small><span class="up">同比 +16%</span>；其中 Online Ecosystem 达 99 亿美元，同比增长 19%。</small>
+          </article>
+          <article class="metric">
+            <span class="label">TurboTax Live</span>
+            <span class="value">53%</span>
+            <b>占 TurboTax 收入</b>
+            <small><span class="up">同比 +37%</span>。说明它在把“自己填表”升级成“软件+专家”。</small>
+          </article>
+          <article class="metric">
+            <span class="label">营业利润</span>
+            <span class="value">59亿</span>
+            <b>美元 · GAAP</b>
+            <small><span class="up">同比 +20%</span>；收入长 14%，利润长更快，说明规模效应开始显现。</small>
+          </article>
+          <article class="metric">
+            <span class="label">经营现金流</span>
+            <span class="value">88亿</span>
+            <b>美元</b>
+            <small><span class="up">同比 +42%</span>；2025 财年为 62 亿美元，现金长得比收入更快。</small>
+          </article>
+        </div>
+        <div class="callout"><strong>一句白话总结：</strong>这份财报最重要的变化，不是单纯“卖得更多”，而是更大比例的收入来自更黏、更深的服务组合。QuickBooks 的在线生态在长，TurboTax Live 在长，Credit Karma 也在恢复。它越来越像一个长期订阅和数据平台，而不是一盒一年只用一次的软件。</div>
+      </div>
+    </section>
+
+    <section id="moat" class="soft">
+      <div class="wrap">
+        <div class="head"><span class="no">05</span><div><span class="analysis">分析判断</span><h2>为什么别人不容易抢走它的生意</h2></div></div>
+        <div class="moats">
+          <article class="moat"><span class="label">工作流黏性</span><h3>客户不是只买一个按钮</h3><p>记账、开票、支付、工资和报税一旦串起来，换系统会连历史数据、流程和团队习惯一起搬，成本很高。</p></article>
+          <article class="moat"><span class="label">数据与场景</span><h3>它知道“钱怎么流”</h3><p>账本、工资、税表、收付款和信用行为放在一起，让它更容易做自动化建议和产品交叉销售。</p></article>
+          <article class="moat"><span class="label">专家网络</span><h3>软件后面站着真人</h3><p>TurboTax Live 和 QuickBooks Live 让用户不只是买工具，而是买“有人托底”的安心感。</p></article>
+          <article class="moat"><span class="label">复杂规则</span><h3>税和工资本来就难</h3><p>税法、工资合规、支付和借贷都不是轻松行业。规则越复杂，能稳定做好的人越少。</p></article>
+        </div>
+        <p class="intro"><b>最大壁垒可以浓缩成一句话：</b>客户把“财务日常”交给了 Intuit。软件一旦嵌进日常工作，价格就不是唯一比较维度。真正难的，是让用户放心把账、税、工资和现金流都放进来。</p>
+      </div>
+    </section>
+
+    <section id="competition">
+      <div class="wrap">
+        <div class="head"><span class="no">06</span><div><span class="background">外部背景资料</span><h2>谁在和它竞争</h2></div></div>
+        <div class="rivals">
+          <article class="rival"><h3>H&amp;R Block</h3><p>强在报税专家、线下网点和“自己报/专家审/全程代办”多层服务，正面争夺 TurboTax 用户。</p></article>
+          <article class="rival"><h3>Xero</h3><p>强在云会计和小企业生态，定位清楚，和银行、会计师、应用商店连接紧密，是 QuickBooks 的典型对手。</p></article>
+          <article class="rival"><h3>ADP</h3><p>强在工资、税务代缴和人力资源合规深度，很多企业选 ADP 不是为了界面，而是为了“别出错”。</p></article>
+          <article class="rival"><h3>HubSpot</h3><p>强在营销自动化和 CRM 一体化，和 Mailchimp 一样都在抢小企业“找客户、留客户”的预算。</p></article>
+          <article class="rival"><h3>Experian</h3><p>强在信用报告、信用分和金融产品入口，和 Credit Karma 一样，竞争的是“谁更懂你的金融画像”。</p></article>
+        </div>
+        <p class="fine">这里不是简单排第一第二。Intuit 是多业务组合，对手也分散在税务、会计、工资、营销和消费金融不同战场。</p>
+      </div>
+    </section>
+
+    <section id="industry" class="soft">
+      <div class="wrap">
+        <div class="head"><span class="no">07</span><div><span class="background">外部背景资料</span><h2>这个行业是什么样</h2></div></div>
+        <div class="industry-grid">
+          <div class="industry-badge">成熟市场<br>+<br>持续数字化<br>+<br>AI 自动化</div>
+          <div class="drivers">
+            <article><h3>需求不会消失</h3><p>美国小企业数量很大。SBA 2026 FAQ 显示，美国有约 3620 万家小企业，说明“记账、工资、税务”是长期需求，不是短期风口。</p></article>
+            <article><h3>税务仍很复杂</h3><p>IRS 2025 年底发布的 Projection 显示，2024 年美国个人报税申报量约 1.593 亿份，其中电子申报 1.49 亿份，预计到 2028 年电子申报占比约 95.7%。量大、规则多、更新频繁，软件和服务都还有位置。</p></article>
+            <article><h3>行业已很成熟</h3><p>这不是“从 0 到 1”的新行业，而是成熟市场里的份额争夺和服务升级。增长更多来自在线化、自动化和提高客单价。</p></article>
+            <article><h3>上游</h3><p>云服务商、银行、支付网络、信用局、税务机关、保险和贷款机构、会计师/报税师网络。</p></article>
+            <article><h3>下游</h3><p>普通家庭、小企业主、中型企业财务团队、会计事务所。</p></article>
+            <article><h3>当前大趋势</h3><p>AI 代理、免费/低价竞争、监管变严、信用周期波动。Intuit 自己也在财报和 10-K 里反复强调这四件事。</p></article>
+          </div>
+        </div>
+        <p class="intro"><b>行业阶段：</b>整体偏成熟，但增长点仍在。不是因为“更多人第一次需要记账软件”，而是因为原本分散的工作正被搬到一个更自动化的平台里。</p>
+      </div>
+    </section>
+
+    <section id="statements">
+      <div class="wrap">
+        <div class="head"><span class="no">08</span><div><span class="fact">财报原文中的事实</span><h2>三张报表的白话解读</h2></div></div>
+        <div class="statements">
+          <article class="statement">
+            <h3>利润表：这年赚了多少</h3>
+            <span class="formula">收入 214 亿美元 → 营业利润 59 亿美元 → 每股收益 16.46 美元</span>
+            <p>先看收入，再看营业利润。收入长 14%，营业利润长 20%，说明费用没有和收入一起等比例膨胀。</p>
+          </article>
+          <article class="statement">
+            <h3>资产负债表：家底稳不稳</h3>
+            <span class="formula">现金和投资 72 亿美元；总债务 77 亿美元</span>
+            <p>它不是“零负债公司”，但现金和投资规模不小，且 2026 年 6 月又发了 17.5 亿美元高级票据来加强流动性。</p>
+          </article>
+          <article class="statement">
+            <h3>现金流表：利润有没有变成真钱</h3>
+            <span class="formula">经营现金流 88 亿美元；购买固定资产约 2.21 亿美元</span>
+            <p>对软件公司来说，最漂亮的地方常常不是利润，而是高质量现金流。Intuit 这年的经营现金流明显快于收入增速。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" class="soft">
+      <div class="wrap">
+        <div class="head"><span class="no">09</span><div><span class="fact">今天的专业名词</span><h2>5 个词，读懂 Intuit</h2></div></div>
+        <div class="terms">
+          <article class="term"><h3>订阅收入</h3><p>客户按月或按年持续付费，不是一次买断。</p><p class="example">例：像你开视频网站会员，不是买一张永久光盘。</p></article>
+          <article class="term"><h3>经营现金流</h3><p>公司靠日常经营真正收进来的现金。</p><p class="example">例：不是“账上说赚了”，而是钱真的打进账户了。</p></article>
+          <article class="term"><h3>递延收入</h3><p>先收了钱，但服务还没完全做完，所以不能马上都算收入。</p><p class="example">例：你先买一年健身卡，健身房今天收到了钱，但要慢慢把这笔钱算成每个月的收入。</p></article>
+          <article class="term"><h3>Cost-per-action</h3><p>按“真正发生动作”收费，比如办卡成功、贷款放款。</p><p class="example">例：不是你看了广告就付钱，而是你真的报名成功了，介绍人才拿佣金。</p></article>
+          <article class="term"><h3>转换成本</h3><p>从一个系统换到另一个系统，要花掉的时间、金钱和麻烦。</p><p class="example">例：手机换品牌不只要买新机，还要搬数据、改习惯、重新配件。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head"><span class="no">10</span><div><span class="fact">财报原文中的事实</span><h2>这期最重要的 4 件事</h2></div></div>
+        <ul class="list">
+          <li><b>全年收入首次站上 200 亿美元：</b>FY2026 总收入 214 亿美元，同比增长 14%。</li>
+          <li><b>QuickBooks 仍是主引擎：</b>Global Business Solutions 收入 129 亿美元，其中 QuickBooks Online Accounting 增长 23%。</li>
+          <li><b>TurboTax 在“加服务”：</b>TurboTax Live 增长 37%，已占 TurboTax 总收入的 53%。</li>
+          <li><b>Credit Karma 明显回暖：</b>全年收入 26 亿美元，同比增长 20%，主要靠个人贷款、信用卡和车险推荐恢复。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="head"><span class="no">11</span><div><span class="analysis">分析判断</span><h2>可能出什么问题</h2></div></div>
+        <div class="risks">
+          <article class="risk"><h3>免费和低价竞争</h3><p>Intuit 在 10-K 里明确写到，它面临免费和低价产品竞争，尤其在税务、会计、支付和消费金融领域。</p></article>
+          <article class="risk"><h3>AI 带来机会，也带来出错风险</h3><p>税务和财务自动化一旦算错，后果不是“推荐错一首歌”，而可能是报税错误、工资错误、客户受损和监管麻烦。</p></article>
+          <article class="risk"><h3>Credit Karma 吃信用周期</h3><p>如果利率高、消费者资格变差、合作银行缩手，贷款和信用卡推荐就会变难，收入也会波动。</p></article>
+          <article class="risk"><h3>监管越来越密</h3><p>税务、支付、贷款、隐私和 AI 都在变严。规则一变，合规成本就会上升，产品节奏也可能被拖慢。</p></article>
+          <article class="risk"><h3>信任是命门</h3><p>它手里有税表、银行账户、工资、信用信息。一旦安全事故或数据泄露发生，伤害会非常直接。</p></article>
+          <article class="risk"><h3>宏观经济会传导到小企业</h3><p>经济转弱时，小企业会压缩软件开支，消费者也可能少办卡、少贷款、少买保险，多个分部都会受影响。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="remember remember">
+      <div class="wrap">
+        <div class="head"><span class="no">12</span><div><span class="fact">今日记住什么</span><h2>把今天这家公司记成 3 句话</h2></div></div>
+        <div class="three">
+          <article><strong>1</strong><h3>它卖的不是软件壳</h3><p>它卖的是“把账、税、工资和收款都省下来”的整套省心方案。</p></article>
+          <article><strong>2</strong><h3>最大护城河是嵌入流程</h3><p>数据和工作流越多，客户越不想换系统。</p></article>
+          <article><strong>3</strong><h3>真正漂亮的是现金</h3><p>214 亿美元收入很大，但 88 亿美元经营现金流更能说明这门生意的质量。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz">
+      <div class="wrap">
+        <div class="head"><span class="no">13</span><div><span class="analysis">自测题与答案</span><h2>三道题，确认你看懂了</h2></div></div>
+        <details><summary>1. Intuit 最大的收入来源是哪一块，为什么它重要？</summary><p class="answer">是 Global Business Solutions，FY2026 收入 129 亿美元。它重要，因为这是 QuickBooks 为中心的长期订阅生态，也是最容易继续卖更多服务的地方。</p></details>
+        <details><summary>2. 为什么说 TurboTax Live 很关键？</summary><p class="answer">因为它说明 Intuit 不再只卖“自己填税表的软件”，而是在卖“软件+真人专家”的更高价值服务。FY2026 中，TurboTax Live 已占 TurboTax 收入的 53%。</p></details>
+        <details><summary>3. Intuit 最大的风险更像哪种：卖不出去，还是做错？</summary><p class="answer">两种都有，但“做错”的杀伤力更大。税务、工资、支付和信用建议都很敏感，算错或泄露数据会直接伤害信任和合规。</p></details>
+      </div>
+    </section>
+
+    <section class="sources">
+      <div class="wrap">
+        <div class="head"><span class="no">14</span><div><span class="background">资料来源</span><h2>原文与核验入口</h2></div></div>
+        <ol>
+          <li><a href="https://investors.intuit.com/news-events/press-releases/detail/1320/intuit-reports-fourth-quarter-and-full-year-fiscal-2026-results-sets-fiscal-2027-guidance">Intuit Reports Fourth Quarter and Full Year Fiscal 2026 Results; Sets Fiscal 2027 Guidance</a>，Intuit 投资者关系，2026-08-25。本文“这期成绩”的正式原文。</li>
+          <li><a href="https://investors.intuit.com/financial-information/financial-results">Financial Results</a>，Intuit 投资者关系，访问于 2026-08-26。用于核对 FY2026 是当前最新结果、FY2025 仍是最新年度 10-K filing 的背景。</li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/896878/000089687825000035/intu-20250731.htm">Intuit FY2025 Form 10-K</a>，美国 SEC，2025-09-03。用于商业模式、分部描述、风险与收入确认背景，不当作 FY2026 原文。</li>
+          <li><a href="https://advocacy.sba.gov/2026/02/03/frequently-asked-questions-about-small-business-2026/">Frequently Asked Questions About Small Business 2026</a>，U.S. Small Business Administration Office of Advocacy，2026-02-03。用于美国小企业数量背景。</li>
+          <li><a href="https://www.irs.gov/pub/irs-access/p6187a_accessible.pdf">IRS Publication 6187-A</a>，美国国税局，2025-12 修订版。用于个人报税量、电子申报占比与趋势。</li>
+          <li><a href="https://www.hrblock.com/">H&amp;R Block 官方网站</a>，访问于 2026-08-26；<a href="https://www.xero.com/accounting-software/">Xero Accounting Software</a>，访问于 2026-08-26；<a href="https://www.adp.com/what-we-offer/payroll/payroll-for-1-49-employees.aspx">ADP Small Business Payroll</a>，访问于 2026-08-26；<a href="https://www.hubspot.com/products/marketing">HubSpot Marketing</a>，访问于 2026-08-26；<a href="https://www.experian.com/">Experian 官方网站</a>，访问于 2026-08-26。用于竞争对手业务定位背景。</li>
+        </ol>
+        <p class="fine">口径说明：本报告所有核心金额均以美元展示，并保持公司原始披露币种。文中标为“财报原文中的事实”的内容来自 Intuit 正式公告；“外部背景资料”来自监管机构、政府机构或竞争对手官方页面；“分析判断”用于帮助理解，不构成投资建议。截至 2026-08-26，若 FY2026 10-K 尚未公开，本文不把任何换算、推断或旧年报数字冒充成 FY2026 年报原文。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="disclaimer"><div class="wrap">本报告只用于商业与财报教育，不构成投资建议，不提供买入、卖出、目标价或收益承诺。</div></footer>
+</body>
+</html>

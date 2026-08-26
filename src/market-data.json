@@ -610,5 +610,21 @@
     "movingAverage50": "140.93",
     "movingAverage200": "118.82",
     "fetchedAt": "2026-08-25T03:41:27.720Z"
+  },
+  "Intuit": {
+    "provider": "Alpha Vantage",
+    "symbol": "INTU",
+    "name": "Intuit Inc",
+    "currency": "USD",
+    "price": "357.4600",
+    "changePercent": "-3.3683",
+    "latestTradingDay": "2026-08-25",
+    "marketCapitalization": "101186806000",
+    "peRatio": "22.56",
+    "week52High": "697.25",
+    "week52Low": "251.72",
+    "movingAverage50": "301.19",
+    "movingAverage200": "441.01",
+    "fetchedAt": "2026-08-26T02:11:43.857Z"
   }
 }

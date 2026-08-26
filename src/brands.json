@@ -216,5 +216,12 @@
     "color": "#CC0000",
     "simpleIcon": "siTarget",
     "marketSymbol": "NYSE:TGT"
+  },
+  "Intuit": {
+    "company": "Intuit",
+    "query": "Intuit Inc.",
+    "color": "#236CFF",
+    "simpleIcon": "siIntuit",
+    "marketSymbol": "NASDAQ:INTU"
   }
 }
