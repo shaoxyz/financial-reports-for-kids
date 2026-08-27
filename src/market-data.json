@@ -626,5 +626,21 @@
     "movingAverage50": "301.19",
     "movingAverage200": "441.01",
     "fetchedAt": "2026-08-26T02:11:43.857Z"
+  },
+  "Salesforce": {
+    "provider": "Alpha Vantage",
+    "symbol": "CRM",
+    "name": "Salesforce.com Inc",
+    "currency": "USD",
+    "price": "205.6200",
+    "changePercent": "-0.0340",
+    "latestTradingDay": "2026-08-26",
+    "marketCapitalization": "161727939000",
+    "peRatio": "23.83",
+    "week52High": "267.75",
+    "week52Low": "146.32",
+    "movingAverage50": "175.45",
+    "movingAverage200": "200.59",
+    "fetchedAt": "2026-08-27T02:11:49.463Z"
   }
 }

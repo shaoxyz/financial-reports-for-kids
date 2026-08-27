@@ -223,5 +223,12 @@
     "color": "#236CFF",
     "simpleIcon": "siIntuit",
     "marketSymbol": "NASDAQ:INTU"
+  },
+  "Salesforce": {
+    "company": "Salesforce",
+    "query": "Salesforce, Inc.",
+    "color": "#00A1E0",
+    "override": "Salesforce.svg",
+    "marketSymbol": "NYSE:CRM"
   }
 }

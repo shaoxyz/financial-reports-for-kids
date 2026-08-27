@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 Salesforce 财报：它怎样把销售、客服、营销、数据和 AI 装进同一朵云里，再把这套工作台按年租给企业。">
+  <title>Salesforce：把客户关系装进云里｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--sky:#00a1e0;--navy:#0f2344;--ocean:#0a5ca8;--mist:#eaf7ff;--foam:#f7fbff;--sand:#f5efe5;--ink:#172033;--muted:#627086;--line:#cfddeb;--green:#158468;--amber:#ffcc62;--red:#bb4d4d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--sand);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.74}a{color:var(--ocean);text-underline-offset:3px}main{overflow:hidden}.wrap{width:min(1120px,calc(100% - 34px));margin:auto}
+    .fact,.background,.analysis,.term-tag{display:inline-block;padding:3px 8px;font-size:.68rem;font-weight:900;border-radius:999px}.fact{color:var(--navy);background:#fff;border:1px solid #c7dbef}.background{color:#155846;background:#e6f6ef}.analysis{color:#21438d;background:#e9efff}.term-tag{color:#6a4d09;background:#ffefc6}
+    .label{font-size:.7rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;padding:78px 0 66px;color:#fff;background:linear-gradient(140deg,#081a34 0%,#0a5ca8 44%,#00a1e0 100%)}.hero:before,.hero:after{content:"";position:absolute;background:rgba(255,255,255,.12);filter:blur(1px)}.hero:before{width:420px;height:420px;right:-120px;top:-150px;border-radius:50%}.hero:after{width:620px;height:180px;left:-100px;bottom:30px;border-radius:999px}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.16fr .84fr;gap:42px;align-items:end}.hero h1{margin:14px 0 18px;font-size:clamp(3rem,7.2vw,6rem);font-weight:900;line-height:.93;letter-spacing:-.05em}.hero h1 em{display:block;color:var(--amber);font-style:normal}.lead{max-width:760px;color:#e8f7ff;font-size:clamp(1rem,1.8vw,1.16rem)}
+    .hero-card{padding:24px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.96);color:var(--ink);box-shadow:18px 18px 0 rgba(6,23,44,.22)}.hero-card strong{display:block;margin:10px 0 14px;color:var(--ocean);font-size:1.22rem}.hero-card p{margin:7px 0;font-size:.87rem}.hero-card a{font-weight:900}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(247,251,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav .wrap{display:flex;gap:20px;padding:12px 0;overflow:auto;white-space:nowrap}.nav a{color:#39506e;text-decoration:none;font-size:.78rem;font-weight:850}
+    section{padding:74px 0}.head{display:grid;grid-template-columns:80px 1fr;gap:18px;align-items:start;margin-bottom:28px}.head .no{font:900 3.75rem/1 Georgia,serif;color:#a8cae7}.head h2{margin:6px 0 0;font-size:clamp(1.95rem,4vw,3.15rem);line-height:1.08}.intro{max-width:900px;font-size:1.04rem}.soft{background:var(--foam);border-block:1px solid var(--line)}
+    .primer{display:grid;grid-template-columns:1.02fr .98fr;gap:22px}.primer-box,.primer-quiz{padding:24px;background:#fff;border:1px solid var(--line)}.primer-box ul,.sources ul,.report-list,.risk-list,.event-list{margin:0;padding:0;list-style:none}.primer-box li,.sources li,.report-list li,.risk-list li,.event-list li{padding:12px 0;border-bottom:1px solid var(--line)}.primer-box li:last-child,.sources li:last-child,.report-list li:last-child,.risk-list li:last-child,.event-list li:last-child{border-bottom:0}.primer-box b,.primer-quiz b{display:block;color:var(--ocean)}.primer-quiz p{margin:10px 0 0}
+    .company{display:grid;grid-template-columns:1.06fr .94fr;gap:40px}.company blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.78rem,3.2vw,2.9rem);line-height:1.28}.company blockquote span{box-shadow:inset 0 -.34em #caeefe}.report-list b{display:block}
+    .segments{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.segment{padding:22px;background:#fff;border:1px solid var(--line);border-top:7px solid var(--sky)}.segment h3{margin:8px 0}.segment .money{display:block;margin:14px 0 10px;font:900 2rem/1 Georgia,serif;color:var(--ocean)}.segment p{margin:0;color:var(--muted);font-size:.87rem}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);border:2px solid var(--sky);background:#fff}.flow article{padding:20px 16px;border-right:1px solid #a6cdeb}.flow article:last-child{border-right:0}.flow b{display:block;color:var(--ocean)}.flow p{margin:6px 0 0;font-size:.85rem}
+    .numbers{background:var(--navy);color:#fff}.numbers .head .no{color:#6e8bb7}.numbers .fact{background:#fff}.dashboard{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:14px}.metric{min-height:180px;padding:22px;background:#fff;color:var(--ink)}.metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#00a1e0 0%,#0a5ca8 58%,#081a34 100%);color:#fff}.metric .value{display:block;margin:10px 0;font:900 clamp(2rem,4vw,4rem)/1 Georgia,serif}.metric small{color:var(--muted)}.metric.main small{color:#e9f7ff}.up{color:var(--green);font-weight:900}.metric.main .up{color:var(--amber)}.callout{margin-top:22px;padding:22px;border-left:7px solid var(--amber);background:#14315e}.callout strong{color:var(--amber)}
+    .moats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.moat,.rival,.statement,.term,.remember-card,.risk{padding:22px;background:#fff;border:1px solid var(--line)}.moat{border-top:7px solid var(--sky)}.moat h3,.rival h3,.statement h3,.term h3,.risk h3{margin:6px 0}.moat p,.rival p,.statement p,.term p,.risk p{margin:7px 0;color:var(--muted)}
+    .rivals{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.rival{border-bottom:5px solid var(--navy)}
+    .industry-grid{display:grid;grid-template-columns:.84fr 1.16fr;gap:38px}.industry-badge{display:grid;place-items:center;aspect-ratio:1;background:radial-gradient(circle at center,#fff 0 26%,#dbf3ff 26% 50%,#7bd4ff 50% 72%,#0f2344 72% 100%);border-radius:32px;color:#0f2344;text-align:center;padding:26px;font-weight:900}.drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.drivers article{padding:16px 0;border-bottom:1px solid var(--line)}.drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.formula{display:block;margin:14px 0;padding:11px;background:#dff1ff;color:#093862;font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}.term{border-left:4px solid var(--sky)}.example{font-size:.9rem;color:var(--muted)}
+    .events{color:#fff;background:linear-gradient(140deg,#082346 0%,#0a5ca8 100%)}.events .head .no{color:#8fcff4}.events .fact{background:#fff}.event-list li{border-color:#7ac5ef}.event-list b{display:block;color:#fff}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.risk{background:#fff8ee;border-color:#efd9bc}
+    .remember{background:#eaf4ff}.remember-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.remember-card{border-top:5px solid var(--sky)}.remember-card strong{display:block;color:var(--ocean);font:900 2.35rem/1 Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}.quiz summary{padding:16px 0;cursor:pointer;font-weight:900}.answer{padding:0 0 18px;color:var(--muted)}
+    .sources{background:#ebe2d6}.fine{font-size:.8rem;color:var(--muted)}.disclaimer{padding:24px 0;background:#181d24;color:#c9cfd9;font-size:.78rem}
+    @media(max-width:920px){.hero-grid,.primer,.company,.industry-grid{grid-template-columns:1fr}.segments,.moats,.statements,.remember-grid{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.rivals{grid-template-columns:1fr 1fr 1fr}.flow{grid-template-columns:1fr}.flow article{border-right:0;border-bottom:1px solid #a6cdeb}.flow article:last-child{border-bottom:0}}
+    @media(max-width:620px){section{padding:56px 0}.hero{padding:52px 0 48px}.hero h1{font-size:3.15rem}.head{grid-template-columns:50px 1fr}.head .no{font-size:2.8rem}.segments,.moats,.rivals,.drivers,.statements,.terms,.risks,.remember-grid,.dashboard{grid-template-columns:1fr}.wrap{width:min(100% - 28px,1120px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 企业软件与 CRM · 2026-08-27</span>
+        <h1>把客户关系<em>装进云里</em></h1>
+        <p class="lead">Salesforce 卖的不是一台机器，也不是一条广告位。它卖的是一整套“客户工作台”：销售怎么跟进、客服怎么回复、营销怎么触达、数据怎么连起来、AI 怎么帮忙，全都放进同一朵云里，然后按年收租。</p>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>Salesforce, Inc.（NYSE: CRM）</strong>
+        <p>主报告：FY2027 Q2 正式业绩公告</p>
+        <p>报告期：截至 2026-07-31 的三个月</p>
+        <p>发布日期：2026-08-26</p>
+        <p>背景补充：2026 Form 10-K（截至 2026-01-31，提交于 2026-03-02）</p>
+        <p>主展示口径：美元（公司原始披露口径）</p>
+        <p>说明：这份报告用最新季度业绩公告讲“这期成绩”，用最近一份 10-K 补充“生意是什么、风险是什么”。</p>
+        <p><a href="https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx">打开公司投资者关系原文 ↗</a></p>
+        <p><a href="https://investor.salesforce.com/files/doc_financials/2027/q2/CRM-Q2-FY27-Earnings-Press-Release.pdf">打开业绩公告 PDF ↗</a></p>
+        <p><a href="https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm">打开 2026 Form 10-K ↗</a></p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#primer">短版导读</a>
+      <a href="#company">公司是什么</a>
+      <a href="#money">钱从哪里来</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#quiz">自测</a>
+      <a href="#sources">资料</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="primer">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">00</span>
+          <div>
+            <span class="fact">5分钟短版导读</span>
+            <h2>先抓住今天最该记住的几件事</h2>
+          </div>
+        </div>
+        <div class="primer">
+          <article class="primer-box">
+            <ul>
+              <li><b>公司怎么赚钱：</b>Salesforce 主要把销售、客服、营销、数据整合和协作工具做成云软件，按订阅收费。2026 财年里，订阅和支持收入占总收入约 95%，说明它本质上是“长期收月租/年租”的生意，不是一次性卖项目。</li>
+              <li><b>最重要的 5 个数字：</b>Q2 FY2027 收入 113 亿美元，同比增长 11%；订阅和支持收入 108 亿美元，同比增长 12%；cRPO 335 亿美元，同比增长 14%；Agentforce 和 Data 360 的 ARR 接近 39 亿美元，同比增长超过 210%；经营现金流 13 亿美元，自由现金流 11 亿美元，分别同比增长 71% 和 81%。</li>
+              <li><b>最大壁垒：</b>它最难被抢走的地方，不是某一个功能，而是客户把销售、客服、营销、数据和内部协作都放进来了。系统一旦变成日常工作台，换掉会很痛。</li>
+              <li><b>主要竞争对手：</b>Microsoft、Oracle、SAP、Adobe、HubSpot。它们分别强在办公生态、前后台一体化、大企业流程底座、数字营销和中小企业易用性。</li>
+              <li><b>最大风险：</b>AI 很热，但企业最后还是会问“真的省了多少钱、签了多少单、少了多少人工”。如果客户觉得 AI 没有明显回报，预算可能会先放慢。</li>
+              <li><b>今天的专业名词：</b>CRM、订阅收入、cRPO、营业利润率、自由现金流。</li>
+            </ul>
+          </article>
+          <aside class="primer-quiz">
+            <span class="term-tag">3道自测题</span>
+            <p><b>1. Salesforce 卖的核心不是服务器，而是什么？</b>答案：是把销售、客服、营销、数据和 AI 放在一起的企业工作台。</p>
+            <p><b>2. 为什么 cRPO 很重要？</b>答案：因为它像“已经签了但还没完全送出去的订单”，能帮助我们看未来一段时间收入底子厚不厚。</p>
+            <p><b>3. 为什么这季每股收益跳得特别快，不能只看表面？</b>答案：因为 GAAP 每股收益里有一大块来自战略投资收益，不全是主营业务自己多赚出来的。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">01</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>一句话：它卖的是“管客户关系的总控制台”</h2>
+          </div>
+        </div>
+        <div class="company">
+          <blockquote>如果一家大公司每天都要回答“谁在跟这个客户谈、客服为什么还没解决、营销投放有没有用、数据为什么在不同系统里对不上”，那 Salesforce 卖的就是把这些问题尽量放到<span>同一个云平台</span>里解决。</blockquote>
+          <ul class="report-list">
+            <li><b>公司做什么：</b>Salesforce 在 2026 Form 10-K 的 Item 1 Business 里把自己定义为 CRM 技术公司，把人、应用、数据和 AI 连到一个统一平台上，帮助企业做销售、服务、营销、商业和 IT 工作。</li>
+            <li><b>谁付钱：</b>主要是企业客户，既有全球大公司，也有中型公司和成长型公司。付款人通常不是个人，而是销售、客服、营销、IT 或管理层预算。</li>
+            <li><b>为什么愿意付钱：</b>因为客户信息分散时，团队会像几个人共用一本乱七八糟的通讯录。Salesforce 的价值，是让不同团队看到同一份“客户真相”。</li>
+            <li><b>它不是靠什么挣钱：</b>它不是靠卖广告，也不是靠卖硬件。它靠软件订阅、增购模块、长期合同和少量实施服务挣钱。</li>
+          </ul>
+        </div>
+        <p class="intro">用孩子也能懂的话说，Salesforce 像一座企业的“客户机场塔台”。销售、客服、营销、数据团队都围着同一套系统转，谁先联系客户、谁来接电话、下一步该做什么，都尽量在一个地方完成。见 2026 Form 10-K Item 1 Business。</p>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">02</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>钱从哪里来</h2>
+          </div>
+        </div>
+        <div class="segments">
+          <article class="segment">
+            <span class="label">FY2026 服务大类</span>
+            <h3>Service</h3>
+            <span class="money">$98亿</span>
+            <p>占 FY2026 订阅和支持收入 25%。企业花钱让客服、工单和自动回复跑得更顺。</p>
+          </article>
+          <article class="segment">
+            <span class="label">FY2026 服务大类</span>
+            <h3>Sales</h3>
+            <span class="money">$90亿</span>
+            <p>占 23%。这是最经典的 CRM 部分，帮助销售跟进线索、报价、续约和预测。</p>
+          </article>
+          <article class="segment">
+            <span class="label">FY2026 服务大类</span>
+            <h3>Platform + Slack</h3>
+            <span class="money">$89亿</span>
+            <p>占 22%。包括平台、协作和其他工具，也包含一部分 Informatica 并表贡献。</p>
+          </article>
+          <article class="segment">
+            <span class="label">FY2026 服务大类</span>
+            <h3>Integration + Analytics</h3>
+            <span class="money">$62亿</span>
+            <p>占 16%。负责把不同系统和数据连起来，再变成分析和判断。</p>
+          </article>
+          <article class="segment">
+            <span class="label">FY2026 服务大类</span>
+            <h3>Marketing + Commerce</h3>
+            <span class="money">$54亿</span>
+            <p>占 14%。帮助企业找客户、做触达、跑电商和做个性化体验。</p>
+          </article>
+        </div>
+        <p class="intro">更重要的是收钱方式。2026 财年里，Salesforce 的订阅和支持收入是 393.88 亿美元，占总收入约 95%；专业服务和其他收入只有 21.37 亿美元，占比约 5%。这说明它更像“持续收费的软件房东”，不是“做完一个项目就结账走人”的外包公司。见 2026 Form 10-K，Subscription and Support Revenues by Service Offering、MD&amp;A。Q2 FY2027 这季也是一样，利润表中订阅和支持收入占总收入 95%，专业服务和其他占 5%，见业绩公告第 7 页。</p>
+      </div>
+    </section>
+
+    <section id="profit" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">03</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>这门生意怎样变成利润和现金</h2>
+          </div>
+        </div>
+        <div class="flow">
+          <article><b>先签合同</b><p>企业先买多个模块，通常是一年或多年的订阅合同。</p></article>
+          <article><b>再分期确认收入</b><p>钱可能先开票，但收入要随着服务慢慢确认，不是一口气全记完。</p></article>
+          <article><b>继续加卖功能</b><p>销售云买完，再加客服、数据、Slack、AI，客单价会变高。</p></article>
+          <article><b>让客户更难搬家</b><p>流程和数据越深，换系统就越像“全公司搬家”，很耗时间和风险。</p></article>
+          <article><b>现金沉淀下来</b><p>软件复制成本没有实体货那么高，所以续费稳定时，现金会比项目制公司更好看。</p></article>
+        </div>
+        <p class="intro">Salesforce 的主要成本，不是原材料，而是研发、销售与营销、客户支持、云基础设施和并购整合。Q2 FY2027 的成本结构很直白：总成本占收入 23%，研发占 15%，销售和营销占 34%，管理费用占 6%，重组占 1%，最后留下 20.5% 的 GAAP 营业利润率。换句话说，这门生意很像“先花很多钱铺路、再靠长期续费回本”的收费公路。见业绩公告第 7 页。</p>
+      </div>
+    </section>
+
+    <section id="numbers" class="numbers">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">04</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>这期成绩怎么样：最能说明生意变化的 5 个数字</h2>
+          </div>
+        </div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div>
+              <span class="label">Q2 FY2027 总收入</span>
+              <span class="value">113亿</span>
+              <b>美元 · 截至 2026-07-31 的三个月</b>
+            </div>
+            <small><span class="up">同比 +11%</span>。其中约 4.56 亿美元来自 Informatica 并表贡献。见业绩公告第 1 页。</small>
+          </article>
+          <article class="metric">
+            <span class="label">订阅和支持收入</span>
+            <span class="value">108亿</span>
+            <b>美元</b>
+            <small><span class="up">同比 +12%</span>，仍是绝对主引擎；这门生意基本靠“租软件”吃饭。见业绩公告第 1 页。</small>
+          </article>
+          <article class="metric">
+            <span class="label">cRPO</span>
+            <span class="value">335亿</span>
+            <b>美元</b>
+            <small><span class="up">同比 +14%</span>。这是未来 12 个月预计确认的已签约收入，像“已经接单、还没全部送完”。见业绩公告第 1 页。</small>
+          </article>
+          <article class="metric">
+            <span class="label">AI 年经常性收入</span>
+            <span class="value">39亿</span>
+            <b>美元 · Agentforce + Data 360 ARR</b>
+            <small><span class="up">同比超过 +210%</span>；说明 AI 现在已经不只是讲故事，而是在快速变成续费池。见业绩公告第 1 页。</small>
+          </article>
+          <article class="metric">
+            <span class="label">自由现金流</span>
+            <span class="value">11亿</span>
+            <b>美元</b>
+            <small><span class="up">同比 +81%</span>；经营现金流 13 亿美元，同比增长 71%。现金增速比收入快。见业绩公告第 1 页、第 14 页。</small>
+          </article>
+        </div>
+        <div class="callout"><strong>一句白话总结：</strong>收入在稳步长，未来已签订单也在加厚，AI 相关续费增长更快，现金流很漂亮。这四点放在一起，说明 Salesforce 现在最像的是“成熟的大软件平台进入 AI 升级周期”，而不是一家公司只靠一次性的 AI 热点冲业绩。</div>
+      </div>
+    </section>
+
+    <section id="moat" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">05</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>为什么别人不容易抢走它的生意</h2>
+          </div>
+        </div>
+        <div class="moats">
+          <article class="moat">
+            <span class="label">客户数据</span>
+            <h3>它握着“同一份客户真相”</h3>
+            <p>Salesforce 反复强调 single source of truth。谁在跟进、客户买过什么、投诉过什么、广告从哪来，都能尽量放到同一套数据里。</p>
+          </article>
+          <article class="moat">
+            <span class="label">工作流深度</span>
+            <h3>不是一个功能，而是一整套流程</h3>
+            <p>销售、客服、营销、分析、整合和 Slack 协作一起卖，意味着客户不是只替换一个按钮，而是要替换一整套日常工作习惯。</p>
+          </article>
+          <article class="moat">
+            <span class="label">生态</span>
+            <h3>伙伴和 AppExchange 在帮它扩边界</h3>
+            <p>10-K 里写到，ISV 和第三方开发者可以在 AppExchange 上卖云应用，咨询伙伴也参与大型实施。这会让平台更黏。</p>
+          </article>
+          <article class="moat">
+            <span class="label">AI 放大器</span>
+            <h3>如果 AI 真好用，护城河会更厚</h3>
+            <p>因为 AI 的效果很依赖上下文和数据。谁先拿到更完整的数据底座，谁就更容易把 AI 变成真实工作流。</p>
+          </article>
+        </div>
+        <p class="intro"><b>最大壁垒可以浓缩成一句话：</b>客户把最核心的客户数据和流程放在了 Salesforce 里。系统越像“总控制台”，转换成本就越高。这个壁垒是真实的，但也不是铁板一块，因为 Microsoft、Oracle、SAP 也在做“平台 + AI + 数据”组合拳。生态来源见 2026 Form 10-K Item 1 Business，Partner Ecosystem。</p>
+      </div>
+    </section>
+
+    <section id="competition">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">06</span>
+          <div>
+            <span class="background">外部背景资料</span>
+            <h2>谁在和它竞争</h2>
+          </div>
+        </div>
+        <div class="rivals">
+          <article class="rival">
+            <h3>Microsoft</h3>
+            <p>强在 Dynamics 365 可以把销售、客服、财务、供应链和 Microsoft 365、Azure 连在一起，适合已经深度用微软生态的大公司。</p>
+          </article>
+          <article class="rival">
+            <h3>Oracle</h3>
+            <p>强在前台和后台靠得更近。官方页面强调从营销到成交再到服务一条线跑完，对已经用 Oracle 企业应用的客户很有吸引力。</p>
+          </article>
+          <article class="rival">
+            <h3>SAP</h3>
+            <p>强在大企业流程底座。SAP 的官方 CX 页面强调把营销、销售、服务和商业接到既有 SAP 基础上，这对老牌企业很重要。</p>
+          </article>
+          <article class="rival">
+            <h3>Adobe</h3>
+            <p>强在数字营销、内容和个性化体验。Adobe Experience Cloud、Marketo 和 Commerce 对营销预算的吸引力很强。</p>
+          </article>
+          <article class="rival">
+            <h3>HubSpot</h3>
+            <p>强在更轻、更快、更容易上手，尤其对中小企业。它把营销、销售和客服做成一个更亲民的平台，常从小客户开始抢。</p>
+          </article>
+        </div>
+        <p class="fine">这些对手不是在完全相同的一条跑道上硬碰硬。Salesforce 的对手分布在 CRM、客服、营销自动化、协作、数据整合和企业 AI 多个战场。来源见 Microsoft Dynamics 365、Oracle Applications、SAP CX、Adobe for Business、HubSpot 官方产品页面。</p>
+      </div>
+    </section>
+
+    <section id="industry" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">07</span>
+          <div>
+            <span class="background">外部背景资料</span>
+            <h2>这个行业是什么样</h2>
+          </div>
+        </div>
+        <div class="industry-grid">
+          <div class="industry-badge">成熟市场<br>+<br>云订阅<br>+<br>AI 升级周期</div>
+          <div class="drivers">
+            <article><h3>行业不是新生意，但还在长</h3><p>IDC 2023 年预测，到 2026 年全球企业应用收入将达到 3852 亿美元，说明这不是小众工具，而是很大的成熟市场。</p></article>
+            <article><h3>增长驱动力从“上云”变成“上 AI”</h3><p>Gartner 2025 年说，到 2026 年底，40% 的企业应用会集成任务型 AI agent；这对 Salesforce 这种平台公司是直接顺风。</p></article>
+            <article><h3>客户现在更重视 AI 是否真有用</h3><p>Gartner 2026 年调查显示，给销售提供 AI next best actions 的组织，更可能实现商业增长。这说明客户愿意花钱，但要看到结果。</p></article>
+            <article><h3>不是所有 AI 投入都会立刻回本</h3><p>IDC 2026 年写到，全球 AI IT 支出预计到 4090 亿美元，但也预计 2026 年近一半 AI 驱动的数字化项目达不到 ROI 目标。</p></article>
+            <article><h3>上游是谁</h3><p>云基础设施、数据中心、网络、安全、数据库、系统集成商、行业顾问和开发者生态。</p></article>
+            <article><h3>下游是谁</h3><p>企业里的销售、客服、营销、IT、财务、运营和管理层，尤其是需要跨团队共享客户信息的组织。</p></article>
+          </div>
+        </div>
+        <p class="intro"><b>行业阶段：</b>成熟，但正在经历一轮很重要的升级。以前企业买 CRM，主要是为了把客户资料电子化；现在企业买 CRM，更想知道 AI 能不能直接帮销售写跟进、帮客服自动回复、帮管理层做预测。也正因为这样，竞争会更激烈，客户也会更挑剔。</p>
+      </div>
+    </section>
+
+    <section id="statements">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">08</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>三张报表的白话解读</h2>
+          </div>
+        </div>
+        <div class="statements">
+          <article class="statement">
+            <h3>利润表：这季赚得怎么样</h3>
+            <span class="formula">收入 113 亿美元 → GAAP 营业利润率 20.5% → GAAP 每股收益 4.29 美元</span>
+            <p>表面看净利润跳得很快，但不能只看最后一行。业绩公告第 6 页写得很清楚：这季战略投资收益让 GAAP 每股收益多了 2.43 美元。所以“利润变好”有一部分来自投资账面收益，不全是主营业务自然变厚。</p>
+          </article>
+          <article class="statement">
+            <h3>资产负债表：家底和负担</h3>
+            <span class="formula">2026-07-31 现金 83 亿美元 + 有价证券 31 亿美元；总负债 712 亿美元</span>
+            <p>资产负债表告诉我们，它不是“轻到没有负担”的公司。现金和证券合计约 114 亿美元，但非流动债务达到 392.88 亿美元，股东权益较 1 月末下降，和并购及大额回购有关。见业绩公告第 8 页。</p>
+          </article>
+          <article class="statement">
+            <h3>现金流量表：赚到的钱有没有真的收到</h3>
+            <span class="formula">经营现金流 13 亿美元；资本开支 1.71 亿美元；自由现金流 11 亿美元</span>
+            <p>对软件公司来说，现金流很关键。Salesforce 这季现金流增速远快于收入增速，说明这门生意不只是“看起来赚钱”，而是真的在往口袋里进现金。见业绩公告第 9 页和第 14 页。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">09</span>
+          <div>
+            <span class="term-tag">今天的专业名词</span>
+            <h2>5 个词，读懂 Salesforce</h2>
+          </div>
+        </div>
+        <div class="terms">
+          <article class="term">
+            <h3>CRM</h3>
+            <p>客户关系管理。白话说，就是把“跟客户有关的事情”放到同一套系统里。</p>
+            <p class="example">例：像班级通讯录、聊天记录、作业提醒和家长反馈都收进一本总册子里，不再东一张西一张。</p>
+          </article>
+          <article class="term">
+            <h3>订阅收入</h3>
+            <p>客户按月或按年持续付钱使用软件，不是一次性买断。</p>
+            <p class="example">例：像视频网站会员，不是买一部永久 DVD，而是每月交会员费继续看。</p>
+          </article>
+          <article class="term">
+            <h3>cRPO</h3>
+            <p>Current Remaining Performance Obligation，未来 12 个月预计确认的已签约收入。</p>
+            <p class="example">例：像面包店已经接到很多生日蛋糕订单，但蛋糕要在未来几个月慢慢做出来。</p>
+          </article>
+          <article class="term">
+            <h3>营业利润率</h3>
+            <p>公司用主营业务赚到的钱，占收入的比例。</p>
+            <p class="example">例：卖 100 元的东西，扣掉原料、员工和门店日常开销后，还剩 20 元，营业利润率就是 20%。</p>
+          </article>
+          <article class="term">
+            <h3>自由现金流</h3>
+            <p>公司经营拿到的现金，减掉维持生意需要的资本开支后，真正比较自由的钱。</p>
+            <p class="example">例：零花钱进账后，先扣掉修自行车和换书包的钱，剩下才是你能自由安排的那部分。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">10</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>这期最重要的 4 件事</h2>
+          </div>
+        </div>
+        <ul class="event-list">
+          <li><b>收入继续稳步增长：</b>Q2 FY2027 收入 113 亿美元，同比增长 11%，其中订阅和支持收入 108 亿美元，同比增长 12%。</li>
+          <li><b>AI 相关生意进入可见规模：</b>Agentforce 和 Data 360 的 ARR 接近 39 亿美元，同比增长超过 210%；其中 Agentforce ARR 超过 15 亿美元。见业绩公告第 1 页。</li>
+          <li><b>未来订单底子更厚：</b>cRPO 达到 335 亿美元，同比增长 14%；总 RPO 663 亿美元，同比增长 11%。说明未来 12 到 36 个月的收入能见度仍然不错。</li>
+          <li><b>管理层上调全年指引：</b>FY2027 全年收入指引提升到 461 亿到 464 亿美元，较此前多 2 亿美元；公司也提到 Contentful 和 Fin 的待完成收购、以及 Informatica 带来的贡献。见业绩公告第 1 至 2 页。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">11</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>可能出什么问题</h2>
+          </div>
+        </div>
+        <div class="risks">
+          <article class="risk">
+            <h3>AI 很热，但客户要的不是热闹</h3>
+            <p>如果企业试用一圈后发现 AI 没有明显省人、省时或增收，预算就可能从“全面铺开”变成“只做局部试点”。IDC 也提示不少 AI 项目 2026 年难达 ROI 目标。</p>
+          </article>
+          <article class="risk">
+            <h3>安全和隐私出事，代价会很大</h3>
+            <p>Salesforce 自己在 10-K 风险因素里写得很直接：一旦数据被未授权访问、服务出故障，客户可能减少或终止使用，声誉、监管和财务都会受伤。</p>
+          </article>
+          <article class="risk">
+            <h3>竞争会从“谁功能多”变成“谁更便宜、更整合、更会卖 AI”</h3>
+            <p>10-K 里也提示，市场竞争激烈，竞争对手可能用更快响应、更灵活合同和更低价格出击。微软、Oracle、SAP 这种平台型对手尤其有压力。</p>
+          </article>
+          <article class="risk">
+            <h3>并购整合和大客户决策都可能拖慢节奏</h3>
+            <p>Salesforce 这几年一直在并购补能力。并购能加速，也会增加整合难度。再加上大企业采购链条长，订单确认和扩单节奏可能忽快忽慢。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="remember" id="remember">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">12</span>
+          <div>
+            <span class="analysis">今日记住什么</span>
+            <h2>如果今天只记 3 件事</h2>
+          </div>
+        </div>
+        <div class="remember-grid">
+          <article class="remember-card">
+            <strong>1</strong>
+            <p>Salesforce 本质上是一家“把客户数据和团队流程租给企业”的公司，95% 左右收入来自订阅和支持。</p>
+          </article>
+          <article class="remember-card">
+            <strong>2</strong>
+            <p>这季最强的信号不是单一利润数字，而是收入、cRPO、AI ARR 和自由现金流一起向上。</p>
+          </article>
+          <article class="remember-card">
+            <strong>3</strong>
+            <p>护城河来自数据和流程沉淀，但 AI 时代的竞争也会更残酷，因为所有大平台都在往同一个方向冲。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="soft quiz">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">13</span>
+          <div>
+            <span class="term-tag">自测题</span>
+            <h2>3 个问题，看看今天有没有读懂</h2>
+          </div>
+        </div>
+        <details>
+          <summary>1. 为什么说 Salesforce 更像“收租的软件房东”，而不像“做项目的乙方”？</summary>
+          <div class="answer">因为它的收入大头来自订阅和支持，2026 财年约占总收入 95%。客户持续付费使用平台，而不是项目做完一次结清。</div>
+        </details>
+        <details>
+          <summary>2. cRPO 335 亿美元告诉我们什么？</summary>
+          <div class="answer">它告诉我们，未来 12 个月里，已经签好的合同里还有很多收入会慢慢确认出来。它不是现金，但能帮助判断未来收入能见度。</div>
+        </details>
+        <details>
+          <summary>3. 这季 GAAP 每股收益为什么不能直接当成“主营业务猛增”的全部证据？</summary>
+          <div class="answer">因为业绩公告第 6 页写明，战略投资收益单季就给 GAAP 每股收益带来 2.43 美元提升。也就是说，有一大块来自投资账面收益，而不是纯粹靠卖软件多赚出来。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">14</span>
+          <div>
+            <span class="background">资料来源</span>
+            <h2>原文、背景和判断分别从哪里来</h2>
+          </div>
+        </div>
+        <ul>
+          <li><b>财报原文中的事实：</b><a href="https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx">Salesforce Investor Relations - FY2027 Q2 Results</a>，发布日期 2026-08-26。</li>
+          <li><b>财报原文中的事实：</b><a href="https://investor.salesforce.com/files/doc_financials/2027/q2/CRM-Q2-FY27-Earnings-Press-Release.pdf">Salesforce FY2027 Q2 Earnings Press Release PDF</a>，重点使用第 1、6、7、8、9、10、14 页。</li>
+          <li><b>财报原文中的事实：</b><a href="https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/crm-20260131.htm">Salesforce 2026 Form 10-K</a>，提交日期 2026-03-02，重点使用 Item 1 Business、Item 1A Risk Factors、Item 7 MD&amp;A。</li>
+          <li><b>外部背景资料：</b><a href="https://www.microsoft.com/en-us/dynamics-365/what-is-dynamics-365">Microsoft Dynamics 365 官方介绍</a>，抓取于 2026-08-27。</li>
+          <li><b>外部背景资料：</b><a href="https://www.oracle.com/applications/">Oracle Fusion Cloud Applications 官方介绍</a>，抓取于 2026-08-27。</li>
+          <li><b>外部背景资料：</b><a href="https://www.sap.com/products/crm.html">SAP Customer Experience 官方介绍</a>，抓取于 2026-08-27。</li>
+          <li><b>外部背景资料：</b><a href="https://business.adobe.com/">Adobe for Business / Experience Cloud 官方介绍</a>，抓取于 2026-08-27。</li>
+          <li><b>外部背景资料：</b><a href="https://www.hubspot.com/">HubSpot 官方首页与产品平台介绍</a>，抓取于 2026-08-27。</li>
+          <li><b>外部背景资料：</b><a href="https://www.businesswire.com/news/home/20230112005046/en/IDC-Forecasts-Steady-Growth-for-Enterprise-Applications-through-2026-in-Support-of-Digital-Business-Objectives">IDC enterprise applications forecast</a>，发布日期 2023-01-12。</li>
+          <li><b>外部背景资料：</b><a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025">Gartner on task-specific AI agents in enterprise apps</a>，发布日期 2025-08-26。</li>
+          <li><b>外部背景资料：</b><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sales-organizations-that-provide-ai-enabled-next-best-actions-are-two-point-six-times-more-likely-to-achieve-commercial-growth">Gartner on AI-enabled next best actions and commercial growth</a>，发布日期 2026-05-20。</li>
+          <li><b>外部背景资料：</b><a href="https://www.idc.com/resource-center/blog/ai-is-ready-enterprises-are-not-vendors-need-to-fix-it/">IDC on 2026 AI spending and ROI gap</a>，发布日期 2026-06-16。</li>
+        </ul>
+        <p class="fine">标签说明：`财报原文中的事实` 指公司投资者关系或 SEC 原文直接披露；`外部背景资料` 指行业或竞争对手官方资料；`分析判断` 是基于前两类信息做的解释，不构成投资建议。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <div class="wrap">本页只用于商业和财报学习，不构成任何投资建议、买卖建议或收益承诺。金额均为美元；百分比、每股数据和利润率优先沿用公司披露口径。</div>
+  </footer>
+</body>
+</html>
