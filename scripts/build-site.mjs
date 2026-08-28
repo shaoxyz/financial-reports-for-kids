@@ -47,7 +47,8 @@ const companyNames = {
   Deere: "约翰迪尔",
   Target: "Target 塔吉特",
   Intuit: "Intuit",
-  Salesforce: "Salesforce"
+  Salesforce: "Salesforce",
+  HP: "HP"
 };
 
 const industries = {
@@ -64,7 +65,7 @@ const industries = {
   EsteeLauder: "高端美妆", Walmart: "综合零售", BHP: "矿业与资源",
   Alibaba: "电商平台与云计算", Deere: "农业与工程机械",
   Target: "综合零售", Intuit: "财税与中小企业软件",
-  Salesforce: "企业软件与CRM"
+  Salesforce: "企业软件与CRM", HP: "电脑与打印"
 };
 
 const clean = (value) => value

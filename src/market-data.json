@@ -642,5 +642,21 @@
     "movingAverage50": "175.45",
     "movingAverage200": "200.59",
     "fetchedAt": "2026-08-27T02:11:49.463Z"
+  },
+  "HP": {
+    "provider": "Alpha Vantage",
+    "symbol": "HPQ",
+    "name": "HP Inc",
+    "currency": "USD",
+    "price": "29.6300",
+    "changePercent": "-2.9161",
+    "latestTradingDay": "2026-08-27",
+    "marketCapitalization": "26996709000",
+    "peRatio": "10.94",
+    "week52High": "32.19",
+    "week52Low": "17.07",
+    "movingAverage50": "26.13",
+    "movingAverage200": "22.64",
+    "fetchedAt": "2026-08-28T02:11:13.190Z"
   }
 }

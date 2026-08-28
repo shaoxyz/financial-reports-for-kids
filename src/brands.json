@@ -230,5 +230,12 @@
     "color": "#00A1E0",
     "override": "Salesforce.svg",
     "marketSymbol": "NYSE:CRM"
+  },
+  "HP": {
+    "company": "HP",
+    "query": "HP Inc.",
+    "color": "#0096D6",
+    "simpleIcon": "siHp",
+    "marketSymbol": "NYSE:HPQ"
   }
 }

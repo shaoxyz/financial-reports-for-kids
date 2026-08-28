@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 HP 财报：它一边卖电脑，一边卖打印机和耗材，真正难学的是怎样把薄利硬件做成持续回现金的生意。">
+  <title>HP：电脑和墨盒，怎样一起赚钱｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--hp:#0096d6;--navy:#0b1f35;--ice:#edf7fc;--paper:#fbfaf7;--mist:#d7ebf7;--steel:#72839a;--ink:#172535;--line:#c9d8e4;--green:#1e8a63;--gold:#f2b544;--rose:#b65353}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#eef7fb 0,#fbfaf7 24%,#fbfaf7 100%);color:var(--ink);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.76}a{color:#0c76ab;text-underline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}.fact,.background,.analysis,.term-tag{display:inline-block;padding:4px 9px;border-radius:999px;font-size:.68rem;font-weight:900}.fact{background:#fff;color:#0d4e70;border:1px solid #bfdef0}.background{background:#e8f4ed;color:#1f6a4d}.analysis{background:#eef2ff;color:#27449b}.term-tag{background:#fff0c7;color:#765500}
+    .label{font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;padding:84px 0 72px;background:radial-gradient(circle at right top,#78d2f4 0,#2caadf 26%,#0c5d8c 58%,#0b1f35 100%);color:#fff}.hero:before,.hero:after{content:"";position:absolute;border-radius:999px;opacity:.16}.hero:before{width:520px;height:520px;right:-180px;top:-220px;background:#fff}.hero:after{width:640px;height:180px;left:-120px;bottom:48px;background:linear-gradient(90deg,#fff,transparent)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:36px;align-items:end}.hero h1{margin:16px 0 18px;font-size:clamp(3rem,7vw,5.9rem);line-height:.92;letter-spacing:-.05em}.hero h1 em{display:block;color:#dff6ff;font-style:normal}.lead{max-width:760px;color:#effaff;font-size:clamp(1rem,1.9vw,1.16rem)}
+    .hero-card{padding:26px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.96);color:var(--ink);box-shadow:18px 18px 0 rgba(7,22,39,.18)}.hero-card strong{display:block;margin:10px 0 14px;color:#0b5d8d;font-size:1.18rem}.hero-card p{margin:7px 0;font-size:.88rem}
+    .hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.hero-strip article{padding:16px 14px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px)}.hero-strip span{display:block;color:#dbf5ff;font-size:.72rem;font-weight:850;letter-spacing:.08em}.hero-strip b{display:block;margin-top:8px;font:900 1.6rem/1 Georgia,serif}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(251,250,247,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav .wrap{display:flex;gap:18px;padding:12px 0;overflow:auto;white-space:nowrap}.nav a{color:#38516a;text-decoration:none;font-size:.78rem;font-weight:850}
+    section{padding:74px 0}.head{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:start;margin-bottom:28px}.head .no{font:900 3.7rem/1 Georgia,serif;color:#9ac7dd}.head h2{margin:6px 0 0;font-size:clamp(1.95rem,4vw,3.1rem);line-height:1.08}.intro{max-width:930px;font-size:1.03rem}
+    .soft{background:linear-gradient(180deg,#ffffff 0,#f5fbff 100%);border-block:1px solid var(--line)}.dark{background:linear-gradient(180deg,#102740 0,#0b1f35 100%);color:#fff}.dark .head .no{color:#6c90b1}.dark .fact{background:#fff}.dark .intro{color:#dfebf6}
+    .primer{display:grid;grid-template-columns:1.02fr .98fr;gap:22px}.primer-box,.primer-quiz,.card,.source-card,.term,.risk,.memory,.table-box,.rival,.moat,.timeline-item{padding:24px;background:#fff;border:1px solid var(--line)}.primer-box ul,.report-list,.sources ul,.risk-list,.timeline,.statement-list{margin:0;padding:0;list-style:none}.primer-box li,.report-list li,.sources li,.risk-list li,.timeline li,.statement-list li{padding:12px 0;border-bottom:1px solid var(--line)}.primer-box li:last-child,.report-list li:last-child,.sources li:last-child,.risk-list li:last-child,.timeline li:last-child,.statement-list li:last-child{border-bottom:0}.primer-box b,.primer-quiz b{display:block;color:#0d6fa1}.primer-quiz p{margin:12px 0 0}
+    .business-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:38px}.business-grid blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.78rem,3.2vw,2.88rem);line-height:1.28}.business-grid blockquote span{box-shadow:inset 0 -.32em #d6f1fd}
+    .money-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.money-card{padding:22px;background:#fff;border:1px solid var(--line);border-top:7px solid var(--hp)}.money-card h3{margin:10px 0}.money-card .num{display:block;margin:12px 0 8px;font:900 2.05rem/1 Georgia,serif;color:#0d6fa1}.money-card p{margin:0;color:var(--steel);font-size:.88rem}
+    .mix-panel{display:grid;grid-template-columns:.95fr 1.05fr;gap:18px;margin-top:22px}.mix-bar{display:flex;height:22px;overflow:hidden;background:#e6edf3}.mix-bar span{display:grid;place-items:center;font-size:.75rem;font-weight:900;color:#fff}.mix-bar .ps{width:75.1%;background:#0f89c3}.mix-bar .print{width:24.9%;background:#7bbfdc}
+    .profit-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid #7bbfdc;background:#fff}.profit-flow article{padding:18px 16px;border-right:1px solid #c4dfec}.profit-flow article:last-child{border-right:0}.profit-flow b{display:block;color:#0d6fa1}.profit-flow p{margin:7px 0 0;font-size:.86rem;color:var(--steel)}
+    .bridge{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:22px}.bridge .card strong{display:block;color:#0d6fa1}.bridge .card p{margin:10px 0 0}
+    .dashboard{display:grid;grid-template-columns:1.06fr .94fr .94fr;gap:14px}.metric{min-height:180px;padding:22px;background:#fff;color:var(--ink)}.metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#e8f8ff 0,#5cc1ea 38%,#0d6fa1 100%);color:#08243a}.metric .value{display:block;margin:12px 0;font:900 clamp(2rem,4vw,4rem)/1 Georgia,serif}.metric small{display:block;color:var(--steel)}.metric.main small{color:#09334f}.up{color:var(--green);font-weight:900}.down{color:var(--rose);font-weight:900}.callout{margin-top:22px;padding:22px;border-left:7px solid var(--gold);background:#f7fbfe}
+    .moats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.moat{border-top:7px solid var(--hp)}.moat h3,.rival h3,.term h3,.risk h3{margin:7px 0}.moat p,.rival p,.term p,.risk p{margin:7px 0;color:var(--steel)}
+    .rivals{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.rival{border-bottom:5px solid #0b1f35}
+    .industry-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px}.industry-visual{display:grid;place-items:center;aspect-ratio:1;background:conic-gradient(from 180deg,#dff5ff 0 24%,#97daf5 24% 56%,#3ca8d8 56% 78%,#0b1f35 78% 100%);border-radius:28px;color:#0b1f35;text-align:center;padding:28px;font-weight:900}.drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.drivers article{padding:16px 0;border-bottom:1px solid var(--line)}.drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.statement{padding:22px;background:#fff;border:1px solid var(--line)}.statement h3{margin:6px 0}.statement p{margin:8px 0;color:var(--steel)}.formula{display:block;margin:14px 0;padding:11px;background:#e7f5fc;color:#0a4d74;font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}.term{border-left:4px solid var(--hp)}.example{font-size:.9rem;color:var(--steel)}
+    .events{background:linear-gradient(150deg,#112b45 0,#0d6fa1 100%);color:#fff}.events .head .no{color:#84d0f2}.events .fact{background:#fff}.timeline-item{background:rgba(255,255,255,.96)}.timeline-item b{display:block;color:#0d6fa1}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.risk{background:#fffaf0;border-color:#edd8b7}
+    .remember{background:linear-gradient(180deg,#edf8ff 0,#f7fbff 100%)}.remember-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.memory{border-top:5px solid var(--hp)}.memory strong{display:block;color:#0d6fa1;font:900 2.3rem/1 Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}.quiz summary{padding:16px 0;cursor:pointer;font-weight:900}.answer{padding:0 0 18px;color:var(--steel)}
+    table{width:100%;border-collapse:collapse}th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:#54708a}
+    .sources{background:#eee4d7}.fine{font-size:.8rem;color:var(--steel)}.disclaimer{padding:24px 0;background:#191f28;color:#c7d0da;font-size:.78rem}
+    @media(max-width:960px){.hero-grid,.primer,.business-grid,.mix-panel,.bridge,.industry-grid{grid-template-columns:1fr}.money-grid,.moats,.statements,.remember-grid{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.rivals{grid-template-columns:1fr 1fr 1fr}.profit-flow{grid-template-columns:1fr}.profit-flow article{border-right:0;border-bottom:1px solid #c4dfec}.profit-flow article:last-child{border-bottom:0}}
+    @media(max-width:640px){section{padding:56px 0}.hero{padding:56px 0 50px}.hero h1{font-size:3.2rem}.hero-strip,.money-grid,.moats,.rivals,.drivers,.statements,.terms,.risks,.remember-grid,.dashboard{grid-template-columns:1fr}.head{grid-template-columns:52px 1fr}.head .no{font-size:2.8rem}.wrap{width:min(100% - 24px,1120px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 电脑与打印 · 2026-08-28</span>
+        <h1>电脑和墨盒<em>怎样一起赚钱</em></h1>
+        <p class="lead">HP 看起来像两门生意拼在一起。第一门是卖电脑，规模大，但利润通常不厚。第二门是卖打印机和耗材，收入没电脑大，却更像“装了机器以后持续回款”。理解 HP，关键就是看懂这两个齿轮怎样同时转。</p>
+        <div class="hero-strip">
+          <article><span>Q3 FY2026 收入</span><b>$157亿</b></article>
+          <article><span>Personal Systems</span><b>$118亿</b></article>
+          <article><span>自由现金流</span><b>$16亿</b></article>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>HP Inc.（NYSE: HPQ）</strong>
+        <p>主报告：Fiscal 2026 Third Quarter Results</p>
+        <p>报告期：截至 2026-07-31 的三个月</p>
+        <p>发布日期：2026-08-26</p>
+        <p>监管补充：Form 10-Q，提交于 2026-08-27，报告期同为 2026-07-31</p>
+        <p>背景补充：Form 10-K，报告期截至 2025-10-31，提交于 2025-12-10</p>
+        <p>主展示口径：美元（公司原始披露口径）</p>
+        <p><a href="https://investor.hp.com/news-events/news/news-details/2026/HP-Inc--Reports-Fiscal-2026-Third-Quarter-Results/default.aspx">打开 HP 投资者关系原文 ↗</a></p>
+        <p><a href="https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/0000047217-26-000051-index.htm">打开 SEC 10-Q 索引页 ↗</a></p>
+        <p><a href="https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/0000047217-25-000071-index.htm">打开 SEC 10-K 索引页 ↗</a></p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#primer">短版导读</a>
+      <a href="#company">公司是什么</a>
+      <a href="#money">钱从哪里来</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#remember">记住什么</a>
+      <a href="#quiz">自测</a>
+      <a href="#sources">资料</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="primer">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">00</span>
+          <div>
+            <span class="fact">5分钟短版导读</span>
+            <h2>先抓最重要的几件事</h2>
+          </div>
+        </div>
+        <div class="primer">
+          <article class="primer-box">
+            <ul>
+              <li><b>公司怎么赚钱：</b>HP 主要卖两类东西。第一类是电脑、工作站和相关服务。第二类是打印机、墨盒、硒鼓和打印服务。电脑像大卖场，量大；耗材像回头客，买了机器以后还会继续买。</li>
+              <li><b>最重要的 5 个数字：</b>Q3 FY2026 收入 156.77 亿美元，同比增长 12.5%；Personal Systems 收入 117.67 亿美元，同比增长 18%；Printing 收入 39.12 亿美元，同比下降 2%；自由现金流 15.68 亿美元，同比增长 7%；Commercial PS 收入增长 22%，但总 PC 出货量却下降 16%。</li>
+              <li><b>最大壁垒：</b>不是某一台电脑，而是“品牌 + 渠道 + 采购规模 + 装机后的耗材和服务”。这让 HP 在成熟行业里还能守住位置。</li>
+              <li><b>主要竞争对手：</b>Lenovo、Dell、Apple、Canon、Epson。前 3 家主要在电脑上缠斗，后 2 家主要在打印上较劲。</li>
+              <li><b>最大风险：</b>如果内存等零部件继续涨价，而 AI PC 的高价卖不动，HP 可能出现“收入看着不差，但销量和利润一起受压”的情况。</li>
+              <li><b>今天的专业名词：</b>经营利润率、自由现金流、耗材、渠道、产品结构升级。</li>
+            </ul>
+          </article>
+          <aside class="primer-quiz">
+            <span class="term-tag">3道自测题</span>
+            <p><b>1. 为什么打印业务收入更小，却很重要？</b>答案：因为打印尤其是耗材更像持续回款，利润率也比电脑高。</p>
+            <p><b>2. 为什么电脑收入涨 18%，出货量却跌 16% 不矛盾？</b>答案：因为卖得更贵、卖给更高端或商用客户更多，单台平均收入变高了。</p>
+            <p><b>3. 为什么要看应付账款、库存和应收账款？</b>答案：因为这能看出公司是不是先收钱、后付钱，现金周转是不是轻松。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">01</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>一句话：它卖的是“工作入口”和“打印入口”</h2>
+          </div>
+        </div>
+        <div class="business-grid">
+          <blockquote>如果一家公司的员工每天第一件事是打开电脑，最后还要把合同、设计图、学习材料打出来，那么 HP 想占住的，就是这两个<span>工作入口</span>。</blockquote>
+          <ul class="report-list">
+            <li><b>公司做什么：</b>HP 在 2025 Form 10-K 的 Item 1 Business 里把自己定义为技术公司，产品覆盖 personal computing、printing、3D printing、hybrid work、gaming 以及相关服务和订阅。</li>
+            <li><b>两大板块：</b>Personal Systems 卖台式机、笔记本、工作站、瘦客户机、显示器、端点安全和服务；Printing 卖家用和商用打印机、耗材、图形打印、3D 打印和个性化方案。</li>
+            <li><b>谁付钱：</b>消费者会买家用电脑和家用打印机；企业、学校、政府和中小商家会买商用电脑、工作站、打印设备、耗材和服务。</li>
+            <li><b>它不是什么：</b>它不是靠广告赚钱的平台，也不是订阅占绝对主导的软件公司。它本质上还是一家硬件和耗材公司，只是附带越来越多服务。</li>
+          </ul>
+        </div>
+        <p class="intro">用白话说，HP 卖的是“让人开始工作”的设备。电脑是数字入口，打印是纸面入口。只要这些入口还在，HP 就有机会靠主机、耗材、维修、订阅和延保持续收钱。事实依据见 HP 2025 Form 10-K 的 Business 段落与板块定义。</p>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">02</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>钱从哪里来</h2>
+          </div>
+        </div>
+        <div class="money-grid">
+          <article class="money-card">
+            <span class="label">Q3 FY2026</span>
+            <h3>Commercial PS</h3>
+            <span class="num">$86亿</span>
+            <p>占总收入约 55%。企业和机构客户是今天最强的增长引擎，同比增长 22%。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q3 FY2026</span>
+            <h3>Consumer PS</h3>
+            <span class="num">$32亿</span>
+            <p>占总收入约 20%。家用电脑和游戏本还在增长，但没有商用那么强。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q3 FY2026</span>
+            <h3>Supplies</h3>
+            <span class="num">$25亿</span>
+            <p>占总收入约 16%。墨盒、硒鼓和其他耗材是“装机后的回头钱”。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q3 FY2026</span>
+            <h3>Printing Hardware</h3>
+            <span class="num">$14亿</span>
+            <p>商用和家用打印硬件合计约 9%。机器卖出去后，后面更想赚的是耗材和服务。</p>
+          </article>
+        </div>
+        <div class="mix-panel">
+          <div class="card">
+            <span class="background">外部背景资料</span>
+            <p><strong>本季结构很直白：</strong>HP Q3 FY2026 总收入 156.77 亿美元里，Personal Systems 占 75.1%，Printing 占 24.9%。电脑还是体量最大的发动机。</p>
+            <div class="mix-bar" aria-label="本季收入中 Personal Systems 约占75.1%，Printing 约占24.9%">
+              <span class="ps">Personal Systems 75.1%</span>
+              <span class="print">Printing 24.9%</span>
+            </div>
+          </div>
+          <div class="card">
+            <span class="fact">财报原文中的事实</span>
+            <p>如果把时间拉长到 FY2025，全年的 Personal Systems 收入是 385.32 亿美元，Printing 是 167.02 亿美元。按损益表分类，产品收入 520.02 亿美元，服务收入 32.93 亿美元。也就是说，HP 主要不是收“软件月租”，而是卖产品，再靠耗材、支持和延保补厚利润。</p>
+          </div>
+        </div>
+        <p class="intro">把它想成一家“先卖铅笔盒，再卖铅笔”的公司就容易理解了。电脑和打印机是铅笔盒，耗材和服务是后续不断买的铅笔。前者带来规模，后者更容易沉淀利润。事实依据见 HP FY2026 Q3 业绩公告第 Segment Results 段落，以及 2025 Form 10-K 的 segment revenue 和 products/services 披露。</p>
+      </div>
+    </section>
+
+    <section id="profit" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">03</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>这门生意怎样变成利润和现金</h2>
+          </div>
+        </div>
+        <div class="profit-flow">
+          <article><b>先做产品和品牌</b><p>HP 先把电脑、打印机、工作站和相关软件服务做出来，再用品牌和渠道铺到很多国家。</p></article>
+          <article><b>通过直销和渠道卖出去</b><p>它既自己卖，也依赖零售商、分销商、经销商、系统集成商。渠道是它的重要“腿”。</p></article>
+          <article><b>电脑负责体量</b><p>Q3 的电脑业务收入 117.67 亿美元，但经营利润率只有 4.6%。说明这块很大，却不算厚利。</p></article>
+          <article><b>打印负责厚利</b><p>Printing 收入 39.12 亿美元，经营利润率 18.1%。收入小一些，但每 1 美元销售额更能留下利润。</p></article>
+          <article><b>供应商帮它垫一部分钱</b><p>Q3 末应付账款约 214 亿美元，高于应收账款 72 亿和库存 103 亿之和。说明供应链信用对现金周转很重要。</p></article>
+        </div>
+        <div class="bridge">
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>为什么打印更像“现金奶牛”</strong>
+            <p>一台打印机卖出去后，用户以后往往还得继续买原装墨盒、硒鼓、纸张或服务。就像剃须刀先卖把手，后面靠刀片持续赚钱。HP 的 10-K 还特别提醒，非原装耗材的低价竞争会直接冲击这块利润，说明这块钱本来就很关键。</p>
+          </article>
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>现金流并不差</strong>
+            <p>Q3 净经营现金流 17.35 亿美元，自由现金流 15.68 亿美元；九个月累计经营现金流 30.44 亿美元。虽然 GAAP 净利润只有 6.56 亿美元，但现金流更高，说明会计利润之外，营运资金管理也在帮忙。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers" class="dark">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">04</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>这期成绩怎么样：最能说明变化的 5 个数字</h2>
+          </div>
+        </div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div>
+              <span class="label">Q3 FY2026 总收入</span>
+              <span class="value">156.77亿</span>
+              <b>美元 · 截至 2026-07-31 的三个月</b>
+            </div>
+            <small><span class="up">同比 +12.5%</span>。这是 HP 业绩公告里最醒目的主标题数字，说明今天的增长是真实存在的。</small>
+          </article>
+          <article class="metric">
+            <span class="label">Personal Systems</span>
+            <span class="value">117.67亿</span>
+            <b>美元</b>
+            <small><span class="up">同比 +18%</span>，其中 Commercial PS <span class="up">+22%</span>。但总出货量 <span class="down">-16%</span>，说明更像“卖得更贵、结构更好”，不只是卖得更多。</small>
+          </article>
+          <article class="metric">
+            <span class="label">Printing</span>
+            <span class="value">39.12亿</span>
+            <b>美元</b>
+            <small><span class="down">同比 -2%</span>；Supplies <span class="down">-3%</span>。HP 第二个发动机没有熄火，但明显在逆风里跑。</small>
+          </article>
+          <article class="metric">
+            <span class="label">经营利润率</span>
+            <span class="value">4.6% / 18.1%</span>
+            <b>PS / Printing</b>
+            <small>电脑块头大，利润薄；打印块头小，利润厚。这个对比比单看收入更能看出生意本质。</small>
+          </article>
+          <article class="metric">
+            <span class="label">自由现金流</span>
+            <span class="value">15.68亿</span>
+            <b>美元</b>
+            <small><span class="up">同比 +7%</span>。经营现金流 17.35 亿美元，Q3 向股东回了约 5.74 亿美元股息和回购。</small>
+          </article>
+        </div>
+        <div class="callout"><strong>一句白话总结：</strong>这季 HP 的表面故事是“收入更高了”。更深一层的故事是“商用电脑撑起增长，打印还在承压，但打印依旧负责更多利润，现金流保持稳健”。</div>
+      </div>
+    </section>
+
+    <section id="moat" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">05</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>为什么别人不容易抢走它的生意</h2>
+          </div>
+        </div>
+        <div class="moats">
+          <article class="moat">
+            <span class="label">渠道</span>
+            <h3>卖得很深</h3>
+            <p>HP 不只靠官网。它通过零售商、经销商、分销商和系统集成商卖货，覆盖消费者、小企业、大企业和政府客户。</p>
+          </article>
+          <article class="moat">
+            <span class="label">规模</span>
+            <h3>买零件更有议价权</h3>
+            <p>成熟硬件行业里，量大本身就是护城河。HP 在 10-K 里直接把 procurement leverage 当作竞争优势之一。</p>
+          </article>
+          <article class="moat">
+            <span class="label">组合</span>
+            <h3>能一起打包卖</h3>
+            <p>一家公司买了商用电脑，常常也会买显示器、工作站、打印机、端点安全和生命周期服务。这会提高客单价，也会增加替换难度。</p>
+          </article>
+          <article class="moat">
+            <span class="label">装机后续</span>
+            <h3>耗材和服务会反复买</h3>
+            <p>打印机装进办公室以后，后续的耗材、维护和服务更容易继续留在原厂体系里，这让 HP 不只是“一锤子买卖”。</p>
+          </article>
+        </div>
+        <p class="intro">但也要说实话：HP 的护城河不是那种“没人能碰”的护城河。它更像成熟制造业里的复合优势，靠品牌、渠道、规模和装机后回款一起守城。只靠单一技术，很难说它绝对领先。竞争优势和渠道信息见 HP 2025 Form 10-K Competition、Sales, Marketing and Distribution、Manufacturing and Materials。</p>
+      </div>
+    </section>
+
+    <section id="competition">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">06</span>
+          <div>
+            <span class="background">外部背景资料 + 分析判断</span>
+            <h2>谁在和它竞争</h2>
+          </div>
+        </div>
+        <div class="rivals">
+          <article class="rival">
+            <span class="label">电脑</span>
+            <h3>Lenovo</h3>
+            <p>IDC 2026-07-08 数据显示，Lenovo 在 Q2 2026 全球传统 PC 出货量市占率 24.4%，排第一。它最强的是全球规模和广覆盖渠道。</p>
+          </article>
+          <article class="rival">
+            <span class="label">电脑</span>
+            <h3>Dell</h3>
+            <p>HP 在 10-K 里点名 Dell 是主要对手。Dell 的强项通常在商用客户和企业采购关系，尤其是办公与企业 IT 场景。</p>
+          </article>
+          <article class="rival">
+            <span class="label">电脑</span>
+            <h3>Apple</h3>
+            <p>IDC 2026-07-08 数据显示，Apple 在 Q2 2026 PC 出货量同比增长 10.1%。它强在软硬件一体和高端品牌黏性，不靠低价打。</p>
+          </article>
+          <article class="rival">
+            <span class="label">打印</span>
+            <h3>Canon</h3>
+            <p>HP 在 10-K 里把 Canon 列为打印主要对手。Canon 的长处是影像和办公打印底子厚，企业和专业打印存在感强。</p>
+          </article>
+          <article class="rival">
+            <span class="label">打印</span>
+            <h3>Epson</h3>
+            <p>HP 在 10-K 里把 Seiko Epson 列为主要对手。Epson 在墨仓式产品和家用、小商户打印场景里很强，正好卡住 HP 最关心的一部分耗材生态。</p>
+          </article>
+        </div>
+        <p class="intro">竞争不是同一种打法。Lenovo 和 Dell 更像规模与商用执行力的对手，Apple 更像高端生态对手，Canon 和 Epson 则是打印战场上的老对手。HP 自己在 10-K 里明确列出了这些名字；电脑市场份额和趋势则参考 IDC 2026-07-08 的全球 PC Tracker。</p>
+      </div>
+    </section>
+
+    <section id="industry" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">07</span>
+          <div>
+            <span class="background">外部背景资料</span>
+            <h2>这个行业是什么样</h2>
+          </div>
+        </div>
+        <div class="industry-grid">
+          <div class="industry-visual">
+            <div>
+              <div class="label">行业判断</div>
+              <h3>成熟行业<br>叠加新一轮 AI 升级</h3>
+              <p>不是高速新生意，而是成熟大市场在等下一次换机理由。</p>
+            </div>
+          </div>
+          <div class="drivers">
+            <article>
+              <h3>阶段：成熟，不是早期爆发</h3>
+              <p>PC 和打印都是成熟行业。需求更多来自换机、企业更新设备、教育和办公，而不是突然多出全新人群。</p>
+            </article>
+            <article>
+              <h3>上游：芯片、内存、存储、屏幕、代工</h3>
+              <p>HP 10-K 说明它高度依赖外包制造和零部件供应。上游一涨价，利润会直接被挤压。</p>
+            </article>
+            <article>
+              <h3>下游：消费者、SMB、大企业、公共部门</h3>
+              <p>商用需求更稳定，家用需求更受消费周期影响，所以这季商用电脑更强、家用相对次之。</p>
+            </article>
+            <article>
+              <h3>趋势 1：AI PC 在拉高单价</h3>
+              <p>HP 自己在 10-K 和 Q3 业绩公告都强调 AI PCs。它们未必立刻让销量爆发，但更容易提高售价和高端产品占比。</p>
+            </article>
+            <article>
+              <h3>趋势 2：内存短缺在扰动市场</h3>
+              <p>IDC 2026-07-08 说，Q2 2026 全球 PC 出货量同比下降 4.9%，一个关键原因是 memory shortage，且 2027 之前难明显缓解。</p>
+            </article>
+            <article>
+              <h3>趋势 3：打印结构在变</h3>
+              <p>IDC 2026-06-24 说，打印市场正经历 ink tank 迁移和 laser decline。换句话说，打印需求没消失，但赚钱方式和主流产品在变。</p>
+            </article>
+          </div>
+        </div>
+        <p class="intro">所以今天看 HP，不该只问“电脑卖得好吗”。更该问“在一个成熟但仍很大的行业里，它能不能把 AI 升级、供应链管理和打印耗材这三件事同时处理好”。</p>
+      </div>
+    </section>
+
+    <section id="statements">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">08</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>三张报表的白话解读</h2>
+          </div>
+        </div>
+        <div class="statements">
+          <article class="statement">
+            <span class="term-tag">利润表</span>
+            <h3>它这季卖了更多钱，但不是每块业务都更好</h3>
+            <span class="formula">收入 156.77 亿美元 → GAAP 净利润 6.56 亿美元</span>
+            <p>收入同比增长 12.5%，主要靠 Personal Systems 拉动。Printing 反而同比下滑 2%。GAAP 稀释每股收益 0.71 美元，同比下降 11.3%，而 non-GAAP EPS 0.83 美元，同比增长 10.7%，这说明“表面利润”受一次性因素扰动较大。</p>
+          </article>
+          <article class="statement">
+            <span class="term-tag">现金流量表</span>
+            <h3>现金流比会计利润更厚一些</h3>
+            <span class="formula">经营现金流 17.35 亿 → 自由现金流 15.68 亿</span>
+            <p>自由现金流就是公司把日常经营赚到的现金，扣掉维持设备等必要投入后，还剩下多少真金白银。HP 这季自由现金流高于净利润，说明这门生意不是只会“纸上赚钱”。</p>
+          </article>
+          <article class="statement">
+            <span class="term-tag">资产负债表</span>
+            <h3>它很会用供应链和往来款做周转</h3>
+            <span class="formula">现金 41.69 亿 + 应收 71.68 亿 + 库存 103.22 亿</span>
+            <p>Q3 末总负债 457.93 亿美元，其中应付账款 213.83 亿美元，明显高于应收账款和库存组合。白话讲，供应商在一定程度上替 HP 垫着钱。好处是现金轻松，风险是供应链紧张时会更脆弱。</p>
+          </article>
+        </div>
+        <div class="table-box" style="margin-top:22px">
+          <span class="background">外部背景资料</span>
+          <table>
+            <thead>
+              <tr>
+                <th>项目</th>
+                <th>金额</th>
+                <th>期间/时点</th>
+                <th>白话解释</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>总资产</td>
+                <td>457.01 亿美元</td>
+                <td>2026-07-31</td>
+                <td>公司一共管着多少“家当”。</td>
+              </tr>
+              <tr>
+                <td>现金、现金等价物和受限现金</td>
+                <td>41.69 亿美元</td>
+                <td>2026-07-31</td>
+                <td>手上最灵活的钱。</td>
+              </tr>
+              <tr>
+                <td>库存</td>
+                <td>103.22 亿美元</td>
+                <td>2026-07-31</td>
+                <td>还没卖出去的机器和零部件。</td>
+              </tr>
+              <tr>
+                <td>总负债</td>
+                <td>457.93 亿美元</td>
+                <td>2026-07-31</td>
+                <td>公司一共背着多少要还的钱。</td>
+              </tr>
+              <tr>
+                <td>应付账款</td>
+                <td>213.83 亿美元</td>
+                <td>2026-07-31</td>
+                <td>已经拿了货、以后再付给供应商的钱。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">09</span>
+          <div>
+            <span class="term-tag">今天只学 5 个词</span>
+            <h2>关键专业名词</h2>
+          </div>
+        </div>
+        <div class="terms">
+          <article class="term">
+            <h3>经营利润率</h3>
+            <p>白话：每卖 100 元，扣掉主要经营成本后，还剩多少经营利润。</p>
+            <p class="example">生活例子：奶茶店卖 100 元饮料，去掉原料、房租、人工后还剩 15 元，那经营利润率就是 15%。</p>
+          </article>
+          <article class="term">
+            <h3>自由现金流</h3>
+            <p>白话：公司把生意跑起来后，扣掉必要设备投入，还能自由支配的现金。</p>
+            <p class="example">生活例子：你这个月工资到账后，交完房租和必须买的电脑，手里还剩的钱，就是更接近“自由现金流”。</p>
+          </article>
+          <article class="term">
+            <h3>耗材</h3>
+            <p>白话：机器本身不是终点，后面反复要买的配套东西也能挣钱。</p>
+            <p class="example">生活例子：买了打印机后，要不断买墨盒；买了咖啡机后，要不断买咖啡胶囊。</p>
+          </article>
+          <article class="term">
+            <h3>渠道</h3>
+            <p>白话：产品不是只靠厂家直接卖，中间还有零售、分销、经销和集成商这些销售通道。</p>
+            <p class="example">生活例子：厂家像厨房，渠道像超市、便利店和外卖平台，顾客往往不是直接去厨房买。</p>
+          </article>
+          <article class="term">
+            <h3>产品结构升级</h3>
+            <p>白话：卖得未必更多，但如果高端产品占比变高，总收入和利润也可能更好。</p>
+            <p class="example">生活例子：同样卖 10 双鞋，以前多卖基础款，现在多卖高端跑鞋，收入会更高。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">10</span>
+          <div>
+            <span class="fact">重要事件</span>
+            <h2>今天这份财报背后的几件事</h2>
+          </div>
+        </div>
+        <div class="rivals" style="grid-template-columns:repeat(4,1fr)">
+          <article class="timeline-item">
+            <b>2026-08-26</b>
+            <p>HP 发布 FY2026 Q3 业绩公告，收入、EPS 和自由现金流都高于此前指引上沿，并上调全年 EPS 与自由现金流预期。</p>
+          </article>
+          <article class="timeline-item">
+            <b>2026-08-27</b>
+            <p>HP 向 SEC 提交 10-Q，补充了资产负债表、现金流量表和更细的分部表，让我们能看清库存、应收、应付和九个月累计现金流。</p>
+          </article>
+          <article class="timeline-item">
+            <b>2026-07-08</b>
+            <p>IDC 说全球 PC 出货量在 Q2 2026 同比下降 4.9%，核心原因之一是内存短缺。也就是说，行业本身并不顺风。</p>
+          </article>
+          <article class="timeline-item">
+            <b>2026-06-24</b>
+            <p>IDC 说打印行业正面临 ink tank 迁移和 laser decline。这意味着 HP 的打印业务不仅在竞争，还在适应结构变化。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">11</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>可能出什么问题</h2>
+          </div>
+        </div>
+        <div class="risks">
+          <article class="risk">
+            <h3>风险 1：零部件涨价，销量还不一定补得上</h3>
+            <p>IDC 说内存短缺会持续较久。HP 业绩公告也提到 memory supply 和 cost environment。若成本继续涨，而终端涨价传不出去，利润会先受伤。</p>
+          </article>
+          <article class="risk">
+            <h3>风险 2：电脑收入上涨可能更多来自价格，不是销量</h3>
+            <p>本季 Personal Systems 收入 +18%，但总 units -16%。如果高端产品热度过去，收入增速可能很快回落。</p>
+          </article>
+          <article class="risk">
+            <h3>风险 3：打印耗材被低价替代</h3>
+            <p>HP 10-K 直接提醒，非原装耗材会压它的 Printing Supplies 生意。这像是“刀片生意”被平替切走利润。</p>
+          </article>
+          <article class="risk">
+            <h3>风险 4：渠道和库存判断失误</h3>
+            <p>HP 的模式高度依赖多层渠道和库存预测。10-K 里明确说，如果需求、定价或渠道判断失误，可能出现库存写减和收款延后。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="remember" class="remember">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">12</span>
+          <div>
+            <span class="analysis">今日记住什么</span>
+            <h2>今天只带走 3 句话</h2>
+          </div>
+        </div>
+        <div class="remember-grid">
+          <article class="memory">
+            <strong>1</strong>
+            <p>HP 不是单纯卖电脑。它真正的结构，是“电脑带规模，打印和耗材带厚度”。</p>
+          </article>
+          <article class="memory">
+            <strong>2</strong>
+            <p>这季最关键的变化，不是销量爆发，而是商用和高端产品占比上升，让收入在逆风行业里还能增长。</p>
+          </article>
+          <article class="memory">
+            <strong>3</strong>
+            <p>看 HP 不能只看利润表，还要看现金流和营运资金，因为它很会利用应付账款和渠道体系做周转。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="soft quiz">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">13</span>
+          <div>
+            <span class="term-tag">3道带答案自测题</span>
+            <h2>看看你有没有读懂</h2>
+          </div>
+        </div>
+        <details>
+          <summary>1. HP 这门生意里，哪块更像“长期回头钱”？为什么？</summary>
+          <div class="answer">答案：打印耗材和相关服务更像长期回头钱，因为打印机装机后，后续会持续购买墨盒、硒鼓和服务，而且这块利润率通常高于电脑。</div>
+        </details>
+        <details>
+          <summary>2. 为什么 HP 本季电脑业务“收入涨、出货量跌”仍可能算好消息？</summary>
+          <div class="answer">答案：因为这通常代表卖得更贵、卖给更高利润的商用或高端客户更多，说明产品结构升级，而不只是靠压价冲销量。</div>
+        </details>
+        <details>
+          <summary>3. 如果你以后再看 HP 财报，最该先盯哪 3 个地方？</summary>
+          <div class="answer">答案：先看 Personal Systems 增长是否还能持续；再看 Printing 尤其 Supplies 是否继续下滑；最后看自由现金流和库存、应付账款变化，判断现金周转有没有恶化。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">14</span>
+          <div>
+            <span class="background">资料来源</span>
+            <h2>本文用到的正式原文与背景资料</h2>
+          </div>
+        </div>
+        <ul>
+          <li>HP Investor Relations，<a href="https://investor.hp.com/news-events/news/news-details/2026/HP-Inc--Reports-Fiscal-2026-Third-Quarter-Results/default.aspx">HP Inc. Reports Fiscal 2026 Third Quarter Results</a>，发布日期 2026-08-26。用于本期收入、EPS、自由现金流、分部收入、分部利润率、库存/应收/应付天数与全年指引。</li>
+          <li>SEC，<a href="https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/0000047217-26-000051-index.htm">HP Form 10-Q filing index</a>，Filing Date 2026-08-27，Period of Report 2026-07-31。用于确认正式 10-Q 的提交日期和报告期。</li>
+          <li>SEC，<a href="https://www.sec.gov/Archives/edgar/data/47217/000004721726000051/hpq-20260731.htm">HP Form 10-Q HTML</a>，报告期截至 2026-07-31。用于资产负债表、现金流量表、Q3 末现金、应收、库存、应付账款与九个月累计经营现金流。</li>
+          <li>SEC，<a href="https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/0000047217-25-000071-index.htm">HP Form 10-K filing index</a>，Filing Date 2025-12-10，Period of Report 2025-10-31。用于确认背景年报的正式来源。</li>
+          <li>SEC，<a href="https://www.sec.gov/Archives/edgar/data/47217/000004721725000071/hpq-20251031.htm">HP Form 10-K HTML</a>，报告期截至 2025-10-31。用于公司业务介绍、Personal Systems/Printing 定义、产品与服务收入、FY2025 分部收入、竞争对手、渠道、供应链与风险背景。</li>
+          <li>IDC，<a href="https://www.idc.com/resource-center/press-releases/2q26-pc-top5/">PC Market Runs Low on RAM to Grow: Shipments Decline 4.9% as Memory Crunch Bites</a>，发布日期 2026-07-08。用于全球 PC 出货量、HP/Lenovo/Apple 等厂商的 Q2 2026 市占率与内存短缺趋势。</li>
+          <li>IDC，<a href="https://www.idc.com/promo/hardcopy-peripherals/">Worldwide Hardcopy Peripherals Market Faces Macro Headwinds in Q1 2026 as Ink Tank Transition and Laser Decline Define Structural Direction</a>，更新日期 2026-06-24。用于打印行业的 ink tank、laser decline 与宏观压力背景。</li>
+        </ul>
+        <p class="fine">标注说明：带“财报原文中的事实”的内容，优先来自 HP 正式业绩公告或 SEC 文件；带“外部背景资料”的内容，来自 IDC 等可靠机构；带“分析判断”的内容，是基于前述材料做的白话解释，不构成投资建议。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <div class="wrap">这是一份面向财报学习的商业教育材料，只用于帮助理解公司生意模式、财务结构和行业背景，不构成买入、卖出或收益承诺。</div>
+  </footer>
+</body>
+</html>
