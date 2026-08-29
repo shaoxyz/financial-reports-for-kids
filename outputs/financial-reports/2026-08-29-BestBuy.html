@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的百思买财报：它卖的不是一堆电子盒子，而是“买前有人讲、买后有人装、坏了有人修”的科技零售服务。">
+  <title>百思买：电子商店，怎么把服务卖成利润｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--blue:#0046be;--navy:#05204f;--sky:#dce9ff;--sun:#fff200;--paper:#fbfaf4;--ink:#16233a;--muted:#5f6f88;--line:#c9d4e6;--card:#ffffff;--good:#157347;--warn:#b66000;--soft:#eef4ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#eff4ff 0,#fbfaf4 20%,#fbfaf4 100%);color:var(--ink);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78}a{color:var(--blue);text-underline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}.fact,.background,.analysis,.term-tag{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.68rem;font-weight:900}.fact{background:#fff;border:1px solid #bfd0f5;color:#153a8a}.background{background:#edf8e8;color:#206b3b}.analysis{background:#eef0ff;color:#2748a7}.term-tag{background:#fff6b0;color:#6d5800}.label{font-size:.74rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;padding:88px 0 70px;background:radial-gradient(circle at 12% 22%,#3e79ff 0,#0046be 30%,#05204f 76%);color:#fff}.hero:before{content:"";position:absolute;right:min(8vw,72px);top:56px;width:240px;height:150px;background:var(--sun);clip-path:polygon(0 0,100% 0,100% 65%,78% 65%,70% 100%,0 100%);box-shadow:18px 18px 0 rgba(4,16,43,.22)}.hero:after{content:"";position:absolute;left:-60px;bottom:36px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.07)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:end}.hero h1{margin:14px 0 18px;font-size:clamp(3.1rem,7vw,5.7rem);line-height:.92;letter-spacing:-.05em}.hero h1 em{display:block;color:#fff5a8;font-style:normal}.lead{max-width:760px;font-size:clamp(1rem,1.9vw,1.14rem);color:#edf3ff}.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.hero-strip article{padding:16px 15px;background:rgba(255,255,255,.12);backdrop-filter:blur(5px)}.hero-strip span{display:block;color:#dce8ff;font-size:.72rem;font-weight:850;letter-spacing:.08em}.hero-strip b{display:block;margin-top:8px;font:900 1.6rem/1 Georgia,serif}
+    .hero-card{padding:26px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.96);color:var(--ink);box-shadow:18px 18px 0 rgba(4,16,43,.18)}.hero-card strong{display:block;margin:10px 0 14px;color:var(--blue);font-size:1.18rem}.hero-card p{margin:7px 0;font-size:.88rem}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(251,250,244,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav .wrap{display:flex;gap:18px;padding:12px 0;overflow:auto;white-space:nowrap}.nav a{color:#314663;text-decoration:none;font-size:.78rem;font-weight:850}
+    section{padding:74px 0}.head{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:start;margin-bottom:28px}.head .no{font:900 3.7rem/1 Georgia,serif;color:#90a9dd}.head h2{margin:6px 0 0;font-size:clamp(1.95rem,4vw,3.1rem);line-height:1.08}.intro{max-width:930px;font-size:1.03rem}
+    .soft{background:linear-gradient(180deg,#ffffff 0,#f3f7ff 100%);border-block:1px solid var(--line)}.dark{background:linear-gradient(180deg,#0b245b 0,#05204f 100%);color:#fff}.dark .head .no{color:#7994d1}.dark .intro{color:#e2ebff}
+    .primer{display:grid;grid-template-columns:1.04fr .96fr;gap:22px}.primer-box,.primer-quiz,.card,.moat,.rival,.term,.risk,.memory,.timeline-item,.statement,.source-card{padding:24px;background:var(--card);border:1px solid var(--line)}.primer-box ul,.report-list,.timeline,.sources ul,.risk-list{margin:0;padding:0;list-style:none}.primer-box li,.report-list li,.timeline li,.sources li,.risk-list li{padding:12px 0;border-bottom:1px solid var(--line)}.primer-box li:last-child,.report-list li:last-child,.timeline li:last-child,.sources li:last-child,.risk-list li:last-child{border-bottom:0}.primer-box b,.primer-quiz b,.card strong{display:block;color:var(--blue)}.primer-quiz p{margin:12px 0 0}
+    .business-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:34px}.business-grid blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.78rem,3.2vw,2.84rem);line-height:1.28}.business-grid blockquote span{box-shadow:inset 0 -.32em #fff3a1}
+    .money-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.money-card{padding:22px;background:#fff;border:1px solid var(--line);border-top:7px solid var(--blue)}.money-card h3{margin:10px 0;font-size:1rem}.money-card .num{display:block;margin:12px 0 8px;font:900 1.95rem/1 Georgia,serif;color:var(--blue)}.money-card p{margin:0;color:var(--muted);font-size:.88rem}
+    .mix-panel{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.mix-bar{display:flex;height:22px;overflow:hidden;background:#dbe6fb}.mix-bar span{display:grid;place-items:center;font-size:.74rem;font-weight:900}.mix-bar .hardware{background:#2259c8;color:#fff}.mix-bar .service{background:#9fc3ff;color:#14306a}.mix-bar .ads{background:#fff19a;color:#6a5600}
+    .profit-flow{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid #aac0ef;background:#fff}.profit-flow article{padding:18px 16px;border-right:1px solid #c4d3ef}.profit-flow article:last-child{border-right:0}.profit-flow b{display:block;color:var(--blue)}.profit-flow p{margin:7px 0 0;font-size:.86rem;color:var(--muted)}
+    .bridge{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.dashboard{display:grid;grid-template-columns:1.08fr .92fr .92fr;gap:14px}.metric{min-height:178px;padding:22px;background:#fff;color:var(--ink)}.metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#fff7b3 0,#78a2ff 40%,#0a2f7a 100%);color:#071932}.metric .value{display:block;margin:12px 0;font:900 clamp(2rem,4vw,4rem)/1 Georgia,serif}.metric small{display:block;color:var(--muted)}.metric.main small{color:#113571}.up{color:var(--good);font-weight:900}.down{color:#b13a3a;font-weight:900}
+    .moats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.moat{border-top:7px solid var(--sun)}.moat h3,.rival h3,.term h3,.risk h3{margin:7px 0}.moat p,.rival p,.term p,.risk p,.statement p,.card p{margin:7px 0;color:var(--muted)}
+    .rivals{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.rival{border-bottom:5px solid var(--blue)}
+    .industry-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:34px}.industry-visual{display:grid;place-items:center;aspect-ratio:1;background:linear-gradient(145deg,#fff6a8 0,#d8e6ff 46%,#0b2d76 100%);border-radius:28px;color:#061a42;text-align:center;padding:28px;font-weight:900}.drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.drivers article{padding:16px 0;border-bottom:1px solid var(--line)}.drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.statement{border-left:4px solid var(--blue)}.formula{display:block;margin:14px 0;padding:11px;background:#ebf2ff;color:#153a8a;font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}.term{border-left:4px solid var(--sun)}.example{font-size:.9rem;color:var(--muted)}
+    .events{background:linear-gradient(155deg,#0d255b 0,#2158c8 100%);color:#fff}.events .head .no{color:#a7c2ff}.timeline-item b{display:block;color:var(--blue)}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.risk{background:#fffaf0;border-color:#ecd8a7}
+    .remember{background:linear-gradient(180deg,#eef4ff 0,#fffdf1 100%)}.remember-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.memory{border-top:5px solid var(--sun)}.memory strong{display:block;color:var(--blue);font:900 2.2rem/1 Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}.quiz summary{padding:16px 0;cursor:pointer;font-weight:900}.answer{padding:0 0 18px;color:var(--muted)}
+    table{width:100%;border-collapse:collapse}th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:#5c7394}.sources{background:#efe6d8}.fine{font-size:.8rem;color:var(--muted)}.disclaimer{padding:24px 0;background:#161d2a;color:#c7d0da;font-size:.78rem}
+    @media(max-width:960px){.hero-grid,.primer,.business-grid,.mix-panel,.bridge,.industry-grid{grid-template-columns:1fr}.money-grid,.moats,.statements,.remember-grid{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.rivals{grid-template-columns:1fr 1fr 1fr}.profit-flow{grid-template-columns:1fr}.profit-flow article{border-right:0;border-bottom:1px solid #c4d3ef}.profit-flow article:last-child{border-bottom:0}}
+    @media(max-width:640px){section{padding:56px 0}.hero{padding:56px 0 48px}.hero:before{width:136px;height:88px;top:24px;right:18px}.hero h1{font-size:3.1rem}.hero-strip,.money-grid,.moats,.rivals,.drivers,.statements,.terms,.risks,.remember-grid,.dashboard{grid-template-columns:1fr}.head{grid-template-columns:52px 1fr}.head .no{font-size:2.8rem}.wrap{width:min(100% - 24px,1120px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 消费电子零售 · 2026-08-29</span>
+        <h1>电子商店<em>怎么把服务卖成利润</em></h1>
+        <p class="lead">百思买看起来像一家卖电视、电脑和冰箱的商店，但它真正想卖的，不只是盒子本身，而是“你不会挑，我来讲；你不会装，我来装；你坏了，我来修”的整套服务。理解这家公司，关键是分清哪些钱来自商品，哪些钱来自服务、广告和渠道能力。</p>
+        <div class="hero-strip">
+          <article><span>Q2 FY27 收入</span><b>$97.8亿</b></article>
+          <article><span>可比销售</span><b>+4.1%</b></article>
+          <article><span>线上收入</span><b>$30.0亿</b></article>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>Best Buy Co., Inc.（NYSE: BBY）</strong>
+        <p>主报告：Q2 FY27 Earnings Release / Exhibit 99</p>
+        <p>报告期：截至 2026-08-01 的 13 周</p>
+        <p>发布日期：2026-08-27</p>
+        <p>背景补充：FY2026 Form 10-K，提交于 2026-03-18</p>
+        <p>主展示口径：美元（公司原始披露口径）</p>
+        <p><a href="https://investors.bestbuy.com/News--Events/news/news-details/2026/Best-Buy-Reports-Second-Quarter-Results/default.aspx">打开百思买本期财报原文 ↗</a></p>
+        <p><a href="https://www.investors.bestbuy.com/">打开百思买投资者关系首页 ↗</a></p>
+        <p><a href="https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/bby-20260131.htm">打开 FY2026 10-K ↗</a></p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#primer">短版导读</a>
+      <a href="#company">公司是什么</a>
+      <a href="#money">钱从哪里来</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#remember">记住什么</a>
+      <a href="#quiz">自测</a>
+      <a href="#sources">资料</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="primer">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">00</span>
+          <div>
+            <span class="fact">5分钟短版导读</span>
+            <h2>先抓住今天最重要的几件事</h2>
+          </div>
+        </div>
+        <div class="primer">
+          <article class="primer-box">
+            <ul>
+              <li><b>公司怎么赚钱：</b>百思买主要靠卖消费电子和家电赚钱，但和普通电商不同，它还卖咨询、安装、维修、延保、广告位和平台流量。简单说，它卖“商品”，也卖“帮你把商品用起来”。</li>
+              <li><b>最重要的 5 个数字：</b>Q2 FY27 收入 97.79 亿美元，同比增长 3.6%；可比销售增长 4.1%；国内线上收入 30.0 亿美元，占国内收入 33.1%；毛利 23.38 亿美元，毛利率 23.9%；摊薄每股收益 1.48 美元，高于上年同期的 0.87 美元。</li>
+              <li><b>最大壁垒：</b>不是某个独家产品，而是“门店 + 线上 + 到家服务 + 厂商关系”的组合。用户买大件或复杂产品时，还是会为解释、安装和售后买单。</li>
+              <li><b>主要竞争对手：</b>Amazon、Walmart、Costco、Target、Apple。它们分别强在海量选择、低价与门店网络、会员仓储、同日履约和自有品牌生态。</li>
+              <li><b>最大风险：</b>这不是高护城河软件生意。电子产品价格透明、需求会波动，厂商还会自己直营。如果库存买多了或价格战打起来，利润会先变薄。</li>
+              <li><b>今天的专业名词：</b>可比销售、毛利率、SG&amp;A、库存、Marketplace。</li>
+            </ul>
+          </article>
+          <aside class="primer-quiz">
+            <span class="term-tag">3道自测题</span>
+            <p><b>1. 为什么百思买不是“纯电商”生意？</b>答案：因为它很依赖门店、员工讲解、安装维修和到家服务，这些都不是单纯把包裹寄出去就能完成的。</p>
+            <p><b>2. 为什么线上收入占比高，不代表门店没用了？</b>答案：因为很多线上订单还是由门店发货、提货或配合售后完成，门店是履约和服务节点。</p>
+            <p><b>3. 为什么看库存很重要？</b>答案：电子产品会降价、过时也快，库存太多就像家里囤了一堆很快会打折的玩具，最后只能便宜卖。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">01</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>一句话：它卖的是“科技商品 + 科技服务”</h2>
+          </div>
+        </div>
+        <div class="business-grid">
+          <blockquote>如果你买一台电视，<span>看不懂参数</span>、搬不动、不会装、坏了也不想自己修，那百思买就不只是卖电视的地方，而是帮你把这件事做完的地方。</blockquote>
+          <ul class="report-list">
+            <li><b>公司做什么：</b>百思买在投资者关系首页把自己定义为全球最大的专业消费电子零售商，靠门店、官网和到家服务提供 advice、products 和 services。</li>
+            <li><b>卖给谁：</b>主要是北美家庭用户，也服务企业、学校和其他机构，尤其是需要电脑、电视、家电、手机和相关支持的人。</li>
+            <li><b>怎么卖：</b>既在线上卖，也在线下卖，还把服务送到家。它希望用户不是只买一次，而是以后装机、维修、换新、加配件时继续回来。</li>
+            <li><b>规模底盘：</b>FY2026 公司披露全年收入 417 亿美元，在北美有 1,000 多家门店，约 82,000 名员工。它不是小众精品店，而是一个很大的零售网络。</li>
+          </ul>
+        </div>
+        <p class="intro">最容易看错百思买的地方，是把它只当成“家电卖场”。实际上它更像“科技零售服务站”：商品帮它带来客流，服务帮它提高黏性，广告和平台尝试让它在低毛利零售之外再多长出一点利润层。</p>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">02</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>钱从哪里来</h2>
+          </div>
+        </div>
+        <div class="money-grid">
+          <article class="money-card">
+            <span class="label">FY2026 结构</span>
+            <h3>电脑与手机</h3>
+            <span class="num">47%</span>
+            <p>这是最大收入池。包括电脑、外设、手机、平板、可穿戴设备等。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">FY2026 结构</span>
+            <h3>消费电子</h3>
+            <span class="num">28%</span>
+            <p>主要是电视、家庭影院、相机和智能家居，适合买前比较、买后安装。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">FY2026 结构</span>
+            <h3>家电</h3>
+            <span class="num">11%</span>
+            <p>冰箱、洗衣机等大件家电，需要送装和售后，服务价值更明显。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">FY2026 结构</span>
+            <h3>娱乐</h3>
+            <span class="num">7%</span>
+            <p>游戏、影音等。波动通常较大，容易受新品周期影响。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">FY2026 结构</span>
+            <h3>服务等</h3>
+            <span class="num">7%</span>
+            <p>服务 6%，其他 1%。包括安装维修、保障计划等，是利润更厚的部分。</p>
+          </article>
+        </div>
+        <div class="mix-panel">
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>本季增长，先靠商品，后靠新业务加分</strong>
+            <p>Q2 FY27 国内收入 90.7 亿美元，同比增长 4.3%。管理层说主要增长来自 computing、home theater，以及 AI glasses 和 trading cards 这类新兴品类。</p>
+            <div class="mix-bar" aria-label="百思买收入由硬件、服务和新业务共同组成">
+              <span class="hardware" style="width:86%">商品仍是大头</span>
+              <span class="service" style="width:9%">服务</span>
+              <span class="ads" style="width:5%">广告与平台</span>
+            </div>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>百思买现在想把自己从“卖货”慢慢做成“卖能力”</strong>
+            <p>电子零售本身毛利不高，所以它近年反复强调 Best Buy Ads 和 Marketplace。白话说，一个是在自己地盘卖广告位，一个是让更多第三方商品进来卖。这样做的目的，是让每个来逛的人，不只贡献商品毛利，还能顺便贡献流量和平台收入。</p>
+          </article>
+        </div>
+        <p class="intro">可以把百思买想成一个“科技版商场”。商场里最显眼的是商品，但真正稳一点的钱，往往来自店租、服务费和配套能力。百思买的方向，也是在往这个逻辑靠近，只是目前商品还是绝对主角。</p>
+      </div>
+    </section>
+
+    <section id="profit" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">03</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>这门生意怎样变成利润和现金</h2>
+          </div>
+        </div>
+        <div class="profit-flow">
+          <article><b>先把货摆齐</b><p>向品牌厂商采购电脑、电视、家电和配件，保证用户能一站式比较和购买。</p></article>
+          <article><b>再用门店和网站接住客流</b><p>门店负责展示、咨询、提货和部分发货；网站负责搜索、下单和更多长尾选择。</p></article>
+          <article><b>服务把单笔收入变厚</b><p>安装、维修、保障计划和咨询服务，像是给商品外面再包一层更值钱的服务壳。</p></article>
+          <article><b>广告和平台提高“每次到店价值”</b><p>Best Buy Ads 和 Marketplace 的作用，是让一个用户不仅买货，还能给平台带来额外收入。</p></article>
+          <article><b>库存和费用决定最后剩多少</b><p>货卖慢了、打折多了、人工和广告费高了，利润就会被迅速吃掉。</p></article>
+        </div>
+        <div class="bridge">
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>为什么本季利润变好</strong>
+            <p>国内毛利率从 23.4% 提高到 24.0%，公司说主要受 Marketplace、Best Buy Ads 和约 3,400 万美元 IEEPA 关税退款带动，但也被商品本身毛利率下降部分抵消。</p>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>这提醒我们：百思买利润改善不只靠“多卖货”</strong>
+            <p>如果只是卖更多标准化电子产品，竞争很容易把利润抢走。能让利润率抬一点的，通常是服务、广告、平台和一次性政策利好。也因此，关税退款这种因素要单独看，不能当成长久本事。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers" class="dark">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">04</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>这期成绩怎么样：最能说明变化的 5 个数字</h2>
+          </div>
+        </div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div>
+              <span class="label">Q2 FY27 总收入</span>
+              <span class="value">97.79亿</span>
+              <b>美元 · 截至 2026-08-01 的 13 周</b>
+            </div>
+            <small><span class="up">同比 +3.6%</span>。这说明它不是只靠会计调整变好，卖出去的东西确实更多了。</small>
+          </article>
+          <article class="metric">
+            <span class="label">可比销售</span>
+            <span class="value">+4.1%</span>
+            <b>Enterprise</b>
+            <small>老店和老站点的销售也在增长，比单看“开新店拉收入”更有含金量。</small>
+          </article>
+          <article class="metric">
+            <span class="label">国内线上收入</span>
+            <span class="value">$30.0亿</span>
+            <b>占国内收入 33.1%</b>
+            <small><span class="up">可比增长 +5.1%</span>。三分之一收入已在线上发生，但门店依旧参与履约。</small>
+          </article>
+          <article class="metric">
+            <span class="label">毛利</span>
+            <span class="value">$23.38亿</span>
+            <b>毛利率 23.9%</b>
+            <small>收入减去货的成本后，先剩下这部分，再去付员工、房租、广告和管理费用。</small>
+          </article>
+          <article class="metric">
+            <span class="label">摊薄每股收益</span>
+            <span class="value">$1.48</span>
+            <b>上年同期 $0.87</b>
+            <small><span class="up">同比 +70%</span>。利润改善明显，但也受去年基数较低和重组因素影响。</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="moat">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">05</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>为什么别人不容易一下子抢走它的生意</h2>
+          </div>
+        </div>
+        <div class="moats">
+          <article class="moat">
+            <span class="term-tag">护城河 1</span>
+            <h3>门店不是负担，也是体验仓</h3>
+            <p>买电视、冰箱、电脑时，很多人还是想摸一摸、问一问。门店能展示复杂商品，也能做提货和退换货。</p>
+          </article>
+          <article class="moat">
+            <span class="term-tag">护城河 2</span>
+            <h3>服务能力比纯比价更难复制</h3>
+            <p>安装、维修、上门支持、保障计划，这些需要人、流程和网点，不像网页价格那样一键复制。</p>
+          </article>
+          <article class="moat">
+            <span class="term-tag">护城河 3</span>
+            <h3>和大品牌厂商关系深</h3>
+            <p>新品首发、展示位、联合促销、培训和供应节奏，都会影响用户最后在哪里买。厂商合作越深，流量越稳。</p>
+          </article>
+          <article class="moat">
+            <span class="term-tag">护城河 4</span>
+            <h3>但护城河没有想象中深</h3>
+            <p>很多商品是标准品，用户很容易跨平台比价；厂商也会直营；线上和仓储会员店还在抢客，所以它的壁垒是“组合拳”，不是绝对垄断。</p>
+          </article>
+        </div>
+        <p class="intro">最实在的判断是：百思买有壁垒，但不是那种“别人根本进不来”的壁垒。它更像会打仗的守城方，能靠服务和网络稳住阵地，但如果行业价格战太凶，它也会疼。</p>
+      </div>
+    </section>
+
+    <section id="competition" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">06</span>
+          <div>
+            <span class="background">外部背景资料</span>
+            <h2>谁在和它竞争</h2>
+          </div>
+        </div>
+        <div class="rivals">
+          <article class="rival">
+            <h3>Amazon</h3>
+            <p><b>强在：</b>海量 SKU、Marketplace、仓配网络和 Prime 习惯。官方披露 2025 年北美收入 4,263 亿美元，规模远超单一电子零售商。</p>
+          </article>
+          <article class="rival">
+            <h3>Walmart</h3>
+            <p><b>强在：</b>低价心智、超大门店网络和持续增长的电商。FY2026 全球电商增长 24%，还能把杂货高频流量带到电子产品。</p>
+          </article>
+          <article class="rival">
+            <h3>Costco</h3>
+            <p><b>强在：</b>会员制、精选少量 SKU、低价和高周转。用户信任它“少但值”，对大件家电和电视有吸引力。</p>
+          </article>
+          <article class="rival">
+            <h3>Target</h3>
+            <p><b>强在：</b>近 2,000 家门店支持的同日履约和数字化会员体系。很多数字订单由门店完成，速度和便利性强。</p>
+          </article>
+          <article class="rival">
+            <h3>Apple</h3>
+            <p><b>强在：</b>自有品牌、直营店和生态锁定。对高端手机、电脑和配件来说，Apple Store 本身就是强劲竞争对手。</p>
+          </article>
+        </div>
+        <p class="intro">百思买自己在 10-K 里也承认，竞争来自 multi-channel retailers、e-commerce businesses、technology service providers、传统门店、供应商直营和移动运营商。也就是说，它不是只跟一家打，而是在很多战场同时打。</p>
+      </div>
+    </section>
+
+    <section id="industry">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">07</span>
+          <div>
+            <span class="background">外部背景资料</span>
+            <h2>这个行业是什么样</h2>
+          </div>
+        </div>
+        <div class="industry-grid">
+          <div class="industry-visual">
+            <div>
+              <div class="label">行业气质</div>
+              <p style="margin:16px 0 10px;font-size:2rem;line-height:1.1">成熟行业</p>
+              <p style="margin:0;font-size:1rem;line-height:1.7">需求会涨跌<br>但很难出现暴利</p>
+            </div>
+          </div>
+          <div class="drivers">
+            <article>
+              <h3>需求由什么推动</h3>
+              <p>新品周期、家庭换机、家电更新、节假日促销，以及 AI 相关新硬件带来的尝鲜需求。</p>
+            </article>
+            <article>
+              <h3>行业处在哪个阶段</h3>
+              <p>整体是成熟零售业，不是高速长大赛道。增长更多来自份额变化、服务深化和新品刺激。</p>
+            </article>
+            <article>
+              <h3>上游是谁</h3>
+              <p>Apple、Samsung、Sony、HP、Lenovo 等品牌厂商和零部件供应链。零售商对上游有议价，但不可能无限强。</p>
+            </article>
+            <article>
+              <h3>下游是谁</h3>
+              <p>家庭消费者、中小企业、学校和机构客户。谁能让这些人更快买到、更容易装好，谁就更占优。</p>
+            </article>
+            <article>
+              <h3>现在最重要的趋势</h3>
+              <p>美国 Census Bureau 披露，2026 年二季度美国零售电商销售同比增长 12.2%，占总零售 17.1%。线上继续吃份额。</p>
+            </article>
+            <article>
+              <h3>另一个现实</h3>
+              <p>IDC 说 2026 年二季度全球 PC 出货量同比下降 4.9%，原因之一是内存紧张。也就是说，量不一定涨，但价格和结构可能上移。</p>
+            </article>
+          </div>
+        </div>
+        <p class="intro">这就是百思买所处的难点：它在一个成熟、透明、竞争激烈的行业里做生意。好消息是，大家总会继续买电子产品；难点是，大家也总能很快找到更便宜的价格。</p>
+      </div>
+    </section>
+
+    <section id="statements" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">08</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>三张报表的白话解读</h2>
+          </div>
+        </div>
+        <div class="statements">
+          <article class="statement">
+            <span class="term-tag">利润表</span>
+            <h3>先看卖货后还剩多少</h3>
+            <span class="formula">收入 97.79 亿 - 成本 74.41 亿 = 毛利 23.38 亿美元</span>
+            <p>毛利率 23.9%。再扣掉 SG&amp;A 19.23 亿美元后，营业利润率只剩 4.3%。这说明它赚的是“薄利大周转”钱。</p>
+          </article>
+          <article class="statement">
+            <span class="term-tag">资产负债表</span>
+            <h3>货很多，说明这不是轻资产生意</h3>
+            <span class="formula">现金 22.55 亿 + 应收 9.22 亿 + 库存 62.96 亿美元</span>
+            <p>库存远大于应收，说明它必须先把很多货备在手上。总流动负债 89.36 亿美元，也说明它一边卖货，一边依赖供应商信用和经营周转。</p>
+          </article>
+          <article class="statement">
+            <span class="term-tag">现金流量表</span>
+            <h3>利润不是纸上富贵，现金也在增加</h3>
+            <span class="formula">过去六个月净利润 5.91 亿，现金及受限现金净增加 5.11 亿美元</span>
+            <p>这说明公司没有把利润全困在库存和应收里。对零售商来说，现金周转是否顺，和利润本身一样重要。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">09</span>
+          <div>
+            <span class="term-tag">今天学 5 个词</span>
+            <h2>关键专业名词，用白话讲</h2>
+          </div>
+        </div>
+        <div class="terms">
+          <article class="term">
+            <h3>可比销售 Comparable Sales</h3>
+            <p>白话：只看“老店老站”卖得有没有变好。</p>
+            <p class="example">例子：你家小卖部今年多开了一家店，总收入涨了，不代表原来的店更会赚钱。可比销售就是专门看原来的店。</p>
+          </article>
+          <article class="term">
+            <h3>毛利率 Gross Profit Rate</h3>
+            <p>白话：卖 100 元东西，先扣进货成本，还剩多少。</p>
+            <p class="example">例子：你 80 元进货、100 元卖出，先剩 20 元，毛利率就是 20%。</p>
+          </article>
+          <article class="term">
+            <h3>SG&amp;A</h3>
+            <p>白话：店员工资、广告、总部管理、门店运营这些日常开销。</p>
+            <p class="example">例子：开店不只要买货，还得请人、交租、打广告，这些钱大多都在 SG&amp;A 里。</p>
+          </article>
+          <article class="term">
+            <h3>库存 Inventory</h3>
+            <p>白话：还没卖出去、躺在仓库和门店里的货。</p>
+            <p class="example">例子：如果你囤了很多去年的平板，等新款出来，它们就可能不得不降价卖。</p>
+          </article>
+          <article class="term">
+            <h3>Marketplace</h3>
+            <p>白话：平台自己不一定买下所有货，而是让第三方商家也来卖。</p>
+            <p class="example">例子：像商场把摊位租给别的商家，商场不用自己进全部商品，也能赚服务费和广告费。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">10</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>这期值得记住的重要事件</h2>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-item"><b>2026-08-27：上调全年指引</b>FY27 收入指引上调到 423 亿至 428 亿美元，可比销售指引上调到 1.9% 至 3.0%，说明管理层觉得下半年比之前更好。</li>
+          <li class="timeline-item"><b>2026-08-27：本季增长点更分散</b>公司说几乎大多数主要品类都在增长，尤其是 computing、home theater，以及 AI glasses 和 trading cards 等新兴品类。</li>
+          <li class="timeline-item"><b>2026-08-27：利润受新业务和关税退款帮助</b>Best Buy Ads、Marketplace 以及约 3,400 万美元关税退款一起把国内毛利率往上托了一点。</li>
+          <li class="timeline-item"><b>2026-11-01：CEO 将切换</b>Jason Bonfig 将在 2026 年 11 月 1 日接任 CEO。对零售公司来说，管理层换帅常常会影响打法节奏和资本分配。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">11</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>可能出什么问题</h2>
+          </div>
+        </div>
+        <div class="risks">
+          <article class="risk">
+            <h3>价格战</h3>
+            <p>如果 Amazon、Walmart 或品牌直营店把热门商品价格压得很低，百思买要么跟降价、要么失去订单，两边都伤利润。</p>
+          </article>
+          <article class="risk">
+            <h3>库存判断失误</h3>
+            <p>电子产品更新快。如果买错型号、买早了，后面新品一来，旧货就得打折清仓。</p>
+          </article>
+          <article class="risk">
+            <h3>服务价值被低估</h3>
+            <p>当消费者更愿意自己装、自己修，或者更相信品牌直营售后时，安装维修这层差异化会被削弱。</p>
+          </article>
+          <article class="risk">
+            <h3>供应链和关税波动</h3>
+            <p>本季关税退款是利好，但反过来，如果未来关税、内存、运输成本再涨，商品毛利率会立刻受压。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="remember" class="remember">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">12</span>
+          <div>
+            <span class="analysis">今日记住什么</span>
+            <h2>把这家公司记成 3 句话</h2>
+          </div>
+        </div>
+        <div class="remember-grid">
+          <article class="memory">
+            <strong>1</strong>
+            <p>百思买不是纯粹卖电子产品，它也卖解释、安装、维修和售后这些“省心服务”。</p>
+          </article>
+          <article class="memory">
+            <strong>2</strong>
+            <p>它所在的是成熟零售业，规模很重要，但护城河不深，所以利润率不会特别高。</p>
+          </article>
+          <article class="memory">
+            <strong>3</strong>
+            <p>本季业绩变好，既有真实销售增长，也有广告、平台和关税退款的帮助，要分清哪些能长期重复。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="soft quiz">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">13</span>
+          <div>
+            <span class="term-tag">自测题与答案</span>
+            <h2>用 3 个问题检查自己有没有读懂</h2>
+          </div>
+        </div>
+        <details open>
+          <summary>1. 为什么百思买明明是零售商，却一直强调服务、广告和 Marketplace？</summary>
+          <div class="answer">因为电子产品本身很容易比价，商品毛利不高。服务、广告和平台能让每个顾客带来更多利润，不必只靠卖货赚薄钱。</div>
+        </details>
+        <details>
+          <summary>2. 为什么说门店对百思买仍然重要？</summary>
+          <div class="answer">因为门店不仅展示商品，还承担咨询、提货、退换货、发货和部分售后服务。很多线上订单其实也靠门店完成最后一公里。</div>
+        </details>
+        <details>
+          <summary>3. 本季哪些改善可能不是长期能力，读财报时要小心？</summary>
+          <div class="answer">约 3,400 万美元的关税退款更像一次性利好，不能直接当成公司长期经营能力。长期要看的是可比销售、服务能力和平台收入能否持续。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">14</span>
+          <div>
+            <span class="background">资料来源</span>
+            <h2>哪些是财报事实，哪些是外部背景</h2>
+          </div>
+        </div>
+        <div class="sources">
+          <ul>
+            <li><b>财报原文中的事实：</b><a href="https://investors.bestbuy.com/News--Events/news/news-details/2026/Best-Buy-Reports-Second-Quarter-Results/default.aspx">Best Buy Reports Second Quarter Results</a>，2026-08-27。</li>
+            <li><b>财报原文中的事实：</b><a href="https://www.investors.bestbuy.com/">Best Buy Investor Relations Corporate Overview</a>，读取于 2026-08-29。</li>
+            <li><b>财报原文中的事实：</b><a href="https://www.sec.gov/Archives/edgar/data/764478/000076447826000009/bby-20260131.htm">Best Buy FY2026 Form 10-K</a>，2026-03-18。</li>
+            <li><b>外部背景资料：</b><a href="https://www.census.gov/retail/ecommerce.html">U.S. Census Bureau Quarterly Retail E-Commerce Sales</a>，2026-08-18。</li>
+            <li><b>外部背景资料：</b><a href="https://www.idc.com/resource-center/blog/press-release-type/tracker-press-release/">IDC Tracker Press Release Archive</a>，其中全球 PC Q2 2026 追踪稿发布于 2026-07-31。</li>
+            <li><b>外部背景资料：</b><a href="https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/">Amazon Q4 2025 / FY2025 Results</a>，2026-02-05。</li>
+            <li><b>外部背景资料：</b><a href="https://corporate.walmart.com/news/2026/04/23/walmart-releases-2026-annual-report-and-proxy-statement">Walmart Releases 2026 Annual Report and Proxy Statement</a>，2026-04-23。</li>
+            <li><b>外部背景资料：</b><a href="https://investor.costco.com/company-profile/default.aspx">Costco Company Profile</a>，读取于 2026-08-29。</li>
+            <li><b>外部背景资料：</b><a href="https://corporate.target.com/investors/annual/2025-annual-report/10-k-report/10-k-part-i/item-1-business">Target 2025 Annual Report Item 1. Business</a>，读取于 2026-08-29。</li>
+            <li><b>外部背景资料：</b><a href="https://investor.apple.com/sec-filings/sec-filings-details/default.aspx?FilingId=18880179">Apple Form 10-K Details</a>，2025-10-31。</li>
+          </ul>
+          <p class="fine">说明：页面里带“财报原文中的事实”的内容，直接来自公司正式投资者关系页面或监管文件；带“外部背景资料”的内容，用来帮助理解行业和竞争格局；带“分析判断”的内容，是基于上述材料做的解释，不构成投资建议。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <div class="wrap">本页面仅用于商业与财报教育，不构成任何投资建议、收益预测或收益承诺。阅读财报时，请优先以公司正式披露原文为准。</div>
+  </footer>
+</body>
+</html>

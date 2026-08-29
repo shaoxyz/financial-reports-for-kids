@@ -450,9 +450,18 @@
   "Nintendo": {
     "provider": "多源交叉补录",
     "sources": [
-      { "name": "Alpha Vantage", "url": "https://www.alphavantage.co/documentation/" },
-      { "name": "Google Finance", "url": "https://www.google.com/finance/quote/7974:TYO" },
-      { "name": "ECB参考汇率", "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" }
+      {
+        "name": "Alpha Vantage",
+        "url": "https://www.alphavantage.co/documentation/"
+      },
+      {
+        "name": "Google Finance",
+        "url": "https://www.google.com/finance/quote/7974:TYO"
+      },
+      {
+        "name": "ECB参考汇率",
+        "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+      }
     ],
     "symbol": "NTDOY",
     "name": "任天堂",
@@ -475,9 +484,18 @@
   "DeutscheTelekom": {
     "provider": "多源交叉补录",
     "sources": [
-      { "name": "Alpha Vantage", "url": "https://www.alphavantage.co/documentation/" },
-      { "name": "Google Finance", "url": "https://www.google.com/finance/quote/DTE:ETR" },
-      { "name": "ECB参考汇率", "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" }
+      {
+        "name": "Alpha Vantage",
+        "url": "https://www.alphavantage.co/documentation/"
+      },
+      {
+        "name": "Google Finance",
+        "url": "https://www.google.com/finance/quote/DTE:ETR"
+      },
+      {
+        "name": "ECB参考汇率",
+        "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+      }
     ],
     "symbol": "DTEGY",
     "name": "德国电信",
@@ -500,9 +518,18 @@
   "LVMH": {
     "provider": "多源交叉补录",
     "sources": [
-      { "name": "Alpha Vantage", "url": "https://www.alphavantage.co/documentation/" },
-      { "name": "Google Finance", "url": "https://www.google.com/finance/quote/MC:EPA" },
-      { "name": "ECB参考汇率", "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" }
+      {
+        "name": "Alpha Vantage",
+        "url": "https://www.alphavantage.co/documentation/"
+      },
+      {
+        "name": "Google Finance",
+        "url": "https://www.google.com/finance/quote/MC:EPA"
+      },
+      {
+        "name": "ECB参考汇率",
+        "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+      }
     ],
     "symbol": "LVMUY",
     "name": "LVMH 路威酩轩",
@@ -525,9 +552,18 @@
   "Tencent": {
     "provider": "多源交叉补录",
     "sources": [
-      { "name": "Alpha Vantage", "url": "https://www.alphavantage.co/documentation/" },
-      { "name": "Google Finance", "url": "https://www.google.com/finance/quote/0700:HKG" },
-      { "name": "ECB参考汇率", "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" }
+      {
+        "name": "Alpha Vantage",
+        "url": "https://www.alphavantage.co/documentation/"
+      },
+      {
+        "name": "Google Finance",
+        "url": "https://www.google.com/finance/quote/0700:HKG"
+      },
+      {
+        "name": "ECB参考汇率",
+        "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+      }
     ],
     "symbol": "TCEHY",
     "name": "腾讯",
@@ -658,5 +694,21 @@
     "movingAverage50": "26.13",
     "movingAverage200": "22.64",
     "fetchedAt": "2026-08-28T02:11:13.190Z"
+  },
+  "BestBuy": {
+    "provider": "Alpha Vantage",
+    "symbol": "BBY",
+    "name": "Best Buy Co. Inc",
+    "currency": "USD",
+    "price": "82.4400",
+    "changePercent": "-1.3404",
+    "latestTradingDay": "2026-08-28",
+    "marketCapitalization": "17611700000",
+    "peRatio": "15.47",
+    "week52High": "91.27",
+    "week52Low": "54.38",
+    "movingAverage50": "82.89",
+    "movingAverage200": "71.22",
+    "fetchedAt": "2026-08-29T02:13:37.144Z"
   }
 }

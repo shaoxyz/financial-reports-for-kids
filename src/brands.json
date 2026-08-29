@@ -237,5 +237,12 @@
     "color": "#0096D6",
     "simpleIcon": "siHp",
     "marketSymbol": "NYSE:HPQ"
+  },
+  "BestBuy": {
+    "company": "百思买",
+    "query": "Best Buy Co., Inc.",
+    "color": "#0046BE",
+    "override": "BestBuy.svg",
+    "marketSymbol": "NYSE:BBY"
   }
 }
