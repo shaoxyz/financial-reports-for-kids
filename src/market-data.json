@@ -710,5 +710,21 @@
     "movingAverage50": "82.89",
     "movingAverage200": "71.22",
     "fetchedAt": "2026-08-29T02:13:37.144Z"
+  },
+  "Marvell": {
+    "provider": "Alpha Vantage",
+    "symbol": "MRVL",
+    "name": "Marvell Technology Group Ltd",
+    "currency": "USD",
+    "price": "216.6200",
+    "changePercent": "-10.2837",
+    "latestTradingDay": "2026-08-28",
+    "marketCapitalization": "194677391000",
+    "peRatio": "71.73",
+    "week52High": "329.8",
+    "week52Low": "61.31",
+    "movingAverage50": "230.01",
+    "movingAverage200": "148.03",
+    "fetchedAt": "2026-08-30T02:13:38.813Z"
   }
 }

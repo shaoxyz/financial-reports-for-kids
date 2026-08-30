@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 Marvell 财报：它卖的不是电脑，而是让 AI 数据中心里海量芯片彼此说话、一起工作的关键零件。">
+  <title>Marvell：AI 数据中心里的搬运工，怎么把芯片卖成好生意｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--brand:#b01647;--brand-deep:#3f1022;--brand-soft:#ffe8f0;--pearl:#fffaf6;--paper:#fffdf9;--ink:#1d1820;--muted:#655b68;--line:#e7d6dd;--gold:#f4c45c;--teal:#0d6f73;--slate:#5f6b7a;--good:#157347;--warn:#9f4b00}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#fff5f8 0,#fffdf9 16%,#fffdf9 100%);color:var(--ink);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78}a{color:var(--brand);text-underline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}
+    .fact,.background,.analysis,.term-tag{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.68rem;font-weight:900}
+    .fact{background:#fff;border:1px solid #efc2d1;color:var(--brand)}
+    .background{background:#edf7f6;color:var(--teal)}
+    .analysis{background:#f7eef2;color:var(--brand-deep)}
+    .term-tag{background:#fff4d5;color:#7a5600}
+    .label{font-size:.74rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;padding:92px 0 74px;background:radial-gradient(circle at 18% 18%,#ef5d88 0,#b01647 28%,#3f1022 76%);color:#fff}
+    .hero:before{content:"";position:absolute;right:min(6vw,60px);top:48px;width:240px;height:240px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03));box-shadow:0 0 0 18px rgba(255,255,255,.04)}
+    .hero:after{content:"";position:absolute;left:-120px;bottom:-120px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.08)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:end}
+    .hero h1{margin:14px 0 18px;font-size:clamp(3rem,6.8vw,5.6rem);line-height:.92;letter-spacing:-.05em}
+    .hero h1 em{display:block;color:#ffd7e5;font-style:normal}
+    .lead{max-width:760px;font-size:clamp(1rem,1.9vw,1.15rem);color:#ffeef4}
+    .hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .hero-strip article{padding:16px 15px;background:rgba(255,255,255,.12);backdrop-filter:blur(5px);border:1px solid rgba(255,255,255,.08)}
+    .hero-strip span{display:block;color:#ffd9e6;font-size:.72rem;font-weight:850;letter-spacing:.08em}
+    .hero-strip b{display:block;margin-top:8px;font:900 1.56rem/1 Georgia,serif}
+    .hero-card{padding:26px;border:1px solid rgba(255,255,255,.18);background:rgba(255,250,246,.96);color:var(--ink);box-shadow:18px 18px 0 rgba(33,8,18,.18)}
+    .hero-card strong{display:block;margin:10px 0 14px;color:var(--brand);font-size:1.18rem}
+    .hero-card p{margin:7px 0;font-size:.88rem}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .nav .wrap{display:flex;gap:18px;padding:12px 0;overflow:auto;white-space:nowrap}
+    .nav a{color:#483847;text-decoration:none;font-size:.78rem;font-weight:850}
+    section{padding:74px 0}
+    .head{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:start;margin-bottom:28px}
+    .head .no{font:900 3.7rem/1 Georgia,serif;color:#d7a1b3}
+    .head h2{margin:6px 0 0;font-size:clamp(1.95rem,4vw,3.1rem);line-height:1.08}
+    .intro{max-width:940px;font-size:1.03rem}
+    .soft{background:linear-gradient(180deg,#fff 0,#fff5f8 100%);border-block:1px solid var(--line)}
+    .dark{background:linear-gradient(180deg,#2e1020 0,#1a1017 100%);color:#fff}
+    .dark .head .no{color:#b97d92}.dark .intro{color:#f4dde6}
+    .primer{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+    .primer-box,.primer-quiz,.card,.moat,.rival,.term,.risk,.memory,.timeline-item,.statement,.source-card,.money-card,.flow-step{padding:24px;background:#fff;border:1px solid var(--line)}
+    .primer-box ul,.report-list,.timeline,.sources ul,.risk-list{margin:0;padding:0;list-style:none}
+    .primer-box li,.report-list li,.timeline li,.sources li,.risk-list li{padding:12px 0;border-bottom:1px solid var(--line)}
+    .primer-box li:last-child,.report-list li:last-child,.timeline li:last-child,.sources li:last-child,.risk-list li:last-child{border-bottom:0}
+    .primer-box b,.primer-quiz b,.card strong,.money-card strong{display:block;color:var(--brand)}
+    .primer-quiz p{margin:12px 0 0}
+    .company-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:30px}
+    .company-grid blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.72rem,3vw,2.7rem);line-height:1.3}
+    .company-grid blockquote span{box-shadow:inset 0 -.3em #ffd8e6}
+    .money-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .money-card{border-top:6px solid var(--brand)}
+    .money-card .num{display:block;margin:12px 0 8px;font:900 1.92rem/1 Georgia,serif;color:var(--brand)}
+    .money-card p{margin:0;color:var(--muted);font-size:.89rem}
+    .mix-panel,.bridge,.industry-grid,.source-grid,.flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .mix-bar{display:flex;height:22px;overflow:hidden;background:#f6d5e0}
+    .mix-bar span{display:grid;place-items:center;font-size:.74rem;font-weight:900}
+    .mix-bar .dc{background:var(--brand);color:#fff}.mix-bar .other{background:#f3b9ca;color:#551226}
+    .flow-grid{grid-template-columns:repeat(4,1fr)}
+    .flow-step{border-bottom:5px solid var(--gold)}
+    .flow-step b{display:block;color:var(--brand)}
+    .flow-step p{margin:8px 0 0;color:var(--muted);font-size:.88rem}
+    .dashboard{display:grid;grid-template-columns:1.05fr .95fr .95fr;gap:14px}
+    .metric{min-height:178px;padding:22px;background:#fff;color:var(--ink)}
+    .metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#ffe1eb 0,#ff7aa1 34%,#4b1026 100%);color:#fff}
+    .metric .value{display:block;margin:12px 0;font:900 clamp(2rem,4vw,4rem)/1 Georgia,serif}
+    .metric b{display:block}
+    .metric small{display:block;color:var(--muted)}
+    .metric.main small{color:#ffe3ed}
+    .up{color:var(--good);font-weight:900}.down{color:#b13a3a;font-weight:900}
+    .moats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .moat{border-top:7px solid var(--gold)}
+    .moat h3,.rival h3,.term h3,.risk h3{margin:7px 0}
+    .moat p,.rival p,.term p,.risk p,.statement p,.card p{margin:7px 0;color:var(--muted)}
+    .rivals{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .rival{border-bottom:5px solid var(--brand)}
+    .industry-visual{display:grid;place-items:center;aspect-ratio:1;background:linear-gradient(145deg,#ffe7ef 0,#f7bdd0 42%,#4b1026 100%);border-radius:28px;color:#30111b;text-align:center;padding:28px;font-weight:900}
+    .drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+    .drivers article{padding:16px 0;border-bottom:1px solid var(--line)}
+    .drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .statement{border-left:4px solid var(--brand)}
+    .formula{display:block;margin:14px 0;padding:11px;background:#fff1f5;color:#7a2442;font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+    .term{border-left:4px solid var(--gold)}
+    .example{font-size:.9rem;color:var(--muted)}
+    .events{background:linear-gradient(155deg,#2b101b 0,#5c1733 100%);color:#fff}
+    .events .head .no{color:#d19ab0}
+    .timeline-item b{display:block;color:var(--brand)}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .risk{background:#fff8f3;border-color:#edd8cc}
+    .remember{background:linear-gradient(180deg,#fff5f8 0,#fff8ec 100%)}
+    .remember-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .memory{border-top:5px solid var(--gold)}
+    .memory strong{display:block;color:var(--brand);font:900 2.2rem/1 Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}
+    .quiz summary{padding:16px 0;cursor:pointer;font-weight:900}
+    .answer{padding:0 0 18px;color:var(--muted)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:#7f6b76}
+    .sources{background:#f7ede6}
+    .source-card{border-top:5px solid var(--brand)}
+    .fine{font-size:.8rem;color:var(--muted)}
+    .disclaimer{padding:24px 0;background:#18141a;color:#cfc4cb;font-size:.78rem}
+    @media(max-width:980px){.hero-grid,.primer,.company-grid,.mix-panel,.bridge,.industry-grid,.source-grid{grid-template-columns:1fr}.money-grid,.moats,.statements,.remember-grid{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.flow-grid{grid-template-columns:1fr 1fr}.rivals{grid-template-columns:1fr 1fr 1fr}.terms,.drivers,.risks{grid-template-columns:1fr}}
+    @media(max-width:640px){section{padding:56px 0}.hero{padding:56px 0 48px}.hero:before{width:136px;height:136px;top:24px;right:18px}.hero h1{font-size:3rem}.hero-strip,.money-grid,.moats,.rivals,.flow-grid,.statements,.terms,.risks,.remember-grid,.dashboard{grid-template-columns:1fr}.head{grid-template-columns:52px 1fr}.head .no{font-size:2.8rem}.wrap{width:min(100% - 24px,1120px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 半导体与 AI 基础设施 · 2026-08-30</span>
+        <h1>AI 机房里的搬运工<em>为什么突然赚得更快</em></h1>
+        <p class="lead">Marvell 不做聊天机器人，也不卖整台服务器。它更像是 AI 数据中心里的“高速道路设计师 + 收费站设备商”：让很多芯片更快地连在一起，数据少堵车，电少浪费，大客户才愿意持续下单。</p>
+        <div class="hero-strip">
+          <article><span>Q2 FY2027 收入</span><b>$27.39亿</b></article>
+          <article><span>数据中心收入占比</span><b>79%</b></article>
+          <article><span>季度经营现金流</span><b>$6.06亿</b></article>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>Marvell Technology, Inc.（NASDAQ: MRVL）</strong>
+        <p>主报告：FY2027 Q2 Earnings Release</p>
+        <p>报告期：截至 2026-08-01 的季度</p>
+        <p>发布日期：2026-08-27</p>
+        <p>补充原文：Form 10-Q（2026-08-28）、Form 10-K（2026-03-11）</p>
+        <p>主展示口径：美元（公司原始披露口径）</p>
+        <p><a href="https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results">打开 Marvell 本期财报原文 ↗</a></p>
+        <p><a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm">打开 FY2027 Q2 10-Q ↗</a></p>
+        <p><a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000011/mrvl-20260131.htm">打开 FY2026 10-K ↗</a></p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#primer">短版导读</a>
+      <a href="#company">公司是什么</a>
+      <a href="#money">钱从哪里来</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#remember">记住什么</a>
+      <a href="#quiz">自测</a>
+      <a href="#sources">资料</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="primer">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">00</span>
+          <div>
+            <span class="fact">5分钟短版导读</span>
+            <h2>先抓住今天最重要的 6 件事</h2>
+          </div>
+        </div>
+        <div class="primer">
+          <article class="primer-box">
+            <ul>
+              <li><b>公司怎么赚钱：</b>Marvell 主要卖芯片和相关设计能力，服务对象是做 AI 数据中心、云计算、网络设备和通信设备的大客户。你可以把它理解成“做服务器里关键交通零件的人”。</li>
+              <li><b>最重要的 5 个数字：</b>Q2 FY2027 收入 27.39 亿美元，同比增长 37%；其中数据中心收入 21.72 亿美元，占总收入 79%；GAAP 毛利率 53.1%，比上年同期高 2.7 个百分点；GAAP 每股收益 0.33 美元，非 GAAP 每股收益 0.94 美元；季度经营现金流 6.06 亿美元。</li>
+              <li><b>最大壁垒：</b>不是“会做一颗芯片”这么简单，而是能把定制芯片、光连接、交换芯片、存储和系统级设计一起打包。大客户一旦把它设计进整套机房，短期不容易换。</li>
+              <li><b>主要竞争对手：</b>Broadcom、NVIDIA、AMD、Intel、Cisco。Marvell 自己在 10-K 里也把这些公司列为直接竞争者之一。</li>
+              <li><b>最大风险：</b>现在增长很大一部分押在 AI 数据中心。如果大客户缩减机房建设，或者自己做芯片，Marvell 的订单会很快受影响。</li>
+              <li><b>今天的专业名词：</b>Fabless、毛利率、NRE、客户集中度、资本开支。</li>
+            </ul>
+          </article>
+          <aside class="primer-quiz">
+            <span class="term-tag">3道自测题</span>
+            <p><b>1. Marvell 卖的不是电脑，为什么却能从 AI 热潮里赚钱？</b>答案：因为 AI 机房需要大量芯片之间高速连接，Marvell 正在卖这些连接、交换和定制芯片。</p>
+            <p><b>2. 为什么“数据中心收入占比 79%”既是好消息也是风险？</b>答案：好消息是最热的市场在拉着它长；风险是太依赖同一类客户和同一波投资周期。</p>
+            <p><b>3. 为什么毛利率上升很重要？</b>答案：说明它不是只多卖了货，还把每 1 美元收入里能留下的钱变多了。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">01</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>一句话：它卖的是“让很多芯片一起高效工作”的关键零件</h2>
+          </div>
+        </div>
+        <div class="company-grid">
+          <blockquote>如果 AI 数据中心像一座超大的城市，Marvell 不是卖房子的，而是卖<span>高速路、路口红绿灯和收费系统</span>的人。</blockquote>
+          <ul class="report-list">
+            <li><b>公司做什么：</b>Marvell 在 10-Q 里把自己定义为“数据基础设施半导体解决方案供应商”，覆盖 data center core 到 network edge。</li>
+            <li><b>卖给谁：</b>主要是云厂商、超大规模数据中心客户、网络设备厂商、通信设备厂商，以及需要高速连接和定制芯片的大客户。</li>
+            <li><b>为什么他们愿意付钱：</b>因为 AI 训练和推理要让大量计算芯片彼此高速交换数据。数据一慢，贵得多的 GPU 也会空转，整套机房的回报就下降。</li>
+            <li><b>它不做什么：</b>它不是自己开晶圆厂的大工厂，也不是面向普通消费者卖手机和电脑的品牌。它更接近“幕后零件商”。</li>
+          </ul>
+        </div>
+        <p class="intro">很多孩子第一次看芯片公司，会以为“芯片就是 CPU 或显卡”。Marvell 适合用来打破这个误解。AI 时代，真正稀缺的不只是算力芯片本身，还有让算力彼此连起来、扩起来、用起来的整套基础设施芯片。</p>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">02</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>钱从哪里来</h2>
+          </div>
+        </div>
+        <div class="money-grid">
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>数据中心</strong>
+            <span class="num">79%</span>
+            <p>收入 21.72 亿美元。这里是绝对主引擎，主要受 AI 相关需求带动。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>通信与其他</strong>
+            <span class="num">21%</span>
+            <p>收入 5.68 亿美元。包含通信、企业网络等其余业务，已从此前库存调整中恢复。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">收费方式</span>
+            <strong>卖芯片</strong>
+            <span class="num">大头</span>
+            <p>10-Q 直接写明：公司大部分收入来自产品销售，也就是芯片和相关硬件。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">收费方式</span>
+            <strong>定制工程</strong>
+            <span class="num">补厚</span>
+            <p>10-K 提到 ASIC 模式会收 NRE，也就是客户为一次性定制开发买单。</p>
+          </article>
+        </div>
+        <div class="mix-panel">
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>现在这家公司几乎已经被“数据中心”重新定义了</strong>
+            <p>Q2 FY2027 数据中心收入 21.72 亿美元，同比增长 46%，占比从上年同期的 74% 继续升到 79%。这说明 Marvell 的重心，正在从更分散的基础设施芯片，快速向 AI 机房集中。</p>
+            <div class="mix-bar" aria-label="Marvell 本季收入主要由数据中心和通信与其他构成">
+              <span class="dc" style="width:79%">数据中心 79%</span>
+              <span class="other" style="width:21%">通信与其他 21%</span>
+            </div>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>Marvell 卖的不是“单颗厉害的芯片”，而是“整套连接能力”</strong>
+            <p>它的产品组合横跨 custom、electro-optics、switching、storage 等。白话说，它想赚的不是某一颗明星芯片的钱，而是整套机房里多个关键位置的钱。这样单点被替代的风险会小一点，但也要求它必须持续跟上大客户路线图。</p>
+          </article>
+        </div>
+        <p class="intro">理解 Marvell 的最好方法，是把它想成“卖高速交通系统的人”。AI 机房越大，车越多，路和路口越贵。Marvell 赚的是这类“路权生意”。</p>
+      </div>
+    </section>
+
+    <section id="profit" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">03</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>这门生意怎样变成利润和现金</h2>
+          </div>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-step"><b>先和大客户一起设计</b><p>客户告诉它要建什么样的 AI 机房，Marvell 再把交换、连接、定制芯片等方案做进去。</p></article>
+          <article class="flow-step"><b>再交给代工厂生产</b><p>它是 fabless 公司，自己设计，不自己开晶圆厂，生产主要靠外部制造伙伴。</p></article>
+          <article class="flow-step"><b>收入进来后先扣制造成本</b><p>Q2 成本是 12.84 亿美元，占收入 46.9%。剩下的部分叫毛利润。</p></article>
+          <article class="flow-step"><b>再扣研发和管理费用</b><p>Q2 研发费用 7.41 亿美元，说明这门生意必须持续投技术，才能留在牌桌上。</p></article>
+        </div>
+        <div class="bridge">
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>本季利润率提升，主要不是“涨价”，而是“结构更好”</strong>
+            <p>Q2 GAAP 毛利率 53.1%，高于上年同期的 50.4%。10-Q 解释，主要因为收入更高带来更好的成本吸收，以及产品组合更好。</p>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>这里要记住一个细节：不是所有 AI 芯片生意都越做越厚</strong>
+            <p>10-K 特别提醒，ASIC 定制模式往往毛利率更低，而且前期要花很多工程成本。也就是说，收入长得快不一定等于利润永远更厚，要看客户结构、产品组合和议价能力。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers" class="dark">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">04</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>这期成绩怎么样：最能说明变化的 5 个数字</h2>
+          </div>
+        </div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div>
+              <span class="label">Q2 FY2027 总收入</span>
+              <span class="value">27.39亿</span>
+              <b>美元 · 截至 2026-08-01 的季度</b>
+            </div>
+            <small><span class="up">同比 +37%</span>。增长不是小修小补，而是明显加速。</small>
+          </article>
+          <article class="metric">
+            <span class="label">数据中心收入</span>
+            <span class="value">$21.72亿</span>
+            <b>占总收入 79%</b>
+            <small><span class="up">同比 +46%</span>。AI 需求是主发动机。</small>
+          </article>
+          <article class="metric">
+            <span class="label">GAAP 毛利率</span>
+            <span class="value">53.1%</span>
+            <b>上年同期 50.4%</b>
+            <small>每卖出 1 美元，扣掉直接生产成本后约留 0.53 美元。</small>
+          </article>
+          <article class="metric">
+            <span class="label">季度经营现金流</span>
+            <span class="value">$6.06亿</span>
+            <b>Q2 FY2027</b>
+            <small>说明利润里有相当一部分真的变成了现金。</small>
+          </article>
+          <article class="metric">
+            <span class="label">研发费用</span>
+            <span class="value">$7.41亿</span>
+            <b>占收入 27.0%</b>
+            <small><span class="up">同比 +42.8%</span>。增长背后也要继续烧研发。</small>
+          </article>
+        </div>
+        <p class="intro">如果只能记 1 件事，就是：Marvell 这季不是“普通地多卖了一点芯片”，而是被 AI 数据中心这一条主线明显推着走，收入更快、毛利更高、现金也更实了。</p>
+      </div>
+    </section>
+
+    <section id="moat">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">05</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>为什么别人不容易抢走它的生意</h2>
+          </div>
+        </div>
+        <div class="moats">
+          <article class="moat">
+            <h3>系统级复杂度</h3>
+            <p>它卖的不只是单颗芯片，而是多种连接、交换、光学和定制方案的配合。客户换供应商，不是换一个螺丝，而是重画高速路。</p>
+          </article>
+          <article class="moat">
+            <h3>设计进入后不易替换</h3>
+            <p>芯片一旦被设计进客户平台，中途更换要重新验证，时间长、风险高、失败代价大。</p>
+          </article>
+          <article class="moat">
+            <h3>知识产权储备</h3>
+            <p>10-K 披露，截至 2026-01-31，公司有超过 10,000 项已授权专利和待审专利申请。</p>
+          </article>
+          <article class="moat">
+            <h3>客户协同深</h3>
+            <p>10-K 和 10-Q 都显示它在 custom AI 和大客户联合开发上持续加码，这类关系不是一天建立的。</p>
+          </article>
+        </div>
+        <p class="intro">但要实话实说，这不是“绝对没人能抢”的生意。它的护城河更像工程门槛、时间门槛和客户切换成本，而不是像可口可乐那样人人都认识的消费品牌。</p>
+      </div>
+    </section>
+
+    <section id="competition" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">06</span>
+          <div>
+            <span class="fact">财报原文中的事实 + 分析判断</span>
+            <h2>谁在和它竞争</h2>
+          </div>
+        </div>
+        <div class="rivals">
+          <article class="rival">
+            <h3>Broadcom</h3>
+            <p><b>强在：</b>网络芯片和定制 ASIC 根基深，和大型基础设施客户关系也很强。</p>
+          </article>
+          <article class="rival">
+            <h3>NVIDIA</h3>
+            <p><b>强在：</b>AI 计算生态最完整，GPU、网络和软件一起卖，整套方案吸引力很高。</p>
+          </article>
+          <article class="rival">
+            <h3>AMD</h3>
+            <p><b>强在：</b>CPU、GPU、FPGA/自适应计算布局更全，能在算力侧直接对接客户需求。</p>
+          </article>
+          <article class="rival">
+            <h3>Intel</h3>
+            <p><b>强在：</b>服务器 CPU 基盘大，生态深，很多企业和云客户长期都和它合作。</p>
+          </article>
+          <article class="rival">
+            <h3>Cisco</h3>
+            <p><b>强在：</b>企业和网络设备市场历史深，渠道与客户信任积累厚。</p>
+          </article>
+        </div>
+        <p class="intro">这些对手不是在同一个小赛道里排队打架。有人强在算力，有人强在网络，有人强在整套平台。Marvell 的位置，是努力把“连接”和“定制”做成不可少的一层。</p>
+      </div>
+    </section>
+
+    <section id="industry">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">07</span>
+          <div>
+            <span class="background">外部背景资料</span>
+            <h2>这个行业是什么样</h2>
+          </div>
+        </div>
+        <div class="industry-grid">
+          <div class="industry-visual">
+            <div>
+              <div class="label">行业一句话</div>
+              <h3>这是 AI 带动下的<br>基础设施扩建潮</h3>
+              <p>不只是多做芯片，而是要重建一整套“更快、更省电、更能扩”的数据中心。</p>
+            </div>
+          </div>
+          <div class="drivers">
+            <article>
+              <h3>行业阶段：增长中，而且很热</h3>
+              <p>SIA 在 2026-08-06 披露，2026 年第二季度全球半导体销售额为 4,033 亿美元，较 2026 年第一季度增长 35.1%。</p>
+            </article>
+            <article>
+              <h3>需求由什么推动</h3>
+              <p>Gartner 在 2026-08-24 预计 2026 年全球半导体收入将达到 1 万亿美元，其中 AI 数据中心生态占比约 36.5%。</p>
+            </article>
+            <article>
+              <h3>产业链上游是谁</h3>
+              <p>上游是晶圆代工、先进封装、基板、光学和关键材料。Marvell 自己不建晶圆厂，要依赖制造伙伴。</p>
+            </article>
+            <article>
+              <h3>产业链下游是谁</h3>
+              <p>下游是云厂商、超大规模数据中心、服务器厂商、网络设备厂商和通信设备商。</p>
+            </article>
+            <article>
+              <h3>当下最重要趋势</h3>
+              <p>AI 机房越来越大，数据在芯片之间来回跑得越来越多，所以“连接”本身开始变成瓶颈。</p>
+            </article>
+            <article>
+              <h3>当下最重要隐忧</h3>
+              <p>10-Q 风险因素提醒，AI 数据中心建设可能受电力、水、许可和社区阻力影响而放慢。</p>
+            </article>
+          </div>
+        </div>
+        <p class="intro">这说明 Marvell 不是靠一时运气长出来的。它站在一条很强的行业风上。但也正因为风太强，竞争、扩产和客户自研都会跟着更激烈。</p>
+      </div>
+    </section>
+
+    <section id="statements" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">08</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>三张报表的白话解读</h2>
+          </div>
+        </div>
+        <div class="statements">
+          <article class="statement">
+            <h3>利润表：卖得更多，而且每单更值钱</h3>
+            <span class="formula">收入 - 直接生产成本 = 毛利润</span>
+            <p>Q2 收入 27.39 亿美元；成本 12.84 亿美元；毛利润 14.56 亿美元。毛利率从 50.4% 升到 53.1%，核心原因是数据中心产品更强，成本摊得更开。</p>
+          </article>
+          <article class="statement">
+            <h3>现金流量表：利润有变成现金</h3>
+            <span class="formula">经营现金流 - 资本开支 ≈ 更自由的现金</span>
+            <p>本季经营现金流 6.06 亿美元。六个月经营现金流 12.44 亿美元，六个月资本开支 2.82 亿美元。说明这门生意不只是账上好看，现金回笼也不差。</p>
+          </article>
+          <article class="statement">
+            <h3>资产负债表：手里现金多，但也要继续投入</h3>
+            <span class="formula">现金、应收、库存 = 眼下能调度的弹药</span>
+            <p>截至 2026-08-01，现金及现金等价物 39.33 亿美元；应收账款 22.18 亿美元；库存 13.61 亿美元，较 2026-01-31 的 13.88 亿美元略降。库存没跟着收入一起膨胀，是个不错信号。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">09</span>
+          <div>
+            <span class="term-tag">今天学 5 个词</span>
+            <h2>关键专业名词，用白话讲</h2>
+          </div>
+        </div>
+        <div class="terms">
+          <article class="term">
+            <h3>Fabless</h3>
+            <p>白话：自己设计芯片，但不自己开晶圆厂生产。</p>
+            <p class="example">生活例子：像建筑师画图，不自己烧砖和倒水泥。</p>
+          </article>
+          <article class="term">
+            <h3>毛利率</h3>
+            <p>白话：卖出去的钱，扣掉最直接的生产成本后，还剩多少比例。</p>
+            <p class="example">生活例子：你卖 100 元手工品，材料花 40 元，毛利率就是 60%。</p>
+          </article>
+          <article class="term">
+            <h3>NRE</h3>
+            <p>白话：一次性工程开发费。客户要你为它单独做东西，先付一笔设计钱。</p>
+            <p class="example">生活例子：做一套完全定制的橱柜，设计费和开模费要先收。</p>
+          </article>
+          <article class="term">
+            <h3>客户集中度</h3>
+            <p>白话：收入是不是被少数几个大客户占了很大比例。</p>
+            <p class="example">生活例子：如果你的零花钱 80% 都来自一个亲戚，那你会很依赖他。</p>
+          </article>
+          <article class="term">
+            <h3>资本开支 CapEx</h3>
+            <p>白话：为了未来生产和研发能力而花的大钱，比如设备、软件、实验平台。</p>
+            <p class="example">生活例子：不是买今天吃的面包，而是买一个以后每天都能做面包的烤箱。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">10</span>
+          <div>
+            <span class="background">外部背景资料 + 财报原文中的事实</span>
+            <h2>最近哪些事最值得知道</h2>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <b>2026-02-02：收购 Celestial AI</b>
+            <p>10-Q 披露，这家公司做 Photonic Fabric 平台，目的是加强下一代 AI 和云数据中心的连接能力。</p>
+          </li>
+          <li class="timeline-item">
+            <b>2026-02-10：收购 XConn</b>
+            <p>补强 PCIe 和 CXL switching 能力，继续加码“机房里怎么把算力连起来”。</p>
+          </li>
+          <li class="timeline-item">
+            <b>2026-03-31：NVIDIA 战略合作与 20 亿美元投资落地</b>
+            <p>10-Q 披露，NVIDIA 认购 Marvell Series A Convertible Preferred Stock，说明它在 AI 基础设施链条里的位置被更看重。</p>
+          </li>
+          <li class="timeline-item">
+            <b>2026-08-06 至 2026-08-24：行业热度继续升温</b>
+            <p>SIA 和 Gartner 的 8 月数据都在说明：半导体总盘子还在快速变大，而且 AI 数据中心正在吞掉越来越多的价值份额。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">11</span>
+          <div>
+            <span class="fact">财报原文中的事实 + 分析判断</span>
+            <h2>可能出什么问题</h2>
+          </div>
+        </div>
+        <div class="risks">
+          <article class="risk">
+            <h3>太依赖 AI 数据中心</h3>
+            <p>Q2 数据中心占收入 79%。如果大客户缩减 AI 机房投资，冲击会很直接。</p>
+          </article>
+          <article class="risk">
+            <h3>大客户自己做芯片</h3>
+            <p>10-K 明说，一些大客户可能为了保供应、降成本而自研半导体，这会挤压 Marvell 空间。</p>
+          </article>
+          <article class="risk">
+            <h3>供应链和台湾风险</h3>
+            <p>公司依赖外部制造伙伴，且多数合格晶圆厂集中在台湾。一旦供应受扰，交付和成本都会受影响。</p>
+          </article>
+          <article class="risk">
+            <h3>中国相关关税和出口限制</h3>
+            <p>10-K、10-Q 都专门提示对华出口许可、关税和贸易限制风险，毛利率和需求都可能被拖累。</p>
+          </article>
+          <article class="risk">
+            <h3>定制业务不一定越做越肥</h3>
+            <p>10-K 提醒 ASIC 模式通常毛利率较低，若客户不愿承担足够 NRE 或出货量不够，利润会被压。</p>
+          </article>
+          <article class="risk">
+            <h3>AI 基建也会遇到现实瓶颈</h3>
+            <p>10-Q 风险因素提到，电力、水、审批、社区反对和长期资本开支可持续性，都可能拖慢整个行业。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="remember" class="remember">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">12</span>
+          <div>
+            <span class="analysis">今日记住什么</span>
+            <h2>看完今天这家公司，最该记住的 3 句话</h2>
+          </div>
+        </div>
+        <div class="remember-grid">
+          <article class="memory">
+            <strong>1</strong>
+            <p>AI 不只是多卖几块显卡。真正的大钱，也在连接、交换和扩展这些“幕后零件”。</p>
+          </article>
+          <article class="memory">
+            <strong>2</strong>
+            <p>收入增长要和毛利、现金一起看。Marvell 这季比较亮眼，是因为这三件事一起变好了。</p>
+          </article>
+          <article class="memory">
+            <strong>3</strong>
+            <p>最热的赛道也可能最危险。数据中心占比过高，会让公司更依赖少数客户和一个投资周期。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="soft quiz">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">13</span>
+          <div>
+            <span class="term-tag">自测题</span>
+            <h2>3 个带答案的小问题</h2>
+          </div>
+        </div>
+        <details>
+          <summary>1. 为什么 Marvell 的数据中心收入占比高，说明它更像“AI 基础设施公司”？</summary>
+          <div class="answer">因为它大部分钱已经不是从分散的小业务来，而是从 AI 数据中心相关的连接、交换和定制芯片来。Q2 这个比例是 79%。</div>
+        </details>
+        <details>
+          <summary>2. 毛利率从 50.4% 升到 53.1%，最想告诉我们什么？</summary>
+          <div class="answer">说明收入结构更好、生产成本摊得更开。不是单纯“忙了”，而是每 1 美元收入里能留下的钱更多了。</div>
+        </details>
+        <details>
+          <summary>3. 如果未来 AI 机房建设放慢，Marvell 为什么会受伤？</summary>
+          <div class="answer">因为它现在高度依赖数据中心客户。如果客户减少资本开支、延后项目，订单、营收和利润都可能同步放缓。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">14</span>
+          <div>
+            <span class="background">资料来源</span>
+            <h2>本报告用了哪些原文</h2>
+          </div>
+        </div>
+        <div class="source-grid">
+          <article class="source-card">
+            <h3>财报原文中的事实</h3>
+            <ul>
+              <li>Marvell Technology, Inc. FY2027 Q2 Earnings Release，发布日期 2026-08-27。<a href="https://investor.marvell.com/news-events/press-releases/detail/1031/marvell-technology-inc-reports-second-quarter-of-fiscal-year-2027-financial-results">链接</a></li>
+              <li>Marvell Technology, Inc. Form 10-Q，季度截至 2026-08-01，提交日期 2026-08-28。重点使用 Note 3 Revenue、Consolidated Balance Sheets、Cash Flows、MD&amp;A、Risk Factors。<a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000025/mrvl-20260801.htm">链接</a></li>
+              <li>Marvell Technology, Inc. Form 10-K，财年截至 2026-01-31，提交日期 2026-03-11。重点使用 Business、Intellectual Property、Competition、Risk Factors。<a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000011/mrvl-20260131.htm">链接</a></li>
+            </ul>
+          </article>
+          <article class="source-card">
+            <h3>外部背景资料</h3>
+            <ul>
+              <li>Semiconductor Industry Association，2026-08-06，《Global Semiconductor Sales Increase 35.1% from Q1 2026 to Q2 2026》。<a href="https://www.semiconductors.org/global-semiconductor-sales-increase-35-1-from-q1-2026-to-q2-2026/">链接</a></li>
+              <li>Gartner，2026-08-24，《Gartner Forecasts Worldwide Semiconductor Revenue to Reach 1 Trillion Dollars in 2026》。<a href="https://www.gartner.com/en/newsroom/press-releases/2026-08-24-gartner-forecasts-worldwide-semiconductor-revenue-to-reach-1-trillion-dollars-in-2026">链接</a></li>
+              <li>Marvell 官网 Data Center 页面，用于理解其对“accelerated infrastructure”与产品范围的官方表述；因站点反爬限制，本报告仅引用公开可访问页面，不直接抓取远程品牌资源。<a href="https://www.marvell.com/solutions/data-center.html">链接</a></li>
+            </ul>
+          </article>
+        </div>
+        <p class="fine">说明：竞争对手名单来自 Marvell FY2026 10-K；各家“强在哪里”属于基于公开业务布局的分析判断。本文只做商业与财报教育，不构成投资建议。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <div class="wrap">
+      本页用于商业与财报学习，不构成买入、卖出或收益承诺。请优先以公司原始披露为准。
+    </div>
+  </footer>
+</body>
+</html>

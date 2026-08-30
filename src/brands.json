@@ -244,5 +244,12 @@
     "color": "#0046BE",
     "override": "BestBuy.svg",
     "marketSymbol": "NYSE:BBY"
+  },
+  "Marvell": {
+    "company": "Marvell",
+    "query": "Marvell Technology, Inc.",
+    "color": "#B01647",
+    "override": "Marvell.svg",
+    "marketSymbol": "NASDAQ:MRVL"
   }
 }
