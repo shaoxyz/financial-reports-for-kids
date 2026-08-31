@@ -251,5 +251,13 @@
     "color": "#B01647",
     "override": "Marvell.svg",
     "marketSymbol": "NASDAQ:MRVL"
+  },
+  "Autodesk": {
+    "company": "Autodesk",
+    "query": "Autodesk, Inc.",
+    "color": "#111111",
+    "simpleIcon": "siAutodesk",
+    "override": "Autodesk.svg",
+    "marketSymbol": "NASDAQ:ADSK"
   }
 }

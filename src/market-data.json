@@ -726,5 +726,21 @@
     "movingAverage50": "230.01",
     "movingAverage200": "148.03",
     "fetchedAt": "2026-08-30T02:13:38.813Z"
+  },
+  "Autodesk": {
+    "provider": "Alpha Vantage",
+    "symbol": "ADSK",
+    "name": "Autodesk Inc",
+    "currency": "USD",
+    "price": "260.6600",
+    "changePercent": "-3.6662",
+    "latestTradingDay": "2026-08-28",
+    "marketCapitalization": "55037121000",
+    "peRatio": "35.08",
+    "week52High": "329.09",
+    "week52Low": "185.5",
+    "movingAverage50": "225.66",
+    "movingAverage200": "248.45",
+    "fetchedAt": "2026-08-31T02:11:08.633Z"
   }
 }

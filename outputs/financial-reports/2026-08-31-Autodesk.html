@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 Autodesk 财报：它把设计、造东西和后续运维的软件串成一条线，靠订阅收费和高转换成本，把数字工具做成长期生意。">
+  <title>Autodesk：造楼造厂做电影的人，为什么年年给它交软件费｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--brand:#111111;--accent:#00a7e1;--accent-deep:#0d3852;--accent-soft:#e8f8ff;--paper:#fcfbf7;--snow:#ffffff;--ink:#161616;--muted:#5f666d;--line:#d9dde2;--gold:#e6b64f;--good:#116149;--warn:#8a4a00}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#eef8ff 0,#fcfbf7 14%,#fcfbf7 100%);color:var(--ink);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78}a{color:var(--accent-deep);text-underline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}
+    .fact,.background,.analysis,.term-tag{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.68rem;font-weight:900}
+    .fact{background:#fff;border:1px solid #bcdcf2;color:var(--accent-deep)}
+    .background{background:#eef8ff;color:var(--accent-deep)}
+    .analysis{background:#f7f3e6;color:#795600}
+    .term-tag{background:#fff4d5;color:#7a5600}
+    .label{font-size:.74rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;padding:92px 0 74px;background:linear-gradient(135deg,#07131b 0,#111111 48%,#0d3852 100%);color:#fff}
+    .hero:before{content:"";position:absolute;right:min(6vw,64px);top:42px;width:260px;height:260px;background:radial-gradient(circle at 30% 30%,rgba(0,167,225,.28),rgba(0,167,225,0) 62%);border-radius:50%}
+    .hero:after{content:"";position:absolute;left:-60px;bottom:-60px;width:320px;height:320px;border:1px solid rgba(255,255,255,.08);transform:rotate(18deg)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:end}
+    .hero h1{margin:14px 0 18px;font-size:clamp(3rem,6.6vw,5.5rem);line-height:.92;letter-spacing:-.05em}
+    .hero h1 em{display:block;color:#8ce7ff;font-style:normal}
+    .lead{max-width:760px;font-size:clamp(1rem,1.9vw,1.15rem);color:#e9f8ff}
+    .hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .hero-strip article{padding:16px 15px;background:rgba(255,255,255,.09);backdrop-filter:blur(5px);border:1px solid rgba(255,255,255,.08)}
+    .hero-strip span{display:block;color:#bfefff;font-size:.72rem;font-weight:850;letter-spacing:.08em}
+    .hero-strip b{display:block;margin-top:8px;font:900 1.56rem/1 Georgia,serif}
+    .hero-card{padding:26px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.97);color:var(--ink);box-shadow:18px 18px 0 rgba(0,0,0,.16)}
+    .hero-card strong{display:block;margin:10px 0 14px;color:var(--accent-deep);font-size:1.18rem}
+    .hero-card p{margin:7px 0;font-size:.88rem}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(252,251,247,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .nav .wrap{display:flex;gap:18px;padding:12px 0;overflow:auto;white-space:nowrap}
+    .nav a{color:#273847;text-decoration:none;font-size:.78rem;font-weight:850}
+    section{padding:74px 0}
+    .head{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:start;margin-bottom:28px}
+    .head .no{font:900 3.7rem/1 Georgia,serif;color:#96bfd2}
+    .head h2{margin:6px 0 0;font-size:clamp(1.95rem,4vw,3.05rem);line-height:1.08}
+    .intro{max-width:950px;font-size:1.03rem}
+    .soft{background:linear-gradient(180deg,#fff 0,#eef8ff 100%);border-block:1px solid var(--line)}
+    .dark{background:linear-gradient(180deg,#101820 0,#0b1014 100%);color:#fff}
+    .dark .head .no{color:#6f94a6}.dark .intro{color:#d9edf6}
+    .primer{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+    .primer-box,.primer-quiz,.card,.moat,.rival,.term,.risk,.memory,.timeline-item,.statement,.source-card,.money-card,.flow-step{padding:24px;background:#fff;border:1px solid var(--line)}
+    .primer-box ul,.report-list,.timeline,.sources ul,.risk-list{margin:0;padding:0;list-style:none}
+    .primer-box li,.report-list li,.timeline li,.sources li,.risk-list li{padding:12px 0;border-bottom:1px solid var(--line)}
+    .primer-box li:last-child,.report-list li:last-child,.timeline li:last-child,.sources li:last-child,.risk-list li:last-child{border-bottom:0}
+    .primer-box b,.primer-quiz b,.card strong,.money-card strong{display:block;color:var(--accent-deep)}
+    .primer-quiz p{margin:12px 0 0}
+    .company-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:30px}
+    .company-grid blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.72rem,3vw,2.7rem);line-height:1.3}
+    .company-grid blockquote span{box-shadow:inset 0 -.3em #d7f3ff}
+    .money-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .money-card{border-top:6px solid var(--accent)}
+    .money-card .num{display:block;margin:12px 0 8px;font:900 1.9rem/1 Georgia,serif;color:var(--accent-deep)}
+    .money-card p{margin:0;color:var(--muted);font-size:.89rem}
+    .mix-panel,.bridge,.industry-grid,.source-grid,.flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .flow-grid{grid-template-columns:repeat(4,1fr)}
+    .flow-step{border-bottom:5px solid var(--gold)}
+    .flow-step b{display:block;color:var(--accent-deep)}
+    .flow-step p{margin:8px 0 0;color:var(--muted);font-size:.88rem}
+    .dashboard{display:grid;grid-template-columns:1.08fr .92fr .92fr;gap:14px}
+    .metric{min-height:180px;padding:22px;background:#fff;color:var(--ink);border:1px solid var(--line)}
+    .metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#dff6ff 0,#58c8ee 38%,#0f2c41 100%);color:#fff;border:0}
+    .metric .value{display:block;margin:12px 0;font:900 clamp(2rem,4vw,4rem)/1 Georgia,serif}
+    .metric b{display:block}
+    .metric small{display:block;color:var(--muted)}
+    .metric.main small{color:#ebfbff}
+    .up{color:var(--good);font-weight:900}.down{color:#b13a3a;font-weight:900}
+    .moats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .moat{border-top:7px solid var(--gold)}
+    .moat h3,.rival h3,.term h3,.risk h3{margin:7px 0}
+    .moat p,.rival p,.term p,.risk p,.statement p,.card p{margin:7px 0;color:var(--muted)}
+    .rivals{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .rival{border-bottom:5px solid var(--accent)}
+    .industry-visual{display:grid;place-items:center;aspect-ratio:1;background:linear-gradient(145deg,#f2fbff 0,#bbe9f8 38%,#0e2b40 100%);border-radius:28px;color:#122331;text-align:center;padding:28px;font-weight:900}
+    .drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+    .drivers article{padding:16px 0;border-bottom:1px solid var(--line)}
+    .drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .statement{border-left:4px solid var(--accent)}
+    .formula{display:block;margin:14px 0;padding:11px;background:#edf9ff;color:#0d3852;font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+    .term{border-left:4px solid var(--gold)}
+    .example{font-size:.9rem;color:var(--muted)}
+    .events{background:linear-gradient(155deg,#0f1820 0,#173448 100%);color:#fff}
+    .events .head .no{color:#7eb7cc}
+    .timeline-item b{display:block;color:var(--accent)}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .risk{background:#fff9f1;border-color:#eedfcb}
+    .remember{background:linear-gradient(180deg,#eef8ff 0,#fff7e8 100%)}
+    .remember-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .memory{border-top:5px solid var(--gold)}
+    .memory strong{display:block;color:var(--accent-deep);font:900 2.2rem/1 Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}
+    .quiz summary{padding:16px 0;cursor:pointer;font-weight:900}
+    .answer{padding:0 0 18px;color:var(--muted)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:#697886}
+    .sources{background:#eef4f7}
+    .source-card{border-top:5px solid var(--accent)}
+    .fine{font-size:.8rem;color:var(--muted)}
+    .disclaimer{padding:24px 0;background:#181818;color:#cbcfd4;font-size:.78rem}
+    @media(max-width:980px){.hero-grid,.primer,.company-grid,.mix-panel,.bridge,.industry-grid,.source-grid{grid-template-columns:1fr}.money-grid,.moats,.statements,.remember-grid{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.flow-grid{grid-template-columns:1fr 1fr}.rivals{grid-template-columns:1fr 1fr 1fr}.terms,.drivers,.risks{grid-template-columns:1fr}}
+    @media(max-width:640px){section{padding:56px 0}.hero{padding:56px 0 48px}.hero h1{font-size:3rem;line-height:.96;letter-spacing:-.04em}.hero-strip,.money-grid,.moats,.rivals,.flow-grid,.statements,.terms,.risks,.remember-grid,.dashboard{grid-template-columns:1fr}.head{grid-template-columns:52px 1fr}.head .no{font-size:2.8rem}.wrap{width:min(100% - 24px,1120px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 设计软件与工业数字化 · 2026-08-31</span>
+        <h1>造楼造厂做电影的人<em>为什么年年给它</em><em>交软件费</em></h1>
+        <p class="lead">Autodesk 最擅长的，不是卖一把锤子，而是卖一整套“数字图纸和协作工作台”。建筑师、工程师、工厂设计师、动画团队一旦都在这套系统里工作，换掉它就像全班一起换教材、换文件格式、换作业方法，麻烦很大，所以它能把软件做成长期收费的生意。</p>
+        <div class="hero-strip">
+          <article><span>Q2 FY2027 收入</span><b>$20.46亿</b></article>
+          <article><span>Q2 自由现金流</span><b>$5.61亿</b></article>
+          <article><span>未来待确认收入 RPO</span><b>$74.33亿</b></article>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>Autodesk, Inc.（NASDAQ: ADSK）</strong>
+        <p>主报告：FY2027 Q2 earnings release / 8-K Exhibit 99.1</p>
+        <p>报告期：截至 2026-07-31 的季度</p>
+        <p>发布日期：2026-08-27；10-Q 提交日期：2026-08-28</p>
+        <p>补充原文：FY2026 Form 10-K（2026-03-03）</p>
+        <p>主展示口径：美元（公司原始披露口径）</p>
+        <p><a href="https://investors.autodesk.com/news-releases/news-release-details/autodesk-inc-announces-fiscal-2027-second-quarter-results">打开 Autodesk 本期财报原文 ↗</a></p>
+        <p><a href="https://www.sec.gov/Archives/edgar/data/769397/000076939726000061/adsk-20260731.htm">打开 FY2027 Q2 10-Q ↗</a></p>
+        <p><a href="https://www.sec.gov/Archives/edgar/data/769397/000076939726000015/adsk-20260131.htm">打开 FY2026 10-K ↗</a></p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#primer">短版导读</a>
+      <a href="#company">公司是什么</a>
+      <a href="#money">钱从哪里来</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#remember">记住什么</a>
+      <a href="#quiz">自测</a>
+      <a href="#sources">资料</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="primer">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">00</span>
+          <div>
+            <span class="fact">5分钟短版导读</span>
+            <h2>先抓住今天最重要的 6 件事</h2>
+          </div>
+        </div>
+        <div class="primer">
+          <article class="primer-box">
+            <ul>
+              <li><b>公司怎么赚钱：</b>Autodesk 主要卖建筑、工程、制造和动画软件，收费方式以订阅为主。可以把它理解成“专业设计世界里的年费工具箱”。</li>
+              <li><b>最重要的 5 个数字：</b>Q2 FY2027 收入 20.46 亿美元，同比增长 16%；账单金额 billings 18.54 亿美元，同比增长 10%；GAAP 营业利润率 29%；Q2 自由现金流 5.61 亿美元，同比增长 24%；截至 2026-07-31 的 RPO 为 74.33 亿美元，其中未来 12 个月预计确认 52.45 亿美元。</li>
+              <li><b>最大壁垒：</b>文件格式、工作流程、插件生态和团队习惯绑在一起，换软件不仅是换按钮，而是整家公司一起返工，所以转换成本很高。</li>
+              <li><b>主要竞争对手：</b>Dassault Systèmes、Bentley Systems、PTC、Nemetschek、Adobe。它们各自在工业设计、基础设施、产品生命周期管理、建筑软件和创意工具上都很强。</li>
+              <li><b>最大风险：</b>它卖软件给建筑、工程、制造这些真实世界行业。如果客户项目变少、预算收紧，软件续费和新增席位都会慢下来。</li>
+              <li><b>今天的专业名词：</b>订阅收入、RPO、经营杠杆、自由现金流、转换成本。</li>
+            </ul>
+          </article>
+          <aside class="primer-quiz">
+            <span class="term-tag">3道自测题</span>
+            <p><b>1. Autodesk 为什么不像游戏软件那样“一次买断”也能做大？</b>答案：因为它卖给专业团队，软件要持续更新、云协作、管理授权，所以订阅更稳定。</p>
+            <p><b>2. 为什么 RPO 很重要？</b>答案：因为它像已经签好的未来作业单，能让我们看到后面大概还有多少收入要慢慢兑现。</p>
+            <p><b>3. 为什么弱建筑景气下，Autodesk 还能增长？</b>答案：因为它不只服务建筑，还服务制造、媒体等行业，而且软件渗透率、提价、直销和新产品也在推动增长。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">01</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>一句话：它卖的是“让复杂项目先在电脑里跑通”的软件系统</h2>
+          </div>
+        </div>
+        <div class="company-grid">
+          <blockquote>如果盖楼、造汽车、做电影像做大型小组作业，Autodesk 卖的就是那套<span>大家都能一起画、一起改、一起交作业的平台</span>。</blockquote>
+          <ul class="report-list">
+            <li><b>公司做什么：</b>FY2026 10-K 说，Autodesk 的产品覆盖建筑、工程、施工与运营，制造，以及数字媒体与娱乐。</li>
+            <li><b>卖给谁：</b>建筑师、工程师、施工团队、工厂和产品设计团队、影视动画和游戏制作团队。</li>
+            <li><b>为什么他们愿意付钱：</b>因为项目越来越复杂，大家需要同一套图纸、模型和流程，不然改一处、错一串。</li>
+            <li><b>它的特殊点：</b>它不只是画图。它想把设计、制造、施工、后续运维连成一条线，这也是 2026 年收购 MaintainX 的方向。</li>
+          </ul>
+        </div>
+        <p class="intro">孩子更容易把 Autodesk 记成“AutoCAD 那家公司”，但这只是入口。今天更准确的理解是：它在卖一个跨行业的专业工作台。谁在这个工作台里沉淀了更多图纸、零件、流程和同事协作记录，谁就更难轻易离开。</p>
+      </div>
+    </section>
+
+    <section id="money">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">02</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>钱从哪里来</h2>
+          </div>
+        </div>
+        <div class="money-grid">
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>Design</strong>
+            <span class="num">$17.08亿</span>
+            <p>占季度收入大头，同比增长 16%。这里装着建筑、工程、施工和通用设计工具。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>Make</strong>
+            <span class="num">$2.44亿</span>
+            <p>同比增长 26%。更偏制造和把设计变成可生产流程的软件。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>Other</strong>
+            <span class="num">$0.94亿</span>
+            <p>同比下降 3%。规模较小，包含培训、服务和其他补充收入。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">收费方式</span>
+            <strong>以订阅为主</strong>
+            <span class="num">年费逻辑</span>
+            <p>10-K 直接写明：订阅方案是混合桌面软件和云功能的组合，目标是给客户更灵活的使用方式。</p>
+          </article>
+        </div>
+        <div class="mix-panel" style="margin-top:18px">
+          <article class="card">
+            <span class="background">财报原文中的事实</span>
+            <strong>Q2 产品家族更像“四个班级”</strong>
+            <table>
+              <thead>
+                <tr><th>产品家族</th><th>Q2 FY2027 收入</th><th>同比</th><th>白话理解</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>AECO</td><td>10.29 亿美元</td><td>+17%</td><td>建筑、工程、施工与运营</td></tr>
+                <tr><td>AutoCAD / LT</td><td>5.00 亿美元</td><td>+14%</td><td>最经典的通用制图工具</td></tr>
+                <tr><td>MFG</td><td>3.85 亿美元</td><td>+15%</td><td>制造设计与工程软件</td></tr>
+                <tr><td>M&amp;E</td><td>0.92 亿美元</td><td>+15%</td><td>影视、动画、游戏工具</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>谁付钱，怎么付</strong>
+            <p>第一类是大客户，直接和 Autodesk 交易。第二类是普通企业和小团队，可能经由官网商店或 Solution Provider 下单。10-K 显示，公司正把更多交易改成“伙伴报价，但钱直接付给 Autodesk”的新交易模式。</p>
+            <p>这件事很重要。以前经销商拿走更多“柜台位置”，现在 Autodesk 更想自己掌握终端客户关系、价格和数据。FY2026 直接销售收入已经占总收入约 63%。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="profit" class="dark">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">03</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>这门生意怎么一步步变成利润和现金</h2>
+          </div>
+        </div>
+        <p class="intro">软件生意和卖实体机器不一样。机器多卖一台，往往就得多造一台；软件多卖一个席位，新增成本通常更小。Autodesk 的核心逻辑就是：先花很多钱把平台做好，再把同一套平台卖给很多行业和很多团队。</p>
+        <div class="flow-grid">
+          <article class="flow-step">
+            <b>第 1 步：先收订阅钱</b>
+            <p>订阅收入就是“软件年卡”。客户为了持续更新、云协作和授权管理，按月或按年续费。</p>
+          </article>
+          <article class="flow-step">
+            <b>第 2 步：服务成本不算低，但可复制</b>
+            <p>10-Q 说成本主要包括客户支持、云和网络基础设施、数据中心、版税和少量服务合同成本。</p>
+          </article>
+          <article class="flow-step">
+            <b>第 3 步：大头费用在卖和做新产品</b>
+            <p>Q2 营销与销售费用 6.16 亿美元，研发费用 4.64 亿美元。它要不停卖、也要不停升级产品和 AI 功能。</p>
+          </article>
+          <article class="flow-step">
+            <b>第 4 步：留下可支配现金</b>
+            <p>Q2 自由现金流 5.61 亿美元。自由现金流就是公司交完维持生意所需支出后，真正还能自由安排的现金。</p>
+          </article>
+        </div>
+        <div class="bridge" style="margin-top:18px">
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>经营杠杆正在显现</strong>
+            <p>经营杠杆，白话说就是“收入跑得快，固定费用不一定同速增加”。Q2 收入增长 16%，GAAP 营业利润率提升到 29%，非 GAAP 营业利润率到 41%，说明 Autodesk 不只是卖得更多，也把每 1 美元收入里能留下的钱变多了。</p>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>为什么现金通常比看上去更稳</strong>
+            <p>因为订阅模式会先签合同，再分期确认收入。这样一来，利润表像“慢慢记成绩”，而现金和合同余额更像“先把作业接到手”。截至 2026-07-31，Autodesk 的 RPO 为 74.33 亿美元，就是这张未来作业单。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="numbers">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">04</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>只看 5 个数字，就能大致看懂这期成绩</h2>
+          </div>
+        </div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div>
+              <span class="label">收入</span>
+              <b>Q2 FY2027</b>
+              <span class="value">$20.46亿</span>
+              <small>同比增长 16%；这是这期最重要的总分。</small>
+            </div>
+            <p>收入还能在建筑景气偏弱时保持两位数增长，说明它的需求不只来自“多开新工地”，也来自软件升级、客户扩席和更深的数字化渗透。</p>
+          </article>
+          <article class="metric">
+            <span class="label">账单金额 Billings</span>
+            <b>$18.54亿</b>
+            <span class="value">+10%</span>
+            <small>像这一季新签和续签作业单的节奏表。</small>
+          </article>
+          <article class="metric">
+            <span class="label">GAAP 营业利润率</span>
+            <b>29%</b>
+            <span class="value">+4pct</span>
+            <small>说明规模效应在起作用。</small>
+          </article>
+          <article class="metric">
+            <span class="label">自由现金流</span>
+            <b>$5.61亿</b>
+            <span class="value">+24%</span>
+            <small>会计利润之外，真钱也在变厚。</small>
+          </article>
+          <article class="metric">
+            <span class="label">Current RPO</span>
+            <b>$52.45亿</b>
+            <span class="value">+12%</span>
+            <small>未来 12 个月大概率会确认的已签收入。</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="moat" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">05</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>为什么别人不容易把它的生意抢走</h2>
+          </div>
+        </div>
+        <div class="moats">
+          <article class="moat">
+            <h3>转换成本高</h3>
+            <p>转换成本，就是换供应商要付出的返工代价。工程图纸、模板、插件、培训和团队协作都绑在一起，改系统不是一键搬家。</p>
+          </article>
+          <article class="moat">
+            <h3>行业标准与习惯</h3>
+            <p>很多岗位找工作时，就默认会 AutoCAD、Revit、Inventor、Maya。会的人多，本身就会继续吸引更多团队用。</p>
+          </article>
+          <article class="moat">
+            <h3>生态与接口</h3>
+            <p>10-K 说它维护了广泛的开发者网络，并通过 Autodesk Platform Services 支持第三方做插件和行业方案，这会加深黏性。</p>
+          </article>
+          <article class="moat">
+            <h3>覆盖更长生命周期</h3>
+            <p>从设计到制造再到运营，Autodesk 想把一个项目从“画出来”延伸到“跑起来”。产品越连成线，客户越难只替换其中一段。</p>
+          </article>
+        </div>
+        <p class="intro">但也不能把护城河说得神乎其神。10-K 也直接提醒，软件行业进入门槛并不高，云和移动计算还在继续降低门槛。所以 Autodesk 的防守重点不是“别人绝对进不来”，而是“客户换走的代价依然很高”。</p>
+      </div>
+    </section>
+
+    <section id="competition">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">06</span>
+          <div>
+            <span class="fact">财报原文中的事实 + 分析判断</span>
+            <h2>谁在和它竞争</h2>
+          </div>
+        </div>
+        <div class="rivals">
+          <article class="rival">
+            <h3>Dassault Systèmes</h3>
+            <p>强在工业设计、PLM 和 3D 体验平台。大制造业客户基础很深。</p>
+          </article>
+          <article class="rival">
+            <h3>Bentley Systems</h3>
+            <p>强在基础设施工程和大型项目软件，尤其是土木和公用事业场景。</p>
+          </article>
+          <article class="rival">
+            <h3>PTC</h3>
+            <p>强在产品生命周期管理、工业软件和数字线程，制造侧竞争力突出。</p>
+          </article>
+          <article class="rival">
+            <h3>Nemetschek</h3>
+            <p>强在建筑设计软件生态，欧洲建筑师圈影响力大。</p>
+          </article>
+          <article class="rival">
+            <h3>Adobe</h3>
+            <p>强在创意设计工作流。和 Autodesk 不完全正面重合，但在视觉内容和部分创意工具上有拉扯。</p>
+          </article>
+        </div>
+        <p class="intro">Autodesk 的 10-K 还列出了 Procore、Trimble、Oracle、Siemens PLM、Hexagon 旗下 Intergraph 等对手。你可以把这看成一片“按专业环节切开的软件战场”，不是所有人都在同一条跑道上冲刺。</p>
+      </div>
+    </section>
+
+    <section id="industry" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">07</span>
+          <div>
+            <span class="background">外部背景资料 + 分析判断</span>
+            <h2>这个行业是什么样</h2>
+          </div>
+        </div>
+        <div class="industry-grid">
+          <div class="industry-visual">
+            <div>
+              <div style="font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">行业画像</div>
+              <div style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.05">成熟软件行业<br>+ 继续数字化</div>
+              <p style="margin:14px 0 0;font-size:.92rem;max-width:320px">终端行业景气会波动，但设计和协作软件长期还在往云、AI、全生命周期平台方向走。</p>
+            </div>
+          </div>
+          <div class="drivers">
+            <article>
+              <h3>增长、成熟还是周期？</h3>
+              <p>成熟。CAD、BIM、制造设计软件不是新行业，但产品仍在升级成订阅、云协作和 AI 辅助工具。</p>
+            </article>
+            <article>
+              <h3>需求由什么推动？</h3>
+              <p>复杂项目协作、降错漏、压缩设计到生产的时间、劳动力紧张，以及真实世界行业对数据连通的需求。</p>
+            </article>
+            <article>
+              <h3>上游是谁？</h3>
+              <p>云基础设施、芯片、数据中心、第三方插件开发者和内容生态。</p>
+            </article>
+            <article>
+              <h3>下游是谁？</h3>
+              <p>建筑与工程公司、施工方、制造企业、媒体动画工作室，以及各类专业设计团队。</p>
+            </article>
+            <article>
+              <h3>当前趋势 1：终端景气并不算热</h3>
+              <p>AIA 2026-08-19 报告显示，2026 年 7 月 Architecture Billings Index 为 46.6，低于 50，表示多数建筑事务所账单仍在收缩。美国 Census 2026-08-03 报告也显示，2026 年 6 月总建筑支出同比下降 3.2%。</p>
+            </article>
+            <article>
+              <h3>当前趋势 2：软件平台在往“运营”延伸</h3>
+              <p>Autodesk 2026-05-28 和 2026-08-03 的官方新闻都强调，MaintainX 收购是把平台从 design 和 make 推向 operate，这意味着它想拿到更长周期的数据和更大的可服务市场。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="statements">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">08</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>三张报表的白话解读</h2>
+          </div>
+        </div>
+        <div class="statements">
+          <article class="statement">
+            <h3>利润表：这季赚得更快了</h3>
+            <span class="formula">收入 20.46 亿美元 → GAAP 营业利润率 29% → GAAP EPS 2.33 美元</span>
+            <p>收入同比增长 16%，GAAP 营业利润率比上年同期高 4 个百分点。说明收入增长并没有被费用完全吃掉。</p>
+          </article>
+          <article class="statement">
+            <h3>现金流量表：真钱也在增加</h3>
+            <span class="formula">Q2 经营现金流 5.75 亿美元 → 自由现金流 5.61 亿美元</span>
+            <p>10-Q 显示，前 6 个月经营现金流 14.68 亿美元，高于上年同期的 10.24 亿美元。订阅和预收款模式，让现金通常不差。</p>
+          </article>
+          <article class="statement">
+            <h3>资产负债表：手里有钱，也准备加杠杆扩张</h3>
+            <span class="formula">截至 2026-07-31 现金、现金等价物和有价证券 43.6 亿美元</span>
+            <p>同一份 10-Q 还披露，Autodesk 在 2026-08-03 为完成 MaintainX 收购借入 10 亿美元定期贷款，并建立最高 20 亿美元商业票据计划。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">09</span>
+          <div>
+            <span class="term-tag">关键专业名词</span>
+            <h2>今天只学 5 个词</h2>
+          </div>
+        </div>
+        <div class="terms">
+          <article class="term">
+            <h3>订阅收入</h3>
+            <p>白话：像软件年卡。客户不是一次性买断，而是为了持续使用、更新和云功能一直交费。</p>
+            <p class="example">生活例子：像你给网盘或视频会员续费，不续费就少了很多功能。</p>
+          </article>
+          <article class="term">
+            <h3>RPO</h3>
+            <p>白话：已经签下、但还没完全交付完的未来收入。不是空想，而是合同里已经排队的工作。</p>
+            <p class="example">生活例子：补习班一次收了一学期学费，但每周上一次课，后面的课就是还没兑现完的作业单。</p>
+          </article>
+          <article class="term">
+            <h3>经营杠杆</h3>
+            <p>白话：收入变快时，费用不一定跟着同速变快，所以利润率会更好看。</p>
+            <p class="example">生活例子：班级合买打印机，打印第 1 张和第 100 张的固定机器钱差不多，但每多打几张，平均成本会降。</p>
+          </article>
+          <article class="term">
+            <h3>自由现金流</h3>
+            <p>白话：公司做完生意、再扣掉维持运转需要的基本开支后，真正还剩下的现金。</p>
+            <p class="example">生活例子：零花钱到账后，先付书本和车费，剩下能自己安排的部分。</p>
+          </article>
+          <article class="term">
+            <h3>转换成本</h3>
+            <p>白话：换供应商要付出的时间、培训、返工和出错代价。</p>
+            <p class="example">生活例子：全班突然从一种题库换到另一种，老师、学生、错题本和学习节奏都要重新适应。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">10</span>
+          <div>
+            <span class="background">重要事件</span>
+            <h2>这期前后最值得记住的 4 件事</h2>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <b>2026-08-03：Autodesk 完成 MaintainX 收购</b>
+            <p>官方新闻说，MaintainX 是 mobile-first CMMS。白话就是帮工厂和设施团队安排维修、巡检和运维的软件。Autodesk 借这笔收购，把自己从“设计和制造的软件商”往“设计到运营的平台商”再推一步。</p>
+          </li>
+          <li class="timeline-item">
+            <b>2026-08-19：AIA 报告显示建筑事务所景气仍偏弱</b>
+            <p>ABI 为 46.6，连续显示行业账单偏弱。这提醒我们：Autodesk 的增长不是站在一个特别火热的终端周期上完成的。</p>
+          </li>
+          <li class="timeline-item">
+            <b>2026-08-27：FY2027 Q2 成绩单发布</b>
+            <p>收入增长 16%，自由现金流增长 24%，并上调全年 billings 和 revenue 增长指引。管理层还说销售重组进展符合预期。</p>
+          </li>
+          <li class="timeline-item">
+            <b>2026-08-28：10-Q 补足更多细节</b>
+            <p>10-Q 把 RPO、现金、费用结构、回购和收购融资方式讲得更完整，也让我们看到 MaintainX 对债务和费用的影响会在后续季度更明显。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="risks">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">11</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>可能出什么问题</h2>
+          </div>
+        </div>
+        <div class="risks">
+          <article class="risk">
+            <h3>终端行业项目变少</h3>
+            <p>如果建筑、制造、媒体客户接单减少，他们最先做的常常不是把办公室关灯，而是压缩软件席位、延后升级和减少新项目投入。</p>
+          </article>
+          <article class="risk">
+            <h3>软件行业门槛下降</h3>
+            <p>Autodesk 的 10-K 直接写到，软件行业进入门槛有限，云和移动计算还在继续降低门槛。AI 也可能让新玩家更快做出能用的工具。</p>
+          </article>
+          <article class="risk">
+            <h3>渠道调整可能带来短期摩擦</h3>
+            <p>从经销商模式转向更多直接交易，会改变伙伴激励和会计口径。长期可能更好，短期也可能带来执行压力。</p>
+          </article>
+          <article class="risk">
+            <h3>并购整合和融资成本</h3>
+            <p>MaintainX 让故事更大，但也带来整合任务、商誉风险和利息成本。如果整合不顺，扩张就会先变成负担。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="remember" class="remember">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">12</span>
+          <div>
+            <span class="analysis">今日记住什么</span>
+            <h2>今天带走 3 句话就够了</h2>
+          </div>
+        </div>
+        <div class="remember-grid">
+          <article class="memory">
+            <strong>1</strong>
+            <p>Autodesk 卖的不是一款单机软件，而是一整套专业团队的协作工作流。</p>
+          </article>
+          <article class="memory">
+            <strong>2</strong>
+            <p>它的好生意核心不是“画图很酷”，而是订阅收费 + 高转换成本 + 多行业复用。</p>
+          </article>
+          <article class="memory">
+            <strong>3</strong>
+            <p>这期最值得注意的是：终端行业不算热，但它依然交出双位数增长，并在往“运营平台”扩边界。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">13</span>
+          <div>
+            <span class="term-tag">自测题</span>
+            <h2>3 个问题，看看你有没有真的看懂</h2>
+          </div>
+        </div>
+        <details open>
+          <summary>1. 为什么说 Autodesk 的护城河更像“全班一起换教材的麻烦”，而不是“别人根本做不出来”？</summary>
+          <div class="answer">答案：因为软件行业并非完全进不来，10-K 还提醒云和移动在降低门槛。Autodesk 更强的地方在于客户已有的图纸、流程、训练和插件生态让迁移很痛。</div>
+        </details>
+        <details>
+          <summary>2. RPO 74.33 亿美元告诉我们什么？</summary>
+          <div class="answer">答案：它说明 Autodesk 已经拿到很多未来要慢慢确认的合同收入，其中 71% 预计会在未来 12 个月内确认，说明后续收入可见性不错。</div>
+        </details>
+        <details>
+          <summary>3. MaintainX 收购为什么重要？</summary>
+          <div class="answer">答案：因为它让 Autodesk 从“设计和制造的软件商”更进一步变成“设计到运营的平台商”，拿到更长生命周期的数据，也可能扩大未来市场。</div>
+        </details>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">14</span>
+          <div>
+            <span class="background">资料来源</span>
+            <h2>这份报告主要基于哪些原文</h2>
+          </div>
+        </div>
+        <div class="source-grid">
+          <article class="source-card">
+            <strong>财报原文中的事实</strong>
+            <ul>
+              <li><a href="https://investors.autodesk.com/news-releases/news-release-details/autodesk-inc-announces-fiscal-2027-second-quarter-results">Autodesk FY2027 Q2 earnings release</a>，发布日期 2026-08-27。</li>
+              <li><a href="https://www.sec.gov/Archives/edgar/data/769397/000076939726000061/adsk-20260731.htm">Autodesk Form 10-Q</a>，报告期截至 2026-07-31，提交日期 2026-08-28。</li>
+              <li><a href="https://www.sec.gov/Archives/edgar/data/769397/000076939726000015/adsk-20260131.htm">Autodesk Form 10-K</a>，财年截至 2026-01-31，提交日期 2026-03-03。</li>
+            </ul>
+          </article>
+          <article class="source-card">
+            <strong>外部背景资料</strong>
+            <ul>
+              <li><a href="https://www.aia.org/resource-center/abi-july-2026-architecture-firm-billings-remain-weak">AIA/Deltek Architecture Billings Index, July 2026</a>，发布日期 2026-08-19。</li>
+              <li><a href="https://www.census.gov/construction/c30/current/index.html">U.S. Census Bureau Monthly Construction Spending, June 2026</a>，发布日期 2026-08-03。</li>
+              <li><a href="https://adsknews.autodesk.com/en/news/autodesk-to-acquire-maintainx-advancing-unified-platform-in-operations/">Autodesk to acquire MaintainX</a>，发布日期 2026-05-28。</li>
+              <li><a href="https://adsknews.autodesk.com/en/news/welcoming-maintainx/">Welcoming MaintainX to Autodesk</a>，发布日期 2026-08-03。</li>
+            </ul>
+          </article>
+        </div>
+        <p class="fine">说明：文中凡是写明“财报原文中的事实”，均来自 Autodesk 正式披露文件；写明“外部背景资料”的内容来自行业协会、监管机构或公司官方新闻；写明“分析判断”的部分是基于这些资料做的教育性解读，不构成投资建议。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <div class="wrap">这是一份面向普通读者的商业与财报学习材料，只用于帮助理解公司生意模式、财务结构和行业背景，不构成任何买入、卖出或收益承诺。</div>
+  </footer>
+</body>
+</html>
