@@ -51,7 +51,8 @@ const companyNames = {
   HP: "HP",
   BestBuy: "百思买",
   Marvell: "Marvell",
-  Autodesk: "Autodesk"
+  Autodesk: "Autodesk",
+  CrowdStrike: "CrowdStrike"
 };
 
 const industries = {
@@ -70,7 +71,8 @@ const industries = {
   Target: "综合零售", Intuit: "财税与中小企业软件",
   Salesforce: "企业软件与CRM", HP: "电脑与打印",
   BestBuy: "消费电子零售", Marvell: "半导体与AI基础设施",
-  Autodesk: "设计软件与工业数字化"
+  Autodesk: "设计软件与工业数字化",
+  CrowdStrike: "网络安全平台"
 };
 
 const clean = (value) => value

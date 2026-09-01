@@ -742,5 +742,21 @@
     "movingAverage50": "225.66",
     "movingAverage200": "248.45",
     "fetchedAt": "2026-08-31T02:11:08.633Z"
+  },
+  "CrowdStrike": {
+    "provider": "Alpha Vantage",
+    "symbol": "CRWD",
+    "name": "Crowdstrike Holdings Inc",
+    "currency": "USD",
+    "price": "231.0000",
+    "changePercent": "5.7692",
+    "latestTradingDay": "2026-08-31",
+    "marketCapitalization": "223627362000",
+    "peRatio": "5460",
+    "week52High": "233.88",
+    "week52Low": "85.68",
+    "movingAverage50": "196.23",
+    "movingAverage200": "140.48",
+    "fetchedAt": "2026-09-01T02:19:09.801Z"
   }
 }

@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="给孩子也看得懂的 CrowdStrike 财报：它把网络安全做成 SaaS 年费生意，靠平台广度、数据积累和高转换成本，把“数字保安”卖给越来越多大公司。">
+  <title>CrowdStrike：为什么很多大公司都给它交“数字保安年费”｜给孩子也看得懂的财报</title>
+  <style>
+    :root{--brand:#fc0000;--brand-deep:#5b0b10;--ink:#171414;--paper:#fbf7f3;--snow:#ffffff;--soft:#fff0ef;--line:#e6d7d1;--muted:#635854;--good:#0e6a4d;--gold:#ba6d2a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#fff4f1 0,#fbf7f3 15%,#fbf7f3 100%);color:var(--ink);font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78}a{color:var(--brand-deep);text-underline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 30px));margin:auto}
+    .fact,.background,.analysis,.term-tag{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.68rem;font-weight:900}
+    .fact{background:#fff;border:1px solid #f2b9b3;color:var(--brand-deep)}
+    .background{background:#fff1ef;color:var(--brand-deep)}
+    .analysis{background:#fbf0df;color:#815318}
+    .term-tag{background:#fff1da;color:#845013}
+    .label{font-size:.74rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+    .hero{position:relative;overflow:hidden;padding:92px 0 74px;background:linear-gradient(135deg,#240709 0,#4b0d11 42%,#8b0f17 100%);color:#fff}
+    .hero:before{content:"";position:absolute;right:min(6vw,72px);top:30px;width:280px;height:280px;background:radial-gradient(circle at 30% 30%,rgba(252,0,0,.26),rgba(252,0,0,0) 65%);border-radius:50%}
+    .hero:after{content:"";position:absolute;left:-80px;bottom:-60px;width:360px;height:220px;border:1px solid rgba(255,255,255,.1);transform:rotate(-12deg)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:end}
+    .hero h1{margin:14px 0 18px;font-size:clamp(2.9rem,6.2vw,5.3rem);line-height:.93;letter-spacing:-.05em}
+    .hero h1 em{display:block;color:#ffd8d4;font-style:normal}
+    .lead{max-width:760px;font-size:clamp(1rem,1.9vw,1.15rem);color:#ffede9}
+    .hero-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .hero-strip article{padding:16px 15px;background:rgba(255,255,255,.09);backdrop-filter:blur(5px);border:1px solid rgba(255,255,255,.08)}
+    .hero-strip span{display:block;color:#ffd4cd;font-size:.72rem;font-weight:850;letter-spacing:.08em}
+    .hero-strip b{display:block;margin-top:8px;font:900 1.56rem/1 Georgia,serif}
+    .hero-card{padding:26px;border:1px solid rgba(255,255,255,.15);background:rgba(255,250,249,.98);color:var(--ink);box-shadow:18px 18px 0 rgba(33,0,0,.18)}
+    .hero-card strong{display:block;margin:10px 0 14px;color:var(--brand-deep);font-size:1.18rem}
+    .hero-card p{margin:7px 0;font-size:.88rem}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(251,247,243,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .nav .wrap{display:flex;gap:18px;padding:12px 0;overflow:auto;white-space:nowrap}
+    .nav a{color:#3e2e2b;text-decoration:none;font-size:.78rem;font-weight:850}
+    section{padding:74px 0}
+    .head{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:start;margin-bottom:28px}
+    .head .no{font:900 3.7rem/1 Georgia,serif;color:#d49e96}
+    .head h2{margin:6px 0 0;font-size:clamp(1.95rem,4vw,3.05rem);line-height:1.08}
+    .intro{max-width:960px;font-size:1.03rem}
+    .soft{background:linear-gradient(180deg,#fff 0,#fff2f0 100%);border-block:1px solid var(--line)}
+    .dark{background:linear-gradient(180deg,#201112 0,#2f1718 100%);color:#fff}
+    .dark .head .no{color:#d58d87}.dark .intro{color:#ffe2de}
+    .primer{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+    .primer-box,.primer-quiz,.card,.moat,.rival,.term,.risk,.memory,.timeline-item,.statement,.source-card,.money-card,.flow-step{padding:24px;background:#fff;border:1px solid var(--line)}
+    .primer-box ul,.report-list,.timeline,.sources ol,.risk-list{margin:0;padding:0;list-style:none}
+    .primer-box li,.report-list li,.timeline li,.sources li,.risk-list li{padding:12px 0;border-bottom:1px solid var(--line)}
+    .primer-box li:last-child,.report-list li:last-child,.timeline li:last-child,.sources li:last-child,.risk-list li:last-child{border-bottom:0}
+    .primer-box b,.primer-quiz b,.card strong,.money-card strong{display:block;color:var(--brand-deep)}
+    .primer-quiz p{margin:12px 0 0}
+    .company-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:30px}
+    .company-grid blockquote{margin:0;font-family:"Songti SC","STSong",serif;font-size:clamp(1.72rem,3vw,2.7rem);line-height:1.3}
+    .company-grid blockquote span{box-shadow:inset 0 -.3em #ffd9d4}
+    .money-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .money-card{border-top:6px solid var(--brand)}
+    .money-card .num{display:block;margin:12px 0 8px;font:900 1.9rem/1 Georgia,serif;color:var(--brand-deep)}
+    .money-card p{margin:0;color:var(--muted);font-size:.89rem}
+    .mix-panel,.bridge,.industry-grid,.source-grid,.flow-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .flow-grid{grid-template-columns:repeat(4,1fr)}
+    .flow-step{border-bottom:5px solid var(--gold)}
+    .flow-step b{display:block;color:var(--brand-deep)}
+    .flow-step p{margin:8px 0 0;color:var(--muted);font-size:.88rem}
+    .dashboard{display:grid;grid-template-columns:1.08fr .92fr .92fr;gap:14px}
+    .metric{min-height:180px;padding:22px;background:#fff;color:var(--ink);border:1px solid var(--line)}
+    .metric.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(155deg,#ffd8d4 0,#ff7676 36%,#5b0b10 100%);color:#fff;border:0}
+    .metric .value{display:block;margin:12px 0;font:900 clamp(2rem,4vw,4rem)/1 Georgia,serif}
+    .metric b{display:block}
+    .metric small{display:block;color:var(--muted)}
+    .metric.main small{color:#fff2ef}
+    .moats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .moat{border-top:7px solid var(--gold)}
+    .moat h3,.rival h3,.term h3,.risk h3{margin:7px 0}
+    .moat p,.rival p,.term p,.risk p,.statement p,.card p{margin:7px 0;color:var(--muted)}
+    .rivals{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .rival{border-bottom:5px solid var(--brand)}
+    .industry-visual{display:grid;place-items:center;aspect-ratio:1;background:linear-gradient(145deg,#fff1ef 0,#ffc8c3 38%,#6f0d13 100%);border-radius:28px;color:#231615;text-align:center;padding:28px;font-weight:900}
+    .drivers{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+    .drivers article{padding:16px 0;border-bottom:1px solid var(--line)}
+    .drivers h3{margin:0}
+    .statements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .statement{border-left:4px solid var(--brand)}
+    .formula{display:block;margin:14px 0;padding:11px;background:#fff2ef;color:var(--brand-deep);font-weight:900}
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+    .term{border-left:4px solid var(--gold)}
+    .example{font-size:.9rem;color:var(--muted)}
+    .events{background:linear-gradient(155deg,#220d0f 0,#5b0b10 100%);color:#fff}
+    .events .head .no{color:#f0a49c}
+    .timeline-item b{display:block;color:#ffb3ad}
+    .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .risk{background:#fff8f3;border-color:#f1ddd0}
+    .remember{background:linear-gradient(180deg,#fff2ef 0,#fff7e8 100%)}
+    .remember-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .memory{border-top:5px solid var(--gold)}
+    .memory strong{display:block;color:var(--brand-deep);font:900 2.2rem/1 Georgia,serif}
+    .quiz details{border-bottom:1px solid var(--line)}
+    .quiz summary{padding:16px 0;cursor:pointer;font-weight:900}
+    .answer{padding:0 0 18px;color:var(--muted)}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:#7a6964}
+    .sources{background:#f5efea}
+    .source-card{border-top:5px solid var(--brand)}
+    .sources ol{list-style:decimal;padding-left:20px}
+    .fine{font-size:.8rem;color:var(--muted)}
+    .disclaimer{padding:24px 0;background:#181212;color:#d9cfc8;font-size:.78rem}
+    @media(max-width:980px){.hero-grid,.primer,.company-grid,.mix-panel,.bridge,.industry-grid,.source-grid{grid-template-columns:1fr}.money-grid,.moats,.statements,.remember-grid{grid-template-columns:1fr 1fr}.dashboard{grid-template-columns:1fr 1fr}.metric.main{grid-column:1/-1;grid-row:auto}.flow-grid{grid-template-columns:1fr 1fr}.rivals{grid-template-columns:1fr 1fr}.terms,.drivers,.risks{grid-template-columns:1fr}}
+    @media(max-width:640px){section{padding:56px 0}.hero{padding:56px 0 48px}.hero h1{font-size:3rem;line-height:.96;letter-spacing:-.04em}.hero-strip,.money-grid,.moats,.rivals,.flow-grid,.statements,.terms,.risks,.remember-grid,.dashboard{grid-template-columns:1fr}.head{grid-template-columns:52px 1fr}.head .no{font-size:2.8rem}.wrap{width:min(100% - 24px,1120px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="label">15分钟财报 · 网络安全平台 · 2026-09-01</span>
+        <h1>为什么很多大公司<em>都给它交</em><em>“数字保安年费”</em></h1>
+        <p class="lead">CrowdStrike 不卖摄像头，也不派保安站岗。它卖的是一套长期在线的网络安全平台，像给公司电脑、服务器、身份账号和云系统装上同一个“总指挥部”。越多设备、越多日志、越多模块接进来，它就越容易继续卖更多功能，也越难被整体换掉。</p>
+        <div class="hero-strip">
+          <article><span>Q2 FY2027 收入</span><b>$14.7亿</b></article>
+          <article><span>期末 ARR</span><b>$58.4亿</b></article>
+          <article><span>Q2 自由现金流</span><b>$3.77亿</b></article>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span class="fact">财报原文中的事实</span>
+        <strong>CrowdStrike Holdings, Inc.（NASDAQ: CRWD）</strong>
+        <p>主报告：FY2027 Q2 earnings release / 8-K Exhibit 99.1</p>
+        <p>报告期：截至 2026-07-31 的季度</p>
+        <p>发布日期：2026-08-26；10-Q 提交日期：2026-08-27</p>
+        <p>补充原文：FY2026 Form 10-K（2026-03-05）</p>
+        <p>主展示口径：美元（公司原始披露口径）</p>
+        <p><a href="https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-second-quarter-fiscal-year-2027-financial/">打开 CrowdStrike 本期财报原文 ↗</a></p>
+        <p><a href="https://ir.crowdstrike.com/sec-filings/sec-filing/10-q/0001535527-26-000031">打开 FY2027 Q2 10-Q ↗</a></p>
+        <p><a href="https://ir.crowdstrike.com/sec-filings/sec-filing/10-k/0001535527-26-000010/">打开 FY2026 10-K ↗</a></p>
+      </aside>
+    </div>
+  </header>
+  <nav class="nav" aria-label="报告目录">
+    <div class="wrap">
+      <a href="#primer">短版导读</a>
+      <a href="#company">公司是什么</a>
+      <a href="#money">钱从哪里来</a>
+      <a href="#profit">怎么变利润</a>
+      <a href="#numbers">核心数字</a>
+      <a href="#moat">壁垒</a>
+      <a href="#competition">竞争</a>
+      <a href="#industry">行业</a>
+      <a href="#statements">三张表</a>
+      <a href="#terms">名词</a>
+      <a href="#events">事件</a>
+      <a href="#risks">风险</a>
+      <a href="#remember">记住什么</a>
+      <a href="#quiz">自测</a>
+      <a href="#sources">资料</a>
+    </div>
+  </nav>
+  <main>
+    <section id="primer">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">00</span>
+          <div>
+            <span class="fact">5分钟短版导读</span>
+            <h2>先抓住今天最重要的 6 件事</h2>
+          </div>
+        </div>
+        <div class="primer">
+          <article class="primer-box">
+            <ul>
+              <li><b>公司怎么赚钱：</b>CrowdStrike 主要把网络安全做成 SaaS 年费。客户按年订阅 Falcon 平台和附加模块，另有少量专业服务收入。</li>
+              <li><b>最重要的 5 个数字：</b>Q2 FY2027 收入 14.7 亿美元，同比增长 26%；订阅收入约占 95%；期末 ARR 58.4 亿美元，同比增长 25%；净新增 ARR 3.33 亿美元，同比增长 51%；Q2 自由现金流 3.77 亿美元，高于上年同期的 2.84 亿美元。</li>
+              <li><b>最大壁垒：</b>一个轻量传感器收集全公司安全数据，再把这些数据复用到 33 个云模块里。数据越集中，切换平台越麻烦。</li>
+              <li><b>主要竞争对手：</b>Microsoft、Palo Alto Networks、SentinelOne、Zscaler。它们分别强在办公与身份生态、网络与云安全平台、AI 端点防护、零信任访问。</li>
+              <li><b>最大风险：</b>2024 年 7 月那次 Falcon 更新事故的后遗症还没完全过去，诉讼、信誉修复和客户补偿仍可能继续拖累生意。</li>
+              <li><b>今天的专业名词：</b>ARR、净新增 ARR、订阅毛利率、自由现金流、转换成本。</li>
+            </ul>
+          </article>
+          <aside class="primer-quiz">
+            <span class="term-tag">3道自测题</span>
+            <p><b>1. CrowdStrike 卖的是软件，为什么财报里最常讲 ARR？</b>答案：因为它靠长期订阅收费，ARR 比一次性销量更能看出这门生意后面能不能继续滚大。</p>
+            <p><b>2. 为什么“模块越多”是好事？</b>答案：因为客户一旦同时买端点、身份、云和日志分析，换平台就会更麻烦，老客户也更容易继续加购。</p>
+            <p><b>3. Q2 收入涨 26%，为什么还不能掉以轻心？</b>答案：因为事故后的信誉、法律成本和大厂打包竞争都还在，增长快不等于风险消失。</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section id="company" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">01</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>一句话：它卖的是一家公司的“数字保安总台”</h2>
+          </div>
+        </div>
+        <div class="company-grid">
+          <blockquote>如果一家公司的电脑、员工账号、云服务器像一座很大的校园，CrowdStrike 卖的就是那套<span>能同时盯住大门、走廊、教室和监控室的总指挥系统</span>。</blockquote>
+          <ul class="report-list">
+            <li><b>公司做什么：</b>CrowdStrike 说自己是面向云和 AI 时代的网络安全平台公司，核心产品是 Falcon 平台。</li>
+            <li><b>卖给谁：</b>安全团队、IT 团队、大企业、政府机构，以及需要托管安全能力的组织。</li>
+            <li><b>怎么收费：</b>以订阅费为主。10-Q 说订阅收入主要来自 Falcon 平台和额外云模块，按合同期分摊确认。</li>
+            <li><b>它卖的不是单品：</b>IR 首页披露，它现在提供 33 个云模块，覆盖端点、身份、云工作负载、威胁情报、日志与安全运营等多个市场。</li>
+          </ul>
+        </div>
+        <p class="intro">理解 CrowdStrike 的关键，不是把它当成“杀毒软件升级版”，而是把它看成一套安全数据平台。传感器先把数据收上来，再把同一份数据用在检测、响应、身份安全、云安全和 SIEM 等不同模块里。这样一来，它卖的不是一把锁，而是一整套安保系统。</p>
+      </div>
+    </section>
+    <section id="money">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">02</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>钱从哪里来</h2>
+          </div>
+        </div>
+        <div class="money-grid">
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>订阅收入</strong>
+            <span class="num">$14.0亿</span>
+            <p>约占收入 95%。这是 Falcon 平台和各种安全模块的年费、月费。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">Q2 FY2027</span>
+            <strong>专业服务</strong>
+            <span class="num">约 $0.7亿</span>
+            <p>约占收入 5%。包括部署、咨询、事件响应等服务，规模小于订阅。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">增长引擎</span>
+            <strong>新客户 + 老客户加购</strong>
+            <span class="num">双轮驱动</span>
+            <p>10-Q 说，订阅增长主要来自新增客户，以及老客户买更多传感器和模块。</p>
+          </article>
+          <article class="money-card">
+            <span class="label">销售通路</span>
+            <strong>大量依赖渠道伙伴</strong>
+            <span class="num">伙伴卖货</span>
+            <p>10-K 直说，Falcon 平台的大部分销售流经渠道伙伴。</p>
+          </article>
+        </div>
+        <div class="mix-panel" style="margin-top:18px">
+          <article class="card">
+            <span class="background">财报原文中的事实</span>
+            <strong>如果把它的收入拆开看，像两层楼</strong>
+            <table>
+              <thead>
+                <tr><th>楼层</th><th>Q2 FY2027 口径</th><th>白话理解</th><th>为什么重要</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>第一层</td><td>订阅收入约 95%</td><td>像长期续费的年卡</td><td>可预期、黏性强，是公司估值和现金流的核心</td></tr>
+                <tr><td>第二层</td><td>专业服务约 5%</td><td>像教练和安装队</td><td>帮助客户用起来，但不是利润主引擎</td></tr>
+                <tr><td>加购逻辑</td><td>模块、传感器、端点数一起增长</td><td>先卖一个入口，再卖更多功能</td><td>决定老客户能不能持续变大单</td></tr>
+                <tr><td>锁定逻辑</td><td>6 个以上模块客户占比 51%</td><td>不是只买一个工具，而是把平台越接越深</td><td>模块越多，转换成本通常越高</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>谁付钱，为什么愿意一直付</strong>
+            <p>公司愿意给 CrowdStrike 交钱，不是因为“装一次就结束”，而是因为黑客手法、员工设备、云环境和 AI 应用都在不断变化，保安系统也得一直更新。</p>
+            <p>它像一所学校的安保平台。你可以先装校门摄像头，但后面很可能还要接学生卡、教室门禁、访客登记和异常告警。CrowdStrike 想做的，就是让客户一步步把这些都接进同一个平台。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="profit" class="dark">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">03</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>这门生意怎么一步步变成利润和现金</h2>
+          </div>
+        </div>
+        <p class="intro">安全软件不是卖出一箱就少一箱。CrowdStrike 先花很多钱把平台、传感器、云底座和检测能力建好，然后把同一套底座卖给更多客户、更多设备、更多模块。只要新增收入跑得比新增成本更快，利润和现金就会变厚。</p>
+        <div class="flow-grid">
+          <article class="flow-step">
+            <b>第 1 步：先把数据收上来</b>
+            <p>10-K 说，Falcon 的轻量传感器会从端点、云工作负载、身份和第三方来源收集数据。</p>
+          </article>
+          <article class="flow-step">
+            <b>第 2 步：同一份数据反复用</b>
+            <p>这些数据不只用来报一次警，还会被多个安全功能复用，所以越集中越值钱。</p>
+          </article>
+          <article class="flow-step">
+            <b>第 3 步：大头成本在人和云</b>
+            <p>Q2 研发费用 4.44 亿美元，销售和营销费用 5.10 亿美元。平台越大，就越需要工程师和销售体系。</p>
+          </article>
+          <article class="flow-step">
+            <b>第 4 步：留下真现金</b>
+            <p>Q2 经营现金流 5.30 亿美元，自由现金流 3.77 亿美元，说明收入不只是账面好看，现金也在进来。</p>
+          </article>
+        </div>
+        <div class="bridge" style="margin-top:18px">
+          <article class="card">
+            <span class="fact">财报原文中的事实</span>
+            <strong>毛利高，是因为“复制一份软件”比“再造一台机器”便宜</strong>
+            <p>Q2 GAAP 订阅毛利率 78%，非 GAAP 订阅毛利率 81%。厨房已经搭好后，多做一碗饭的边际成本没有重新开一家店那么高。</p>
+          </article>
+          <article class="card">
+            <span class="analysis">分析判断</span>
+            <strong>为什么 ARR 比一次性利润更像主线</strong>
+            <p>ARR 像“已经养成的续费池”。这家公司最重要的不是这季一次赚了多少，而是下一季、明年还有多少老客户会继续交钱，并且再加几项模块。对订阅公司来说，这通常比单季利润更能说明生意质量。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="numbers">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">04</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>只看 5 个数字，就能大致看懂这期成绩</h2>
+          </div>
+        </div>
+        <div class="dashboard">
+          <article class="metric main">
+            <div>
+              <span class="label">收入</span>
+              <b>Q2 FY2027</b>
+              <span class="value">$14.7亿</span>
+              <small>同比增长 26%；这说明客户还在继续买。</small>
+            </div>
+            <p>如果把 CrowdStrike 看成卖年卡的平台，这个数字就是“这季一共收了多少学费”。保持 26% 增长，说明这门生意还在扩张，不只是守成。</p>
+          </article>
+          <article class="metric">
+            <span class="label">期末 ARR</span>
+            <b>$58.4亿</b>
+            <span class="value">+25%</span>
+            <small>代表滚动年化订阅池的大小。</small>
+          </article>
+          <article class="metric">
+            <span class="label">净新增 ARR</span>
+            <b>$3.33亿</b>
+            <span class="value">+51%</span>
+            <small>这是这季新增年费池，管理层称其为历史最好季度。</small>
+          </article>
+          <article class="metric">
+            <span class="label">非 GAAP 营业利润</span>
+            <b>$3.72亿</b>
+            <span class="value">25%</span>
+            <small>比上年同期的 2.55 亿美元更厚。</small>
+          </article>
+          <article class="metric">
+            <span class="label">自由现金流</span>
+            <b>$3.77亿</b>
+            <span class="value">高于上年</span>
+            <small>上年同期为 2.84 亿美元，真钱在增加。</small>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="moat" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">05</span>
+          <div>
+            <span class="analysis">分析判断</span>
+            <h2>为什么别人不容易把它的生意抢走</h2>
+          </div>
+        </div>
+        <div class="moats">
+          <article class="moat">
+            <h3>一个传感器，喂很多模块</h3>
+            <p>10-K 说 Falcon 的轻量传感器一次收集数据，再给多个安全功能复用。这比每个功能都单装一套更顺。</p>
+          </article>
+          <article class="moat">
+            <h3>平台越宽，客户越难搬家</h3>
+            <p>6 个以上模块客户占比 51%，7 个以上占比 35%，8 个以上占比 26%。模块接得越深，整体替换越麻烦。</p>
+          </article>
+          <article class="moat">
+            <h3>安全数据会越积越有用</h3>
+            <p>日志、行为模式、身份关系和威胁情报越多，平台判断异常的能力通常越强。这不是一夜之间能复制的。</p>
+          </article>
+          <article class="moat">
+            <h3>Falcon Flex 让大单更黏</h3>
+            <p>Q2 末采用 Falcon Flex 的账户对应 ARR 已超过 22.9 亿美元，同比增长 101%。先承诺预算，再慢慢把模块装满，锁定时间更长。</p>
+          </article>
+        </div>
+        <p class="intro">但要实话实说，网络安全不是“赢家通吃”。这不是品牌壁垒一劳永逸的行业，而是持续迭代、持续证明效果的技术战场。它的壁垒更像高速跑步机，你得一直跑，别人才能不那么容易追上。</p>
+      </div>
+    </section>
+    <section id="competition">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">06</span>
+          <div>
+            <span class="fact">外部背景资料 + 分析判断</span>
+            <h2>谁在和它竞争</h2>
+          </div>
+        </div>
+        <div class="rivals">
+          <article class="rival">
+            <h3>Microsoft</h3>
+            <p>强在身份、邮件、终端、云和办公套件打包能力。很多客户本来就在微软生态里，采购更顺手。</p>
+          </article>
+          <article class="rival">
+            <h3>Palo Alto Networks</h3>
+            <p>强在网络安全老底子深，又在往云安全、XDR、AI 安全平台延伸，企业客户基础很厚。</p>
+          </article>
+          <article class="rival">
+            <h3>SentinelOne</h3>
+            <p>强在 AI 驱动端点防护和自动化响应，路线更聚焦“机器速度”的端点安全。</p>
+          </article>
+          <article class="rival">
+            <h3>Zscaler</h3>
+            <p>强在零信任访问和安全服务边缘。它更像看“人怎么进楼”，和 CrowdStrike 有交集也有分工。</p>
+          </article>
+        </div>
+        <p class="intro">这一行不是简单排第一第二。Microsoft 容易靠已有办公和身份系统打包卖；Palo Alto 更像从防火墙起家的平台巨头；SentinelOne 更轻更专；Zscaler 把重点放在访问路径和零信任。CrowdStrike 的特色，是把端点、安全运营、身份和 AI 场景拉到同一个云原生平台里卖。</p>
+      </div>
+    </section>
+    <section id="industry" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">07</span>
+          <div>
+            <span class="background">外部背景资料 + 分析判断</span>
+            <h2>这个行业是什么样</h2>
+          </div>
+        </div>
+        <div class="industry-grid">
+          <div class="industry-visual">
+            <div>
+              <div style="font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">行业画像</div>
+              <div style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.05">成熟安全市场<br>+ AI 带来新加速</div>
+              <p style="margin:14px 0 0;font-size:.92rem;max-width:330px">企业已经离不开安全支出，但安全重点正在从“防电脑病毒”变成“保护云、身份、数据和 AI 工作流”。</p>
+            </div>
+          </div>
+          <div class="drivers">
+            <article>
+              <h3>增长、成熟还是周期？</h3>
+              <p>大盘已成熟，但还在增长。Gartner 预计全球信息安全支出在 2026 年达到 2440 亿美元，同比增长 11.6%。</p>
+            </article>
+            <article>
+              <h3>需求由什么推动？</h3>
+              <p>云迁移、身份安全、勒索与供应链攻击、合规压力，还有企业上 AI 后新增的安全问题。</p>
+            </article>
+            <article>
+              <h3>上游是谁？</h3>
+              <p>云基础设施、操作系统、身份系统、日志数据源、芯片与数据中心设备。</p>
+            </article>
+            <article>
+              <h3>下游是谁？</h3>
+              <p>大型企业、中型企业、政府、医疗、金融，以及代管安全能力的 MSSP 服务商。</p>
+            </article>
+            <article>
+              <h3>当前趋势 1：AI 自己也要被保护</h3>
+              <p>Gartner 在 2026-08-26 说，保护 AI 的市场到 2027 年预计接近 48 亿美元，同比增长 68.7%。AI 不只是卖点，也是新的安全预算入口。</p>
+            </article>
+            <article>
+              <h3>当前趋势 2：AI 代理带来新风险</h3>
+              <p>CISA 与多国伙伴在 2026-05-01 发布 agentic AI 安全采用指南，提醒组织在设计、部署和治理 AI 代理时要增加防护。CrowdStrike Q2 也同步推出了 AI agent identity 相关能力。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="statements">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">08</span>
+          <div>
+            <span class="fact">财报原文中的事实</span>
+            <h2>三张报表的白话解读</h2>
+          </div>
+        </div>
+        <div class="statements">
+          <article class="statement">
+            <h3>利润表：增长快，但 GAAP 还是很克制</h3>
+            <span class="formula">收入 14.7 亿美元 → GAAP 营业亏损 0.33 亿美元 → 非 GAAP 营业利润 3.72 亿美元</span>
+            <p>这告诉我们两件事。第一，平台仍在强增长。第二，股票薪酬、摊销等项目仍让 GAAP 口径显得没那么“暴利”。看这种公司，不能只盯一个利润数字。</p>
+          </article>
+          <article class="statement">
+            <h3>现金流量表：真钱继续比上年更厚</h3>
+            <span class="formula">经营现金流 5.30 亿美元 → 自由现金流 3.77 亿美元</span>
+            <p>订阅公司一个优点是，很多合同先签下来，再慢慢确认收入。所以只要客户续费稳定，现金流往往比会计利润更早反映韧性。</p>
+          </article>
+          <article class="statement">
+            <h3>资产负债表：手里钱多，也继续加码底层基础设施</h3>
+            <span class="formula">截至 2026-07-31 现金及现金等价物 50.1 亿美元</span>
+            <p>10-Q 同时显示，数据中心和其他计算机设备账面值约 11.99 亿美元，在建项目约 3.42 亿美元。平台要快、要稳，底层机器也得持续投入。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="terms" class="soft">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">09</span>
+          <div>
+            <span class="term-tag">关键专业名词</span>
+            <h2>今天只学 5 个词</h2>
+          </div>
+        </div>
+        <div class="terms">
+          <article class="term">
+            <h3>ARR</h3>
+            <p>白话：把现在这一批订阅合同，按一年口径折算出来的年费池。</p>
+            <p class="example">生活例子：像学校统计“如果现在所有学生都继续读一年，总学费大概是多少”。</p>
+          </article>
+          <article class="term">
+            <h3>净新增 ARR</h3>
+            <p>白话：这一季新长出来的那部分年费池，扣掉流失后净增加多少。</p>
+            <p class="example">生活例子：不是只看新招了多少学生，还要扣掉转学走的学生。</p>
+          </article>
+          <article class="term">
+            <h3>订阅毛利率</h3>
+            <p>白话：每 100 元订阅收入，扣掉提供这项服务的直接成本后，还剩多少。</p>
+            <p class="example">生活例子：开食堂时，先扣掉食材和灶火，再看每份饭还能留下多少。</p>
+          </article>
+          <article class="term">
+            <h3>自由现金流</h3>
+            <p>白话：公司交完维持运营必须花的钱后，还能自由支配的现金。</p>
+            <p class="example">生活例子：零花钱先交完校车和午饭，剩下的才是真正能自己决定怎么花的钱。</p>
+          </article>
+          <article class="term">
+            <h3>转换成本</h3>
+            <p>白话：换一家供应商要付出的麻烦和代价。</p>
+            <p class="example">生活例子：全班突然换教材，不只是买新书，还要重做笔记、适应新老师和新作业。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="events" class="events">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">10</span>
+          <div>
+            <span class="background">财报原文中的事实 + 外部背景资料</span>
+            <h2>这期前后发生了什么</h2>
+          </div>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <b>2026-08-04</b>
+            公司公告将于 2026-08-26 美股收盘后发布 FY2027 Q2 业绩。
+          </li>
+          <li class="timeline-item">
+            <b>2026-08-26</b>
+            发布 Q2 业绩：收入 14.7 亿美元，期末 ARR 58.4 亿美元，净新增 ARR 3.33 亿美元，并上调全年净新增 ARR 增长指引至中点 34%。
+          </li>
+          <li class="timeline-item">
+            <b>财报里的近期动作</b>
+            推出面向 AI agents 的 Continuous Identity；和 AWS 联合推出新的 AI、云和 Next-Gen SIEM 创新；继续扩展 Project QuiltWorks。
+          </li>
+          <li class="timeline-item">
+            <b>组织和产品延伸</b>
+            与 Schwarz Digits 扩大战略合作，并同意收购 XM Cyber 的技术资产，补强攻击路径可视化与模拟能力。
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="risks">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">11</span>
+          <div>
+            <span class="analysis">风险不是照抄条款，而是想象真实场景</span>
+            <h2>这门生意可能出什么问题</h2>
+          </div>
+        </div>
+        <div class="risks">
+          <article class="risk">
+            <h3>事故后遗症还没完</h3>
+            <p>10-K 明说，2024 年 7 月 Falcon 更新事故已经伤害并可能继续伤害业务、销售、客户关系和品牌，还引来诉讼和监管询问。</p>
+          </article>
+          <article class="risk">
+            <h3>大客户可能更想“一站式打包”</h3>
+            <p>如果客户决定更多从大型老牌安全厂商，或自己的主 IT 设备供应商手里一起采购，CrowdStrike 的抢单会更难。</p>
+          </article>
+          <article class="risk">
+            <h3>渠道伙伴很重要</h3>
+            <p>10-K 说大部分销售流经渠道伙伴。要是关键伙伴卖得没那么积极，或者转去推别家的产品，增长会受影响。</p>
+          </article>
+          <article class="risk">
+            <h3>这类公司下半年通常更重</h3>
+            <p>10-K 还提示，它通常在财年下半年的新单和续费更多，因为很多客户要等预算审批。所以上半年和下半年的节奏并不完全一样。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="remember" class="remember">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">12</span>
+          <div>
+            <span class="analysis">今日记住什么</span>
+            <h2>如果今天只带走 3 句话</h2>
+          </div>
+        </div>
+        <div class="remember-grid">
+          <article class="memory">
+            <strong>1</strong>
+            <p>CrowdStrike 卖的不是单个安全工具，而是把端点、身份、云和安全运营串在一起的平台。</p>
+          </article>
+          <article class="memory">
+            <strong>2</strong>
+            <p>这期成绩最能说明问题的，不只是收入 14.7 亿美元，而是订阅占比 95%、ARR 58.4 亿美元和净新增 ARR 加速。</p>
+          </article>
+          <article class="memory">
+            <strong>3</strong>
+            <p>好生意和大风险可以同时存在。增长很强，但事故尾巴、打包竞争和渠道依赖也不能忽视。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="quiz" class="soft quiz">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">13</span>
+          <div>
+            <span class="term-tag">自测题</span>
+            <h2>3 个问题，看看有没有真的读懂</h2>
+          </div>
+        </div>
+        <details>
+          <summary>1. 为什么说 CrowdStrike 更像“年费平台”，不像“一次性卖软件”公司？</summary>
+          <div class="answer">因为它主要靠订阅收费，Q2 约 95% 的收入都来自订阅。客户要持续更新、持续防护、持续接更多模块，所以收入会滚成 ARR，而不是一次卖完就结束。</div>
+        </details>
+        <details>
+          <summary>2. 为什么 6 个以上模块客户占比 51% 是个重要信号？</summary>
+          <div class="answer">因为这代表很多客户不是只买一件产品，而是把多个安全功能接到同一平台。模块越多，平台越像基础设施，客户越难整体换走。</div>
+        </details>
+        <details>
+          <summary>3. 如果你只看“这季赚没赚钱”，会漏掉什么？</summary>
+          <div class="answer">会漏掉 ARR、净新增 ARR、自由现金流和模块渗透率这些更能说明订阅平台质量的指标。对这类公司来说，未来的续费池往往比单季 GAAP 利润更重要。</div>
+        </details>
+      </div>
+    </section>
+    <section id="sources" class="sources">
+      <div class="wrap">
+        <div class="head">
+          <span class="no">14</span>
+          <div>
+            <span class="fact">资料来源</span>
+            <h2>关键事实都可以回到原文</h2>
+          </div>
+        </div>
+        <div class="source-grid">
+          <article class="source-card">
+            <ol>
+              <li><a href="https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-second-quarter-fiscal-year-2027-financial/">CrowdStrike Reports Second Quarter Fiscal Year 2027 Financial Results</a>，2026-08-26。主业绩原文；核心数字、管理层表述、Q2 亮点与全年指引。</li>
+              <li><a href="https://ir.crowdstrike.com/node/17376/pdf">CrowdStrike FY2027 Q2 earnings release PDF</a>，2026-08-26。8-K Exhibit 99.1 PDF 版本；净新增 ARR、毛利率、现金流、模块采用率和近期事件。</li>
+              <li><a href="https://ir.crowdstrike.com/sec-filings/sec-filing/10-q/0001535527-26-000031">CrowdStrike Form 10-Q</a>，提交于 2026-08-27。收入结构、费用构成、资本开支、数据中心资产和季度 MD&amp;A。</li>
+              <li><a href="https://ir.crowdstrike.com/sec-filings/sec-filing/10-k/0001535527-26-000010/">CrowdStrike FY2026 Form 10-K</a>，提交于 2026-03-05。商业模式、渠道伙伴、风险因素、季节性与公司历史。</li>
+              <li><a href="https://ir.crowdstrike.com/">CrowdStrike Investor Relations</a>，访问于 2026-09-01。IR 首页披露 33 个云模块及最新季度概览。</li>
+            </ol>
+          </article>
+          <article class="source-card">
+            <ol start="6">
+              <li><a href="https://www.gartner.com/en/documents/7408930">Gartner Forecast Analysis: Information Security, Worldwide, 2026</a>，2026-02-05。全球信息安全支出 2026 年预测。</li>
+              <li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-08-26-gartner-forecasts-the-market-for-securing-ai-will-reach-almost-5-billion-in-2027">Gartner Forecasts the Market for Securing AI Will Reach Almost $5 Billion in 2027</a>，2026-08-26。AI 安全市场扩张趋势。</li>
+              <li><a href="https://www.cisa.gov/news-events/news/cisa-us-and-international-partners-release-guide-secure-adoption-agentic-ai">CISA and partners release guide to secure adoption of agentic AI</a>，2026-05-01。AI 代理安全趋势背景。</li>
+              <li><a href="https://www.microsoft.com/en-us/security">Microsoft Security</a>，访问于 2026-09-01。Microsoft Defender、Sentinel、Entra 等官方产品范围，用于竞争格局核对。</li>
+              <li><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-reports-fiscal-third-quarter-2026-financial/">Palo Alto Networks Reports Fiscal Third Quarter 2026 Financial Results</a>，2026-06-02。平台型竞争对手增长与 ARR 背景。</li>
+              <li><a href="https://investors.sentinelone.com/press-releases/news-details/2026/SentinelOne-Announces-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/default.aspx">SentinelOne Announces Fourth Quarter and Fiscal Year 2026 Financial Results</a>，2026-03-12。AI 端点安全竞争对手背景。</li>
+              <li><a href="https://ir.zscaler.com/">Zscaler Investor Relations</a>，访问于 2026-09-01。零信任与 SSE 竞争对手背景。</li>
+            </ol>
+          </article>
+        </div>
+        <p class="fine">口径说明：除特别注明外，金额均为美元。季度数字默认对应截至 2026-07-31 的 FY2027 Q2，并与上年同期比较。约数如“14.0 亿美元”是为了阅读方便做的四舍五入，不冒充公司逐位披露数。本文仅用于商业与财报教育，不构成投资建议。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="disclaimer">
+    <div class="wrap">这是一份财报学习材料，不构成买入、卖出或收益承诺。请把重点放在“公司怎么赚钱、为什么能守住生意、哪些风险会让这门生意变差”。</div>
+  </footer>
+</body>
+</html>
