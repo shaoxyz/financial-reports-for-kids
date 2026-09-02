@@ -52,6 +52,7 @@ for (const slug of slugs) {
   };
   if (match) next.simpleIcon = match.key;
   if (current.override) next.override = current.override;
+  if (current.image) next.image = current.image;
   if (current.marketSymbol) next.marketSymbol = current.marketSymbol;
   if (current.dataSymbol) next.dataSymbol = current.dataSymbol;
   if (JSON.stringify(brands[slug] || {}) !== JSON.stringify(next)) {

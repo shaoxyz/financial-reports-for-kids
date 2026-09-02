@@ -758,5 +758,21 @@
     "movingAverage50": "196.23",
     "movingAverage200": "140.48",
     "fetchedAt": "2026-09-01T02:19:09.801Z"
+  },
+  "Hormel": {
+    "provider": "Alpha Vantage",
+    "symbol": "HRL",
+    "name": "Hormel Foods Corporation",
+    "currency": "USD",
+    "price": "21.9900",
+    "changePercent": "0.6407",
+    "latestTradingDay": "2026-09-01",
+    "marketCapitalization": "12025165000",
+    "peRatio": "35.24",
+    "week52High": "26.43",
+    "week52Low": "19.47",
+    "movingAverage50": "24.7",
+    "movingAverage200": "23.45",
+    "fetchedAt": "2026-09-02T02:07:18.214Z"
   }
 }

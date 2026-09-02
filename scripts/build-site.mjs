@@ -52,7 +52,8 @@ const companyNames = {
   BestBuy: "百思买",
   Marvell: "Marvell",
   Autodesk: "Autodesk",
-  CrowdStrike: "CrowdStrike"
+  CrowdStrike: "CrowdStrike",
+  Hormel: "Hormel Foods"
 };
 
 const industries = {
@@ -72,7 +73,8 @@ const industries = {
   Salesforce: "企业软件与CRM", HP: "电脑与打印",
   BestBuy: "消费电子零售", Marvell: "半导体与AI基础设施",
   Autodesk: "设计软件与工业数字化",
-  CrowdStrike: "网络安全平台"
+  CrowdStrike: "网络安全平台",
+  Hormel: "食品制造与品牌消费品"
 };
 
 const clean = (value) => value
@@ -105,6 +107,14 @@ const overridePath = (name) => {
   return existsSync(resolved) ? resolved : "";
 };
 
+const imagePath = (name) => {
+  if (!name || name !== basename(name) || !name.toLowerCase().endsWith(".png")) return "";
+  const resolved = resolve(assetsDir, name);
+  const rel = relative(resolve(assetsDir), resolved);
+  if (!rel || rel.startsWith("..")) return "";
+  return existsSync(resolved) ? resolved : "";
+};
+
 const rewriteSvgRoot = (svg, label) => svg.replace(/<svg\b([^>]*)>/i, (_, attrs) => {
   const take = (attr) => {
     const match = attrs.match(new RegExp("\\b" + attr + "\\s*=\\s*(\"([^\"]*)\"|'([^']*)')", "i"));
@@ -129,6 +139,8 @@ const inlineLogo = (slug, brand) => {
     const svg = readFileSync(file, "utf8").replace(/^\uFEFF/, "").replace(/^\s*<\?xml[^>]*>/, "").trim();
     return rewriteSvgRoot(svg, label);
   }
+  const image = imagePath(brand.image);
+  if (image) return `<img class="brand-logo" src="data:image/png;base64,${readFileSync(image).toString("base64")}" alt="${label}">`;
   const icon = (brand.simpleIcon && simpleIcons[brand.simpleIcon])
     || simpleIcons[exportName(slug.toLowerCase())];
   if (icon?.path) {

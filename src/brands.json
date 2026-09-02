@@ -266,5 +266,12 @@
     "color": "#FC0000",
     "override": "CrowdStrike.svg",
     "marketSymbol": "NASDAQ:CRWD"
+  },
+  "Hormel": {
+    "company": "Hormel Foods",
+    "query": "Hormel Foods Corporation",
+    "color": "#B51F2B",
+    "image": "Hormel.png",
+    "marketSymbol": "NYSE:HRL"
   }
 }
