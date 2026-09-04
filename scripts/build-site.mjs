@@ -53,7 +53,8 @@ const companyNames = {
   Marvell: "Marvell",
   Autodesk: "Autodesk",
   CrowdStrike: "CrowdStrike",
-  Hormel: "Hormel Foods"
+  Hormel: "Hormel Foods",
+  Lululemon: "lululemon"
 };
 
 const industries = {
@@ -74,7 +75,8 @@ const industries = {
   BestBuy: "消费电子零售", Marvell: "半导体与AI基础设施",
   Autodesk: "设计软件与工业数字化",
   CrowdStrike: "网络安全平台",
-  Hormel: "食品制造与品牌消费品"
+  Hormel: "食品制造与品牌消费品",
+  Lululemon: "运动服饰与零售"
 };
 
 const clean = (value) => value

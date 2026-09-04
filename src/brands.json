@@ -273,5 +273,12 @@
     "color": "#B51F2B",
     "image": "Hormel.png",
     "marketSymbol": "NYSE:HRL"
+  },
+  "Lululemon": {
+    "company": "lululemon",
+    "query": "lululemon athletica inc.",
+    "color": "#D31345",
+    "override": "Lululemon.svg",
+    "marketSymbol": "NASDAQ:LULU"
   }
 }

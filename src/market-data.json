@@ -774,5 +774,21 @@
     "movingAverage50": "24.7",
     "movingAverage200": "23.45",
     "fetchedAt": "2026-09-02T02:07:18.214Z"
+  },
+  "Lululemon": {
+    "provider": "Alpha Vantage",
+    "symbol": "LULU",
+    "name": "Lululemon Athletica Inc.",
+    "currency": "USD",
+    "price": "121.7700",
+    "changePercent": "1.4158",
+    "latestTradingDay": "2026-09-03",
+    "marketCapitalization": "13634419000",
+    "peRatio": "9.55",
+    "week52High": "225.98",
+    "week52Low": "104.44",
+    "movingAverage50": "118.23",
+    "movingAverage200": "153.58",
+    "fetchedAt": "2026-09-04T02:07:22.064Z"
   }
 }
