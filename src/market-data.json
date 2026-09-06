@@ -790,5 +790,21 @@
     "movingAverage50": "118.23",
     "movingAverage200": "153.58",
     "fetchedAt": "2026-09-04T02:07:22.064Z"
+  },
+  "Ciena": {
+    "provider": "Alpha Vantage",
+    "symbol": "CIEN",
+    "name": "Ciena Corp",
+    "currency": "USD",
+    "price": "321.0000",
+    "changePercent": "1.1151",
+    "latestTradingDay": "2026-09-04",
+    "marketCapitalization": "45520536000",
+    "peRatio": "70.86",
+    "week52High": "637.51",
+    "week52Low": "117.02",
+    "movingAverage50": "408.01",
+    "movingAverage200": "376.52",
+    "fetchedAt": "2026-09-06T02:04:47.591Z"
   }
 }

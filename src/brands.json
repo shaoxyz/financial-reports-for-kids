@@ -280,5 +280,11 @@
     "color": "#D31345",
     "override": "Lululemon.svg",
     "marketSymbol": "NASDAQ:LULU"
+  },
+  "Ciena": {
+    "company": "Ciena",
+    "query": "ciena",
+    "color": "#E1261C",
+    "marketSymbol": "NYSE:CIEN"
   }
 }
