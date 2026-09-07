@@ -54,7 +54,7 @@ const companyNames = {
   Autodesk: "Autodesk",
   CrowdStrike: "CrowdStrike",
   Hormel: "Hormel Foods",
-  Lululemon: "lululemon", Ciena: "Ciena"
+  Lululemon: "lululemon", Ciena: "Ciena", Broadcom: "Broadcom"
 };
 
 const industries = {
@@ -76,7 +76,8 @@ const industries = {
   Autodesk: "设计软件与工业数字化",
   CrowdStrike: "网络安全平台",
   Hormel: "食品制造与品牌消费品",
-  Lululemon: "运动服饰与零售", Ciena: "光网络设备与软件"
+  Lululemon: "运动服饰与零售", Ciena: "光网络设备与软件",
+  Broadcom: "半导体与基础软件"
 };
 
 const clean = (value) => value

@@ -286,5 +286,12 @@
     "query": "ciena",
     "color": "#E1261C",
     "marketSymbol": "NYSE:CIEN"
+  },
+  "Broadcom": {
+    "company": "Broadcom",
+    "query": "Broadcom Inc.",
+    "color": "#CC092F",
+    "simpleIcon": "siBroadcom",
+    "marketSymbol": "NASDAQ:AVGO"
   }
 }

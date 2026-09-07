@@ -806,5 +806,21 @@
     "movingAverage50": "408.01",
     "movingAverage200": "376.52",
     "fetchedAt": "2026-09-06T02:04:47.591Z"
+  },
+  "Broadcom": {
+    "provider": "Alpha Vantage",
+    "symbol": "AVGO",
+    "name": "Broadcom Inc",
+    "currency": "USD",
+    "price": "357.8950",
+    "changePercent": "0.2058",
+    "latestTradingDay": "2026-09-04",
+    "marketCapitalization": "1702714147000",
+    "peRatio": "45.65",
+    "week52High": "494.18",
+    "week52Low": "289.48",
+    "movingAverage50": "383.66",
+    "movingAverage200": "369.83",
+    "fetchedAt": "2026-09-07T02:09:30.985Z"
   }
 }
