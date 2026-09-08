@@ -293,5 +293,11 @@
     "color": "#CC092F",
     "simpleIcon": "siBroadcom",
     "marketSymbol": "NASDAQ:AVGO"
+  },
+  "Samsara": {
+    "company": "Samsara",
+    "query": "Samsara Inc.",
+    "color": "#143B67",
+    "marketSymbol": "NYSE:IOT"
   }
 }

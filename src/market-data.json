@@ -822,5 +822,21 @@
     "movingAverage50": "383.66",
     "movingAverage200": "369.83",
     "fetchedAt": "2026-09-07T02:09:30.985Z"
+  },
+  "Samsara": {
+    "provider": "Alpha Vantage",
+    "symbol": "IOT",
+    "name": "Samsara Inc",
+    "currency": "USD",
+    "price": "40.2000",
+    "changePercent": "3.7419",
+    "latestTradingDay": "2026-09-04",
+    "marketCapitalization": "23424946000",
+    "peRatio": "268",
+    "week52High": "47.47",
+    "week52Low": "23.38",
+    "movingAverage50": "37.63",
+    "movingAverage200": "33.65",
+    "fetchedAt": "2026-09-08T02:07:06.609Z"
   }
 }
