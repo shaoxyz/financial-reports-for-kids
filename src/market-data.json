@@ -838,5 +838,21 @@
     "movingAverage50": "37.63",
     "movingAverage200": "33.65",
     "fetchedAt": "2026-09-08T02:07:06.609Z"
+  },
+  "GameStop": {
+    "provider": "Alpha Vantage",
+    "symbol": "GME",
+    "name": "GameStop Corp.",
+    "currency": "USD",
+    "price": "18.8900",
+    "changePercent": "-1.4092",
+    "latestTradingDay": "2026-09-08",
+    "marketCapitalization": "8596924000",
+    "peRatio": "14.3",
+    "week52High": "28.1",
+    "week52Low": "17.79",
+    "movingAverage50": "20.27",
+    "movingAverage200": "22.18",
+    "fetchedAt": "2026-09-09T02:08:14.215Z"
   }
 }

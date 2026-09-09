@@ -299,5 +299,11 @@
     "query": "Samsara Inc.",
     "color": "#143B67",
     "marketSymbol": "NYSE:IOT"
+  },
+  "GameStop": {
+    "company": "GameStop",
+    "query": "GameStop Corp.",
+    "color": "#E31B23",
+    "marketSymbol": "NYSE:GME"
   }
 }
