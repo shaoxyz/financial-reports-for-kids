@@ -305,5 +305,11 @@
     "query": "GameStop Corp.",
     "color": "#E31B23",
     "marketSymbol": "NYSE:GME"
+  },
+  "Signet": {
+    "company": "Signet Jewelers",
+    "query": "Signet Jewelers",
+    "color": "#073B73",
+    "marketSymbol": "NYSE:SIG"
   }
 }

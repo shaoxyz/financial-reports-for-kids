@@ -54,7 +54,7 @@ const companyNames = {
   Autodesk: "Autodesk",
   CrowdStrike: "CrowdStrike",
   Hormel: "Hormel Foods",
-  Lululemon: "lululemon", Ciena: "Ciena", Broadcom: "Broadcom", Samsara: "Samsara", GameStop: "GameStop"
+  Lululemon: "lululemon", Ciena: "Ciena", Broadcom: "Broadcom", Samsara: "Samsara", GameStop: "GameStop", Signet: "Signet Jewelers"
 };
 
 const industries = {
@@ -77,7 +77,7 @@ const industries = {
   CrowdStrike: "网络安全平台",
   Hormel: "食品制造与品牌消费品",
   Lululemon: "运动服饰与零售", Ciena: "光网络设备与软件",
-  Broadcom: "半导体与基础软件", Samsara: "物联网与车队软件", GameStop: "游戏与收藏品零售"
+  Broadcom: "半导体与基础软件", Samsara: "物联网与车队软件", GameStop: "游戏与收藏品零售", Signet: "珠宝零售与服务"
 };
 
 const clean = (value) => value

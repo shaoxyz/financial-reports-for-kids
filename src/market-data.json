@@ -854,5 +854,21 @@
     "movingAverage50": "20.27",
     "movingAverage200": "22.18",
     "fetchedAt": "2026-09-09T02:08:14.215Z"
+  },
+  "Signet": {
+    "provider": "Alpha Vantage",
+    "symbol": "SIG",
+    "name": "Signet Jewelers Ltd",
+    "currency": "USD",
+    "price": "102.4800",
+    "changePercent": "23.9627",
+    "latestTradingDay": "2026-09-09",
+    "marketCapitalization": "3354831000",
+    "peRatio": "11.68",
+    "week52High": "108.63",
+    "week52Low": "71.34",
+    "movingAverage50": "88.17",
+    "movingAverage200": "88.66",
+    "fetchedAt": "2026-09-10T02:08:37.258Z"
   }
 }
