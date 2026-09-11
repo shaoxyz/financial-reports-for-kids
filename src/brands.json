@@ -311,5 +311,11 @@
     "query": "Signet Jewelers",
     "color": "#073B73",
     "marketSymbol": "NYSE:SIG"
+  },
+  "Oracle": {
+    "company": "Oracle",
+    "query": "Oracle Corporation",
+    "color": "#C74634",
+    "marketSymbol": "NYSE:ORCL"
   }
 }

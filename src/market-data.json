@@ -870,5 +870,21 @@
     "movingAverage50": "88.17",
     "movingAverage200": "88.66",
     "fetchedAt": "2026-09-10T02:08:37.258Z"
+  },
+  "Oracle": {
+    "provider": "Alpha Vantage",
+    "symbol": "ORCL",
+    "name": "Oracle Corporation",
+    "currency": "USD",
+    "price": "152.9400",
+    "changePercent": "-5.3765",
+    "latestTradingDay": "2026-09-10",
+    "marketCapitalization": "465570562000",
+    "peRatio": "27.87",
+    "week52High": "325.79",
+    "week52Low": "114.5",
+    "movingAverage50": "140.4",
+    "movingAverage200": "168.18",
+    "fetchedAt": "2026-09-11T02:08:03.803Z"
   }
 }
