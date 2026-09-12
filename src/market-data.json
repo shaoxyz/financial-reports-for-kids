@@ -886,5 +886,21 @@
     "movingAverage50": "140.4",
     "movingAverage200": "168.18",
     "fetchedAt": "2026-09-11T02:08:03.803Z"
+  },
+  "Adobe": {
+    "provider": "Alpha Vantage",
+    "symbol": "ADBE",
+    "name": "Adobe Systems Incorporated",
+    "currency": "USD",
+    "price": "252.2300",
+    "changePercent": "1.3664",
+    "latestTradingDay": "2026-09-11",
+    "marketCapitalization": "98909929000",
+    "peRatio": "14.58",
+    "week52High": "370.86",
+    "week52Low": "190.12",
+    "movingAverage50": "250.91",
+    "movingAverage200": "267.28",
+    "fetchedAt": "2026-09-12T02:06:00.454Z"
   }
 }

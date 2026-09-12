@@ -317,5 +317,12 @@
     "query": "Oracle Corporation",
     "color": "#C74634",
     "marketSymbol": "NYSE:ORCL"
+  },
+  "Adobe": {
+    "company": "Adobe",
+    "query": "Adobe Inc.",
+    "color": "#EB1000",
+    "override": "Adobe.svg",
+    "marketSymbol": "NASDAQ:ADBE"
   }
 }
