@@ -902,5 +902,21 @@
     "movingAverage50": "250.91",
     "movingAverage200": "267.28",
     "fetchedAt": "2026-09-12T02:06:00.454Z"
+  },
+  "Kroger": {
+    "provider": "Alpha Vantage",
+    "symbol": "KR",
+    "name": "Kroger Company",
+    "currency": "USD",
+    "price": "58.4900",
+    "changePercent": "2.7041",
+    "latestTradingDay": "2026-09-11",
+    "marketCapitalization": "34860040000",
+    "peRatio": "33.42",
+    "week52High": "75.66",
+    "week52Low": "53.78",
+    "movingAverage50": "57.73",
+    "movingAverage200": "63.9",
+    "fetchedAt": "2026-09-13T02:05:20.024Z"
   }
 }

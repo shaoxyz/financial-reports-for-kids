@@ -324,5 +324,11 @@
     "color": "#EB1000",
     "override": "Adobe.svg",
     "marketSymbol": "NASDAQ:ADBE"
+  },
+  "Kroger": {
+    "company": "克罗格",
+    "query": "The Kroger Co.",
+    "color": "#1D4E9E",
+    "marketSymbol": "NYSE:KR"
   }
 }
