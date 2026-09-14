@@ -918,5 +918,21 @@
     "movingAverage50": "57.73",
     "movingAverage200": "63.9",
     "fetchedAt": "2026-09-13T02:05:20.024Z"
+  },
+  "Chewy": {
+    "provider": "Alpha Vantage",
+    "symbol": "CHWY",
+    "name": "Chewy Inc",
+    "currency": "USD",
+    "price": "20.4400",
+    "changePercent": "-3.0361",
+    "latestTradingDay": "2026-09-11",
+    "marketCapitalization": "8215393000",
+    "peRatio": "31.45",
+    "week52High": "40.55",
+    "week52Low": "17.4",
+    "movingAverage50": "22.39",
+    "movingAverage200": "25.58",
+    "fetchedAt": "2026-09-14T02:06:55.904Z"
   }
 }

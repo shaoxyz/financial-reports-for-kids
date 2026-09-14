@@ -330,5 +330,11 @@
     "query": "The Kroger Co.",
     "color": "#1D4E9E",
     "marketSymbol": "NYSE:KR"
+  },
+  "Chewy": {
+    "company": "Chewy",
+    "query": "Chewy, Inc.",
+    "color": "#1E75BB",
+    "marketSymbol": "NYSE:CHWY"
   }
 }
