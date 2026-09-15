@@ -336,5 +336,12 @@
     "query": "Chewy, Inc.",
     "color": "#1E75BB",
     "marketSymbol": "NYSE:CHWY"
+  },
+  "GitLab": {
+    "company": "GitLab",
+    "query": "GitLab Inc.",
+    "color": "#FC6D26",
+    "simpleIcon": "siGitlab",
+    "marketSymbol": "NASDAQ:GTLB"
   }
 }

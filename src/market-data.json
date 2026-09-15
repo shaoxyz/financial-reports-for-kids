@@ -934,5 +934,21 @@
     "movingAverage50": "22.39",
     "movingAverage200": "25.58",
     "fetchedAt": "2026-09-14T02:06:55.904Z"
+  },
+  "GitLab": {
+    "provider": "Alpha Vantage",
+    "symbol": "GTLB",
+    "name": "Gitlab Inc",
+    "currency": "USD",
+    "price": "49.2500",
+    "changePercent": "4.8095",
+    "latestTradingDay": "2026-09-14",
+    "marketCapitalization": "7829239000",
+    "peRatio": "None",
+    "week52High": "55.55",
+    "week52Low": "18.73",
+    "movingAverage50": "38.62",
+    "movingAverage200": "31.66",
+    "fetchedAt": "2026-09-15T02:06:00.748Z"
   }
 }
