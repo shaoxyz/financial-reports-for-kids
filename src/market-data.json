@@ -950,5 +950,21 @@
     "movingAverage50": "38.62",
     "movingAverage200": "31.66",
     "fetchedAt": "2026-09-15T02:06:00.748Z"
+  },
+  "TollBrothers": {
+    "provider": "Alpha Vantage",
+    "symbol": "TOL",
+    "name": "Toll Brothers Inc",
+    "currency": "USD",
+    "price": "134.2000",
+    "changePercent": "-0.0223",
+    "latestTradingDay": "2026-09-15",
+    "marketCapitalization": "12368892000",
+    "peRatio": "10.82",
+    "week52High": "167.75",
+    "week52Low": "122.93",
+    "movingAverage50": "147.28",
+    "movingAverage200": "144.63",
+    "fetchedAt": "2026-09-16T02:06:35.146Z"
   }
 }

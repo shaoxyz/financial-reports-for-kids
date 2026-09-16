@@ -343,5 +343,12 @@
     "color": "#FC6D26",
     "simpleIcon": "siGitlab",
     "marketSymbol": "NASDAQ:GTLB"
+  },
+  "TollBrothers": {
+    "company": "Toll Brothers",
+    "query": "Toll Brothers, Inc.",
+    "color": "#8B1E2D",
+    "simpleIcon": "siToll",
+    "marketSymbol": "NYSE:TOL"
   }
 }
