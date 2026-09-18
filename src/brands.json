@@ -350,5 +350,12 @@
     "color": "#8B1E2D",
     "simpleIcon": "siToll",
     "marketSymbol": "NYSE:TOL"
+  },
+  "Lennar": {
+    "company": "Lennar",
+    "query": "Lennar Corporation",
+    "color": "#235CA3",
+    "override": "Lennar.svg",
+    "marketSymbol": "NYSE:LEN"
   }
 }

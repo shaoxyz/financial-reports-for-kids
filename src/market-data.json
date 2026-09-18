@@ -966,5 +966,21 @@
     "movingAverage50": "147.28",
     "movingAverage200": "144.63",
     "fetchedAt": "2026-09-16T02:06:35.146Z"
+  },
+  "Lennar": {
+    "provider": "Alpha Vantage",
+    "symbol": "LEN",
+    "name": "Lennar Corporation",
+    "currency": "USD",
+    "price": "79.7000",
+    "changePercent": "1.7101",
+    "latestTradingDay": "2026-09-17",
+    "marketCapitalization": "18876543000",
+    "peRatio": "12.54",
+    "week52High": "131.68",
+    "week52Low": "76.06",
+    "movingAverage50": "84.37",
+    "movingAverage200": "96.87",
+    "fetchedAt": "2026-09-18T02:09:34.425Z"
   }
 }
