@@ -357,5 +357,12 @@
     "color": "#235CA3",
     "override": "Lennar.svg",
     "marketSymbol": "NYSE:LEN"
+  },
+  "FedEx": {
+    "company": "FedEx",
+    "query": "FedEx Corporation",
+    "color": "#4D148C",
+    "simpleIcon": "siFedex",
+    "marketSymbol": "NYSE:FDX"
   }
 }

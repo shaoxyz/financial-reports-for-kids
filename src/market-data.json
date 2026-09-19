@@ -982,5 +982,21 @@
     "movingAverage50": "84.37",
     "movingAverage200": "96.87",
     "fetchedAt": "2026-09-18T02:09:34.425Z"
+  },
+  "FedEx": {
+    "provider": "Alpha Vantage",
+    "symbol": "FDX",
+    "name": "FedEx Corporation",
+    "currency": "USD",
+    "price": "303.6500",
+    "changePercent": "-0.7290",
+    "latestTradingDay": "2026-09-18",
+    "marketCapitalization": "72392753000",
+    "peRatio": "16.26",
+    "week52High": "342.74",
+    "week52Low": "177.98",
+    "movingAverage50": "318.7",
+    "movingAverage200": "294.95",
+    "fetchedAt": "2026-09-19T02:06:23.423Z"
   }
 }
