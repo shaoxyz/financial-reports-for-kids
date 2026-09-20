@@ -54,7 +54,7 @@ const companyNames = {
   Autodesk: "Autodesk",
   CrowdStrike: "CrowdStrike",
   Hormel: "Hormel Foods",
-  Lululemon: "lululemon", Ciena: "Ciena", Broadcom: "Broadcom", Samsara: "Samsara", GameStop: "GameStop", Signet: "Signet Jewelers", Oracle: "Oracle", Adobe: "Adobe", Kroger: "克罗格", Chewy: "Chewy", GitLab: "GitLab", TollBrothers: "Toll Brothers", Lennar: "Lennar", FedEx: "FedEx"
+  Lululemon: "lululemon", Ciena: "Ciena", Broadcom: "Broadcom", Samsara: "Samsara", GameStop: "GameStop", Signet: "Signet Jewelers", Oracle: "Oracle", Adobe: "Adobe", Kroger: "克罗格", Chewy: "Chewy", GitLab: "GitLab", TollBrothers: "Toll Brothers", Lennar: "Lennar", FedEx: "FedEx", BrownForman: "Brown-Forman"
 };
 
 const industries = {
@@ -77,7 +77,7 @@ const industries = {
   CrowdStrike: "网络安全平台",
   Hormel: "食品制造与品牌消费品",
   Lululemon: "运动服饰与零售", Ciena: "光网络设备与软件",
-  Broadcom: "半导体与基础软件", Samsara: "物联网与车队软件", GameStop: "游戏与收藏品零售", Signet: "珠宝零售与服务", Oracle: "企业软件与云计算", Adobe: "创意软件与企业营销", Kroger: "食品杂货零售与零售媒体", Chewy: "宠物电商与健康服务", GitLab: "开发平台与 DevSecOps", TollBrothers: "高端住宅建造", Lennar: "住宅建造与按揭服务", FedEx: "全球快递与物流网络"
+  Broadcom: "半导体与基础软件", Samsara: "物联网与车队软件", GameStop: "游戏与收藏品零售", Signet: "珠宝零售与服务", Oracle: "企业软件与云计算", Adobe: "创意软件与企业营销", Kroger: "食品杂货零售与零售媒体", Chewy: "宠物电商与健康服务", GitLab: "开发平台与 DevSecOps", TollBrothers: "高端住宅建造", Lennar: "住宅建造与按揭服务", FedEx: "全球快递与物流网络", BrownForman: "烈酒品牌与全球分销"
 };
 
 const clean = (value) => value

@@ -364,5 +364,11 @@
     "color": "#4D148C",
     "simpleIcon": "siFedex",
     "marketSymbol": "NYSE:FDX"
+  },
+  "BrownForman": {
+    "company": "Brown-Forman",
+    "query": "Brown-Forman Corporation",
+    "color": "#A44A2A",
+    "marketSymbol": "NYSE:BFB"
   }
 }
