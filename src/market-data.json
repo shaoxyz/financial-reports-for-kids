@@ -998,5 +998,21 @@
     "movingAverage50": "318.7",
     "movingAverage200": "294.95",
     "fetchedAt": "2026-09-19T02:06:23.423Z"
+  },
+  "HRBlock": {
+    "provider": "Alpha Vantage",
+    "symbol": "HRB",
+    "name": "H&R Block Inc",
+    "currency": "USD",
+    "price": "44.2500",
+    "changePercent": "-1.2497",
+    "latestTradingDay": "2026-09-18",
+    "marketCapitalization": "5454517000",
+    "peRatio": "7.78",
+    "week52High": "58.14",
+    "week52Low": "27.23",
+    "movingAverage50": "46.8",
+    "movingAverage200": "38.82",
+    "fetchedAt": "2026-09-21T02:24:14.641Z"
   }
 }

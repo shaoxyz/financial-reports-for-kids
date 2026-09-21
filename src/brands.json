@@ -97,6 +97,12 @@
     "color": "#D52B1E",
     "marketSymbol": "NYSE:LLY"
   },
+  "HRBlock": {
+    "company": "H&R Block",
+    "query": "H&R Block",
+    "color": "#00A651",
+    "marketSymbol": "NYSE:HRB"
+  },
   "Airbnb": {
     "company": "Airbnb",
     "query": "Airbnb, Inc.",
