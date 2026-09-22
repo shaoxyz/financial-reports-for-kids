@@ -1014,5 +1014,21 @@
     "movingAverage50": "46.8",
     "movingAverage200": "38.82",
     "fetchedAt": "2026-09-21T02:24:14.641Z"
+  },
+  "AutoZone": {
+    "provider": "Alpha Vantage",
+    "symbol": "AZO",
+    "name": "AutoZone Inc",
+    "currency": "USD",
+    "price": "2803.2500",
+    "changePercent": "-1.8233",
+    "latestTradingDay": "2026-09-21",
+    "marketCapitalization": "46613950000",
+    "peRatio": "19.65",
+    "week52High": "4332.68",
+    "week52Low": "2796.85",
+    "movingAverage50": "2996.86",
+    "movingAverage200": "3336.16",
+    "fetchedAt": "2026-09-22T02:06:39.839Z"
   }
 }

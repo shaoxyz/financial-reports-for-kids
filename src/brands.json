@@ -376,5 +376,12 @@
     "query": "Brown-Forman Corporation",
     "color": "#A44A2A",
     "marketSymbol": "NYSE:BFB"
+  },
+  "AutoZone": {
+    "company": "AutoZone",
+    "query": "AutoZone, Inc.",
+    "color": "#F58220",
+    "simpleIcon": "siAutozone",
+    "marketSymbol": "NYSE:AZO"
   }
 }
