@@ -383,5 +383,12 @@
     "color": "#F58220",
     "simpleIcon": "siAutozone",
     "marketSymbol": "NYSE:AZO"
+  },
+  "GeneralMills": {
+    "company": "通用磨坊",
+    "query": "General Mills, Inc.",
+    "color": "#234291",
+    "override": "GeneralMills.svg",
+    "marketSymbol": "NYSE:GIS"
   }
 }

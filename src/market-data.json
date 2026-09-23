@@ -1030,5 +1030,21 @@
     "movingAverage50": "2996.86",
     "movingAverage200": "3336.16",
     "fetchedAt": "2026-09-22T02:06:39.839Z"
+  },
+  "GeneralMills": {
+    "provider": "Alpha Vantage",
+    "symbol": "GIS",
+    "name": "General Mills Inc",
+    "currency": "USD",
+    "price": "35.4500",
+    "changePercent": "0.1130",
+    "latestTradingDay": "2026-09-22",
+    "marketCapitalization": "18931229000",
+    "peRatio": "None",
+    "week52High": "48.32",
+    "week52Low": "31.21",
+    "movingAverage50": "37.83",
+    "movingAverage200": "39.42",
+    "fetchedAt": "2026-09-23T02:08:28.217Z"
   }
 }
