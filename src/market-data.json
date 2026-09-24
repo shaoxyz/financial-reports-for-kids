@@ -1046,5 +1046,21 @@
     "movingAverage50": "37.83",
     "movingAverage200": "39.42",
     "fetchedAt": "2026-09-23T02:08:28.217Z"
+  },
+  "Micron": {
+    "provider": "Alpha Vantage",
+    "symbol": "MU",
+    "name": "Micron Technology Inc",
+    "currency": "USD",
+    "price": "1071.8800",
+    "changePercent": "-2.2150",
+    "latestTradingDay": "2026-09-23",
+    "marketCapitalization": "1237995618000",
+    "peRatio": "23.58",
+    "week52High": "1254.81",
+    "week52Low": "154.4",
+    "movingAverage50": "931.73",
+    "movingAverage200": "648.48",
+    "fetchedAt": "2026-09-24T02:04:49.983Z"
   }
 }

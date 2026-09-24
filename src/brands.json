@@ -390,5 +390,12 @@
     "color": "#234291",
     "override": "GeneralMills.svg",
     "marketSymbol": "NYSE:GIS"
+  },
+  "Micron": {
+    "company": "美光科技",
+    "query": "Micron Technology",
+    "color": "#00A9E0",
+    "image": "Micron.png",
+    "marketSymbol": "NASDAQ:MU"
   }
 }
