@@ -397,5 +397,11 @@
     "color": "#00A9E0",
     "image": "Micron.png",
     "marketSymbol": "NASDAQ:MU"
+  },
+  "Costco": {
+    "company": "Costco",
+    "query": "Costco Wholesale",
+    "color": "#E31837",
+    "marketSymbol": "NASDAQ:COST"
   }
 }

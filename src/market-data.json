@@ -1062,5 +1062,21 @@
     "movingAverage50": "931.73",
     "movingAverage200": "648.48",
     "fetchedAt": "2026-09-24T02:04:49.983Z"
+  },
+  "Costco": {
+    "provider": "Alpha Vantage",
+    "symbol": "COST",
+    "name": "Costco Wholesale Corp",
+    "currency": "USD",
+    "price": "896.4800",
+    "changePercent": "-0.9086",
+    "latestTradingDay": "2026-09-24",
+    "marketCapitalization": "401215291000",
+    "peRatio": "45.26",
+    "week52High": "1094.76",
+    "week52Low": "840.35",
+    "movingAverage50": "935.3",
+    "movingAverage200": "960.23",
+    "fetchedAt": "2026-09-25T02:05:09.136Z"
   }
 }
