@@ -403,5 +403,11 @@
     "query": "Costco Wholesale",
     "color": "#E31837",
     "marketSymbol": "NASDAQ:COST"
+  },
+  "Jabil": {
+    "company": "Jabil",
+    "query": "Jabil Inc.",
+    "color": "#007F7B",
+    "marketSymbol": "NYSE:JBL"
   }
 }

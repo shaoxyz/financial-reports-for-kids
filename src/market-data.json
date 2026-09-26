@@ -1078,5 +1078,21 @@
     "movingAverage50": "935.3",
     "movingAverage200": "960.23",
     "fetchedAt": "2026-09-25T02:05:09.136Z"
+  },
+  "Jabil": {
+    "provider": "Alpha Vantage",
+    "symbol": "JBL",
+    "name": "Jabil Circuit Inc",
+    "currency": "USD",
+    "price": "316.7400",
+    "changePercent": "1.9473",
+    "latestTradingDay": "2026-09-25",
+    "marketCapitalization": "32556300000",
+    "peRatio": "38.59",
+    "week52High": "428.84",
+    "week52Low": "189.46",
+    "movingAverage50": "317.41",
+    "movingAverage200": "299.23",
+    "fetchedAt": "2026-09-26T02:07:38.377Z"
   }
 }
