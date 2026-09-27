@@ -409,5 +409,12 @@
     "query": "Jabil Inc.",
     "color": "#007F7B",
     "marketSymbol": "NYSE:JBL"
+  },
+  "Accenture": {
+    "company": "埃森哲",
+    "query": "Accenture plc",
+    "color": "#A100FF",
+    "simpleIcon": "siAccenture",
+    "marketSymbol": "NYSE:ACN"
   }
 }
