@@ -416,5 +416,11 @@
     "color": "#A100FF",
     "simpleIcon": "siAccenture",
     "marketSymbol": "NYSE:ACN"
+  },
+  "Cintas": {
+    "company": "Cintas",
+    "query": "Cintas Corporation",
+    "color": "#005596",
+    "marketSymbol": "NASDAQ:CTAS"
   }
 }

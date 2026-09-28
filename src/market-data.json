@@ -1110,5 +1110,21 @@
     "movingAverage50": "174.7",
     "movingAverage200": "198.43",
     "fetchedAt": "2026-09-27T02:05:39.352Z"
+  },
+  "Cintas": {
+    "provider": "Alpha Vantage",
+    "symbol": "CTAS",
+    "name": "Cintas Corporation",
+    "currency": "USD",
+    "price": "199.9100",
+    "changePercent": "1.1281",
+    "latestTradingDay": "2026-09-25",
+    "marketCapitalization": "79867445000",
+    "peRatio": "39.35",
+    "week52High": "218.6",
+    "week52Low": "160.31",
+    "movingAverage50": "202.4",
+    "movingAverage200": "187.76",
+    "fetchedAt": "2026-09-28T02:07:45.143Z"
   }
 }
