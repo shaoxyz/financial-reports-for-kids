@@ -422,5 +422,11 @@
     "query": "Cintas Corporation",
     "color": "#005596",
     "marketSymbol": "NASDAQ:CTAS"
+  },
+  "VailResorts": {
+    "company": "Vail Resorts",
+    "query": "Vail Resorts, Inc.",
+    "color": "#006241",
+    "marketSymbol": "NYSE:MTN"
   }
 }

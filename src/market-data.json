@@ -1126,5 +1126,21 @@
     "movingAverage50": "202.4",
     "movingAverage200": "187.76",
     "fetchedAt": "2026-09-28T02:07:45.143Z"
+  },
+  "VailResorts": {
+    "provider": "Alpha Vantage",
+    "symbol": "MTN",
+    "name": "Vail Resorts Inc",
+    "currency": "USD",
+    "price": "138.0900",
+    "changePercent": "1.4547",
+    "latestTradingDay": "2026-09-28",
+    "marketCapitalization": "4850080000",
+    "peRatio": "29.85",
+    "week52High": "160.49",
+    "week52Low": "116.69",
+    "movingAverage50": "144.54",
+    "movingAverage200": "137.84",
+    "fetchedAt": "2026-09-29T02:08:01.058Z"
   }
 }
