@@ -1142,5 +1142,21 @@
     "movingAverage50": "144.54",
     "movingAverage200": "137.84",
     "fetchedAt": "2026-09-29T02:08:01.058Z"
+  },
+  "Paychex": {
+    "provider": "Alpha Vantage",
+    "symbol": "PAYX",
+    "name": "Paychex Inc",
+    "currency": "USD",
+    "price": "99.3100",
+    "changePercent": "0.0101",
+    "latestTradingDay": "2026-09-29",
+    "marketCapitalization": "35348861000",
+    "peRatio": "19.7",
+    "week52High": "127.98",
+    "week52Low": "83.5",
+    "movingAverage50": "118.07",
+    "movingAverage200": "104.11",
+    "fetchedAt": "2026-09-30T02:07:58.836Z"
   }
 }

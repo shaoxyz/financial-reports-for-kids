@@ -428,5 +428,12 @@
     "query": "Vail Resorts, Inc.",
     "color": "#006241",
     "marketSymbol": "NYSE:MTN"
+  },
+  "Paychex": {
+    "company": "Paychex",
+    "query": "Paychex, Inc.",
+    "color": "#0067B1",
+    "simpleIcon": "siPaychex",
+    "marketSymbol": "NASDAQ:PAYX"
   }
 }
