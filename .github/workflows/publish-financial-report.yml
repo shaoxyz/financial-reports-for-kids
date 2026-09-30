@@ -1,0 +1,97 @@
+name: Publish financial report
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - publishing/manifest.json
+      - outputs/financial-reports/**
+      - src/**
+      - scripts/**
+      - package*.json
+      - wrangler.ci.jsonc
+      - .github/workflows/publish-financial-report.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financial-report-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: 'true'
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: node --test tests/publish.test.mjs
+      - name: Check required secrets without displaying them
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          AV_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        run: |
+          test -n "$CF_TOKEN" || { echo 'Missing CLOUDFLARE_API_TOKEN'; exit 1; }
+          test -n "$AV_KEY" || { echo 'Missing ALPHA_VANTAGE_API_KEY'; exit 1; }
+      - name: Synchronize brands and reserve one market attempt
+        id: reserve
+        run: |
+          npm run brands
+          node scripts/publish-state.mjs reserve
+      - name: Persist reservation before any market request
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- src/brands.json publishing/market-attempts/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Persist financial report market reservation'
+            git push origin HEAD:main
+          fi
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+      - name: Capture only the manifest company, without force
+        if: steps.reserve.outputs.capture_market == 'true'
+        env:
+          ALPHA_VANTAGE_API_KEY: ${{ secrets.ALPHA_VANTAGE_API_KEY }}
+        run: node scripts/publish-state.mjs capture
+      - name: Persist snapshot and final market receipt
+        id: source
+        run: |
+          git add -- src/market-data.json publishing/market-attempts/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Persist financial report market result'
+            git push origin HEAD:main
+          fi
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Build the exact persisted commit and stamp public assets
+        run: |
+          npm run build
+          git diff --exit-code HEAD --
+          node scripts/publish-version.mjs stamp
+      - name: Upload and deploy a version without changing routes
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PUBLISH_SHA: ${{ steps.source.outputs.sha }}
+        run: node scripts/publish-version.mjs deploy
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: publication-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .wrangler/publication.json
+          include-hidden-files: true
+          if-no-files-found: error

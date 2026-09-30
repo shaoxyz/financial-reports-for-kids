@@ -4,6 +4,8 @@
 
 网站：<https://f.webbx.space>
 
+云端每日发布及手动重试流程见 [publishing/README.md](publishing/README.md)。
+
 ## 本地查看
 
 ```bash

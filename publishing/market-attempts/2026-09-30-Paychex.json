@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-09-30",
+    "slug": "Paychex",
+    "industry": "人力资源、薪酬与福利服务"
+  },
+  "status": "captured",
+  "attemptedAt": "2026-09-30T03:58:47.546Z",
+  "reason": "existing-snapshot",
+  "snapshotFetchedAt": "2026-09-30T02:07:58.836Z",
+  "snapshotSha256": "08b202d7a05a7bd0cd3e8d7e49f348e1bd88eac97e5055684f0fd3fb3e5836bc"
+}

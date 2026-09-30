@@ -11,6 +11,20 @@ const template = readFileSync(join(root, "src/index.html"), "utf8");
 const brands = JSON.parse(readFileSync(join(root, "src/brands.json"), "utf8"));
 const marketDataFile = join(root, "src/market-data.json");
 const marketData = existsSync(marketDataFile) ? JSON.parse(readFileSync(marketDataFile, "utf8")) : {};
+const publicationMetadata = new Map();
+const receiptsDir = join(root, "publishing/market-attempts");
+if (existsSync(receiptsDir)) {
+  for (const file of readdirSync(receiptsDir).filter((name) => name.endsWith(".json"))) {
+    const receipt = JSON.parse(readFileSync(join(receiptsDir, file), "utf8"));
+    publicationMetadata.set(`${receipt.manifest.date}-${receipt.manifest.slug}`, receipt);
+  }
+}
+const manifestFile = join(root, "publishing/manifest.json");
+if (existsSync(manifestFile)) {
+  const manifest = JSON.parse(readFileSync(manifestFile, "utf8"));
+  const id = `${manifest.date}-${manifest.slug}`;
+  if (!publicationMetadata.has(id)) publicationMetadata.set(id, { manifest });
+}
 
 const companyNames = {
   NVIDIA: "英伟达",
@@ -358,13 +372,17 @@ const reports = files.map((file) => {
   brand.company = companyNames[slug] || brand.company;
   const logo = inlineLogo(slug, brand);
   const branded = addBrandHeader(html, brand, date, logo);
-  const withMarket = addMarketSnapshot(branded, brand, marketData[slug]);
+  const publication = publicationMetadata.get(`${date}-${slug}`);
+  const unavailable = publication?.status === "unavailable";
+  const withMarket = unavailable
+    ? branded.replace("</body>", `<aside data-market-status="unavailable" role="note" style="margin:24px;padding:20px;border:1px solid #d7dce5;border-radius:16px"><h2>本篇行情快照暂缺</h2><p>本次未取得可用的行情数据，因此未展示价格、市值或估值快照。财报分析依据文中列出的官方资料。</p></aside></body>`)
+    : addMarketSnapshot(branded, brand, marketData[slug]);
   writeFileSync(join(reportDir, file), addDiscussionDrawer(withMarket, brand, date, slug, title));
   return {
     date,
     slug,
     company: brand.company,
-    industry: industries[slug] || "商业与财报",
+    industry: publication?.manifest?.industry || industries[slug] || "商业与财报",
     title,
     headline,
     brandColor: brand.color,
@@ -375,9 +393,9 @@ const reports = files.map((file) => {
 });
 
 const cards = reports.map((report, index) => `
-  <article class="report${index === 0 ? " latest" : ""}" style="--brand:${report.brandColor};--brand-text:${report.brandText}" data-search="${clean(`${report.company} ${report.industry} ${report.title}`).toLowerCase()}">
+  <article class="report${index === 0 ? " latest" : ""}" style="--brand:${report.brandColor};--brand-text:${report.brandText}" data-search="${escapeXml(clean(`${report.company} ${report.industry} ${report.title}`).toLowerCase())}">
     <a href="${report.href}" aria-label="阅读 ${report.company} 财报">
-      <div class="report-top"><time datetime="${report.date}">${report.date.replaceAll("-", ".")}</time><span>${report.industry}</span></div>
+      <div class="report-top"><time datetime="${report.date}">${report.date.replaceAll("-", ".")}</time><span>${escapeXml(report.industry)}</span></div>
       <div class="report-brand">${report.logo}</div>
       <h2>${report.company}</h2>
       <p>${report.headline}</p>

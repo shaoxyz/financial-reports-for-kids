@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "financial-reports-for-kids",
+  "account_id": "8eebcbe6c5b866b8c91ad391013d95a0",
+  "compatibility_date": "2026-08-11",
+  "send_metrics": false,
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

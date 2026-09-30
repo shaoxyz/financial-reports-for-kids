@@ -50,7 +50,7 @@ const request = async (fn) => {
   url.searchParams.set("function", fn);
   url.searchParams.set("symbol", symbol);
   url.searchParams.set("apikey", apiKey);
-  const response = await fetch(url);
+  const response = await fetch(url, { signal: AbortSignal.timeout(30000) });
   if (!response.ok) throw new Error(`Alpha Vantage ${fn} 请求失败：HTTP ${response.status}`);
   const json = await response.json();
   const error = json.Note || json.Information || json["Error Message"];
