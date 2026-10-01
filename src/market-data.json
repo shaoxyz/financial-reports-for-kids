@@ -1158,5 +1158,21 @@
     "movingAverage50": "118.07",
     "movingAverage200": "104.11",
     "fetchedAt": "2026-09-30T02:07:58.836Z"
+  },
+  "Conagra": {
+    "provider": "Alpha Vantage",
+    "symbol": "CAG",
+    "name": "Conagra Brands, Inc.",
+    "currency": "USD",
+    "price": "13.4400",
+    "changePercent": "-4.8832",
+    "latestTradingDay": "2026-09-30",
+    "marketCapitalization": "6762132000",
+    "peRatio": "None",
+    "week52High": "19.6",
+    "week52Low": "12.39",
+    "movingAverage50": "15.25",
+    "movingAverage200": "15.67",
+    "fetchedAt": "2026-10-01T02:17:23.425Z"
   }
 }

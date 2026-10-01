@@ -6,7 +6,9 @@
     "slug": "Conagra",
     "industry": "品牌包装食品与冷冻食品"
   },
-  "status": "reserved",
+  "status": "captured",
   "attemptedAt": "2026-10-01T02:17:20.475Z",
-  "reason": "new-attempt"
+  "reason": "api-snapshot",
+  "snapshotFetchedAt": "2026-10-01T02:17:23.425Z",
+  "snapshotSha256": "ed4984c080e50e5c3bbd62d5176fb0fb9079e1c8e5b8eb8547d506c06b2b558b"
 }
