@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-01",
+    "slug": "Conagra",
+    "industry": "品牌包装食品与冷冻食品"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-01T02:17:20.475Z",
+  "reason": "new-attempt"
+}
