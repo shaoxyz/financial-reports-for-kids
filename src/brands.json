@@ -441,5 +441,10 @@
     "query": "Conagra Brands Inc",
     "color": "#8A2834",
     "marketSymbol": "NYSE:CAG"
+  },
+  "FactSet": {
+    "company": "FactSet",
+    "query": "FactSet Research Systems Inc.",
+    "marketSymbol": "NYSE:FDS"
   }
 }
