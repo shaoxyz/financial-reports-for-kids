@@ -6,7 +6,9 @@
     "slug": "FactSet",
     "industry": "金融数据与分析订阅服务"
   },
-  "status": "reserved",
+  "status": "captured",
   "attemptedAt": "2026-10-02T02:08:48.115Z",
-  "reason": "new-attempt"
+  "reason": "api-snapshot",
+  "snapshotFetchedAt": "2026-10-02T02:08:51.260Z",
+  "snapshotSha256": "e4f05b4172b435f3d102cd95740ba1f8f3d227af057d26e539029d7ee1a3daf2"
 }

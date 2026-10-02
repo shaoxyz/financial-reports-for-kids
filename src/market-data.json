@@ -1174,5 +1174,21 @@
     "movingAverage50": "15.25",
     "movingAverage200": "15.67",
     "fetchedAt": "2026-10-01T02:17:23.425Z"
+  },
+  "FactSet": {
+    "provider": "Alpha Vantage",
+    "symbol": "FDS",
+    "name": "FactSet Research Systems Inc",
+    "currency": "USD",
+    "price": "277.6100",
+    "changePercent": "2.8376",
+    "latestTradingDay": "2026-10-01",
+    "marketCapitalization": "9600919000",
+    "peRatio": "17.78",
+    "week52High": "320.48",
+    "week52Low": "182.47",
+    "movingAverage50": "281.06",
+    "movingAverage200": "249.4",
+    "fetchedAt": "2026-10-02T02:08:51.260Z"
   }
 }
