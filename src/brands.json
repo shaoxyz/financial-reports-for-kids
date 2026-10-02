@@ -445,6 +445,7 @@
   "FactSet": {
     "company": "FactSet",
     "query": "FactSet Research Systems Inc.",
+    "color": "hsl(142 64% 42%)",
     "marketSymbol": "NYSE:FDS"
   }
 }

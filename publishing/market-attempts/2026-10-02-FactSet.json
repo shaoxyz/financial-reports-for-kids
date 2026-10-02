@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-02",
+    "slug": "FactSet",
+    "industry": "金融数据与分析订阅服务"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-02T02:08:48.115Z",
+  "reason": "new-attempt"
+}
