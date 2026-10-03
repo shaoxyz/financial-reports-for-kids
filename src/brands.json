@@ -447,5 +447,10 @@
     "query": "FactSet Research Systems Inc.",
     "color": "hsl(142 64% 42%)",
     "marketSymbol": "NYSE:FDS"
+  },
+  "Acuity": {
+    "company": "Acuity Inc.",
+    "query": "Acuity Inc.",
+    "marketSymbol": "NYSE:AYI"
   }
 }
