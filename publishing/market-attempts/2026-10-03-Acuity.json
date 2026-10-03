@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-03",
+    "slug": "Acuity",
+    "industry": "照明与智能空间技术"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-03T02:18:14.883Z",
+  "reason": "new-attempt"
+}

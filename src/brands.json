@@ -451,6 +451,7 @@
   "Acuity": {
     "company": "Acuity Inc.",
     "query": "Acuity Inc.",
+    "color": "hsl(83 64% 42%)",
     "marketSymbol": "NYSE:AYI"
   }
 }
