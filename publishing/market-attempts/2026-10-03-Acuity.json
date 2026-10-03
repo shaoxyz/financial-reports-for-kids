@@ -6,7 +6,9 @@
     "slug": "Acuity",
     "industry": "照明与智能空间技术"
   },
-  "status": "reserved",
+  "status": "captured",
   "attemptedAt": "2026-10-03T02:18:14.883Z",
-  "reason": "new-attempt"
+  "reason": "api-snapshot",
+  "snapshotFetchedAt": "2026-10-03T02:18:17.783Z",
+  "snapshotSha256": "eb6738a8e31a3b3cac8d2704416a336ebfc1228f4c7b56577c751f87f0042efe"
 }

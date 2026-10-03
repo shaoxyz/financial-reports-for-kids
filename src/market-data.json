@@ -1190,5 +1190,21 @@
     "movingAverage50": "281.06",
     "movingAverage200": "249.4",
     "fetchedAt": "2026-10-02T02:08:51.260Z"
+  },
+  "Acuity": {
+    "provider": "Alpha Vantage",
+    "symbol": "AYI",
+    "name": "Acuity Brands Inc",
+    "currency": "USD",
+    "price": "308.7600",
+    "changePercent": "3.1676",
+    "latestTradingDay": "2026-10-02",
+    "marketCapitalization": "8959111000",
+    "peRatio": "19.79",
+    "week52High": "379.43",
+    "week52Low": "256.71",
+    "movingAverage50": "331.37",
+    "movingAverage200": "314.74",
+    "fetchedAt": "2026-10-03T02:18:17.783Z"
   }
 }
