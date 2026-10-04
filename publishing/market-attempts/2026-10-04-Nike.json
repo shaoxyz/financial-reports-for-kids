@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-04",
+    "slug": "Nike",
+    "industry": "运动鞋服与品牌零售"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-04T02:18:51.183Z",
+  "reason": "new-attempt"
+}
