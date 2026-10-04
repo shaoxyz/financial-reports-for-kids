@@ -6,7 +6,9 @@
     "slug": "Nike",
     "industry": "运动鞋服与品牌零售"
   },
-  "status": "reserved",
+  "status": "captured",
   "attemptedAt": "2026-10-04T02:18:51.183Z",
-  "reason": "new-attempt"
+  "reason": "api-snapshot",
+  "snapshotFetchedAt": "2026-10-04T02:18:54.179Z",
+  "snapshotSha256": "e68626c8f8ca635ec69c430212d2e9bed8e518601200b2ddc7a1714d3b2047f3"
 }
