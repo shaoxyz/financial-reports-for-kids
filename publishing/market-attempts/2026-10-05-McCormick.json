@@ -6,7 +6,9 @@
     "slug": "McCormick",
     "industry": "香辛料、调味品与风味解决方案"
   },
-  "status": "reserved",
+  "status": "captured",
   "attemptedAt": "2026-10-05T02:13:24.050Z",
-  "reason": "new-attempt"
+  "reason": "api-snapshot",
+  "snapshotFetchedAt": "2026-10-05T02:13:26.812Z",
+  "snapshotSha256": "e4829ef6525b41d1b5951a56fa9391f51fc4159fb989af7a9d887fa382c94304"
 }

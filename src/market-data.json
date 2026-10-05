@@ -1204,5 +1204,21 @@
     "movingAverage50": "331.37",
     "movingAverage200": "314.74",
     "fetchedAt": "2026-10-03T02:18:17.783Z"
+  },
+  "McCormick": {
+    "provider": "Alpha Vantage",
+    "symbol": "MKC",
+    "name": "McCormick & Company Incorporated",
+    "currency": "USD",
+    "price": "44.6700",
+    "changePercent": "1.2007",
+    "latestTradingDay": "2026-10-02",
+    "marketCapitalization": "12019110000",
+    "peRatio": "7.43",
+    "week52High": "71.13",
+    "week52Low": "43.25",
+    "movingAverage50": "51.68",
+    "movingAverage200": "55.51",
+    "fetchedAt": "2026-10-05T02:13:26.812Z"
   }
 }
