@@ -453,5 +453,10 @@
     "query": "Acuity Inc.",
     "color": "hsl(83 64% 42%)",
     "marketSymbol": "NYSE:AYI"
+  },
+  "McCormick": {
+    "company": "味好美 McCormick",
+    "query": "McCormick & Company, Incorporated",
+    "marketSymbol": "NYSE:MKC"
   }
 }
