@@ -457,6 +457,7 @@
   "McCormick": {
     "company": "味好美 McCormick",
     "query": "McCormick & Company, Incorporated",
+    "color": "hsl(324 64% 42%)",
     "marketSymbol": "NYSE:MKC"
   }
 }
