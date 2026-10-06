@@ -6,7 +6,9 @@
     "slug": "Concentrix",
     "industry": "客户体验与科技服务"
   },
-  "status": "reserved",
+  "status": "captured",
   "attemptedAt": "2026-10-06T02:14:05.419Z",
-  "reason": "new-attempt"
+  "reason": "api-snapshot",
+  "snapshotFetchedAt": "2026-10-06T02:14:08.637Z",
+  "snapshotSha256": "6cec9139b916c9df65349bb5d4f26622a5aefc1ceb442e7440f193c0f1267fe5"
 }

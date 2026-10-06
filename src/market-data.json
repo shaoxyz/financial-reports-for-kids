@@ -1220,5 +1220,21 @@
     "movingAverage50": "51.68",
     "movingAverage200": "55.51",
     "fetchedAt": "2026-10-05T02:13:26.812Z"
+  },
+  "Concentrix": {
+    "provider": "Alpha Vantage",
+    "symbol": "CNXC",
+    "name": "Concentrix Corporation",
+    "currency": "USD",
+    "price": "25.8700",
+    "changePercent": "3.8539",
+    "latestTradingDay": "2026-10-05",
+    "marketCapitalization": "1518215000",
+    "peRatio": "None",
+    "week52High": "47.1",
+    "week52Low": "18.81",
+    "movingAverage50": "26.99",
+    "movingAverage200": "29.79",
+    "fetchedAt": "2026-10-06T02:14:08.637Z"
   }
 }
