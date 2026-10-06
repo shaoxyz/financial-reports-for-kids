@@ -459,5 +459,10 @@
     "query": "McCormick & Company, Incorporated",
     "color": "hsl(324 64% 42%)",
     "marketSymbol": "NYSE:MKC"
+  },
+  "Concentrix": {
+    "company": "Concentrix",
+    "query": "Concentrix Corporation",
+    "marketSymbol": "NASDAQ:CNXC"
   }
 }
