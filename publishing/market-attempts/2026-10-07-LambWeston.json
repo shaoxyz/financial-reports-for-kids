@@ -6,7 +6,7 @@
     "slug": "LambWeston",
     "industry": "冷冻薯制品"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-07T02:11:48.955Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
