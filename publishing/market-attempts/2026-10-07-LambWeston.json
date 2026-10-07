@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-07",
+    "slug": "LambWeston",
+    "industry": "冷冻薯制品"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-07T02:11:48.955Z",
+  "reason": "new-attempt"
+}
