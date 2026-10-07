@@ -465,5 +465,12 @@
     "query": "Concentrix Corporation",
     "color": "hsl(71 64% 42%)",
     "marketSymbol": "NASDAQ:CNXC"
+  },
+  "LambWeston": {
+    "company": "Lamb Weston",
+    "query": "Lamb Weston Holdings, Inc.",
+    "color": "#144B3B",
+    "marketSymbol": "NYSE:LW",
+    "dataSymbol": "LW"
   }
 }
