@@ -6,7 +6,7 @@
     "slug": "RPM",
     "industry": "特种涂料与建筑材料"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-08T02:07:48.764Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
