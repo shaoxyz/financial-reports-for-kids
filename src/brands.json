@@ -472,5 +472,12 @@
     "color": "#144B3B",
     "marketSymbol": "NYSE:LW",
     "dataSymbol": "LW"
+  },
+  "RPM": {
+    "company": "RPM International",
+    "query": "RPM International Inc.",
+    "color": "#122D4E",
+    "marketSymbol": "NYSE:RPM",
+    "dataSymbol": "RPM"
   }
 }
