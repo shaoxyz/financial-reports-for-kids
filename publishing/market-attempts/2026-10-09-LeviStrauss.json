@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-09",
+    "slug": "LeviStrauss",
+    "industry": "品牌服饰与零售"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-09T02:06:22.830Z",
+  "reason": "new-attempt"
+}
