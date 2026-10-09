@@ -6,7 +6,7 @@
     "slug": "LeviStrauss",
     "industry": "品牌服饰与零售"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-09T02:06:22.830Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
