@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-10",
+    "slug": "DeltaAirLines",
+    "industry": "航空运输"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-10T02:07:42.177Z",
+  "reason": "new-attempt"
+}
