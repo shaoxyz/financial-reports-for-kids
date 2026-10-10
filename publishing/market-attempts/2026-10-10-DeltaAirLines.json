@@ -6,7 +6,7 @@
     "slug": "DeltaAirLines",
     "industry": "航空运输"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-10T02:07:42.177Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
