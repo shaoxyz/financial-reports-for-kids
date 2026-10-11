@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-11",
+    "slug": "PepsiCo",
+    "industry": "食品饮料"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-11T02:13:10.020Z",
+  "reason": "new-attempt"
+}
