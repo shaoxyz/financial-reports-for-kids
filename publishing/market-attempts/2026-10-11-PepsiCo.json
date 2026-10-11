@@ -6,7 +6,7 @@
     "slug": "PepsiCo",
     "industry": "食品饮料"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-11T02:13:10.020Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
