@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-12",
+    "slug": "TDSynnex",
+    "industry": "科技分销与基础设施制造"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-12T02:16:00.034Z",
+  "reason": "new-attempt"
+}
