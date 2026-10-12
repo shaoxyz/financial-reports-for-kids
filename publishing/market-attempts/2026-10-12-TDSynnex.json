@@ -6,7 +6,7 @@
     "slug": "TDSynnex",
     "industry": "科技分销与基础设施制造"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-12T02:16:00.034Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
