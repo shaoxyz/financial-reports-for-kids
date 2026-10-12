@@ -486,5 +486,12 @@
     "color": "#A71930",
     "marketSymbol": "NYSE:LEVI",
     "dataSymbol": "LEVI"
+  },
+  "TDSynnex": {
+    "company": "TD SYNNEX",
+    "query": "TD SYNNEX Corporation",
+    "color": "#006B67",
+    "marketSymbol": "NYSE:SNX",
+    "dataSymbol": "SNX"
   }
 }
