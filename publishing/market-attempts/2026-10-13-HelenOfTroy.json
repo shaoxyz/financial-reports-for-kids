@@ -6,7 +6,7 @@
     "slug": "HelenOfTroy",
     "industry": "家居户外与美容健康消费品"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-13T02:16:56.624Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
