@@ -493,5 +493,12 @@
     "color": "#006B67",
     "marketSymbol": "NYSE:SNX",
     "dataSymbol": "SNX"
+  },
+  "HelenOfTroy": {
+    "company": "Helen of Troy",
+    "query": "Helen of Troy Limited",
+    "color": "#594371",
+    "marketSymbol": "NASDAQ:HELE",
+    "dataSymbol": "HELE"
   }
 }
