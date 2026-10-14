@@ -500,5 +500,12 @@
     "color": "#594371",
     "marketSymbol": "NASDAQ:HELE",
     "dataSymbol": "HELE"
+  },
+  "DominosPizza": {
+    "company": "Domino’s Pizza 达美乐",
+    "query": "Domino's Pizza, Inc.",
+    "color": "#005C84",
+    "marketSymbol": "NASDAQ:DPZ",
+    "dataSymbol": "DPZ"
   }
 }
