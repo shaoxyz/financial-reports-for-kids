@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-14",
+    "slug": "DominosPizza",
+    "industry": "披萨连锁加盟与食品供应链"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-14T02:12:01.113Z",
+  "reason": "new-attempt"
+}
