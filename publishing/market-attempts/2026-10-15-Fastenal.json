@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-15",
+    "slug": "Fastenal",
+    "industry": "工业用品分销与库存管理"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-15T02:07:16.008Z",
+  "reason": "new-attempt"
+}
