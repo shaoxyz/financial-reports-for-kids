@@ -507,5 +507,12 @@
     "color": "#005C84",
     "marketSymbol": "NASDAQ:DPZ",
     "dataSymbol": "DPZ"
+  },
+  "Fastenal": {
+    "company": "Fastenal",
+    "query": "Fastenal Company",
+    "color": "#005696",
+    "marketSymbol": "NASDAQ:FAST",
+    "dataSymbol": "FAST"
   }
 }
