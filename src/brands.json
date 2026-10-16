@@ -514,5 +514,12 @@
     "color": "#005696",
     "marketSymbol": "NASDAQ:FAST",
     "dataSymbol": "FAST"
+  },
+  "JBHunt": {
+    "company": "J.B. Hunt",
+    "query": "J.B. Hunt Transport Services, Inc.",
+    "color": "#F5CC22",
+    "marketSymbol": "NASDAQ:JBHT",
+    "dataSymbol": "JBHT"
   }
 }
