@@ -6,7 +6,7 @@
     "slug": "JBHunt",
     "industry": "多式联运与货运物流"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-16T02:11:25.046Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
