@@ -6,7 +6,7 @@
     "slug": "Abbott",
     "industry": "医疗器械与诊断及营养健康"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-17T02:13:00.903Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
