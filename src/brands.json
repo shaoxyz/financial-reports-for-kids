@@ -521,5 +521,12 @@
     "color": "#F5CC22",
     "marketSymbol": "NASDAQ:JBHT",
     "dataSymbol": "JBHT"
+  },
+  "Abbott": {
+    "company": "雅培 Abbott",
+    "query": "Abbott Laboratories",
+    "color": "#009CDE",
+    "marketSymbol": "NYSE:ABT",
+    "dataSymbol": "ABT"
   }
 }
