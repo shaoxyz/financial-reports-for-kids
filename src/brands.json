@@ -526,6 +526,7 @@
     "company": "雅培 Abbott",
     "query": "Abbott Laboratories",
     "color": "#009CDE",
+    "simpleIcon": "siAbbott",
     "marketSymbol": "NYSE:ABT",
     "dataSymbol": "ABT"
   }
