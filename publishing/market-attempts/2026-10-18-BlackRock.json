@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-18",
+    "slug": "BlackRock",
+    "industry": "资产管理与金融科技"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-18T02:07:43.513Z",
+  "reason": "new-attempt"
+}
