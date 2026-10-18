@@ -6,7 +6,7 @@
     "slug": "BlackRock",
     "industry": "资产管理与金融科技"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-18T02:07:43.513Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
