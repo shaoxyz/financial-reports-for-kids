@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-19",
+    "slug": "AppliedMaterials",
+    "industry": "半导体设备与服务"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-19T02:14:58.504Z",
+  "reason": "new-attempt"
+}
