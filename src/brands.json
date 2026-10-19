@@ -536,5 +536,12 @@
     "color": "#000000",
     "marketSymbol": "NYSE:BLK",
     "dataSymbol": "BLK"
+  },
+  "AppliedMaterials": {
+    "company": "应用材料",
+    "query": "Applied Materials",
+    "color": "#006EAA",
+    "marketSymbol": "NASDAQ:AMAT",
+    "dataSymbol": "AMAT"
   }
 }
