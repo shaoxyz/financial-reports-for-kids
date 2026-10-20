@@ -543,5 +543,12 @@
     "color": "#006EAA",
     "marketSymbol": "NASDAQ:AMAT",
     "dataSymbol": "AMAT"
+  },
+  "Albertsons": {
+    "company": "Albertsons",
+    "query": "Albertsons Companies, Inc.",
+    "color": "#005A8B",
+    "marketSymbol": "NYSE:ACI",
+    "dataSymbol": "ACI"
   }
 }
