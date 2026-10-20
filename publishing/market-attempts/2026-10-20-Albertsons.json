@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-20",
+    "slug": "Albertsons",
+    "industry": "食品与药品零售"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-20T02:10:09.659Z",
+  "reason": "new-attempt"
+}
