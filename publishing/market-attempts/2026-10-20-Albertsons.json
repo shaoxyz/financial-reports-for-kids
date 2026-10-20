@@ -6,7 +6,7 @@
     "slug": "Albertsons",
     "industry": "食品与药品零售"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-20T02:10:09.659Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
