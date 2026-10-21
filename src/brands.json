@@ -550,5 +550,12 @@
     "color": "#005A8B",
     "marketSymbol": "NYSE:ACI",
     "dataSymbol": "ACI"
+  },
+  "Netflix": {
+    "company": "Netflix",
+    "query": "Netflix, Inc.",
+    "color": "#E50914",
+    "marketSymbol": "NASDAQ:NFLX",
+    "dataSymbol": "NFLX"
   }
 }
