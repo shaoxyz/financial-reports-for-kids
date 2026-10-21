@@ -6,7 +6,7 @@
     "slug": "Netflix",
     "industry": "流媒体与数字娱乐"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-21T02:06:29.662Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
