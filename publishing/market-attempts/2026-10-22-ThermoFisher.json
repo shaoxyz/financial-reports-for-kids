@@ -6,7 +6,7 @@
     "slug": "ThermoFisher",
     "industry": "生命科学工具与实验室服务"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-22T02:08:50.641Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
