@@ -558,5 +558,12 @@
     "simpleIcon": "siNetflix",
     "marketSymbol": "NASDAQ:NFLX",
     "dataSymbol": "NFLX"
+  },
+  "ThermoFisher": {
+    "company": "赛默飞",
+    "query": "Thermo Fisher Scientific",
+    "color": "#C32032",
+    "marketSymbol": "NYSE:TMO",
+    "dataSymbol": "TMO"
   }
 }
