@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-22",
+    "slug": "ThermoFisher",
+    "industry": "生命科学工具与实验室服务"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-22T02:08:50.641Z",
+  "reason": "new-attempt"
+}
