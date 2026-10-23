@@ -565,5 +565,12 @@
     "color": "#C32032",
     "marketSymbol": "NYSE:TMO",
     "dataSymbol": "TMO"
+  },
+  "UnionPacific": {
+    "company": "联合太平洋铁路",
+    "query": "Union Pacific Corporation",
+    "color": "#073663",
+    "marketSymbol": "NYSE:UNP",
+    "dataSymbol": "UNP"
   }
 }
