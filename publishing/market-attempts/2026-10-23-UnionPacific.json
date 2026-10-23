@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-23",
+    "slug": "UnionPacific",
+    "industry": "铁路货运"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-23T02:11:45.192Z",
+  "reason": "new-attempt"
+}
