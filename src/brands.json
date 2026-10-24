@@ -572,5 +572,12 @@
     "color": "#073663",
     "marketSymbol": "NYSE:UNP",
     "dataSymbol": "UNP"
+  },
+  "ThreeM": {
+    "company": "3M",
+    "query": "3M Company",
+    "color": "#CC0000",
+    "marketSymbol": "NYSE:MMM",
+    "dataSymbol": "MMM"
   }
 }
