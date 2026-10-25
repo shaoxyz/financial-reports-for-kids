@@ -142,7 +142,8 @@
     "company": "宝洁",
     "query": "Procter & Gamble",
     "color": "#003DA5",
-    "marketSymbol": "NYSE:PG"
+    "marketSymbol": "NYSE:PG",
+    "dataSymbol": "PG"
   },
   "McDonalds": {
     "company": "麦当劳",
