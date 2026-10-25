@@ -6,7 +6,7 @@
     "slug": "ProcterAndGamble",
     "industry": "日化消费品"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-25T02:05:53.975Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
