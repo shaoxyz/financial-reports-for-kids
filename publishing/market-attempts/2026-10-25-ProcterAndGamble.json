@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-25",
+    "slug": "ProcterAndGamble",
+    "industry": "日化消费品"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-25T02:05:53.975Z",
+  "reason": "new-attempt"
+}
