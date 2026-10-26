@@ -6,7 +6,7 @@
     "slug": "LockheedMartin",
     "industry": "航空航天与国防"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-26T02:14:10.173Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
