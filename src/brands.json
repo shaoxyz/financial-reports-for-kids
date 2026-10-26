@@ -580,5 +580,12 @@
     "color": "#CC0000",
     "marketSymbol": "NYSE:MMM",
     "dataSymbol": "MMM"
+  },
+  "LockheedMartin": {
+    "company": "洛克希德·马丁",
+    "query": "Lockheed Martin Corporation",
+    "color": "#006B9B",
+    "marketSymbol": "NYSE:LMT",
+    "dataSymbol": "LMT"
   }
 }
