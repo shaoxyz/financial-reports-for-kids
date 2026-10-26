@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-26",
+    "slug": "LockheedMartin",
+    "industry": "航空航天与国防"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-26T02:14:10.173Z",
+  "reason": "new-attempt"
+}
