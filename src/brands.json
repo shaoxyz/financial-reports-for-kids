@@ -587,5 +587,12 @@
     "color": "#006B9B",
     "marketSymbol": "NYSE:LMT",
     "dataSymbol": "LMT"
+  },
+  "Verizon": {
+    "company": "Verizon",
+    "query": "Verizon Communications Inc.",
+    "color": "#C8102E",
+    "marketSymbol": "NYSE:VZ",
+    "dataSymbol": "VZ"
   }
 }
