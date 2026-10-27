@@ -6,7 +6,7 @@
     "slug": "Verizon",
     "industry": "电信与宽带"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-27T02:14:42.009Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
