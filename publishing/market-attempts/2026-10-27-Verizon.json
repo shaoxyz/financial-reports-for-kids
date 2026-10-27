@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-27",
+    "slug": "Verizon",
+    "industry": "电信与宽带"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-27T02:14:42.009Z",
+  "reason": "new-attempt"
+}
