@@ -595,5 +595,12 @@
     "simpleIcon": "siVerizon",
     "marketSymbol": "NYSE:VZ",
     "dataSymbol": "VZ"
+  },
+  "WasteManagement": {
+    "company": "WM 废物管理",
+    "query": "Waste Management, Inc.",
+    "color": "#174B35",
+    "marketSymbol": "NYSE:WM",
+    "dataSymbol": "WM"
   }
 }
