@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-28",
+    "slug": "WasteManagement",
+    "industry": "环境服务与废物管理"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-28T02:07:39.820Z",
+  "reason": "new-attempt"
+}
