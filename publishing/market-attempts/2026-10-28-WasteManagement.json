@@ -6,7 +6,7 @@
     "slug": "WasteManagement",
     "industry": "环境服务与废物管理"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-28T02:07:39.820Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
