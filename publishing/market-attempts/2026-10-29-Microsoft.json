@@ -6,7 +6,7 @@
     "slug": "Microsoft",
     "industry": "企业软件与云计算"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-29T02:15:19.574Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
