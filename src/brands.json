@@ -602,5 +602,12 @@
     "color": "#174B35",
     "marketSymbol": "NYSE:WM",
     "dataSymbol": "WM"
+  },
+  "Caterpillar": {
+    "company": "卡特彼勒",
+    "query": "Caterpillar Inc.",
+    "color": "#FFCD11",
+    "marketSymbol": "NYSE:CAT",
+    "dataSymbol": "CAT"
   }
 }
