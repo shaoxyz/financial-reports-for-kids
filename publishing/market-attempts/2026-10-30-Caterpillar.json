@@ -6,7 +6,7 @@
     "slug": "Caterpillar",
     "industry": "工程机械、矿业装备与动力系统"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-30T02:07:42.775Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
