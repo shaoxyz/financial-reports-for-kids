@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-10-30",
+    "slug": "Caterpillar",
+    "industry": "工程机械、矿业装备与动力系统"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-10-30T02:07:42.775Z",
+  "reason": "new-attempt"
+}
