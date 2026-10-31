@@ -6,7 +6,7 @@
     "slug": "ExxonMobil",
     "industry": "综合油气、炼油与化工"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-10-31T02:08:30.551Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
