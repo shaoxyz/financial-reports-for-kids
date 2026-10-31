@@ -610,5 +610,12 @@
     "simpleIcon": "siCaterpillar",
     "marketSymbol": "NYSE:CAT",
     "dataSymbol": "CAT"
+  },
+  "ExxonMobil": {
+    "company": "埃克森美孚",
+    "query": "ExxonMobil Holdings Corporation",
+    "color": "#D51C2E",
+    "marketSymbol": "NYSE:XOM",
+    "dataSymbol": "XOM"
   }
 }
