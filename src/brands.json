@@ -622,6 +622,7 @@
     "company": "超威半导体",
     "query": "Advanced Micro Devices",
     "color": "#B71923",
+    "simpleIcon": "siAmd",
     "marketSymbol": "NASDAQ:AMD"
   }
 }

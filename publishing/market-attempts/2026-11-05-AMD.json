@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-05",
+    "slug": "AMD",
+    "industry": "半导体设计与计算芯片"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-05T02:14:52.169Z",
+  "reason": "new-attempt"
+}
