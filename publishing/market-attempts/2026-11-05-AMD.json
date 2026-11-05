@@ -6,7 +6,7 @@
     "slug": "AMD",
     "industry": "半导体设计与计算芯片"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-05T02:14:52.169Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
