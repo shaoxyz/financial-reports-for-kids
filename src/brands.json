@@ -617,5 +617,11 @@
     "color": "#D51C2E",
     "marketSymbol": "NYSE:XOM",
     "dataSymbol": "XOM"
+  },
+  "AMD": {
+    "company": "超威半导体",
+    "query": "Advanced Micro Devices",
+    "color": "#B71923",
+    "marketSymbol": "NASDAQ:AMD"
   }
 }
