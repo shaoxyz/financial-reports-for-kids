@@ -624,5 +624,11 @@
     "color": "#B71923",
     "simpleIcon": "siAmd",
     "marketSymbol": "NASDAQ:AMD"
+  },
+  "ELFBeauty": {
+    "company": "e.l.f. Beauty",
+    "query": "e.l.f. Beauty",
+    "color": "#9B3158",
+    "marketSymbol": "NYSE:ELF"
   }
 }
