@@ -6,7 +6,7 @@
     "slug": "ELFBeauty",
     "industry": "彩妆与护肤消费品"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-06T02:11:36.008Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
