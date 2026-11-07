@@ -630,5 +630,12 @@
     "query": "e.l.f. Beauty",
     "color": "#9B3158",
     "marketSymbol": "NYSE:ELF"
+  },
+  "Doximity": {
+    "company": "Doximity",
+    "query": "Doximity, Inc.",
+    "color": "#176AA0",
+    "marketSymbol": "NYSE:DOCS",
+    "dataSymbol": "DOCS"
   }
 }
