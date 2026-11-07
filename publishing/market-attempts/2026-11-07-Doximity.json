@@ -6,7 +6,7 @@
     "slug": "Doximity",
     "industry": "医疗专业人士数字平台"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-07T02:02:57.975Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
