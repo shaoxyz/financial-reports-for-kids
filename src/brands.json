@@ -637,5 +637,12 @@
     "color": "#176AA0",
     "marketSymbol": "NYSE:DOCS",
     "dataSymbol": "DOCS"
+  },
+  "UPS": {
+    "company": "UPS 联合包裹",
+    "query": "United Parcel Service, Inc.",
+    "color": "#4B2B18",
+    "marketSymbol": "NYSE:UPS",
+    "dataSymbol": "UPS"
   }
 }
