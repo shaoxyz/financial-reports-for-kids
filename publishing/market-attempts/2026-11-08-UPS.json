@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-08",
+    "slug": "UPS",
+    "industry": "快递与供应链物流"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-08T02:07:18.774Z",
+  "reason": "new-attempt"
+}

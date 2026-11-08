@@ -642,6 +642,7 @@
     "company": "UPS 联合包裹",
     "query": "United Parcel Service, Inc.",
     "color": "#4B2B18",
+    "simpleIcon": "siUps",
     "marketSymbol": "NYSE:UPS",
     "dataSymbol": "UPS"
   }
