@@ -645,5 +645,12 @@
     "simpleIcon": "siUps",
     "marketSymbol": "NYSE:UPS",
     "dataSymbol": "UPS"
+  },
+  "Pinterest": {
+    "company": "Pinterest",
+    "query": "Pinterest, Inc.",
+    "color": "#A61931",
+    "marketSymbol": "NYSE:PINS",
+    "dataSymbol": "PINS"
   }
 }
