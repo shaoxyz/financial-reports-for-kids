@@ -650,6 +650,7 @@
     "company": "Pinterest",
     "query": "Pinterest, Inc.",
     "color": "#A61931",
+    "simpleIcon": "siPinterest",
     "marketSymbol": "NYSE:PINS",
     "dataSymbol": "PINS"
   }

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-09",
+    "slug": "Pinterest",
+    "industry": "视觉搜索与数字广告"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-09T02:09:18.864Z",
+  "reason": "new-attempt"
+}
