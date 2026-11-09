@@ -6,7 +6,7 @@
     "slug": "Pinterest",
     "industry": "视觉搜索与数字广告"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-09T02:09:18.864Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
