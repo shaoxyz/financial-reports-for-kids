@@ -6,7 +6,7 @@
     "slug": "HFFoods",
     "industry": "亚洲餐饮食材分销"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-10T02:11:23.874Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
