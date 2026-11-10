@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-10",
+    "slug": "HFFoods",
+    "industry": "亚洲餐饮食材分销"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-10T02:11:23.874Z",
+  "reason": "new-attempt"
+}
