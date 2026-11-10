@@ -653,5 +653,12 @@
     "simpleIcon": "siPinterest",
     "marketSymbol": "NYSE:PINS",
     "dataSymbol": "PINS"
+  },
+  "HFFoods": {
+    "company": "HF Foods",
+    "query": "HF Foods Group Inc.",
+    "color": "#215744",
+    "marketSymbol": "NASDAQ:HFFG",
+    "dataSymbol": "HFFG"
   }
 }
