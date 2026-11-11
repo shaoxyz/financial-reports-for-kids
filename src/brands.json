@@ -660,5 +660,12 @@
     "color": "#215744",
     "marketSymbol": "NASDAQ:HFFG",
     "dataSymbol": "HFFG"
+  },
+  "RocketLab": {
+    "company": "Rocket Lab",
+    "query": "Rocket Lab Corporation",
+    "color": "#132D46",
+    "marketSymbol": "NASDAQ:RKLB",
+    "dataSymbol": "RKLB"
   }
 }
