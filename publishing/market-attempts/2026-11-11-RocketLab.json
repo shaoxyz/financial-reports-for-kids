@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-11",
+    "slug": "RocketLab",
+    "industry": "航天发射与空间系统"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-11T02:11:08.577Z",
+  "reason": "new-attempt"
+}
