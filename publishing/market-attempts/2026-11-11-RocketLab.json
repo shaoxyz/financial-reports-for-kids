@@ -6,7 +6,7 @@
     "slug": "RocketLab",
     "industry": "航天发射与空间系统"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-11T02:11:08.577Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
