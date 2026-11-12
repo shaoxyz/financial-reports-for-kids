@@ -672,6 +672,7 @@
     "company": "多邻国 Duolingo",
     "query": "Duolingo, Inc.",
     "color": "#307800",
+    "simpleIcon": "siDuolingo",
     "marketSymbol": "NASDAQ:DUOL",
     "dataSymbol": "DUOL"
   }
