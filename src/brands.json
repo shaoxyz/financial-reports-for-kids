@@ -667,5 +667,12 @@
     "color": "#132D46",
     "marketSymbol": "NASDAQ:RKLB",
     "dataSymbol": "RKLB"
+  },
+  "Duolingo": {
+    "company": "多邻国 Duolingo",
+    "query": "Duolingo, Inc.",
+    "color": "#307800",
+    "marketSymbol": "NASDAQ:DUOL",
+    "dataSymbol": "DUOL"
   }
 }
