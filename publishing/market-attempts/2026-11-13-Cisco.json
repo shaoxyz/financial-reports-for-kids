@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-13",
+    "slug": "Cisco",
+    "industry": "网络设备与企业数字基础设施"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-13T02:12:22.348Z",
+  "reason": "new-attempt"
+}

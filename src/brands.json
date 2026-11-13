@@ -680,6 +680,7 @@
     "company": "思科 Cisco",
     "query": "Cisco Systems, Inc.",
     "color": "#006F9B",
+    "simpleIcon": "siCisco",
     "marketSymbol": "NASDAQ:CSCO",
     "dataSymbol": "CSCO"
   }
