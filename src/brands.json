@@ -675,5 +675,12 @@
     "simpleIcon": "siDuolingo",
     "marketSymbol": "NASDAQ:DUOL",
     "dataSymbol": "DUOL"
+  },
+  "Cisco": {
+    "company": "思科 Cisco",
+    "query": "Cisco Systems, Inc.",
+    "color": "#006F9B",
+    "marketSymbol": "NASDAQ:CSCO",
+    "dataSymbol": "CSCO"
   }
 }
