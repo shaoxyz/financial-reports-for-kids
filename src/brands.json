@@ -683,5 +683,12 @@
     "simpleIcon": "siCisco",
     "marketSymbol": "NASDAQ:CSCO",
     "dataSymbol": "CSCO"
+  },
+  "Dole": {
+    "company": "都乐 Dole",
+    "query": "Dole plc",
+    "color": "#154D38",
+    "marketSymbol": "NYSE:DOLE",
+    "dataSymbol": "DOLE"
   }
 }
