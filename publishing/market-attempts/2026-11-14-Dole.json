@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-14",
+    "slug": "Dole",
+    "industry": "生鲜果蔬生产与分销"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-14T02:07:47.312Z",
+  "reason": "new-attempt"
+}
