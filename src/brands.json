@@ -695,6 +695,7 @@
     "company": "佳明 Garmin",
     "query": "Garmin Ltd.",
     "color": "#00677D",
+    "simpleIcon": "siGarmin",
     "marketSymbol": "NYSE:GRMN",
     "dataSymbol": "GRMN"
   }

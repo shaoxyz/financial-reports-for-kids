@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-15",
+    "slug": "Garmin",
+    "industry": "专业可穿戴与导航电子设备"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-15T02:07:48.736Z",
+  "reason": "new-attempt"
+}
