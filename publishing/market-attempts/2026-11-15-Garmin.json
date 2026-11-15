@@ -6,7 +6,7 @@
     "slug": "Garmin",
     "industry": "专业可穿戴与导航电子设备"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-15T02:07:48.736Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
