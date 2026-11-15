@@ -690,5 +690,12 @@
     "color": "#154D38",
     "marketSymbol": "NYSE:DOLE",
     "dataSymbol": "DOLE"
+  },
+  "Garmin": {
+    "company": "佳明 Garmin",
+    "query": "Garmin Ltd.",
+    "color": "#00677D",
+    "marketSymbol": "NYSE:GRMN",
+    "dataSymbol": "GRMN"
   }
 }
