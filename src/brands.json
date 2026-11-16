@@ -698,5 +698,12 @@
     "simpleIcon": "siGarmin",
     "marketSymbol": "NYSE:GRMN",
     "dataSymbol": "GRMN"
+  },
+  "BookingHoldings": {
+    "company": "Booking Holdings",
+    "query": "Booking Holdings Inc.",
+    "color": "#003B95",
+    "marketSymbol": "NASDAQ:BKNG",
+    "dataSymbol": "BKNG"
   }
 }
