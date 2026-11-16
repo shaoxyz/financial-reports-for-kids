@@ -6,7 +6,7 @@
     "slug": "BookingHoldings",
     "industry": "在线旅游与住宿预订平台"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-16T02:04:28.798Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
