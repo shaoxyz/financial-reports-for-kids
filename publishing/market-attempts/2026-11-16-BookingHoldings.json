@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-16",
+    "slug": "BookingHoldings",
+    "industry": "在线旅游与住宿预订平台"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-16T02:04:28.798Z",
+  "reason": "new-attempt"
+}
