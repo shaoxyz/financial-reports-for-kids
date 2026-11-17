@@ -6,7 +6,7 @@
     "slug": "AECOM",
     "industry": "基础设施咨询与工程服务"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-17T02:04:14.256Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
