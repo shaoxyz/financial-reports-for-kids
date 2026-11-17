@@ -705,5 +705,12 @@
     "color": "#003B95",
     "marketSymbol": "NASDAQ:BKNG",
     "dataSymbol": "BKNG"
+  },
+  "AECOM": {
+    "company": "AECOM",
+    "query": "AECOM",
+    "color": "#00637A",
+    "marketSymbol": "NYSE:ACM",
+    "dataSymbol": "ACM"
   }
 }
