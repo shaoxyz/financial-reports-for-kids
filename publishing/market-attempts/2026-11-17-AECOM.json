@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-17",
+    "slug": "AECOM",
+    "industry": "基础设施咨询与工程服务"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-17T02:04:14.256Z",
+  "reason": "new-attempt"
+}
