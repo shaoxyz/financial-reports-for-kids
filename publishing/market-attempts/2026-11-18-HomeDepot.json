@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-18",
+    "slug": "HomeDepot",
+    "industry": "家居改善零售与专业建材分销"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-18T02:12:37.170Z",
+  "reason": "new-attempt"
+}
