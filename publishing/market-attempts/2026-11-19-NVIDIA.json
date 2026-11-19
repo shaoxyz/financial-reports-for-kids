@@ -6,7 +6,7 @@
     "slug": "NVIDIA",
     "industry": "加速计算与AI基础设施"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-19T02:05:20.690Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
