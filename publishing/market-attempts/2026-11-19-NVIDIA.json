@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-19",
+    "slug": "NVIDIA",
+    "industry": "加速计算与AI基础设施"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-19T02:05:20.690Z",
+  "reason": "new-attempt"
+}
