@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-20",
+    "slug": "Walmart",
+    "industry": "综合零售与全渠道商业"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-20T02:07:09.488Z",
+  "reason": "new-attempt"
+}
