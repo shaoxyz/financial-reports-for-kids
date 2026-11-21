@@ -6,7 +6,7 @@
     "slug": "Intuit",
     "industry": "财税与中小企业软件"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-21T02:04:16.861Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
