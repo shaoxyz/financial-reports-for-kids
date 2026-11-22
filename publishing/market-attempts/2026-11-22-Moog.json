@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-22",
+    "slug": "Moog",
+    "industry": "精密运动控制与航空工业"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-22T02:07:19.022Z",
+  "reason": "new-attempt"
+}
