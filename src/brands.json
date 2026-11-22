@@ -712,5 +712,11 @@
     "color": "#00637A",
     "marketSymbol": "NYSE:ACM",
     "dataSymbol": "ACM"
+  },
+  "Moog": {
+    "company": "Moog Inc.",
+    "query": "Moog Inc.",
+    "color": "#882B36",
+    "marketSymbol": "NYSE:MOG.A"
   }
 }
