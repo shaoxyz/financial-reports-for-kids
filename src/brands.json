@@ -718,5 +718,11 @@
     "query": "Moog Inc.",
     "color": "#882B36",
     "marketSymbol": "NYSE:MOG.A"
+  },
+  "PaloAltoNetworks": {
+    "company": "派拓网络",
+    "query": "Palo Alto Networks Inc.",
+    "color": "#F27D39",
+    "marketSymbol": "NASDAQ:PANW"
   }
 }
