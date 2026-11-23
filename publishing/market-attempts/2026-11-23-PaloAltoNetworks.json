@@ -6,7 +6,7 @@
     "slug": "PaloAltoNetworks",
     "industry": "企业网络安全"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-23T02:02:37.321Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
