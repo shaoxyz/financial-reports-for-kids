@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-23",
+    "slug": "PaloAltoNetworks",
+    "industry": "企业网络安全"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-23T02:02:37.321Z",
+  "reason": "new-attempt"
+}

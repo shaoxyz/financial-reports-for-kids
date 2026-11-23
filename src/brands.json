@@ -723,6 +723,7 @@
     "company": "派拓网络",
     "query": "Palo Alto Networks Inc.",
     "color": "#F27D39",
+    "simpleIcon": "siPaloaltonetworks",
     "marketSymbol": "NASDAQ:PANW"
   }
 }
