@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-24",
+    "slug": "Agilent",
+    "industry": "实验室分析仪器与服务"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-24T02:08:04.924Z",
+  "reason": "new-attempt"
+}
