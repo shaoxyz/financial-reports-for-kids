@@ -725,5 +725,11 @@
     "color": "#F27D39",
     "simpleIcon": "siPaloaltonetworks",
     "marketSymbol": "NASDAQ:PANW"
+  },
+  "Agilent": {
+    "company": "安捷伦",
+    "query": "Agilent Technologies, Inc.",
+    "color": "#00698A",
+    "marketSymbol": "NYSE:A"
   }
 }
