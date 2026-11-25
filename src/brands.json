@@ -731,5 +731,11 @@
     "query": "Agilent Technologies, Inc.",
     "color": "#00698A",
     "marketSymbol": "NYSE:A"
+  },
+  "Medtronic": {
+    "company": "美敦力",
+    "query": "Medtronic plc",
+    "color": "#123DA8",
+    "marketSymbol": "NYSE:MDT"
   }
 }
