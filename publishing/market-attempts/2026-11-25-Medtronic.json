@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-25",
+    "slug": "Medtronic",
+    "industry": "医疗器械"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-25T02:05:30.158Z",
+  "reason": "new-attempt"
+}
