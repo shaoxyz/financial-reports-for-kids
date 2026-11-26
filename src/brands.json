@@ -737,5 +737,11 @@
     "query": "Medtronic plc",
     "color": "#123DA8",
     "marketSymbol": "NYSE:MDT"
+  },
+  "Dell": {
+    "company": "戴尔科技",
+    "query": "Dell Technologies Inc.",
+    "color": "#0076CE",
+    "marketSymbol": "NYSE:DELL"
   }
 }
