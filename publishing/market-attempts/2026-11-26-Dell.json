@@ -6,7 +6,7 @@
     "slug": "Dell",
     "industry": "企业计算与服务器"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-26T02:04:05.573Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
