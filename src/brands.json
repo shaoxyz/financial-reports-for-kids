@@ -742,6 +742,7 @@
     "company": "戴尔科技",
     "query": "Dell Technologies Inc.",
     "color": "#0076CE",
+    "simpleIcon": "siDell",
     "marketSymbol": "NYSE:DELL"
   }
 }

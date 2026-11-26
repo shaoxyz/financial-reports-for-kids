@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-26",
+    "slug": "Dell",
+    "industry": "企业计算与服务器"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-26T02:04:05.573Z",
+  "reason": "new-attempt"
+}
