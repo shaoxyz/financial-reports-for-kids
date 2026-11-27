@@ -744,5 +744,11 @@
     "color": "#0076CE",
     "simpleIcon": "siDell",
     "marketSymbol": "NYSE:DELL"
+  },
+  "DollarTree": {
+    "company": "Dollar Tree",
+    "query": "Dollar Tree, Inc.",
+    "color": "#008755",
+    "marketSymbol": "NASDAQ:DLTR"
   }
 }
