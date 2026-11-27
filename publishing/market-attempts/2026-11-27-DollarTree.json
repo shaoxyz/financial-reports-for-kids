@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-27",
+    "slug": "DollarTree",
+    "industry": "折扣杂货零售"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-27T02:03:52.473Z",
+  "reason": "new-attempt"
+}
