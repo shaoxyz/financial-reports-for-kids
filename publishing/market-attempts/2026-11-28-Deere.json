@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "date": "2026-11-28",
+    "slug": "Deere",
+    "industry": "农机、工程机械与设备金融"
+  },
+  "status": "reserved",
+  "attemptedAt": "2026-11-28T02:02:30.711Z",
+  "reason": "new-attempt"
+}
