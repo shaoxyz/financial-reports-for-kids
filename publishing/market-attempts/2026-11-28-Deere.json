@@ -6,7 +6,7 @@
     "slug": "Deere",
     "industry": "农机、工程机械与设备金融"
   },
-  "status": "reserved",
+  "status": "unavailable",
   "attemptedAt": "2026-11-28T02:02:30.711Z",
-  "reason": "new-attempt"
+  "reason": "api-unavailable"
 }
